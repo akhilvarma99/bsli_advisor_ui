@@ -18,6 +18,7 @@ function Users() {
                                         <div className="select-user-id">
                                             <ul>
                                                 <li>
+                                                    <span></span>
                                                     <a href><img src={userIcon} alt={userIcon} />User ID 123456</a>
                                                 </li>
                                                 <li className="brdr-none">

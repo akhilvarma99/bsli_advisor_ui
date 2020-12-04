@@ -7,7 +7,6 @@ function Layout() {
     return (
         <div>
             <Approuter />
-
         </div>
     )
 }
