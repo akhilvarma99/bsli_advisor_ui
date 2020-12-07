@@ -1,6 +1,6 @@
 import React from 'react';
 import userIcon from '../../assets/img/icons/user-icon.svg';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Users() {
     return (
@@ -10,7 +10,7 @@ function Users() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="login-card shadow-sm">
-                                <span className="back-a"><Link to='/password'>Back</Link></span>
+                                <span className="back-a"><NavLink to='/password'>Back</NavLink></span>
                                 <p className="h3 text-center">Choose an Account</p>
                                 <br />
                                 <div className="row">
@@ -22,7 +22,7 @@ function Users() {
                                                     <a href><img src={userIcon} alt={userIcon} />User ID 123456</a>
                                                 </li>
                                                 <li className="brdr-none">
-                                                    <a className="bold" href>Add Another Account</a>
+                                                    <NavLink to='/' className="bold" >Add Another Account</NavLink>
                                                 </li>
                                             </ul>
                                         </div>
@@ -32,11 +32,11 @@ function Users() {
                                 <br />
                                 <div className="row">
                                     <div className="col-md-8 hide">
-                                        <a className="float-left m-top-10" data-toggle="modal" data-target="#staticBackdrop" href="/">Having problem signing in?</a>
+                                        <NavLink to='/troubleLogin' className="float-left m-top-10" data-toggle="modal" data-target="#staticBackdrop" >Having problem signing in?</NavLink>
                                     </div>
                                     <div className="col-md-8 show-xs">
                                         <br />
-                                        <a className="float-left m-top-10" data-toggle="modal" data-target="#staticBackdrop" href="/">Having problem signing in?</a>
+                                        <NavLink to='/troubleLogin' className="float-left m-top-10" data-toggle="modal" data-target="#staticBackdrop" >Having problem signing in?</NavLink>
                                     </div>
                                 </div>
                             </div>
