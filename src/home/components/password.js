@@ -1,52 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import arrow from '../../assets/img/icons/arrow.svg';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+
 
 function Password() {
 
-    console.log('yes');
+    const [forgotmodal, setForgotModal] = useState(false);
+    const [loginPassword, setLoginPassword] = useState(true);
+    const [loginOTP, setLoginOTP] = useState(false);
+    const [TermsModal, HandleTerms] = useState(false);
+    const [sendOTP, setSendOTP] = useState(false);
+
+
+
+
+
     return (
         <main role="main">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <div className="login-card shadow-sm">
-                            <span className="back-a"><Link to='/'>Back</Link></span>
+                            <span className="back-a"><NavLink to='/'>Back</NavLink></span>
                             <p className="h3 text-center">Welcome to Advisor Portal</p>
                             <br />
                             <div className="user-id-drop-div">
 
-                                <Link to='/users' >12345656</Link> <img src={arrow} alt='arrow_icon' />
+                                <NavLink to='/users' >12345656</NavLink> <img src={arrow} alt='arrow_icon' />
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
                                     <ul className="nav nav-tabs row" id="myTab" role="tablist">
                                         <li className="nav-item col-md-6 col-sm-6 col-xs-6" role="presentation">
-                                            <span className="nav-link active" id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true">Login With Password</span>
+                                            <span className={loginPassword ? "nav-link active" : "nav-link"} id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" onClick={() => { console.log('Password clicked'); setLoginOTP(false); setLoginPassword(true) }} >Login With Password</span>
 
                                         </li>
                                         <li className="nav-item  col-md-6 col-sm-6 col-xs-6" role="presentation">
 
-                                            <span className="nav-link" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Login With OTP</span>
+                                            <span className={loginOTP ? "nav-link active" : "nav-link"} id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false" onClick={() => { console.log('Otp clicked'); setLoginOTP(true); setLoginPassword(false) }}>Login With OTP</span>
                                         </li>
                                     </ul>
                                     <div className="tab-content" id="myTabContent">
-                                        <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div className={loginPassword ? "tab-pane fade show active" : "tab-pane fade"} style={loginPassword ? { display: 'block' } : { display: 'none' }} id="home" role="tabpanel" aria-labelledby="home-tab">
                                             <div className="form-group">
                                                 <br />
                                                 <label htmlFor="exampleInputEmail1">Enter Password</label>
                                                 <input className="form-control shadow-sm" id="password-field" type="password" name="password" defaultValue="secret" />
                                                 <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password" />
-                                                <span className="float-right" data-toggle="modal" data-target="#forgot-password">Forgot Password?</span>
+                                                <NavLink to='#' onClick={(e) => {
+                                                    e.preventDefault();
+                                                    setForgotModal(true);
+                                                }} className="float-right" data-toggle="modal" data-target="#forgot-password">Forgot Password?</NavLink>
 
                                             </div>
                                         </div>
-                                        <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div className={loginOTP ? "tab-pane fade show active" : "tab-pane fade"} style={loginOTP ? { display: 'block' } : { display: 'none' }} id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                             <div className="form-group">
+                                                <br />
+                                                <div class="alert alert-secondary otp-txt mrgn-0" style={sendOTP ? { display: 'block' } : { display: 'none' }} role="alert">
+                                                    Please enter the OTP sent to your mobile number 98*****180 as well as registered email ID
+                                                    san****ha@gmail.com
+                                                </div>
                                                 <br />
                                                 <label htmlFor="exampleInputEmail1">Enter OTP</label>
                                                 <input type="email" className="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg :123456" />
-                                                <span className="float-right" href="login-1-otp.html">Send OTP</span>
+                                                <NavLink to="#" className="float-right" onClick={(e) => {
+                                                    e.preventDefault();
+                                                    setSendOTP(true);
+                                                }}>Send OTP</NavLink>
+                                                <label class="otp-expire-txt" style={sendOTP ? { display: 'block' } : { display: 'none' }}>Wait 60 seconds to regenerate </label>
+
 
                                             </div>
                                         </div>
@@ -60,7 +83,7 @@ function Password() {
                                         <input className="form-check-input" type="checkbox" defaultValue id="defaultCheck1" />
                                         <label className="form-check-label" htmlFor="defaultCheck1">
                                             I agree the
-                                             <span className="text-u" data-toggle="modal" data-target="#staticBackdrop">terms &amp; conditions</span>
+                                             <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop"> terms &amp; conditions</NavLink>
 
 
                                         </label>
@@ -70,17 +93,15 @@ function Password() {
                             <br />
                             <div className="row">
                                 <div className="col-md-8 hide">
-                                    <span className="float-left m-top-10">Having problem signing in?</span>
+                                    <NavLink to='/troubleLogin' className="float-left m-top-10">Having problem signing in?</NavLink>
 
 
                                 </div>
                                 <div className="col-md-4">
-                                    <button type="button" className="btn btn-primary float-right">Next</button>
+                                    <NavLink to='/dashboard'><button type="button" className="btn btn-primary float-right">Next</button></NavLink>
                                 </div>
                                 <div className="col-md-8 show-xs">
-                                    <br />                         <span className="float-left m-top-10">Having problem signing in?</span>
-
-
+                                    <br />  <span className="float-left m-top-10">Having problem signing in?</span>
                                 </div>
                             </div>
                         </div>
@@ -93,13 +114,13 @@ function Password() {
   Launch static backdrop modal
 </button> */}
             {/* Terms & Conditions Modal */}
-            <div className="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className={TermsModal ? `modal fade show` : "modal fade"} style={TermsModal ? { display: 'block' } : { display: 'none' }} id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-terms-conditions">
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title  bold" id="staticBackdropLabel">Terms of Use</h5>
-                            <button type="button" className="close modal-close-button" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"></span>
+                            <button type="button" className="close modal-close-button" onClick={() => HandleTerms(false)} data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">x</span>
                             </button>
                         </div>
                         <div className="modal-body">
@@ -111,19 +132,22 @@ function Password() {
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">I Agree</button>
+                            <button type="button" className="btn btn-secondary" onClick={() => HandleTerms(false)} data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" onClick={() => HandleTerms(false)}>I Agree</button>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Forgot Password Modal */}
-            <div className="modal fade" id="forgot-password" data-backdrop="static" data-keyboard="false" tabIndex={-1} aria-labelledby="forgot-password" aria-hidden="true">
+            <div className={forgotmodal ? `modal fade show` : "modal fade"} style={forgotmodal ? { display: 'block' } : { display: 'none' }} id="forgot-password" data-backdrop="static" data-keyboard="false" tabIndex={-1} aria-labelledby="forgot-password" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5>
-                            <button type="button" className="close modal-close-button" data-dismiss="modal" aria-label="Close">
+                            <button onClick={(e) => {
+                                e.preventDefault();
+                                setForgotModal(false);
+                            }} type="button" className="close modal-close-button" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
                         </div>
@@ -131,7 +155,10 @@ function Password() {
                             <p>Clicking forgot password link will redirect you to an external self help page where you can reset your password</p>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn btn-primary" data-dismiss="modal">OK</button>
+                            <button onClick={(e) => {
+                                e.preventDefault();
+                                setForgotModal(false);
+                            }} type="button" className="btn btn-primary" data-dismiss="modal">OK</button>
                         </div>
                     </div>
                 </div>
