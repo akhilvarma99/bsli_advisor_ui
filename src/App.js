@@ -8,7 +8,7 @@ import './assets/css/media-query.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/advisor">
       <Layout />
     </BrowserRouter>
   );
