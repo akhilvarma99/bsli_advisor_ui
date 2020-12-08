@@ -4,12 +4,13 @@ import Login from './login';
 import Password from './password';
 import Users from './users';
 import Trouble from './trouble';
-import Dashboard from '../containers/dashboard'
+import Dashboard from '../containers/dashboard';
+
 
 
 function Approuter() {
     return (
-        <div>
+        <div className='portal-wrapper'>
             <Route exact path="/" component={Login} />
             <Route path="/password" component={Password} />
             <Route path="/users" component={Users} />

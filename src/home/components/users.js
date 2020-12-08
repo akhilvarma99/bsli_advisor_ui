@@ -19,7 +19,7 @@ function Users() {
                                             <ul>
                                                 <li>
                                                     <span></span>
-                                                    <a href><img src={userIcon} alt={userIcon} />User ID 123456</a>
+                                                    <NavLink to='/' ><img src={userIcon} alt={userIcon} />User ID 123456</NavLink>
                                                 </li>
                                                 <li className="brdr-none">
                                                     <NavLink to='/' className="bold" >Add Another Account</NavLink>

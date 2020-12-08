@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+/* @import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700'); */
 @import url('../../assets/fonts/regular.css');
 @import url('../../assets/fonts/bold.css');
 @import url('../../assets/fonts/medium.css');
@@ -12,8 +12,6 @@ body,html{height: 100%;  font-family:'pf_handbook_proregular';-webkit-font-smoot
 body{
     background-color: #f1f3f6;
 }
-
-
 
 
 .form-control {

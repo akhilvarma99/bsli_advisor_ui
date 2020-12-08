@@ -57,7 +57,7 @@ function Password() {
                                         <div className={loginOTP ? "tab-pane fade show active" : "tab-pane fade"} style={loginOTP ? { display: 'block' } : { display: 'none' }} id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                             <div className="form-group">
                                                 <br />
-                                                <div class="alert alert-secondary otp-txt mrgn-0" style={sendOTP ? { display: 'block' } : { display: 'none' }} role="alert">
+                                                <div className="alert alert-secondary otp-txt mrgn-0" style={sendOTP ? { display: 'block' } : { display: 'none' }} role="alert">
                                                     Please enter the OTP sent to your mobile number 98*****180 as well as registered email ID
                                                     san****ha@gmail.com
                                                 </div>
@@ -68,7 +68,7 @@ function Password() {
                                                     e.preventDefault();
                                                     setSendOTP(true);
                                                 }}>Send OTP</NavLink>
-                                                <label class="otp-expire-txt" style={sendOTP ? { display: 'block' } : { display: 'none' }}>Wait 60 seconds to regenerate </label>
+                                                <label className="otp-expire-txt" style={sendOTP ? { display: 'block' } : { display: 'none' }}>Wait 60 seconds to regenerate </label>
 
 
                                             </div>
