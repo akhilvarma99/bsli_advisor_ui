@@ -1,0 +1,46 @@
+.bs-brown-header{
+    background-color:$brown-header;
+    font-family: $regular;
+    .tagline{
+        color: $clr-white;
+        line-height: 12px;
+        padding: .5rem 7.5rem ;
+    }
+}
+@media only screen and (max-width:$media-lg) {
+    .bs-brown-header{
+        .tagline{
+            line-height: 12px;
+            font-size: 8px;
+            padding: .5rem 4.5rem;
+        }
+    }
+}
+
+
+//bs-pink-header
+
+.bs-pink-header{
+    background-color: $header-pink;
+    .life-insurance-btn{
+        background-color: transparent;
+        color: $clr-white;
+        border-width: 0;
+        padding: 0;
+        cursor: pointer;
+        font-family: $bold;
+        line-height: 37px;
+        font-size: 26px;
+        text-transform: uppercase;
+        padding: .5rem 7.5rem;
+    }
+}
+@media only screen and (max-width:$media-lg) {
+    .bs-pink-header{
+        .life-insurance-btn{
+            line-height: 24px;
+            font-size: 15px;
+            padding: 0.5rem 4.5rem;
+        }
+    }
+}

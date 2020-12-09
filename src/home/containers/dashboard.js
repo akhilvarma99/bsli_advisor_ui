@@ -18,7 +18,7 @@ function Dashboard() {
                             <NavLink to='#' className="text-center" onClick={(e) => {
                                 e.preventDefault();
                                 handleWAmodal(true);
-                            }} data-toggle="modal" data-target="#whatsapp">Whats App Optin</NavLink>
+                            }} data-toggle="modal" data-target="#whatsapp">Click here to get Whats App Optin</NavLink>
                         </div>
                     </div>
                 </div>

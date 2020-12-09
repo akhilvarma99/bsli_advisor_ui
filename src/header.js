@@ -590,6 +590,21 @@ function Header() {
                 </div >
             </nav >
 
+            <div className="container-fluid p-0">
+
+                <div className="bs-pink-header">
+                    <div className="content-wrapper">
+                        <button type="button" className="life-insurance-btn">Life Insurance</button>
+                    </div>
+                </div>
+                <div className="bs-brown-header">
+                    <div className="content-wrapper">
+                        <p className="tagline">Aditya Birla Sun Life Insurance Company LTD.</p>
+                    </div>
+                </div>
+            </div>
+
+
         </header >
     )
 }

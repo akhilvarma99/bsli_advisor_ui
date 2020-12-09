@@ -3,6 +3,8 @@ import arrow from '../../assets/img/icons/arrow.svg';
 import { NavLink } from 'react-router-dom';
 
 
+
+
 function Password() {
 
     const [forgotmodal, setForgotModal] = useState(false);
@@ -31,13 +33,13 @@ function Password() {
                             <div className="row">
                                 <div className="col-md-12">
                                     <ul className="nav nav-tabs row" id="myTab" role="tablist">
-                                        <li className="nav-item col-md-6 col-sm-6 col-xs-6" role="presentation">
-                                            <span className={loginPassword ? "nav-link active" : "nav-link"} id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" onClick={() => { console.log('Password clicked'); setLoginOTP(false); setLoginPassword(true) }} >Login With Password</span>
+                                        <li className="nav-item col-6" role="presentation">
+                                            <span className={loginPassword ? "nav-link active nav-link-50" : "nav-link  nav-link-50"} id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" onClick={() => { console.log('Password clicked'); setLoginOTP(false); setLoginPassword(true) }} >Login With Password</span>
 
                                         </li>
-                                        <li className="nav-item  col-md-6 col-sm-6 col-xs-6" role="presentation">
+                                        <li className="nav-item  col-6" role="presentation">
 
-                                            <span className={loginOTP ? "nav-link active" : "nav-link"} id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false" onClick={() => { console.log('Otp clicked'); setLoginOTP(true); setLoginPassword(false) }}>Login With OTP</span>
+                                            <span className={loginOTP ? "nav-link active nav-link-50" : "nav-link nav-link-50"} id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false" onClick={() => { console.log('Otp clicked'); setLoginOTP(true); setLoginPassword(false) }}>Login With OTP</span>
                                         </li>
                                     </ul>
                                     <div className="tab-content" id="myTabContent">
