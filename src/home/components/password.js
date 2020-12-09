@@ -56,7 +56,7 @@ function Password() {
                                         </div>
                                         <div className={loginOTP ? "tab-pane fade show active" : "tab-pane fade"} style={loginOTP ? { display: 'block' } : { display: 'none' }} id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                             <div className="form-group">
-                                                <br />
+
                                                 <div className="alert alert-secondary otp-txt mrgn-0" style={sendOTP ? { display: 'block' } : { display: 'none' }} role="alert">
                                                     Please enter the OTP sent to your mobile number 98*****180 as well as registered email ID
                                                     san****ha@gmail.com

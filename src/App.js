@@ -14,8 +14,10 @@ import './sass/index.scss';
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Layout />
+      <div className="abc-container">
+        <Header />
+        <Layout />
+      </div>
       <Footer />
     </BrowserRouter>
   );
