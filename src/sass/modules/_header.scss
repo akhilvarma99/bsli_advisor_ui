@@ -208,18 +208,20 @@
   
   
   .dropdown-menu {
-    display: none;
-    &:not(.datepicker-dropdown){
-    width: 900px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.18);
-    border: none !important;
-    border-radius: 0px !important;
-    left: auto !important;
-    right: 0px !important;
-    line-height: 1.25;
+    &.global-nav-dropdown-menu{
+      &:not(.datepicker-dropdown){
+        width: 900px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.18);
+        border: none !important;
+        border-radius: 0px !important;
+        left: auto !important;
+        right: 0px !important;
+        line-height: 1.25;
+      }
     }
+    
   
     ul li ul li {
       padding-top: 0px !important;
@@ -274,65 +276,67 @@
       list-style: none;
       padding: 0px;
       margin-bottom: -5px;
-    }
-  
-    li {
-      display: table-cell;
-      float: none;
-      text-align: center;
-      width: 100%;
-      list-style: none;
-      vertical-align: middle !important;
-      padding: 15px !important;
-      color: #FFF !important;
-  
-      &:before {
-        content: "";
-      }
-  
-      a {
-        text-decoration: none !important;
-  
-        &:hover,
-        &:focus {
+      li {
+        display: table-cell;
+        float: none;
+        text-align: center;
+        width: 100%;
+        list-style: none;
+        vertical-align: middle !important;
+        padding: 15px !important;
+        color: #FFF !important;
+
+        &.selected-menu {
+          font-weight: bold;
+          list-style: none;
+          color: #FFF !important;
+          background-color: #8B151B !important;
+      
+          span:after {
+            position: relative;
+            content: '';
+            display: block;
+            z-index: 100;
+            left: 45%;
+            bottom: -22px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid #8B151B;
+            border-right: 8px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-left: 8px solid transparent;
+          }
+      
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+      
+          a {
+            top: 5px;
+            position: relative;
+          }
+        }
+    
+        &:before {
+          content: "";
+        }
+    
+        a {
           text-decoration: none !important;
-          border-bottom: 0px !important;
-          text-decoration: none !important;
+          color: #FFF !important;
+          &:hover,
+          &:focus {
+            text-decoration: none !important;
+            border-bottom: 0px !important;
+            text-decoration: none !important;
+          }
         }
       }
     }
+      
   
-    .selected-menu {
-      font-weight: bold;
-      list-style: none;
-      color: #FFF !important;
-      background-color: #8B151B !important;
-  
-      span:after {
-        position: relative;
-        content: '';
-        display: block;
-        z-index: 100;
-        left: 45%;
-        bottom: -22px;
-        width: 0;
-        height: 0;
-        border-top: 10px solid #8B151B;
-        border-right: 8px solid transparent;
-        border-bottom: 0 solid transparent;
-        border-left: 8px solid transparent;
-      }
-  
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-  
-      a {
-        top: 5px;
-        position: relative;
-      }
-    }
+    
   
     a {
       text-decoration: none;
@@ -611,33 +615,33 @@
                     }
                     .nav-item.prt {
                         border-left: 8px #da9089 solid;
-                        a.menu_label {
+                        .menu_label {
                             color: #da9089;
                         }
                     }
 
                     .nav-item.ins {
                         border-left: 8px #969f6e solid;
-                        a.menu_label {
+                        .menu_label {
                             color: #969f6e;
                         }
                     }
 
                     .nav-item.fin {
                         border-left: 8px #d4ae69 solid;
-                        a.menu_label {
+                        .menu_label {
                             color: #d4ae69;
                         }
                     }
 
                     .nav-item.adv {
                         border-left: 8px #c7222a solid;
-                        a.menu_label {
-                            color: #c7222a;
+                        .menu_label {
+                            color: #c7222a;                            
                         }
                     }
 
-                    a.menu_label {
+                    .menu_label {
                         font-family: 'pf_handbook_probold';
                         font-size: 28px;
                         line-height: 1.14;
@@ -713,13 +717,19 @@
             @media only screen and (max-width: 1024px) and (min-width: 768px) {
                 padding: 9px;
             }
-            a.menu_label {
+            .menu_label {
                 line-height: 20px;
                 position: relative;
                 display: block;
                 font-size: 18px;
                 // padding: 9px 8px 0 0;
                 padding: 9px 3px 0 0;
+                &.home{
+                  display: none;
+                  @media (max-width: 768px) {
+                    display: block;
+                  }
+                }
                 &.menu_hover{
                     &:hover{
                         border-bottom: 1px solid #FFF;
@@ -772,7 +782,7 @@
             &:hover {
                 background-color: #f1f3f6;
                 position: relative;
-                a.menu_label {
+                .menu_label {
                     color: #000000;
                     i.arrow-down {
                         border-color: #c7222a;
@@ -819,7 +829,7 @@
             margin: 0 25px 0 0;                
             li.nav-item {
                 padding: 9px 12px 8px 0px;
-                a.menu_label {
+                .menu_label {
                     color: #ffffff;                        
                     .right-img {
                         margin-top: -7px;
@@ -833,12 +843,12 @@
                 }
                 &:hover {
                     background: none;
-                    a.menu_label {
+                    .menu_label {
                         color: #ffffff;
                     }
                 }
                 &:first-child {
-                    a.menu_label {
+                    .menu_label {
                         &:hover {
                             text-decoration: none;
                         }
@@ -1034,3 +1044,4 @@
     text-decoration: none;
     }
 }
+
