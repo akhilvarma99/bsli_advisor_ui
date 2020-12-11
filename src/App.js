@@ -6,7 +6,7 @@ import Header from './header';
 import Footer from './footer';
 import './sass/index.scss';
 
-// import '../../assets/css/main.scss';
+
 
 
 

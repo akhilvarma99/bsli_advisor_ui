@@ -47,8 +47,23 @@ function Password() {
                                             <div className="form-group">
                                                 <br />
                                                 <label htmlFor="exampleInputEmail1">Password</label>
-                                                <input className="form-control shadow-sm" id="password-field" type="password" name="password" defaultValue="secret" />
-                                                <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password" />
+                                                <input className="form-control shadow-sm" id="password-field" type="password" name="password" placeholder='********' />
+                                                <span id="toggle-pwd" toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password" onClick={
+                                                    () => {
+
+                                                        const togglePwd = document.getElementById('toggle-pwd');
+                                                        togglePwd.classList.toggle('fa-eye');
+                                                        togglePwd.classList.toggle('fa-eye-slash');
+
+                                                        const pwdField = document.getElementById('password-field');
+
+                                                        if (pwdField.type === 'password') {
+                                                            pwdField.type = 'text'
+                                                        } else {
+                                                            pwdField.type = 'password'
+                                                        }
+                                                    }
+                                                }></span>
                                                 <NavLink to='#' onClick={(e) => {
                                                     e.preventDefault();
                                                     setForgotModal(true);
@@ -66,7 +81,7 @@ function Password() {
                                                 <br />
                                                 <label htmlFor="exampleInputEmail1">OTP</label>
                                                 <input type="email" className="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg :123456" />
-                                                <NavLink to="#" className="float-right" onClick={(e) => {
+                                                <NavLink to="#" className="float-right link-underline" onClick={(e) => {
                                                     e.preventDefault();
                                                     setSendOTP(true);
                                                 }}>Send OTP</NavLink>
@@ -82,9 +97,9 @@ function Password() {
                                 <div className="col-md-12">
                                     <br />
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" defaultValue id="defaultCheck1" />
+                                        <input className="form-check-input" type="checkbox" defaultChecked defaultValue id="defaultCheck1" />
                                         <label className="form-check-label" htmlFor="defaultCheck1">
-                                            I agree the
+                                            I agree to
                                              <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop"> terms &amp; conditions</NavLink>
 
 
@@ -100,7 +115,7 @@ function Password() {
 
                                 </div>
                                 <div className="col-md-4">
-                                    <NavLink to='/dashboard'><button type="button" className="btn btn-primary float-right">Next</button></NavLink>
+                                    <NavLink to='/dashboard'><button type="button" className="btn btn-primary float-right">Login</button></NavLink>
                                 </div>
                                 <div className="col-md-8 show-xs">
                                     <br />  <span className="float-left m-top-10">Having problem signing in?</span>
@@ -133,10 +148,10 @@ function Password() {
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div>
-                        <div className="modal-footer">
+                        {/* <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" onClick={() => HandleTerms(false)} data-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-primary" onClick={() => HandleTerms(false)}>I Agree</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

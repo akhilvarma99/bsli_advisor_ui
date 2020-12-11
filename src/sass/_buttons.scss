@@ -1,0 +1,29 @@
+.btn-primary{
+    background-color: $capital-red;
+    border: 0px !important;
+    font-size: 18px;
+}
+
+.btn-primary:hover{
+    background-color: $dark-grey;
+    outline: 0 !important;
+    border-color: $capital-dark-red !important;
+}
+
+.btn-primary:active{
+    background-color: $capital-dark-red!important;
+    border-color: $capital-dark-red !important;
+    outline: 0 !important;
+    
+}
+
+.btn-primary:focus{
+    background-color: $capital-dark-red!important;
+    border-color: $capital-dark-red !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.alert-secondary{
+    background-color: $l-grey;
+}

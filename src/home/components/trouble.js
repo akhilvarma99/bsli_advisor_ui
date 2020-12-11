@@ -2,19 +2,26 @@ import React from 'react';
 import closeIcon from '../../assets/img/icons/close.svg';
 import lockIcon from '../../assets/img/icons/lock.svg';
 import keyIcon from '../../assets/img/icons/key.svg';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 
 function Trouble() {
     return (
+
         <main role="main">
             <section className="grey-section">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
                             <div className="cardz shadow-sm">
-                                <p className="h4 bold">Problem Sign In?</p>
-                                <p className="font-size-18">Potential problems a user can face at the time of logging in. Explained below is the appropriate action which has to be taken in each case</p>
+                                <p className="h4 bold">Can't sign in to your account </p>
+                                <p className="font-size-18">If you can't sign in to your Account, select the issue that most closely applies to you. Follow the instructions for help getting back in to your account.</p>
+                                <p className="font-size-18">Select the issue:</p>
+                                <ul className="font-size-18" type="circle">
+                                    <li>You forgot your password. </li>
+                                    <li>Your Account is locked </li>
+                                    <li>You know your username and password, but you can't sign in. </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -25,22 +32,39 @@ function Trouble() {
                     <div className="row">
                         <div className="col-md-12">
                             <br /><br />
-                            <p className="h4 bold"><img className="mrgn-right-10" src={closeIcon} alt='closeIcon' />Your user ID or password is incorrect.</p>
-                            <p className="font-size-18">a) Please check the user ID entered by you.</p>
-                            <p className="font-size-18">b) Your Business Code is the user id e.g. if you are an Insurance Advisor, please enter your advisor code. if you are a Corporate Agent, please enter your Corporate Agency Code. If you are Business Mentor, please enter your Business Mentor Code</p>
-                            <p className="font-size-18">c) Password is case sensitive.</p>
-                            <p className="font-size-18">d) Please check the password entered by you.</p>
-                            <p className="font-size-18">e) Password is case sensitive.</p>
-                            <p className="font-size-18">f) If you have forgotten your password, please click on Generate Password link.</p>
-                            <p className="font-size-18">g) If you enter incorrect password 5 times, your account will be locked.</p>
+                            <p className="h4 bold"><img className="mrgn-right-10" alt='closeIcon' src={closeIcon} />You forgot your password. </p>
+                            <p className="font-size-18">Step 1: Go to <a href="https://selfhelp.abfsg.com/ ">https://selfhelp.abfsg.com/ </a></p>
+                            <p className="font-size-18">Step 2: Use “AD account unlock and password reset” option at bottom left. </p>
+                            <p className="font-size-18">Step 3: Reset your password when prompted. Choose a strong password that you haven't already used with this account. </p>
+                            <p className="h4 bold"><img className="mrgn-right-10" alt={lockIcon} src={lockIcon} />Your Account is locked </p>
+                            <p className="font-size-18">Step 1: Go to <a href="https://selfhelp.abfsg.com/ ">https://selfhelp.abfsg.com/ </a></p>
+                            <p className="font-size-18">Step 2: Use “AD account unlock and password reset” option at bottom left. </p>
+                            <p className="font-size-18">Step 3: Reset your password when prompted. Choose a strong password that you haven't already used with this account. </p>
+                            <p className="h4 bold"><img className="mrgn-right-10" alt={keyIcon} src={keyIcon} />You know your username and password, but you can't sign in.</p>
+                            <ol className="font-size-18">
+                                <li>You get an error message. <br /><p>Username or password is wrong, invalid, or unrecognized </p></li>
+                                <ol>
+                                    <li>
+                                        Make sure that:
+                      <ol type="a">
+                                            <li>There isn't a typo in your username or password. </li>
+                                            <li>You've entered your correct UserID </li>
+                                            <li>Caps lock is turned off. </li>
+                                            <li>Your keyboard is in the right language</li>
+                                        </ol>
+                                    </li>
+                                    <li>Refresh your browser and try signing in again.</li>
+                                    <li>If you're still getting the error message, follow the steps to recover your account.
+                      <ul type="circle">
+                                            <li>Step 1: Go to <a href="https://selfhelp.abfsg.com/ ">https://selfhelp.abfsg.com/ </a></li>
+                                            <li>Step 2: Use “AD account unlock and password reset” option at bottom left. </li>
+                                            <li>Step 3: Reset your password when prompted. Choose a strong password that you haven't already used with this account. </li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </ol>
                             <br />
-                            <p className="h4 bold"><img className="mrgn-right-10" src={lockIcon} alt='lockIcon' />Your account is locked</p>
-                            <p className="font-size-18">If your Account is locked, kindly <NavLink className="link-m" to='/'>Generate Password to unlock </NavLink>it or call our toll free no. 1800 270 7000.</p>
-                            <br />
-                            <p className="h4 bold"><img className="mrgn-right-10" src={keyIcon} alt='keyIcon' />Change password</p>
-                            <p className="font-size-18">Login with your user ID and password.<NavLink className="link-m" to='/'>Go to Change Password link</NavLink> available at the bottom of the page. Change your password.</p>
                             <p className="font-size-18 color-red bold">NOTE: In case you face any other problem or need assistance, please call our toll free no. 1800 270 7000</p>
-                            <br /><br />
                         </div>
                     </div>
                 </div>
