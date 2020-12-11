@@ -25,7 +25,7 @@ function Password() {
                         <div className="login-card shadow-sm">
                             <span className="back-a"><NavLink to='/'>Back</NavLink></span>
                             <p className="h3 text-center">Welcome to Advisor Portal</p>
-                            <br />
+
                             <div className="user-id-drop-div">
 
                                 <NavLink to='/users' >12345656</NavLink> <img src={arrow} alt='arrow_icon' />
@@ -34,19 +34,19 @@ function Password() {
                                 <div className="col-md-12">
                                     <ul className="nav nav-tabs row" id="myTab" role="tablist">
                                         <li className="nav-item col-6" role="presentation">
-                                            <span className={loginPassword ? "nav-link active nav-link-50" : "nav-link  nav-link-50"} id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" onClick={() => { console.log('Password clicked'); setLoginOTP(false); setLoginPassword(true) }} >Login With Password</span>
+                                            <span className={loginPassword ? "nav-link active nav-link-50 cursor-pointer" : "nav-link cursor-pointer  nav-link-50"} id="home-tab" data-toggle="tab" role="tab" aria-controls="home" aria-selected="true" onClick={() => { console.log('Password clicked'); setLoginOTP(false); setLoginPassword(true) }} >Login With Password</span>
 
                                         </li>
                                         <li className="nav-item  col-6" role="presentation">
 
-                                            <span className={loginOTP ? "nav-link active nav-link-50" : "nav-link nav-link-50"} id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false" onClick={() => { console.log('Otp clicked'); setLoginOTP(true); setLoginPassword(false) }}>Login With OTP</span>
+                                            <span className={loginOTP ? "nav-link active nav-link-50 cursor-pointer" : "nav-link cursor-pointer nav-link-50"} id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false" onClick={() => { console.log('Otp clicked'); setLoginOTP(true); setLoginPassword(false) }}>Login With OTP</span>
                                         </li>
                                     </ul>
                                     <div className="tab-content" id="myTabContent">
                                         <div className={loginPassword ? "tab-pane fade show active" : "tab-pane fade"} style={loginPassword ? { display: 'block' } : { display: 'none' }} id="home" role="tabpanel" aria-labelledby="home-tab">
                                             <div className="form-group">
                                                 <br />
-                                                <label htmlFor="exampleInputEmail1">Enter Password</label>
+                                                <label htmlFor="exampleInputEmail1">Password</label>
                                                 <input className="form-control shadow-sm" id="password-field" type="password" name="password" defaultValue="secret" />
                                                 <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password" />
                                                 <NavLink to='#' onClick={(e) => {
@@ -64,7 +64,7 @@ function Password() {
                                                     san****ha@gmail.com
                                                 </div>
                                                 <br />
-                                                <label htmlFor="exampleInputEmail1">Enter OTP</label>
+                                                <label htmlFor="exampleInputEmail1">OTP</label>
                                                 <input type="email" className="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg :123456" />
                                                 <NavLink to="#" className="float-right" onClick={(e) => {
                                                     e.preventDefault();
@@ -80,7 +80,7 @@ function Password() {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <br /> <br />
+                                    <br />
                                     <div className="form-check">
                                         <input className="form-check-input" type="checkbox" defaultValue id="defaultCheck1" />
                                         <label className="form-check-label" htmlFor="defaultCheck1">

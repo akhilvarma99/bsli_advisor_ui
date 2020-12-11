@@ -466,6 +466,10 @@
         @media screen and (max-width: 768px) {
             flex-direction: column;
         }
+        @media screen and (max-width: 991px) {
+           display: block; 
+        }
+        
         .mobile-logo-section,
         .mobile-menu-footer {
             display: none;

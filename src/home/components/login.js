@@ -20,7 +20,7 @@ function Login(props) {
                             <p className="h3 text-center">Welcome to Advisor Portal</p>
                             <br />
                             <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Enter User ID</label>
+                                <label htmlFor="exampleInputEmail1">User ID</label>
                                 <input type="email" className="form-control shadow-sm input-success" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg :123456" />
                                 {/* <span onClick={fnToggleLogin('forgotUserID')} className="float-right" data-toggle="modal" data-target="#forgot-userid" >Forgot User ID?</span> */}
                                 <NavLink to="#" onClick={(e) => {
