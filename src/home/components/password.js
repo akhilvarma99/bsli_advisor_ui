@@ -97,14 +97,19 @@ function Password() {
                             <div className="row">
                                 <div className="col-md-12">
                                     <br />
-                                    <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" defaultChecked defaultValue id="defaultCheck1" />
-                                        <label className="form-check-label" htmlFor="defaultCheck1">
+                                    <div className="custom-control custom-checkbox check-box-row">
+                                    <input type="checkbox" className="custom-control-input" id="customCheckBox5"/>
+                                            <label className="custom-control-label" htmlFor="customCheckBox5">I agree to &nbsp;
+                                             <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop">Terms &amp; Conditions</NavLink></label>
+                                    </div>
+                                    {/* <div className="form-check custom-checkbox">
+                                        <input className="form-check-input custom-control-input" type="checkbox" defaultChecked defaultValue id="defaultCheck1" />
+                                        <label className="form-check-label custom-control-label" htmlFor="defaultCheck1">
                                             I agree to &nbsp;
                                              <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop">Terms &amp; Conditions</NavLink>
 
                                         </label>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <br />
