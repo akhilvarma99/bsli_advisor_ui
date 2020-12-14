@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import arrow from '../../assets/img/icons/arrow.svg';
+import leftArrow from '../../assets/img/icons/left-arrow.svg';
 import { NavLink } from 'react-router-dom';
 
 
@@ -23,7 +24,7 @@ function Password() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="login-card shadow-sm">
-                            <span className="back-a"><NavLink to='/'>Back</NavLink></span>
+                            <span className="back-a"><NavLink to='/'><img className = 'backArrow' alt = 'backIcon' src = {leftArrow}/>Back</NavLink></span>
                             <p className="h3 text-center">Welcome to Advisor Portal</p>
 
                             <div className="user-id-drop-div">
@@ -99,9 +100,8 @@ function Password() {
                                     <div className="form-check">
                                         <input className="form-check-input" type="checkbox" defaultChecked defaultValue id="defaultCheck1" />
                                         <label className="form-check-label" htmlFor="defaultCheck1">
-                                            I agree to
-                                             <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop"> terms &amp; conditions</NavLink>
-
+                                            I agree to &nbsp;
+                                             <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop">Terms &amp; Conditions</NavLink>
 
                                         </label>
                                     </div>
@@ -118,7 +118,7 @@ function Password() {
                                     <NavLink to='/dashboard'><button type="button" className="btn btn-primary float-right">Login</button></NavLink>
                                 </div>
                                 <div className="col-md-8 show-xs">
-                                    <br />  <span className="float-left m-top-10">Having problem signing in?</span>
+                                    <br />  <NavLink to='/troubleLogin' className="float-left m-top-10">Having problem signing in?</NavLink>
                                 </div>
                             </div>
                         </div>

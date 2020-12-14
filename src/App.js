@@ -13,7 +13,7 @@ import './sass/index.scss';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/advisor"}>
       <div className="abc-container">
         <Header />
         <Layout />

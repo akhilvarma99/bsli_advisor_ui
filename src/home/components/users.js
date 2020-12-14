@@ -1,6 +1,9 @@
 import React from 'react';
-import userIcon from '../../assets/img/icons/user-icon.svg';
+// import userIcon from '../../assets/img/icons/user-icon.svg';
+import newUser from '../../assets/img/icons/newUser.svg';
+import existingUser from '../../assets/img/icons/existingUser.svg';
 import { NavLink } from 'react-router-dom';
+import leftArrow from '../../assets/img/icons/left-arrow.svg';
 
 function Users() {
     return (
@@ -10,7 +13,7 @@ function Users() {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="login-card shadow-sm">
-                                <span className="back-a"><NavLink to='/password'>Back</NavLink></span>
+                                <span className="back-a"><NavLink to='/password'><img className = 'backArrow' alt = 'backIcon' src = {leftArrow}/>Back</NavLink></span>
                                 <p className="h3 text-center">Choose an Account</p>
                                 <br />
                                 <div className="row">
@@ -19,10 +22,10 @@ function Users() {
                                             <ul>
                                                 <li>
                                                     <span></span>
-                                                    <NavLink to='/' ><img src={userIcon} alt={userIcon} />User ID 123456</NavLink>
+                                                    <NavLink to='/' ><img className = 'existingUser' src={existingUser} alt={existingUser} />User ID 123456</NavLink>
                                                 </li>
                                                 <li className="brdr-none">
-                                                    <NavLink to='/' className="bold" >Add Another Account</NavLink>
+                                                    <NavLink to='/' className="bold" ><img src={newUser} alt={newUser} />Add Another Account</NavLink>
                                                 </li>
                                             </ul>
                                         </div>

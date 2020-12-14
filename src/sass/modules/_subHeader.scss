@@ -11,7 +11,7 @@
         padding: 0;
         cursor: pointer;
         line-height: 45px;
-        font-family: $bold;
+        font-family: 'pf_handbook_proregular';
         font-size: 26px;
         text-transform: uppercase;
     }
@@ -28,12 +28,12 @@
 
 .bs-brown-header{
     background-color:$brown-header;
-    font-family: $regular;
+    font-family: 'pf_handbook_proregular';
     padding-left: 7.5rem;
 
     .tagline{
         color: $clr-white;
-       line-height: 24px;
+       line-height: 28px;
         font-size: 16px;
         
     }

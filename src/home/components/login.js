@@ -19,11 +19,11 @@ function Login(props) {
         const textElement = document.querySelector(".textBoxControl");
         const buttonElement = document.querySelector('.checkNext')
         if (textElement.value === '') {
-            textElement.style.border = '1px solid'
+            textElement.style.border = '1px solid';
             buttonElement.disabled = true;
         }
         else {
-            textElement.style.border = '1px #1f874c solid'
+            textElement.style.border = '1px #1f874c solid';
             console.log(textElement.value);
             buttonElement.disabled = false;
         }
@@ -63,7 +63,7 @@ function Login(props) {
                                 </div>
                                 <div className="col-md-8 show-xs">
                                     <br />
-                                    <span className="float-left m-top-10" >Having problem signing in?</span>
+                                    <NavLink to='/troubleLogin' className="float-left m-top-10" >Having problem signing in?</NavLink>
                                 </div>
                             </div>
                         </div>
