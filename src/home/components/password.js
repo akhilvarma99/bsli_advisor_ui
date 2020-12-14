@@ -85,7 +85,7 @@ function Password() {
                                                 <NavLink to="#" className="float-right link-underline" onClick={(e) => {
                                                     e.preventDefault();
                                                     setSendOTP(true);
-                                                }}>Send OTP</NavLink>
+                                                }}>{sendOTP? 'Resend OTP' : 'Send OTP'}</NavLink>
                                                 <label className="otp-expire-txt" style={sendOTP ? { display: 'block' } : { display: 'none' }}>Wait 60 seconds to regenerate </label>
 
 
