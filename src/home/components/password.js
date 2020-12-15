@@ -115,7 +115,7 @@ function Password() {
                             <br />
                             <div className="row">
                                 <div className="col-md-8 hide">
-                                    <NavLink to='/troubleLogin' className="float-left m-top-10">Having problem signing in?</NavLink>
+                                    <NavLink to='/troubleLogin' target = '_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
 
 
                                 </div>
@@ -123,7 +123,7 @@ function Password() {
                                     <NavLink to='/dashboard'><button type="button" className="btn btn-primary float-right">Login</button></NavLink>
                                 </div>
                                 <div className="col-md-8 show-xs">
-                                    <br />  <NavLink to='/troubleLogin' className="float-left m-top-10">Having problem signing in?</NavLink>
+                                    <br />  <NavLink to='/troubleLogin' target = '_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
                                 </div>
                             </div>
                         </div>
