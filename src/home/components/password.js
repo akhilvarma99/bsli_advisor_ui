@@ -48,7 +48,7 @@ function Password() {
                                             <div className="form-group">
                                                 <br />
                                                 <label htmlFor="exampleInputEmail1">Password</label>
-                                                <input className="form-control shadow-sm" id="password-field" type="password" name="password" placeholder='********' />
+                                                <input className="form-control shadow-sm" id="password-field" type="password" name="password" placeholder='Enter your password' />
                                                 <span id="toggle-pwd" toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password" onClick={
                                                     () => {
 
@@ -80,8 +80,8 @@ function Password() {
                                                     san****ha@gmail.com
                                                 </div>
                                                 <br />
-                                                <label htmlFor="exampleInputEmail1">OTP</label>
-                                                <input type="email" className="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg :123456" />
+                                                <label htmlFor="exampleInputEmail1">Enter OTP</label>
+                                                <input type="email" className="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your OTP" />
                                                 <NavLink to="#" className="float-right link-underline" onClick={(e) => {
                                                     e.preventDefault();
                                                     setSendOTP(true);
@@ -98,7 +98,7 @@ function Password() {
                                 <div className="col-md-12">
                                     <br />
                                     <div className="custom-control custom-checkbox check-box-row">
-                                    <input type="checkbox" className="custom-control-input" id="customCheckBox5"/>
+                                    <input type="checkbox" defaultChecked className="custom-control-input" id="customCheckBox5"/>
                                             <label className="custom-control-label" htmlFor="customCheckBox5">I agree to &nbsp;
                                              <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop">Terms &amp; Conditions</NavLink></label>
                                     </div>

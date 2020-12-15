@@ -4,8 +4,8 @@
     font-size: 18px;
 }
 
-.btn-primary:hover{
-    background-color: $dark-grey;
+.btn-primary:hover:enabled {
+    background-color: $capital-red;
     outline: 0 !important;
     border-color: $capital-dark-red !important;
 }
@@ -14,7 +14,7 @@
     background-color: $capital-dark-red!important;
     border-color: $capital-dark-red !important;
     outline: 0 !important;
-    
+
 }
 
 .btn-primary:focus{

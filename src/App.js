@@ -6,11 +6,6 @@ import Header from './header';
 import Footer from './footer';
 import './sass/index.scss';
 
-
-
-
-
-
 function App() {
   return (
     <BrowserRouter basename={"/advisor"}>
