@@ -23,3 +23,27 @@
 .existingUser {
     height: 28px !important;
 }
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color:$white;
+}
+
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after{
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='red' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !important;
+    box-shadow: none;
+}
+
+.btn-primary:hover:enabled {
+    background-color: $capital-red !important;
+    outline: 0 !important;
+    border-color: $capital-dark-red !important;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #cdcece;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}

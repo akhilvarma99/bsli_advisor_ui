@@ -48,7 +48,7 @@ function Password() {
                                             <div className="form-group">
                                                 <br />
                                                 <label htmlFor="exampleInputEmail1">Password</label>
-                                                <input className="form-control shadow-sm" id="password-field" type="password" name="password" placeholder='********' />
+                                                <input className="form-control shadow-sm" id="password-field" type="password" name="password" placeholder='Enter your password' />
                                                 <span id="toggle-pwd" toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password" onClick={
                                                     () => {
 
@@ -80,8 +80,8 @@ function Password() {
                                                     san****ha@gmail.com
                                                 </div>
                                                 <br />
-                                                <label htmlFor="exampleInputEmail1">OTP</label>
-                                                <input type="email" className="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg :123456" />
+                                                <label htmlFor="exampleInputEmail1">Enter OTP</label>
+                                                <input type="email" className="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your OTP" />
                                                 <NavLink to="#" className="float-right link-underline" onClick={(e) => {
                                                     e.preventDefault();
                                                     setSendOTP(true);
@@ -97,20 +97,25 @@ function Password() {
                             <div className="row">
                                 <div className="col-md-12">
                                     <br />
-                                    <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" defaultChecked defaultValue id="defaultCheck1" />
-                                        <label className="form-check-label" htmlFor="defaultCheck1">
+                                    <div className="custom-control custom-checkbox check-box-row">
+                                    <input type="checkbox" defaultChecked className="custom-control-input" id="customCheckBox5"/>
+                                            <label className="custom-control-label" htmlFor="customCheckBox5">I agree to &nbsp;
+                                             <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop">Terms &amp; Conditions</NavLink></label>
+                                    </div>
+                                    {/* <div className="form-check custom-checkbox">
+                                        <input className="form-check-input custom-control-input" type="checkbox" defaultChecked defaultValue id="defaultCheck1" />
+                                        <label className="form-check-label custom-control-label" htmlFor="defaultCheck1">
                                             I agree to &nbsp;
                                              <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop">Terms &amp; Conditions</NavLink>
 
                                         </label>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             <br />
                             <div className="row">
                                 <div className="col-md-8 hide">
-                                    <NavLink to='/troubleLogin' className="float-left m-top-10">Having problem signing in?</NavLink>
+                                    <NavLink to='/troubleLogin' target = '_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
 
 
                                 </div>
@@ -118,7 +123,7 @@ function Password() {
                                     <NavLink to='/dashboard'><button type="button" className="btn btn-primary float-right">Login</button></NavLink>
                                 </div>
                                 <div className="col-md-8 show-xs">
-                                    <br />  <NavLink to='/troubleLogin' className="float-left m-top-10">Having problem signing in?</NavLink>
+                                    <br />  <NavLink to='/troubleLogin' target = '_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
                                 </div>
                             </div>
                         </div>
