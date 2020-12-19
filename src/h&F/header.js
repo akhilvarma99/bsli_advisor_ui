@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import abclogo2x from './assets/img/ABCLOGO_2x.png';
-import abgmobile2x from './assets/img/ABGBirla MOBILE2x.png';
-import logo from './assets/img/logo.png';
-import bigHome from './assets/img/big-home.svg';
-import bigPhone from './assets/img/big-phone.svg';
-import bigLogIn from './assets/img/big-log-in.svg';
-import phone from './assets/img/phone.svg';
-import home from './assets/img/home.svg'
+import abclogo2x from '../assets/img/ABCLOGO_2x.png';
+import abgmobile2x from '../assets/img/ABGBirla MOBILE2x.png';
+import logo from '../assets/img/logo.png';
+import bigHome from '../assets/img/big-home.svg';
+import bigPhone from '../assets/img/big-phone.svg';
+import bigLogIn from '../assets/img/big-log-in.svg';
+import phone from '../assets/img/phone.svg';
+import home from '../assets/img/home.svg'
 
 const loadProtectingMenu = (globalMenuSelected) => {
 
