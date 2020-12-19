@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import AESEncryption from './aes';
+import axios from 'axios';
+
 // import Popover from 'react-bootstrap/Popover';
 // import infoIcon from '../../assets/img/icons/info-icon.svg';
 // import Tooltip from 'react-bootstrap/Tooltip';
 // import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
 
-
-
 function Login(props) {
 
-
+    
     const [forgotmodal, setforgotmodal] = useState(false);
+    console.log(AESEncryption.encrypt('akhil'));
+
+   
+  
 
     // const [clickForgot, SetClickForgrot] = useState(false);
 

@@ -2,17 +2,16 @@
 import React from 'react';
 import Layout from './home/containers/layout';
 import { BrowserRouter } from 'react-router-dom';
-import Header from './header';
-import Footer from './footer';
+import Header from './h&F/header';
+import Footer from './h&F/footer';
 import './sass/index.scss';
 
 function App() {
   return (
     <BrowserRouter basename={"/advisor"}>
-      <div className="abc-container">
-        <Header />
-        <Layout />
-      </div>
+
+      <Header />
+      <Layout />
       <Footer />
     </BrowserRouter>
   );
