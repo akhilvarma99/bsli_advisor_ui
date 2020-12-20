@@ -2,38 +2,73 @@ import React, { useState,useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import AESEncryption from './aes';
 import axios from 'axios';
+import { useHistory } from "react-router-dom";
 
-// import Popover from 'react-bootstrap/Popover';
-// import infoIcon from '../../assets/img/icons/info-icon.svg';
-// import Tooltip from 'react-bootstrap/Tooltip';
-// import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
 
 function Login(props) {
 
-    
+    const history = useHistory();
     const [forgotmodal, setforgotmodal] = useState(false);
+    const [nextButton, setNextButton] = useState(false);
+    const [wrongUser, setWrongUser] = useState(false);
+    // const [activateNext,SetActivateNext] = useState(false);
     console.log(AESEncryption.encrypt('akhil'));
+    useEffect(() => {
+        // POST request using axios inside useEffect React hook
+        const headers = {
+           'checksum' : 'b4a465320696ab8119974e90f321bd7fe0a04a65',
+           'timestamp' : '1607326166'          };
+        const article = {
+            "mode": "LWUP",
+            "user_id": "ByNDZ4knI0NniQcjQ2eJJ5lWBDgQmVYEOBCZVgQ4EBBa5PeFgk25Fz7JB0lYRu4inHXmkfdeXAnNEgk1vTqCPr3NycuDJF34wL25lgGqS+I=",
+            "password": "ByNDZ4knI0NniQcjQ2eJJ5lWBDgQmVYEOBCZVgQ4EBAgZ1Cf/1PczoO5HNhtLcxVMabC7xwT/XUTcSbfhAGJIJOTkYyg86w+mS0KW8ACdgQ=",
+            "ip_address": "127.0.0.1",
+            "device_type": "app",
+            "device_os": "windows"
+        };
+        axios.post('http://localhost:4000/v1/auth/login', article, {headers})
+            .then(response => console.log(response));
+    
+    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+    }, []);
 
-   
-  
 
-    // const [clickForgot, SetClickForgrot] = useState(false);
-
-    const handleInput = () => {
-        const textElement = document.querySelector(".textBoxControl");
-        const buttonElement = document.querySelector('.checkNext')
-        if (textElement.value === '') {
-            textElement.style.border = '1px solid';
-            buttonElement.disabled = true;
-        }
-        else {
-            textElement.style.border = '1px #1f874c solid';
-            console.log(textElement.value);
-            buttonElement.disabled = false;
-        }
+    
+const handleInput = () => {
+    const textElement = document.querySelector(".textBoxControl");
+    const buttonElement = document.querySelector('.checkNext');
+    if (textElement.value.length === 5 || textElement.value.length === 8  ) {
+        textElement.style.border = '1px #1f874c solid';
+        console.log(textElement.value);
+        setNextButton(true);
+        textElement.addEventListener("keyup", function(event) { 
+            if (event.keyCode === 13) {
+              buttonElement.click();
+            }
+          });
     }
+    else {
+        textElement.style.border = '1px solid';
+        setNextButton(false);
+    }
+}
 
+
+
+const nextHandler = () => {
+    const textElement = document.querySelector(".textBoxControl");
+    if (textElement.value === 'akhil' || textElement.value === 'kamal') {
+        console.log('matches');
+        history.push('/password');
+    }
+    else {
+        console.log('no');
+        setWrongUser(true);
+        textElement.style.border = '1px solid red';
+        }     
+    }
+    
     return (
         <main role="main">
             <div className="container">
@@ -47,6 +82,7 @@ function Login(props) {
 
 
                                 <input type="email" className="form-control shadow-sm input-success textBoxControl" onChange={handleInput} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Eg :123456" />
+                                <span className = {wrongUser ? 'float-left text-danger' : 'noDisplay'}   >Please Enter the Correct User ID</span>
                                 {/* <span onClick={fnToggleLogin('forgotUserID')} className="float-right" data-toggle="modal" data-target="#forgot-userid" >Forgot User ID?</span> */}
                                 <NavLink to="#" onClick={(e) => {
                                     e.preventDefault();
@@ -62,7 +98,7 @@ function Login(props) {
 
                                 </div>
                                 <div className="col-md-4   ">
-                                    <NavLink to='/password'> <button type="button" disabled className="btn btn-primary float-right checkNext">Next</button></NavLink>
+                                     <button type="button" disabled = {!nextButton} onClick = {nextHandler}   className="btn btn-primary float-right checkNext">Next</button>
 
 
                                 </div>

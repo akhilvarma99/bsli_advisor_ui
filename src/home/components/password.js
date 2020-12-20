@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import arrow from '../../assets/img/icons/arrow.svg';
 import leftArrow from '../../assets/img/icons/left-arrow.svg';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+import {createHash} from 'crypto';
+import AESEncryption from './aes';
+
 
 
 
 
 function Password() {
+    console.log('called');
 
     const [forgotmodal, setForgotModal] = useState(false);
     const [loginPassword, setLoginPassword] = useState(true);
@@ -14,6 +19,51 @@ function Password() {
     const [TermsModal, HandleTerms] = useState(false);
     const [sendOTP, setSendOTP] = useState(false);
 
+    const mode = 'LWUP';
+    const user_id = AESEncryption.encrypt('IN002345');
+    const password = AESEncryption.encrypt('pass@123');
+    const timestamp = Date.now();
+
+    let data = `${mode}::${user_id}::${password}::${timestamp}`;;
+
+    let checksum = createHash('sha1').update(data).digest('hex');
+
+   
+
+    // axios.get('https://api.ipify.org')
+    // .then(response => console.log(response));
+
+
+    useEffect(() => {
+        // POST request using axios inside useEffect React hook
+
+        const headers = {
+           'checksum' : checksum,
+           'timestamp' : timestamp
+         };
+        const article = {
+            "mode": mode,
+            "user_id": user_id,
+            "password": password,
+            "ip_address": '127.0.0.1',
+            "device_type": "app",
+            "device_os": "windows"
+        };
+        axios.post('http://localhost:4000/v1/auth/login', article, {headers})
+            .then(response => {
+                if(response.data.userAuthResponse.isAuthorized){
+                    console.log(response.data);
+                    localStorage.setItem('access_token', response.data.tokens.access.token);
+                    localStorage.setItem('refresh_token', response.data.tokens.refresh.token);
+                    document.cookie = `access_token=${response.data.tokens.access.token};expires=${ response.data.tokens.access.expires};path=/advisor`;
+                    document.cookie = `refresh_token=${ response.data.tokens.refresh.token};expires=${ response.data.tokens.access.expires};path=/advisor`;
+                }
+            else {
+                return;
+            }});
+    
+    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+    }, [checksum,timestamp,user_id,password,mode]);
 
 
 
