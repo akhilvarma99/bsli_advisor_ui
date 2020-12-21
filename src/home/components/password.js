@@ -1,46 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import arrow from '../../assets/img/icons/arrow.svg';
 import leftArrow from '../../assets/img/icons/left-arrow.svg';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-import {createHash} from 'crypto';
+import { createHash } from 'crypto';
 import AESEncryption from './aes';
-
-
-
+import { useLocation } from "react-router-dom";
 
 
 function Password() {
-    console.log('called');
 
+    console.log('called');
+    const location = useLocation();
     const [forgotmodal, setForgotModal] = useState(false);
     const [loginPassword, setLoginPassword] = useState(true);
     const [loginOTP, setLoginOTP] = useState(false);
     const [TermsModal, HandleTerms] = useState(false);
     const [sendOTP, setSendOTP] = useState(false);
+    
 
-    const mode = 'LWUP';
-    const user_id = AESEncryption.encrypt('IN002345');
-    const password = AESEncryption.encrypt('pass@123');
-    const timestamp = Date.now();
+    const userID = location.state;
 
-    let data = `${mode}::${user_id}::${password}::${timestamp}`;;
-
-    let checksum = createHash('sha1').update(data).digest('hex');
-
-   
-
-    // axios.get('https://api.ipify.org')
-    // .then(response => console.log(response));
-
-
-    useEffect(() => {
-        // POST request using axios inside useEffect React hook
-
+    const handleLogin = () => {
+        const inputPassElement = document.querySelector('.pass-auth');
+        const mode = 'LWUP';
+        const user_id = AESEncryption.encrypt(userID);
+        const password = AESEncryption.encrypt(inputPassElement.value);
+        const timestamp = Date.now();
+        
+        console.log(userID + inputPassElement.value );
+    
+        let data = `${mode}::${user_id}::${password}::${timestamp}`;;
+    
+        let checksum = createHash('sha1').update(data).digest('hex');
+        
         const headers = {
-           'checksum' : checksum,
-           'timestamp' : timestamp
-         };
+            'checksum': checksum,
+            'timestamp': timestamp
+        };
         const article = {
             "mode": mode,
             "user_id": user_id,
@@ -49,21 +46,30 @@ function Password() {
             "device_type": "app",
             "device_os": "windows"
         };
-        axios.post('http://localhost:4000/v1/auth/login', article, {headers})
+        axios.post('http://localhost:4000/v1/auth/login', article, { headers })
             .then(response => {
-                if(response.data.userAuthResponse.isAuthorized){
-                    console.log(response.data);
-                    localStorage.setItem('access_token', response.data.tokens.access.token);
-                    localStorage.setItem('refresh_token', response.data.tokens.refresh.token);
-                    document.cookie = `access_token=${response.data.tokens.access.token};expires=${ response.data.tokens.access.expires};path=/advisor`;
-                    document.cookie = `refresh_token=${ response.data.tokens.refresh.token};expires=${ response.data.tokens.access.expires};path=/advisor`;
+
+                console.log(response);
+                    if(response.data.userAuthResponse.isAuthorized){
+                        console.log('local storage created' + response.data );
+                        localStorage.setItem('access_token', response.data.tokens.access.token);
+                        localStorage.setItem('refresh_token', response.data.tokens.refresh.token);
+                    } else {
+                        console.log('unAuthorized access');
+                    }
+            })
+            .catch(err => {
+                if (err.response) {
+                  console.log(err.response );
+                } else if (err.request) {
+                  console.log(err.request);
+                } else {
+                  console.log('Something Went Wrong!!');
                 }
-            else {
-                return;
-            }});
-    
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-    }, [checksum,timestamp,user_id,password,mode]);
+            })
+
+
+    }
 
 
 
@@ -74,12 +80,12 @@ function Password() {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="login-card shadow-sm">
-                            <span className="back-a"><NavLink to='/'><img className = 'backArrow' alt = 'backIcon' src = {leftArrow}/>Back</NavLink></span>
+                            <span className="back-a"><NavLink to='/'><img className='backArrow' alt='backIcon' src={leftArrow} />Back</NavLink></span>
                             <p className="h3 text-center">Welcome to Advisor Portal</p>
 
                             <div className="user-id-drop-div">
 
-                                <NavLink to='/users' >12345656</NavLink> <img src={arrow} alt='arrow_icon' />
+                                <NavLink to='/users' >{userID}</NavLink> <img src={arrow} alt='arrow_icon' />
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
@@ -98,7 +104,7 @@ function Password() {
                                             <div className="form-group">
                                                 <br />
                                                 <label htmlFor="exampleInputEmail1">Password</label>
-                                                <input className="form-control shadow-sm" id="password-field" type="password" name="password" placeholder='Enter your password' />
+                                                <input className="form-control shadow-sm pass-auth" id="password-field" type="password" name="password" placeholder='Enter your password' />
                                                 <span id="toggle-pwd" toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password" onClick={
                                                     () => {
 
@@ -135,7 +141,7 @@ function Password() {
                                                 <NavLink to="#" className="float-right link-underline" onClick={(e) => {
                                                     e.preventDefault();
                                                     setSendOTP(true);
-                                                }}>{sendOTP? 'Resend OTP' : 'Send OTP'}</NavLink>
+                                                }}>{sendOTP ? 'Resend OTP' : 'Send OTP'}</NavLink>
                                                 <label className="otp-expire-txt" style={sendOTP ? { display: 'block' } : { display: 'none' }}>Wait 60 seconds to regenerate </label>
 
 
@@ -148,8 +154,8 @@ function Password() {
                                 <div className="col-md-12">
                                     <br />
                                     <div className="custom-control custom-checkbox check-box-row">
-                                    <input type="checkbox" defaultChecked className="custom-control-input" id="customCheckBox5"/>
-                                            <label className="custom-control-label" htmlFor="customCheckBox5">I agree to &nbsp;
+                                        <input type="checkbox" defaultChecked className="custom-control-input" id="customCheckBox5" />
+                                        <label className="custom-control-label" htmlFor="customCheckBox5">I agree to &nbsp;
                                              <NavLink to='#' className="text-u" onClick={(e) => { e.preventDefault(); HandleTerms(true) }} data-toggle="modal" data-target="#staticBackdrop">Terms &amp; Conditions</NavLink></label>
                                     </div>
                                     {/* <div className="form-check custom-checkbox">
@@ -165,15 +171,15 @@ function Password() {
                             <br />
                             <div className="row">
                                 <div className="col-md-8 hide">
-                                    <NavLink to='/troubleLogin' target = '_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
+                                    <NavLink to='/troubleLogin' target='_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
 
 
                                 </div>
                                 <div className="col-md-4">
-                                    <NavLink to='/dashboard'><button type="button" className="btn btn-primary float-right">Login</button></NavLink>
+                                    <button type="button" onClick={handleLogin} className="btn btn-primary float-right">Login</button>
                                 </div>
                                 <div className="col-md-8 show-xs">
-                                    <br />  <NavLink to='/troubleLogin' target = '_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
+                                    <br />  <NavLink to='/troubleLogin' target='_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
                                 </div>
                             </div>
                         </div>

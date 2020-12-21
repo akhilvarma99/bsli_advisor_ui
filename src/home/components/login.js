@@ -1,7 +1,6 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import AESEncryption from './aes';
-import axios from 'axios';
 import { useHistory } from "react-router-dom";
 
 
@@ -14,31 +13,12 @@ function Login(props) {
     const [wrongUser, setWrongUser] = useState(false);
     // const [activateNext,SetActivateNext] = useState(false);
     console.log(AESEncryption.encrypt('akhil'));
-    useEffect(() => {
-        // POST request using axios inside useEffect React hook
-        const headers = {
-           'checksum' : 'b4a465320696ab8119974e90f321bd7fe0a04a65',
-           'timestamp' : '1607326166'          };
-        const article = {
-            "mode": "LWUP",
-            "user_id": "ByNDZ4knI0NniQcjQ2eJJ5lWBDgQmVYEOBCZVgQ4EBBa5PeFgk25Fz7JB0lYRu4inHXmkfdeXAnNEgk1vTqCPr3NycuDJF34wL25lgGqS+I=",
-            "password": "ByNDZ4knI0NniQcjQ2eJJ5lWBDgQmVYEOBCZVgQ4EBAgZ1Cf/1PczoO5HNhtLcxVMabC7xwT/XUTcSbfhAGJIJOTkYyg86w+mS0KW8ACdgQ=",
-            "ip_address": "127.0.0.1",
-            "device_type": "app",
-            "device_os": "windows"
-        };
-        axios.post('http://localhost:4000/v1/auth/login', article, {headers})
-            .then(response => console.log(response));
     
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-    }, []);
 
-
-    
 const handleInput = () => {
     const textElement = document.querySelector(".textBoxControl");
     const buttonElement = document.querySelector('.checkNext');
-    if (textElement.value.length === 5 || textElement.value.length === 8  ) {
+    if (textElement.value.length === 6 || textElement.value.length === 7  ) {
         textElement.style.border = '1px #1f874c solid';
         console.log(textElement.value);
         setNextButton(true);
@@ -58,9 +38,13 @@ const handleInput = () => {
 
 const nextHandler = () => {
     const textElement = document.querySelector(".textBoxControl");
-    if (textElement.value === 'akhil' || textElement.value === 'kamal') {
+    if (textElement.value.length === 6 ) {
         console.log('matches');
-        history.push('/password');
+        const userID = textElement.value;
+        history.push({
+            pathname: '/password',
+            state: userID
+          })
     }
     else {
         console.log('no');
