@@ -7,7 +7,7 @@ import bigHome from '../assets/img/big-home.svg';
 import bigPhone from '../assets/img/big-phone.svg';
 import bigLogIn from '../assets/img/big-log-in.svg';
 import phone from '../assets/img/phone.svg';
-import home from '../assets/img/home.svg'
+import user from '../assets/img/icons/user.svg';
 
 const loadProtectingMenu = (globalMenuSelected) => {
 
@@ -573,8 +573,8 @@ function Header() {
                             <li className="nav-item">
                                 <a className="nav-link menu_label menu_hover" href="https://www.adityabirlacapital.com"
                                     id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Home
-                                <img className="right-img" alt='home.svg' src={home} />
+                                    Login
+                                <img className="right-img" alt='home.svg' src={user} />
                                 </a>
                             </li>
 

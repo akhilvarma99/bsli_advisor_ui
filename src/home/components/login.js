@@ -1,6 +1,5 @@
 import React, { useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import AESEncryption from './aes';
 import { useHistory } from "react-router-dom";
 
 
@@ -12,7 +11,6 @@ function Login(props) {
     const [nextButton, setNextButton] = useState(false);
     const [wrongUser, setWrongUser] = useState(false);
     // const [activateNext,SetActivateNext] = useState(false);
-    console.log(AESEncryption.encrypt('akhil'));
     
 
 const handleInput = () => {

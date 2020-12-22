@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import arrow from '../../assets/img/icons/arrow.svg';
 import leftArrow from '../../assets/img/icons/left-arrow.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink,useLocation,useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { createHash } from 'crypto';
 import AESEncryption from './aes';
-import { useLocation } from "react-router-dom";
+import useLoader from '../../hooks/useLoader.js'
 
 
 function Password() {
-
+    const history =   useHistory()
     console.log('called');
     const location = useLocation();
     const [forgotmodal, setForgotModal] = useState(false);
@@ -17,11 +17,27 @@ function Password() {
     const [loginOTP, setLoginOTP] = useState(false);
     const [TermsModal, HandleTerms] = useState(false);
     const [sendOTP, setSendOTP] = useState(false);
+    const [loader, showLoader, hideLoader] = useLoader();
+    const [wrongPassword,handleWrongPassword] = useState(false);
+    const userID = location.state;
     
 
-    const userID = location.state;
+    useEffect(() => {
+
+        const inputPassElement = document.querySelector('.pass-auth');
+        const loginElement = document.querySelector('.login');
+        inputPassElement.addEventListener("keyup", function(event) { 
+            if (event.keyCode === 13) {
+                loginElement.click();
+            }
+          });
+        
+    }, [])
+    
+    // Api calling
 
     const handleLogin = () => {
+        showLoader();
         const inputPassElement = document.querySelector('.pass-auth');
         const mode = 'LWUP';
         const user_id = AESEncryption.encrypt(userID);
@@ -46,14 +62,24 @@ function Password() {
             "device_type": "app",
             "device_os": "windows"
         };
-        axios.post('http://localhost:4000/v1/auth/login', article, { headers })
+        axios.post('http://localhost:4000/v1/auth/login', article, { headers})
             .then(response => {
-
+                 hideLoader();
                 console.log(response);
                     if(response.data.userAuthResponse.isAuthorized){
-                        console.log('local storage created' + response.data );
-                        localStorage.setItem('access_token', response.data.tokens.access.token);
-                        localStorage.setItem('refresh_token', response.data.tokens.refresh.token);
+
+                        console.log(response.data.agentDetails["Message: "] );
+                        sessionStorage.setItem('access_token', response.data.tokens.access.token);
+                        sessionStorage.setItem('refresh_token', response.data.tokens.refresh.token);
+                      if (response.data.agentDetails["Message: "]){
+                        handleWrongPassword(true);
+                      } else {
+                               history.push({
+                              pathname: '/dashboard',
+                              response: response
+                            })
+                      }
+                             
                     } else {
                         console.log('unAuthorized access');
                     }
@@ -64,7 +90,7 @@ function Password() {
                 } else if (err.request) {
                   console.log(err.request);
                 } else {
-                  console.log('Something Went Wrong!!');
+                  console.log(err);
                 }
             })
 
@@ -121,6 +147,7 @@ function Password() {
                                                         }
                                                     }
                                                 }></span>
+                                               <span className = {wrongPassword ? 'float-left text-danger' : 'noDisplay'}   >Please Enter the Correct User ID</span>
                                                 <NavLink to='#' onClick={(e) => {
                                                     e.preventDefault();
                                                     setForgotModal(true);
@@ -176,7 +203,7 @@ function Password() {
 
                                 </div>
                                 <div className="col-md-4">
-                                    <button type="button" onClick={handleLogin} className="btn btn-primary float-right">Login</button>
+                                    <button type="button" onClick={handleLogin} className="btn btn-primary float-right login">Login</button>
                                 </div>
                                 <div className="col-md-8 show-xs">
                                     <br />  <NavLink to='/troubleLogin' target='_blank' className="float-left m-top-10">Having problem signing in?</NavLink>
@@ -241,6 +268,7 @@ function Password() {
                     </div>
                 </div>
             </div>
+            {loader}
         </main>
 
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route,Switch } from 'react-router-dom';
 import Login from './login';
 import Password from './password';
 import Users from './users';
@@ -11,13 +11,15 @@ import Dashboard from '../containers/dashboard';
 
 function Approuter() {
     return (
-        <div className='portal-wrapper'>
+        
+            <Switch>
             <Route exact path="/" component={Login} />
             <Route path="/password" component={Password} />
             <Route path="/users" component={Users} />
             <Route path='/troubleLogin' component={Trouble} />
             <Route path='/dashboard' component={Dashboard} />
-        </div>
+            </Switch>
+    
     )
 }
 

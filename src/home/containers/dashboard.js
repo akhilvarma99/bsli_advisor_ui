@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState,useEffect } from 'react';
+import { NavLink,useLocation } from 'react-router-dom';
 import WAicon from '../../assets/img/icons/whats-app.svg';
 
 
 
 function Dashboard() {
-
+    
+    const location = useLocation();
+    console.log(location.response);
     const [WAmodal, handleWAmodal] = useState(false);
 
+    useEffect(() => {
+         document.querySelector('.waButton').click();
+    }, [])
+
+    
     return (
         <div>
             <main role="main">
@@ -15,10 +22,11 @@ function Dashboard() {
                     <div className="row">
                         <div className="col-md-12 container-dummy text-center">
                             <br /><br /><br /><br /><br /><br />
-                            <NavLink to='#' className="text-center" onClick={(e) => {
-                                e.preventDefault();
+                            Welcome to Dashboard <br/>
+                           {location.response.data.agentDetails.Entity_1.first_name+ location.response.data.agentDetails.Entity_1.last_name} 
+                            <button hidden className="text-center waButton" onClick={(e) => {
                                 handleWAmodal(true);
-                            }} data-toggle="modal" data-target="#whatsapp">Click here to get Whats App Optin</NavLink>
+                            }} data-toggle="modal" data-target="#whatsapp">Whats App Optin</button>
                         </div>
                     </div>
                 </div>
@@ -41,16 +49,14 @@ function Dashboard() {
                                 <p className="font-size-18">Disclaimer text goes here <br /> You can opt-in/opt-out anytime inside your profile</p>
                                 <div className="form-check">
                                     <input className="form-check-input" type="checkbox" defaultValue id="defaultCheck1" />
-                                    <label className="form-check-label" htmlFor="defaultCheck1">
-                                        Don't show this message again
-            </label>
+                                    <label className="form-check-label" htmlFor="defaultCheck1">  Don't show this message again  </label>
                                 </div>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-outline-secondary" onClick={(e) => {
                                     e.preventDefault();
                                     handleWAmodal(false);
-                                }}>Not Now</button>
+                                }}data-dismiss="modal" >Not Now</button>
                                 <button type="button" className="btn btn-primary" onClick={(e) => {
                                     e.preventDefault();
                                     handleWAmodal(false);
@@ -65,4 +71,4 @@ function Dashboard() {
     )
 }
 
-export default Dashboard
+export default Dashboard;

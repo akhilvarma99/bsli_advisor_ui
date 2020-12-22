@@ -1,0 +1,18 @@
+<svg id="Log_In" data-name="Log In" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Login" d="M10.021,11.17C9.409,9.454,7.748,8.5,5.507,8.5c-2.17,0-3.794.892-4.451,2.506-.041.1-.255.262-.327.239l-.523-.164a.294.294,0,0,1-.2-.3c.784-2.158,2.856-3.342,5.5-3.342s4.728,1.191,5.508,3.357a.27.27,0,0,1-.165.3l-.559.174a.117.117,0,0,1-.036,0C10.172,11.269,10.038,11.216,10.021,11.17ZM2.32,3.188A3.187,3.187,0,1,1,5.507,6.375,3.188,3.188,0,0,1,2.32,3.188Z" transform="translate(0)"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_32px_Login" data-name="Icon/32px/Login">
+    <path id="Icon_BG" data-name="Icon BG" d="M0,0H17V17H0Z" fill="none"/>
+    <g id="Group_29" data-name="Group 29" transform="translate(2.992 2.656)">
+      <path id="Login-2" data-name="Login" d="M10.021,11.17C9.409,9.454,7.748,8.5,5.507,8.5c-2.17,0-3.794.892-4.451,2.506-.041.1-.255.262-.327.239l-.523-.164a.294.294,0,0,1-.2-.3c.784-2.158,2.856-3.342,5.5-3.342s4.728,1.191,5.508,3.357a.27.27,0,0,1-.165.3l-.559.174a.117.117,0,0,1-.036,0C10.172,11.269,10.038,11.216,10.021,11.17ZM2.32,3.188A3.187,3.187,0,1,1,5.507,6.375,3.188,3.188,0,0,1,2.32,3.188Z" transform="translate(0)"/>
+      <g id="Mask_Group_29" data-name="Mask Group 29" clip-path="url(#clip-path)">
+        <g id="Icon_Colour" data-name="Icon Colour" transform="translate(-2.992 -2.656)">
+          <path id="Rectangle_Copy" data-name="Rectangle Copy" d="M0,0H17V17H0Z" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
