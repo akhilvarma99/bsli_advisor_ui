@@ -17,31 +17,3 @@
 .form-group input{
     padding: 21px 15px!important;
 }
-
-.btn-primary{
-    background-color: $capital-red;
-    border: none;
-    font-size: 18px;
-}
-
-.btn-primary:hover{
-    background-color: $dark-grey;
-    border: none;
-    outline: 0 !important;
-}
-
-.btn-primary:active{
-    background-color: $dark-grey;
-    border: none;
-    outline: 0 !important;
-}
-
-.btn-primary:focus{
-    background-color: $dark-grey;
-    border: none;
-    outline: 0 !important;
-}
-
-.alert-secondary{
-    background-color: $l-grey;
-}

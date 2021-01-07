@@ -21,3 +21,9 @@
     box-shadow: $shadowValue;
     border-collapse: separate;
 }
+
+@mixin card_base {
+    background-color: $white;
+    padding: 22px;
+    border:1px #e1e2e2 solid;
+  }

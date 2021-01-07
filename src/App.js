@@ -1,20 +1,15 @@
-
-import React from 'react';
-import Layout from './home/containers/layout';
-import { BrowserRouter } from 'react-router-dom';
-import Header from './header';
-import Footer from './footer';
-import './sass/index.scss';
+import React from "react";
+import Layout from "./home/containers/layout";
+import { BrowserRouter, HashRouter } from "react-router-dom";
+import "./sass/index.scss";
 
 function App() {
   return (
-    <BrowserRouter basename={"/advisor"}>
+    <HashRouter basename={"."}>
       <div className="abc-container">
-        <Header />
         <Layout />
       </div>
-      <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

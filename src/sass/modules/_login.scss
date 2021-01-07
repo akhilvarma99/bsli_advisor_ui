@@ -3,8 +3,8 @@
     height:auto;
     background-color: $white;
     margin: auto;
-    margin-top: 34px;
-    margin-bottom: 52px;
+    margin-top: 70px;
+    margin-bottom: 70px;
     padding: 50px 30px;
     border-radius: 5px;
     position: relative;
@@ -27,7 +27,28 @@
         z-index: 10;
     }
     
-   
+    .w-50-p{
+        width: 50%;
+    }
+
+    .login-card{
+
+        .nav-tabs{
+            width: 100%;
+        }
+
+       
+
+    
+    }
+
+
+
+
+
+    .input-success{
+        border: 1px $accent-green solid;
+    }
     
     .nav-tabs{
         border-bottom: 0px solid $light-grey2;
@@ -87,7 +108,7 @@
     }
     .select-user-id{
         width: 100%;
-        background-color: rgba(205,206,206,0.11);            
+        background-color: $l-grey;            
         border-top: 1px $light-grey solid;
         border-bottom: 1px $light-grey solid;
         
@@ -120,10 +141,10 @@
 
     .otp-txt{
         font-size: 14px;
-        margin-top: 20px;
     }
     .otp-expire-txt{
         color: $accent-yellow;
+        
     }
     .field-icon {
         float: right;
@@ -170,6 +191,11 @@
 }
 
 
+.u-link{
+    text-decoration: underline !important;
+}
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -178,13 +204,25 @@
         height:auto;
         background-color: $white;
         margin: auto;
-        margin-top: 70px;
-        margin-bottom: 70px;
+        margin-top: 16px;
+        margin-bottom: 16px;
         padding: 50px 20px;
         border-radius: 5px;
         .h3{
             font-size: 24px;
             font-weight: 600;
         }
-    }      
+    }   
+    
+  
+
+
+
+
 }
+
+
+
+
+
+

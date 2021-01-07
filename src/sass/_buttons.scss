@@ -1,11 +1,14 @@
+
+
+
 .btn-primary{
     background-color: $capital-red;
     border: 0px !important;
     font-size: 18px;
 }
 
-.btn-primary:hover:enabled {
-    background-color: $capital-red;
+.btn-primary:hover{
+    background-color: $capital-red!important;
     outline: 0 !important;
     border-color: $capital-dark-red !important;
 }
@@ -14,7 +17,7 @@
     background-color: $capital-dark-red!important;
     border-color: $capital-dark-red !important;
     outline: 0 !important;
-
+    
 }
 
 .btn-primary:focus{
@@ -27,3 +30,76 @@
 .alert-secondary{
     background-color: $l-grey;
 }
+
+
+.btn-outline-s{
+    border: 1px $capital-red solid;
+    padding: 4px 10px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #c7222a;
+    border: 1px #c7222a solid;
+    margin-top: 3px;
+}
+
+.btn-outline-s:hover{
+    
+    background-color: $l-grey;
+    
+}
+
+.btn-outline-s-secondary{
+    border: 1px $capital-red solid;
+    padding: 4px 10px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #6c7174;
+    border: 1px #6c7174 solid;
+    margin-top: 3px;
+}
+
+
+.btn-primary-s{
+
+    border: 1px $capital-red solid;
+    padding: 4px 10px;
+    font-size: 15px;
+    background-color: $capital-red;
+    color: #fff;
+    margin-top: 3px;
+}
+
+.btn-primary-s:hover{
+
+    border: 1px $dark-red solid;
+    padding: 4px 10px;
+    font-size: 15px;
+    background-color: $dark-red;
+    color: #fff;
+    margin-top: 3px;
+}
+
+.btn-primary-s:active{
+box-shadow: none;
+}
+
+.btn-primary-s:focus{
+    box-shadow: none;
+    }
+    
+
+
+.disabled-btn{
+    background-color: #cdcdcece !important;
+    color: #6c7174 !important;
+    border: 1px #cdcece solid !important;
+}
+
+.disabled-btn:active{
+box-shadow: none !important;
+}
+
+.disabled-btn:focus{
+    box-shadow: none !important;
+    
+    }

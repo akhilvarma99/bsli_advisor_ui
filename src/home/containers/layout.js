@@ -1,14 +1,18 @@
-import React from 'react';
-import Approuter from '../components/approuter';
-import '../../assets/css/bootstrap.min.css';
-
+import React from "react";
+import Approuter from "../components/approuter";
+import "../../assets/css/vendor/bootstrap.min.css";
+import Header from "../../header";
+import Footer from "../../footer";
+import BlankHeader from "../../blankheader";
 
 function Layout() {
-    return (
-        <div>
-            <Approuter />
-        </div>
-    )
+  return (
+    <div>
+      <BlankHeader />
+      <Approuter />
+      <Footer />
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;

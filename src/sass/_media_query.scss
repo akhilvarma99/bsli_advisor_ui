@@ -6,6 +6,21 @@
     .show-xs{
         display: block;
     }
+
+
+    .login-card{
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .h-scroll-s {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -15,7 +30,14 @@
     }    
     .show-xs{
         display: none;
-    }    
+    }   
+    
+    .h-scroll-s {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -47,3 +69,6 @@
         display: none;
     }   
 }
+
+
+

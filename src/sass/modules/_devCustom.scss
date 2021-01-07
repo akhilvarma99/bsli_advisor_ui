@@ -1,49 +1,75 @@
 .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .link-underline:link {
-    text-decoration : underline;
+  text-decoration: underline;
 }
 
-
 .checkNext:disabled {
-    background-color : rgb(133, 133, 133);
+  background-color: rgb(133, 133, 133);
 }
 
 .modal {
-    top : 20% !important;
+  top: 20% !important;
 }
 
 .backArrow {
-    margin-right: 6px;
-    margin-top: -4px;
+  margin-right: 6px;
+  margin-top: -4px;
 }
 
 .existingUser {
-    height: 28px !important;
+  height: 28px !important;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-    background-color:$white;
+  background-color: $white;
 }
 
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::after{
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='red' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !important;
-    box-shadow: none;
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='red' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !important;
+  box-shadow: none;
 }
 
 .btn-primary:hover:enabled {
-    background-color: $capital-red !important;
-    outline: 0 !important;
-    border-color: $capital-dark-red !important;
+  background-color: $capital-red !important;
+  outline: 0 !important;
+  border-color: $capital-dark-red !important;
 }
 
 .form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #cdcece;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  color: #495057;
+  background-color: #fff;
+  border-color: #cdcece;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+.noDisplay {
+  display: none;
+}
+.fp-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f8f8f8ad;
+  .fp-loader {
+    left: 45%;
+    top: 50%;
+    z-index: 100;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fp-container {
+    .fp-loader {
+      left: 39%;
+    }
+  }
+}
+
+
