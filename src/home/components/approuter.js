@@ -18,10 +18,12 @@ import Querymanagementsystem from "./Querymanagementsystem";
 import Query_list from "./Query_list";
 import Raise_query from "./Raise_query";
 
+import Trouble from "./trouble";
 function Approuter() {
   return (
     <div className="portal-wrapper">
       <Route exact path="/" component={login} />
+      <Route path="/troubleLogin" component={Trouble} />
       <Route exact path="/CustomerList" component={CustomerList} />
       <Route exact path="/Allcustomers" component={Allcustomers} />
       <Route exact path="/Recommendations" component={Recommendations} />
