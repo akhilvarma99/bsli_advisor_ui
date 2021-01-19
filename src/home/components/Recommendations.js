@@ -434,50 +434,6 @@ function Recommendations() {
                           </div>
                         </div>
                       </div>
-                      <div className="row">
-                        <div className="col-lg-12 filter_sub_check_box_row">
-                          <h3>Product</h3>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox5"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox5"
-                            >
-                              Product Name 1
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox6"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox6"
-                            >
-                              Product Name 2
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox7"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox7"
-                            >
-                              Product Name 3
-                            </label>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                     <div className="filter-footer">
                       <div className="row">
@@ -546,6 +502,7 @@ function Recommendations() {
                               }}
                             >
                               <a
+                                href="#"
                                 className="nav-link active"
                                 id="home-tab"
                                 data-toggle="tab"
@@ -568,6 +525,7 @@ function Recommendations() {
                               }}
                             >
                               <a
+                                href="#"
                                 className="nav-link"
                                 id="profile-tab"
                                 data-toggle="tab"

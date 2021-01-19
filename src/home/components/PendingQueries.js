@@ -214,7 +214,7 @@ function PendingQueries() {
                                 aria-controls="all"
                                 aria-selected="true"
                               >
-                                Recent(last 3 days)
+                                Recent
                               </a>
                             </li>
                             <li className="nav-item w-50-p" role="presentation">
@@ -227,7 +227,7 @@ function PendingQueries() {
                                 aria-controls="active"
                                 aria-selected="false"
                               >
-                                Last Week(4-10 days)
+                                Last Week
                               </a>
                             </li>
                             <li className="nav-item w-50-p" role="presentation">
@@ -240,7 +240,7 @@ function PendingQueries() {
                                 aria-controls="fav"
                                 aria-selected="false"
                               >
-                                Older(Day11 + 30d)
+                                Older
                               </a>
                             </li>
                           </ul>
@@ -810,6 +810,7 @@ function PendingQueries() {
                                       Resend Payment Link
                                     </button>
                                   </div>
+                                  F\
                                 </div>
                               </div>
                               {/* Block */}

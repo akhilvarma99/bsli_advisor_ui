@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import login from '../components/login.js';
+import login from "../components/login.js";
 import CustomerList from "./CustomerList";
 import Allcustomers from "./Allcustomers";
 import Recommendations from "./Recommendations";
@@ -13,6 +13,11 @@ import Overdue from "./Overdue";
 import Customerdetails from "./Customerdetails";
 import PolicyDetails from "./Policydetails";
 import Customerdetailsaddfamily from "./Customerdetailsfamily";
+import Query_details from "./Query_details";
+import Querymanagementsystem from "./Querymanagementsystem";
+import Query_list from "./Query_list";
+import Raise_query from "./Raise_query";
+
 function Approuter() {
   return (
     <div className="portal-wrapper">
@@ -23,7 +28,6 @@ function Approuter() {
       <Route exact path="/PendingQueries" component={PendingQueries} />
       <Route exact path="/Payouts" component={Payouts} />
       <Route exact path="/Overdue" component={Overdue} />
-      <Route exact path="/BirthdayWishes" component={BirthdayWishes} />
       <Route exact path="/BirthdayWishes" component={BirthdayWishes} />
 
       <Route
@@ -39,6 +43,14 @@ function Approuter() {
         path="/customerdetailsfamily"
         component={Customerdetailsaddfamily}
       />
+      <Route exact path="/Query_details" component={Query_details} />
+      <Route
+        exact
+        path="/Querymanagementsystem"
+        component={Querymanagementsystem}
+      />
+      <Route exact path="/Query_list" component={Query_list} />
+      <Route exact path="/Raise_query" component={Raise_query} />
     </div>
   );
 }
