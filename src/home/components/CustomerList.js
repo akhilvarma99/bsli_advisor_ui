@@ -89,7 +89,7 @@ function CoustmerListingPage() {
                           color: "#000",
                         }}
                       >
-                        <li className="ative">
+                        <li>
                           <img src={user} alt="user" />
                           All Customers
                         </li>

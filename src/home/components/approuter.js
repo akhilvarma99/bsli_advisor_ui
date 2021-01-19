@@ -13,10 +13,12 @@ import Overdue from "./Overdue";
 import Customerdetails from "./Customerdetails";
 import PolicyDetails from "./Policydetails";
 import Customerdetailsaddfamily from "./Customerdetailsfamily";
+import Trouble from './trouble';
 function Approuter() {
   return (
     <div className="portal-wrapper">
       <Route exact path="/" component={login} />
+      <Route path='/troubleLogin' component={Trouble} />
       <Route exact path="/CustomerList" component={CustomerList} />
       <Route exact path="/Allcustomers" component={Allcustomers} />
       <Route exact path="/Recommendations" component={Recommendations} />

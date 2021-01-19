@@ -390,9 +390,7 @@ function Customerdetails() {
                                                 Send Wishes
                                               </button>
 
-                                              <button className="btn btn-outline-s">
-                                                Share
-                                              </button>
+                                             
                                             </div>
                                           </div>
                                         </div>
@@ -549,9 +547,7 @@ function Customerdetails() {
                                               <button className="btn btn-outline-s">
                                                 Send Remainder
                                               </button>
-                                              <button className="btn btn-outline-s">
-                                                Share
-                                              </button>
+                                              
                                             </div>
                                           </div>
                                         </div>
@@ -578,14 +574,14 @@ function Customerdetails() {
                                               />
                                             </div>
                                             <div className="col-10">
-                                              <input type="text" />
-                                              {/* <p>
+                                            
+                                               <p>
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  Plan Name |Policy Owner
+                                                  Policy Owner
                                                 </span>
-                                              </p> */}
+                                              </p> 
                                             </div>
                                           </div>
                                           <div className="row">
@@ -593,9 +589,7 @@ function Customerdetails() {
                                               <button className="btn btn-outline-s">
                                                 Add family tag
                                               </button>
-                                              <button className="btn btn-outline-s">
-                                                Tag Relation
-                                              </button>
+                                              
                                             </div>
                                           </div>
                                         </div>
@@ -1152,7 +1146,7 @@ function Customerdetails() {
                                 className="accordion-header"
                                 id="flush-headingOne"
                               >
-                                Policies Owned by Customer
+                                Policies Owned by Family
                               </h2>
                               <i className="arrow-up" />
                               <i className="arrow-down" />
@@ -1199,7 +1193,7 @@ function Customerdetails() {
                                 </div>
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
-                                    <h3>Tax Certificate</h3>
+                                    <h3>Policy Documents</h3>
                                   </div>
                                 </div>
                               </div>
@@ -1208,33 +1202,17 @@ function Customerdetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img src={sales} alt="sales" />
+                                    <img src={policycontract} alt="sales" />
                                   </div>
                                 </div>
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
-                                    <h3>Sales Illustration</h3>
+                                    <h3>Account Statement</h3>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
-                              <div className="state-box shadow-normal">
-                                <div className="row r1">
-                                  <div className="col-lg-12 text-center">
-                                    <img
-                                      src={policycontract}
-                                      alt="policycontract"
-                                    />
-                                  </div>
-                                </div>
-                                <div className="row r2">
-                                  <div className="col-lg-12 text-center">
-                                    <h3>Policy Contract</h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                        
                             <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
@@ -1301,7 +1279,7 @@ function Customerdetails() {
                               <div className="yellow-flag">
                                 <img src={yellowflag} alt="yellowflag" />
                               </div>
-                              <div className="today">Today</div>
+                              {/* <div className="today">Today</div> */}
                               <div className="row">
                                 <div className="col-lg-12">
                                   <h3>Upsell Opportunity</h3>
@@ -1317,7 +1295,8 @@ function Customerdetails() {
                                 </div>
                                 <div className="col-10">
                                   <p className="m-top-12">
-                                    Plan Name Goes here
+                                    PASA SUM Assured + Value
+                                
                                   </p>
                                 </div>
                               </div>
@@ -1335,7 +1314,7 @@ function Customerdetails() {
                               <div className="yellow-flag">
                                 <img src={yellowflag} alt="yellowflag" />
                               </div>
-                              <div className="today">Today</div>
+                              {/* <div className="today">Today</div> */}
                               <div className="row">
                                 <div className="col-lg-12">
                                   <h3>Set Up ECS</h3>
@@ -1352,7 +1331,7 @@ function Customerdetails() {
                               <div className="row">
                                 <div className="col-lg-12 text-right">
                                   <button className="btn btn-outline-s">
-                                    Send Register Request
+                                    Send Registration link
                                   </button>
                                 </div>
                               </div>

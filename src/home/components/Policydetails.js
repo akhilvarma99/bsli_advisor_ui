@@ -13,6 +13,9 @@ import sales from "../../assets/img/icons/sales.svg";
 import policycontract from "../../assets/img/icons/policy-contract.svg";
 import tdscertificate from "../../assets/img/icons/tds-certificate.svg";
 import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
+import policyid from "../../assets/img/icons/policy-id.svg";
+import gift from "../../assets/img/icons/gift.svg";
+
 function policydetails() {
   return (
     <div>
@@ -32,9 +35,7 @@ function policydetails() {
         {/* Bootstrap core CSS */}
         <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="./assets/css/custom/index.css" />
-        <header>
-          <div className="sample-header"></div>
-        </header>
+
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -248,6 +249,7 @@ function policydetails() {
                                 >
                                   <div className="accordion-body">
                                     <div className="row">
+                                     
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
                                           <div className="yellow-flag">
@@ -256,23 +258,27 @@ function policydetails() {
                                               alt="yellowflag"
                                             />
                                           </div>
-                                          <div className="today">Next Week</div>
+                                          <div className="today">overdue</div>
                                           <div className="row">
                                             <div className="col-lg-12">
-                                              <h3>Renewal Payment Due</h3>
+                                              <h3>Premium Due</h3>
                                             </div>
                                           </div>
-                                          <div className="row pad-10 d-flex align-items-center">
+                                          <div className="row pad-10">
                                             <div className="col-2">
-                                              <img src={dollar} alt="dollar" />
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
                                             </div>
-                                            <div className="col-10 pl-4">
-                                              <div>Policy ID</div>
-                                              <div className="d-flex align-items-center">
-                                                <span>27.11.1990</span>
-                                                <span className="dot" />
-                                                <span>Rs 1,00,000</span>
-                                              </div>
+                                            <div className="col-10">
+                                              <p>
+                                                Policy ID
+                                                <br />{" "}
+                                                <span>
+                                                  27.11.1990 | 1,50,000
+                                                </span>
+                                              </p>
                                             </div>
                                           </div>
                                           <div className="row">
@@ -280,6 +286,89 @@ function policydetails() {
                                               <button className="btn btn-outline-s">
                                                 Send Payment Link
                                               </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="smart-card shadow-normal">
+                                          <div className="yellow-flag">
+                                            <img
+                                              src={yellowflag}
+                                              alt="yellowflag"
+                                            />
+                                          </div>
+                                          <div className="today">Today</div>
+                                          <div className="row">
+                                            <div className="col-lg-12">
+                                              <h3>Payment Failures</h3>
+                                            </div>
+                                          </div>
+                                          <div className="row pad-10">
+                                            <div className="col-2">
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
+                                            </div>
+                                            <div className="col-10">
+                                              <p>
+                                                Policy ID
+                                                <br />{" "}
+                                                <span>
+                                                  27.11.1990 | Payment Mode
+                                                  |1,50,000
+                                                </span>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div className="row">
+                                            <div className="col-lg-12 text-right">
+                                              <button className="btn btn-outline-s">
+                                                Send Payment Link
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="smart-card shadow-normal">
+                                          <div className="yellow-flag">
+                                            <img
+                                              src={yellowflag}
+                                              alt="yellowflag"
+                                            />
+                                          </div>
+                                          <div className="today">Tomorrow</div>
+                                          <div className="row">
+                                            <div className="col-lg-12">
+                                              <h3>To be Matured</h3>
+                                            </div>
+                                          </div>
+                                          <div className="row pad-10">
+                                            <div className="col-2">
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
+                                            </div>
+                                            <div className="col-10">
+                                              <p>
+                                                Policy ID
+                                                <br />{" "}
+                                                <span>27.11.1990|1,50,000</span>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div className="row">
+                                            <div className="col-lg-12 text-right">
+                                              <button className="btn btn-outline-s">
+                                                Send Wishes
+                                              </button>
+
+
                                             </div>
                                           </div>
                                         </div>
@@ -295,26 +384,29 @@ function policydetails() {
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
-                                              <h3>Policy Matured Wishes</h3>
+                                              <h3>
+                                                To Be Terminated/Discontinued
+                                              </h3>
                                             </div>
                                           </div>
-                                          <div className="row pad-10 d-flex align-items-center">
+                                          <div className="row pad-10">
                                             <div className="col-2">
-                                              <img src={dollar} alt="dollar" />
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
                                             </div>
-                                            <div className="col-10 pl-4">
-                                              <div>Policy ID</div>
-                                              <div className="d-flex align-items-center">
-                                                <span>27.11.1990</span>
-                                                <span className="dot" />
-                                                <span>Rs 1,00,000</span>
-                                              </div>
+                                            <div className="col-10">
+                                              <p>
+                                                Policy ID
+                                                <br /> <span>27.11.1990</span>
+                                              </p>
                                             </div>
                                           </div>
                                           <div className="row">
                                             <div className="col-lg-12 text-right">
                                               <button className="btn btn-outline-s">
-                                                Send Payment Link
+                                                Contact Customer
                                               </button>
                                             </div>
                                           </div>
@@ -331,28 +423,109 @@ function policydetails() {
                                           <div className="today">Next Week</div>
                                           <div className="row">
                                             <div className="col-lg-12">
-                                              <h3>Policy To Be Lapsed</h3>
+                                              <h3>Paid Up Policies</h3>
                                             </div>
                                           </div>
-                                          <div className="row pad-10 d-flex align-items-center">
+                                          <div className="row pad-10">
                                             <div className="col-2">
-                                              <img src={dollar} alt="dollar" />
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
                                             </div>
-                                            <div className="col-10 pl-4">
-                                              {/* <p>Policy ID<br>   <span>Relation <span class="dot"></span> 27.11.1990</span></p> */}
-                                              <div>Policy ID</div>
-                                              <div className="d-flex align-items-center">
-                                                <span>27.11.1990</span>
-                                                <span className="dot" />
-                                                <span>Rs 1,00,000</span>
-                                              </div>
+                                            <div className="col-10">
+                                              <p>
+                                                Policy ID
+                                                <br /> <span>27.11.1990</span>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          {/* <div className="row">
+                                            <div className="col-lg-12 text-right">
+                                              <button className="btn btn-outline-s">
+                                                Send Payment Link
+                                              </button>
+                                            </div>
+                                          </div> */}
+                                        </div>
+                                      </div>
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="smart-card shadow-normal">
+                                          <div className="yellow-flag">
+                                            <img
+                                              src={yellowflag}
+                                              alt="yellowflag"
+                                            />
+                                          </div>
+                                          <div className="today">Today</div>
+                                          <div className="row">
+                                            <div className="col-lg-12">
+                                              <h3>Payouts Released</h3>
+                                            </div>
+                                          </div>
+                                          <div className="row pad-10">
+                                            <div className="col-2">
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
+                                            </div>
+                                            <div className="col-10">
+                                              <p>
+                                                Policy ID
+                                                <br /> <span>27.11.1990</span>
+                                              </p>
                                             </div>
                                           </div>
                                           <div className="row">
                                             <div className="col-lg-12 text-right">
                                               <button className="btn btn-outline-s">
-                                                Send Reminder
+                                                Send Wishes
                                               </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
+                                         
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="smart-card shadow-normal">
+                                          <div className="yellow-flag">
+                                            <img
+                                              src={yellowflag}
+                                              alt="yellowflag"
+                                            />
+                                          </div>
+
+                                          <div className="row">
+                                            <div className="col-lg-12">
+                                              <h3>Family Tagging</h3>
+                                            </div>
+                                          </div>
+                                          <div className="row pad-10">
+                                            <div className="col-2">
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
+                                            </div>
+                                            <div className="col-10">
+
+                                              <p>
+                                                Policy ID
+                                                <br />{" "}
+                                                <span>
+                                                  Policy Owner
+                                                </span>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <div className="row">
+                                            <div className="col-lg-12 text-right">
+                                              <button className="btn btn-outline-s">
+                                                Add family tag
+                                              </button>
+
                                             </div>
                                           </div>
                                         </div>
@@ -525,10 +698,18 @@ function policydetails() {
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Next Premium Due Date
+                                        Policy Id
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        1234567
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Policy Issue Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-Dec-2019
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
@@ -884,6 +1065,14 @@ function policydetails() {
                                         XXXXXX
                                       </div>
                                     </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Payment Mode
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        **************
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1124,12 +1313,40 @@ function policydetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
+                                    <img src={policycontract} alt="sales" />
+                                  </div>
+                                </div>
+                                <div className="row r2">
+                                  <div className="col-lg-12 text-center">
+                                    <h3>Policy Account Statement</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                              <div className="state-box shadow-normal">
+                                <div className="row r1">
+                                  <div className="col-lg-12 text-center">
                                     <img src={sales} alt="sales" />
                                   </div>
                                 </div>
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
                                     <h3>Sales Illustration</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                              <div className="state-box shadow-normal">
+                                <div className="row r1">
+                                  <div className="col-lg-12 text-center">
+                                    <img src={policycontract} alt="sales" />
+                                  </div>
+                                </div>
+                                <div className="row r2">
+                                  <div className="col-lg-12 text-center">
+                                    <h3>	Reinstatement Quotation</h3>
                                   </div>
                                 </div>
                               </div>
