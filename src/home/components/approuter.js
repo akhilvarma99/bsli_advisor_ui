@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import login from '../components/login.js';
+import login from "../components/login.js";
 import CustomerList from "./CustomerList";
 import Allcustomers from "./Allcustomers";
 import Recommendations from "./Recommendations";
@@ -13,12 +13,12 @@ import Overdue from "./Overdue";
 import Customerdetails from "./Customerdetails";
 import PolicyDetails from "./Policydetails";
 import Customerdetailsaddfamily from "./Customerdetailsfamily";
-import Trouble from './trouble';
+import Trouble from "./trouble";
 function Approuter() {
   return (
     <div className="portal-wrapper">
       <Route exact path="/" component={login} />
-      <Route path='/troubleLogin' component={Trouble} />
+      <Route path="/troubleLogin" component={Trouble} />
       <Route exact path="/CustomerList" component={CustomerList} />
       <Route exact path="/Allcustomers" component={Allcustomers} />
       <Route exact path="/Recommendations" component={Recommendations} />
