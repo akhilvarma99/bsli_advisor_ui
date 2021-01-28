@@ -1,12 +1,14 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbsArrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import starEmpty from "../../assets/img/icons/star-empty.svg";
 import user from "../../assets/img/icons/user.svg";
-import hand from "../../assets/img/icons/hand.svg";
-import wishlist from "../../assets/img/icons/wishlist.svg";
-import help from "../../assets/img/icons/help.svg";
-import invoice from "../../assets/img/icons/invoice.svg";
-import handshake from "../../assets/img/icons/hand-shake.svg";
+import hand from "../../assets/img/icons/hand_w.svg";
+import wishlist from "../../assets/img/icons/wishlist_w.svg";
+import help from "../../assets/img/icons/help_w.svg";
+import invoice from "../../assets/img/icons/invoice_w.svg";
+import load from "../../assets/img/icons/load-more.svg";
+
 import sort from "../../assets/img/icons/sort.svg";
 import { NavLink } from "react-router-dom";
 
@@ -14,25 +16,7 @@ function CoustmerListingPage() {
   return (
     <div>
       <div>
-        {/* Hello world */}
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content />
-        <meta
-          name="author"
-          content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-        />
-        <meta name="generator" content="Jekyll v4.1.1" />
-        <title>Dashboard</title>
-        {/* Bootstrap core CSS */}
-        <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/custom/index.css" />
-        <header>
-          <div className="sample-header"></div>
-        </header>
+        <Header />
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -80,7 +64,7 @@ function CoustmerListingPage() {
                 <div className="quikc-links-card">
                   <h2>Quick Links</h2>
                   <div className="quick-links-inner h-scroll-s">
-                    <ul className>
+                    <ul>
                       <NavLink
                         to="/Allcustomers"
                         style={{
@@ -90,7 +74,7 @@ function CoustmerListingPage() {
                         }}
                       >
                         <li>
-                          <img src={user} alt="user" />
+                          <img src={user} alt="user" className="userIcon" />
                           All Customers
                         </li>
                       </NavLink>
@@ -145,11 +129,11 @@ function CoustmerListingPage() {
                           <img src={invoice} alt="invoice" />
                           Payouts
                         </li>
+                        {/* <li>
+                          <img src={handshake} alt="handshake" />
+                          Business
+                        </li> */}
                       </NavLink>
-                      <li>
-                        <img src={handshake} alt="handshake" />
-                        New Business
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -236,17 +220,13 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
                                       Policy Details
-                                      <img src={sort} alt="sort" />
-                                      <br />
-                                      <span>Sorted by due date</span>
+                                      {/* <img src={sort} alt="sort" /> */}
+                                      {/* <span>Sorted by due date</span> */}
                                     </label>
                                   </div>
                                 </div>
@@ -286,7 +266,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -340,7 +320,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -394,7 +374,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -448,7 +428,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -501,7 +481,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -554,7 +534,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -579,6 +559,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -603,10 +584,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -653,7 +631,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -707,7 +685,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -761,7 +739,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -815,7 +793,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -868,7 +846,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -921,7 +899,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -946,6 +924,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -970,10 +949,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1020,7 +996,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1074,7 +1050,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1128,7 +1104,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1182,7 +1158,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1235,7 +1211,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1288,7 +1264,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1313,6 +1289,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1408,10 +1385,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1457,7 +1431,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1468,7 +1442,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s  disabled-btn"
                                     >
                                       Send Wishes
                                     </button>
@@ -1511,7 +1485,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1565,7 +1539,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1619,7 +1593,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1672,7 +1646,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1725,7 +1699,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1749,6 +1723,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1773,10 +1748,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1822,7 +1794,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1831,12 +1803,12 @@ function CoustmerListingPage() {
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -1875,22 +1847,22 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      Sanveetha &nbsp;|&nbsp; Mother
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -1930,21 +1902,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -1984,21 +1956,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2037,21 +2009,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2090,21 +2062,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2114,6 +2086,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -2138,10 +2111,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -2187,21 +2157,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2241,21 +2211,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2295,21 +2265,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2349,21 +2319,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2402,21 +2372,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2455,21 +2425,21 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Wishes
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </div>
                               </div>
@@ -2479,6 +2449,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -2492,11 +2463,6 @@ function CoustmerListingPage() {
                 </div>
               </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
           </div>
         </main>
       </div>

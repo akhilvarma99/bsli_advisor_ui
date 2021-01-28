@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import downloadexcel from "../../assets/img/icons/dlownload-excel.svg";
@@ -13,6 +14,7 @@ function Payouts() {
   return (
     <div>
       <div>
+        <Header />
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -142,41 +144,47 @@ function Payouts() {
                         <h3>Next Month</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox5"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox5"
+                          >
+                            Last 30 days
+                          </label>
+                        </div>
+                        <div className="custom-control custom-checkbox check-box-row">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox6"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="customCheckBox6"
                           >
                             Today
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox6"
-                          />
-                          <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox6"
-                          >
-                            Next Week
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox7"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox7"
                           >
-                            Next 30 Days
+                            Next 30 days
                           </label>
                         </div>
                       </div>
@@ -216,41 +224,47 @@ function Payouts() {
                         </h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox5"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox5"
                           >
-                            Today
+                            Last 30 days
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox6"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox6"
                           >
-                            Next Week
+                            This Week
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox7"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox7"
                           >
-                            Next 30 Days
+                            Next 30 days
                           </label>
                         </div>
                       </div>
@@ -721,7 +735,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -784,7 +798,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -847,7 +861,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -910,7 +924,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -973,7 +987,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1036,7 +1050,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1134,7 +1148,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1197,7 +1211,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1260,7 +1274,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1323,7 +1337,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1386,7 +1400,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1449,7 +1463,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1547,7 +1561,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1610,7 +1624,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1673,7 +1687,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1736,7 +1750,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1799,7 +1813,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1862,7 +1876,7 @@ function Payouts() {
                                   {/* Visible SM */}
                                   <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>

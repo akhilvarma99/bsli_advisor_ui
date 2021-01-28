@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import downloadexcel from "../../assets/img/icons/dlownload-excel.svg";
@@ -12,6 +13,7 @@ import sort from "../../assets/img/icons/sort.svg";
 function Allcustomers() {
   return (
     <div>
+      <Header />
       <div>
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
@@ -39,19 +41,8 @@ function Allcustomers() {
               <div className="col">
                 <h1 className="p-header">
                   <img src={backarrow} alt="backarrow" />
-                  All Customers
+                  All Customers(3456)
                 </h1>
-              </div>
-              <div className="col">
-                <ul className="download-report">
-                  <li>Export as:</li>
-                  <li>
-                    <img src={downloadexcel} alt="downloadexcel" />
-                  </li>
-                  <li>
-                    <img src={downloadpdf} alt="downloadpdf" />
-                  </li>
-                </ul>
               </div>
             </div>
             {/* Heading Ends  */}
@@ -137,17 +128,20 @@ function Allcustomers() {
                         </div>
                       </div>
                     </div>
+
                     <div className="row">
                       <div className="col-lg-12 filter_sub_check_box_row">
                         <h3>Premium Due Date (1)</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox5"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox5"
                           >
                             Today
@@ -155,12 +149,14 @@ function Allcustomers() {
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox6"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox6"
                           >
                             Next Week
@@ -168,12 +164,14 @@ function Allcustomers() {
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox7"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox7"
                           >
                             Next 30 Days
@@ -212,39 +210,45 @@ function Allcustomers() {
                         <h3>lapse date</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox5"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox8"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox5"
+                            className="form-check-label"
+                            htmlFor="customCheckBox8"
                           >
                             Today
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox6"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox10"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox6"
+                            className="form-check-label"
+                            htmlFor="customCheckBox10"
                           >
                             Next Week
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox7"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox5"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox7"
+                            className="form-check-label"
+                            htmlFor="customCheckBox5"
                           >
                             Next 30 Days
                           </label>
@@ -282,39 +286,45 @@ function Allcustomers() {
                         <h3>Mature date</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox5"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox11"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox5"
+                            className="form-check-label"
+                            htmlFor="customCheckBox11"
                           >
                             Today
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox6"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox13"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox6"
+                            className="form-check-label"
+                            htmlFor="customCheckBox13"
                           >
                             Next Week
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox7"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox5"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox7"
+                            className="form-check-label"
+                            htmlFor="customCheckBox5"
                           >
                             Next 30 Days
                           </label>
@@ -352,39 +362,45 @@ function Allcustomers() {
                         <h3>Paid up date</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox5"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox14"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox5"
+                            className="form-check-label"
+                            htmlFor="customCheckBox14"
                           >
                             Today
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox6"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox15"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox6"
+                            className="form-check-label"
+                            htmlFor="customCheckBox15"
                           >
                             Next Week
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox7"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox16"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox7"
+                            className="form-check-label"
+                            htmlFor="customCheckBox16"
                           >
                             Next 30 Days
                           </label>
@@ -422,41 +438,47 @@ function Allcustomers() {
                         <h3>Surrendered</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox5"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox17"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox5"
+                            className="form-check-label"
+                            htmlFor="customCheckBox17"
                           >
                             Today
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox6"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox18"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox6"
+                            className="form-check-label"
+                            htmlFor="customCheckBox18"
                           >
-                            Next Week
+                            Last Week
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox7"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox19"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox7"
+                            className="form-check-label"
+                            htmlFor="customCheckBox19"
                           >
-                            Next 30 Days
+                            Last 30 Days
                           </label>
                         </div>
                       </div>
@@ -492,41 +514,47 @@ function Allcustomers() {
                         <h3>terminated</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox5"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox20"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox5"
+                            className="form-check-label"
+                            htmlFor="customCheckBox20"
                           >
                             Today
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
                             id="customCheckBox6"
                           />
                           <label
-                            className="custom-control-label"
+                            className="form-check-label"
                             htmlFor="customCheckBox6"
                           >
-                            Next Week
+                            Last Week
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox7"
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox21"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox7"
+                            className="form-check-label"
+                            htmlFor="customCheckBox21"
                           >
-                            Next 30 Days
+                            Last 30 Days
                           </label>
                         </div>
                       </div>
@@ -595,7 +623,7 @@ function Allcustomers() {
                                   className="form-control data-search-box"
                                   id="search"
                                   aria-describedby="data-search"
-                                  placeholder="Search by customer name, policy no., PAN, Mobile No."
+                                  placeholder="Search by Customer Name, Policy No,Mobile No."
                                 />
                                 <button
                                   type="button"
@@ -1066,7 +1094,7 @@ function Allcustomers() {
                                   className="btn btn-primary"
                                 >
                                   <img src={load} alt="load" />
-                                  Load More
+                                  See More
                                 </button>
                               </div>
                             </div>
@@ -1479,7 +1507,7 @@ function Allcustomers() {
                                   className="btn btn-primary"
                                 >
                                   <img src={load} alt="load" />
-                                  Load More
+                                  See More
                                 </button>
                               </div>
                             </div>
@@ -1892,7 +1920,7 @@ function Allcustomers() {
                                   className="btn btn-primary"
                                 >
                                   <img src={load} alt="load" />
-                                  Load More
+                                  See More
                                 </button>
                               </div>
                             </div>
@@ -1910,13 +1938,7 @@ function Allcustomers() {
             </div>
           </div>
         </main>
-        {/* <footer class="text-muted">
-  <div class="sample-footer">
-              
-  </div>
-</footer> */}
       </div>
-      ); );
     </div>
   );
 }

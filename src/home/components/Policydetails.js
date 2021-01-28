@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbsarrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import yellowstarfilled from "../../assets/img/icons/yellow-star-filled.svg";
@@ -20,6 +21,7 @@ function policydetails() {
   return (
     <div>
       <div>
+        <Header />
         <meta charSet="utf-8" />
         <meta
           name="viewport"
@@ -117,7 +119,7 @@ function policydetails() {
                         </div>
                         <div className="col-6 mb-3">
                           <div className="dark-grey-text font18 line-ht-14">
-                            Premium Amount
+                            Premium Amount (with Taxes)
                           </div>
                           <div className="font20 line-ht-11">12,000.00</div>
                         </div>
@@ -125,7 +127,13 @@ function policydetails() {
                           <div className="dark-grey-text font18 line-ht-14">
                             Premium Due Date
                           </div>
-                          <div className="font20 line-ht-11">22/12/2020</div>
+                          <div className="font20 line-ht-11">20/Dec/2020</div>
+                        </div>
+                        <div className="col-6 mb-3">
+                          <div className="dark-grey-text font18 line-ht-14">
+                            Policy Status
+                          </div>
+                          <div className="font20 line-ht-11">Active</div>
                         </div>
                       </div>
                     </div>
@@ -249,7 +257,6 @@ function policydetails() {
                                 >
                                   <div className="accordion-body">
                                     <div className="row">
-                                     
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
                                           <div className="yellow-flag">
@@ -276,7 +283,7 @@ function policydetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  27.11.1990 | 1,50,000
+                                                  20/Dec/2020 | 1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -317,8 +324,7 @@ function policydetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  27.11.1990 | Payment Mode
-                                                  |1,50,000
+                                                  20/Dec/2020 | Cheque |1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -358,7 +364,9 @@ function policydetails() {
                                               <p>
                                                 Policy ID
                                                 <br />{" "}
-                                                <span>27.11.1990|1,50,000</span>
+                                                <span>
+                                                  20/Dec/2020|1,50,000
+                                                </span>
                                               </p>
                                             </div>
                                           </div>
@@ -367,8 +375,6 @@ function policydetails() {
                                               <button className="btn btn-outline-s">
                                                 Send Wishes
                                               </button>
-
-
                                             </div>
                                           </div>
                                         </div>
@@ -399,7 +405,7 @@ function policydetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>27.11.1990</span>
+                                                <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -436,7 +442,7 @@ function policydetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>27.11.1990</span>
+                                                <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -473,7 +479,7 @@ function policydetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>27.11.1990</span>
+                                                <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -486,50 +492,9 @@ function policydetails() {
                                           </div>
                                         </div>
                                       </div>
-                                      
-                                         
-                                      <div className="col-lg-4 col-md-6">
-                                        <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
-                                            <img
-                                              src={yellowflag}
-                                              alt="yellowflag"
-                                            />
-                                          </div>
 
-                                          <div className="row">
-                                            <div className="col-lg-12">
-                                              <h3>Family Tagging</h3>
-                                            </div>
-                                          </div>
-                                          <div className="row pad-10">
-                                            <div className="col-2">
-                                              <img
-                                                src={policyid}
-                                                alt="policyid"
-                                              />
-                                            </div>
-                                            <div className="col-10">
-
-                                              <p>
-                                                Policy ID
-                                                <br />{" "}
-                                                <span>
-                                                  Policy Owner
-                                                </span>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div className="row">
-                                            <div className="col-lg-12 text-right">
-                                              <button className="btn btn-outline-s">
-                                                Add family tag
-                                              </button>
-
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
+                                      {/* <div className="col-lg-4 col-md-6"> */}
+                                      {/* <div className="smart-card shadow-normal"></div> */}
                                     </div>
                                   </div>
                                 </div>
@@ -554,7 +519,7 @@ function policydetails() {
                                 </div>
                                 <div
                                   id="flush-collapseTwo"
-                                  className="accordion-collapse collapse show"
+                                  className="accordion-collapse collapse "
                                 >
                                   <div className="accordion-body">
                                     <div className="row">
@@ -709,7 +674,7 @@ function policydetails() {
                                         Policy Issue Date
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        28-Dec-2019
+                                        20/Dec/2020
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
@@ -1346,7 +1311,7 @@ function policydetails() {
                                 </div>
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
-                                    <h3>	Reinstatement Quotation</h3>
+                                    <h3> Reinstatement Quotation</h3>
                                   </div>
                                 </div>
                               </div>
@@ -1538,7 +1503,6 @@ function policydetails() {
   </div>
 </footer> */}
       </div>
-      ); );
     </div>
   );
 }
