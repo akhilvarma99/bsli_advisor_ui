@@ -23,7 +23,11 @@ function Customerdetails() {
       <div>
         <Header />
 
-        <main className="bg-white " role="main">
+        <main
+          className="bg-white "
+          role="main"
+          style={{ paddingBottom: "20px" }}
+        >
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
               <div className="row">
@@ -95,12 +99,12 @@ function Customerdetails() {
                       <h2>02</h2>
                     </div>
                   </div>
-                  <div className="col-6">
+                  {/* <div className="col-6">
                     <div className="card-div-lrge shadow-normal m-left-0">
                       <p>Premium Due</p>
                       <h2>01</h2>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
