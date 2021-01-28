@@ -219,7 +219,7 @@ function Renewalpaymentdue() {
                                 <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                   <label>
                                     Contact
-                                    <img src={sort} alt="sort" />
+                                    {/* <img src={sort} alt="sort" /> */}
                                   </label>
                                 </div>
                                 <div className="col-md-4">

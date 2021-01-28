@@ -678,7 +678,7 @@ function Recommendations() {
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>
                                       Contact
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-7">
@@ -1001,6 +1001,7 @@ function Recommendations() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1027,7 +1028,7 @@ function Recommendations() {
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>
                                       Contact
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-7">
@@ -1368,6 +1369,7 @@ function Recommendations() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1394,7 +1396,7 @@ function Recommendations() {
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>
                                       Contact
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-7">
@@ -1735,6 +1737,7 @@ function Recommendations() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1767,7 +1770,7 @@ function Recommendations() {
                                   <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <label>
                                       Contact
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-4">
@@ -2232,7 +2235,7 @@ function Recommendations() {
                             <div className="g-footer text-center">
                               <button type="button" className="btn btn-primary">
                                 <img src={load} alt="loadmore" />
-                                Load More
+                                See More
                               </button>
                             </div>
                           </div>
@@ -2260,7 +2263,7 @@ function Recommendations() {
                                   <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <label>
                                       Contact
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-4">
@@ -2772,7 +2775,7 @@ function Recommendations() {
                                   <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <label>
                                       Contact
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-4">
@@ -3225,7 +3228,7 @@ function Recommendations() {
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>
                                       Contact
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-7">
@@ -3566,6 +3569,7 @@ function Recommendations() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>

@@ -332,7 +332,7 @@ function Query_list() {
                                   <p>Customer</p>
                                 </div>
                                 <div className="col-md-3">
-                                  <p>DD/MM/YYYY 12:10 AM</p>
+                                  <p>DD/MMM/YYYY 12:10 AM</p>
                                 </div>
                                 <div className="col-md-2">
                                   <p>Tanmoy Misra</p>
@@ -372,7 +372,91 @@ function Query_list() {
                           role="tabpanel"
                           aria-labelledby="next-week"
                         >
-                          <h1>2</h1>
+                          <div
+                            className="tab-pane fade show active"
+                            id="today"
+                            role="tabpanel"
+                            aria-labelledby="today"
+                          >
+                            <div className="g-container">
+                              {/* Block */}
+                              <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <label>
+                                      Interaction ID
+                                      <img src={sort} alt="sort" />
+                                    </label>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <label>
+                                      Query Type
+                                      <img src={sort} alt="sort" />
+                                    </label>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <label>Raised By</label>
+                                  </div>
+                                  <div className="col-md-3">
+                                    <label>Created Date</label>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <label>Query For</label>
+                                  </div>
+                                  <div className="col-md-1">
+                                    <label>Status</label>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <p>12345678AB123456</p>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <p>Customer Servicing</p>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <p>Customer</p>
+                                  </div>
+                                  <div className="col-md-3">
+                                    <p>DD/MMM/YYYY 12:10 AM</p>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <p>Tanmoy Misra</p>
+                                  </div>
+                                  <div className="col-md-1">
+                                    <p>Pending</p>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <div className="g-footer text-center">
+                                <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  <img src={loadmore} />
+                                  See More
+                                </button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         {/* Next Week Content Ends Here */}
                         {/* Later Content Starts Here ----------------------------------------------------------------------------------------------*/}
@@ -382,7 +466,91 @@ function Query_list() {
                           role="tabpanel"
                           aria-labelledby="later"
                         >
-                          <h1>3</h1>
+                          <div
+                            className="tab-pane fade show active"
+                            id="today"
+                            role="tabpanel"
+                            aria-labelledby="today"
+                          >
+                            <div className="g-container">
+                              {/* Block */}
+                              <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <label>
+                                      Interaction ID
+                                      <img src={sort} alt="sort" />
+                                    </label>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <label>
+                                      Query Type
+                                      <img src={sort} alt="sort" />
+                                    </label>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <label>Raised By</label>
+                                  </div>
+                                  <div className="col-md-3">
+                                    <label>Created Date</label>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <label>Query For</label>
+                                  </div>
+                                  <div className="col-md-1">
+                                    <label>Status</label>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-md-2">
+                                    <p>12345678AB123456</p>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <p>Customer Servicing</p>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <p>Customer</p>
+                                  </div>
+                                  <div className="col-md-3">
+                                    <p>DD/MMM/YYYY 12:10 AM</p>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <p>Tanmoy Misra</p>
+                                  </div>
+                                  <div className="col-md-1">
+                                    <p>Pending</p>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <br />
+                              <div className="g-footer text-center">
+                                <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  <img src={loadmore} />
+                                  See More
+                                </button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         {/* Later Content Ends Here */}
                       </div>

@@ -536,43 +536,6 @@ function Customerdetails() {
                                           </div>
                                         </div>
                                       </div>
-                                      <div className="col-lg-4 col-md-6">
-                                        <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
-                                            <img
-                                              src={yellowflag}
-                                              alt="yellowflag"
-                                            />
-                                          </div>
-
-                                          <div className="row">
-                                            <div className="col-lg-12">
-                                              <h3>Family Tagging</h3>
-                                            </div>
-                                          </div>
-                                          <div className="row pad-10">
-                                            <div className="col-2">
-                                              <img
-                                                src={policyid}
-                                                alt="policyid"
-                                              />
-                                            </div>
-                                            <div className="col-10">
-                                              <p>
-                                                Policy ID
-                                                <br /> <span>Policy Owner</span>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div className="row">
-                                            <div className="col-lg-12 text-right">
-                                              <button className="btn btn-outline-s">
-                                                Add family tag
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -1173,7 +1136,7 @@ function Customerdetails() {
 
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
-                                    <h3>Policy Documents</h3>
+                                    <h3>Tax Certificate</h3>
                                   </div>
                                 </div>
                               </div>
@@ -1202,7 +1165,7 @@ function Customerdetails() {
                                 </div>
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
-                                    <h3>Account Statement</h3>
+                                    <h3>Policy Contract</h3>
                                   </div>
                                 </div>
                               </div>

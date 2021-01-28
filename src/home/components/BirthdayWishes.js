@@ -176,7 +176,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-2 col-md-3 text-right">
                                   <button
                                     type="button"
-                                    className="btn btn-outline-s"
+                                    className="btn btn-outline-s  disabled-btn"
                                   >
                                     Send Wishes
                                   </button>

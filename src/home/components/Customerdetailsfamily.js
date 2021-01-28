@@ -671,7 +671,7 @@ function customerdetailsaddfamily() {
                                               <p>
                                                 Next Premium Due Date
                                                 <br />
-                                                <span>DD/MM/YYYY</span>
+                                                <span>DD/MMM/YYYY</span>
                                               </p>
                                             </div>
                                             <div className="col-lg-3 col-md-3 col-sm-12">
@@ -684,7 +684,7 @@ function customerdetailsaddfamily() {
                                               <p>
                                                 Cease Date
                                                 <br />
-                                                <span>DD/MM/YYYY</span>
+                                                <span>DD/MMM/YYYY</span>
                                               </p>
                                             </div>
                                           </div>

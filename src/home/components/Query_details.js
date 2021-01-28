@@ -77,7 +77,9 @@ function Query_details() {
                     <div className="dark-grey-text font18 line-ht-14">
                       Created Date
                     </div>
-                    <div className="font20 line-ht-11">DD/MM/YYYY 12:10 AM</div>
+                    <div className="font20 line-ht-11">
+                      DD/MMM/YYYY 12:10 AM
+                    </div>
                   </div>
                 </div>
                 <div className="qd-detail-block col-md-4">
@@ -353,7 +355,7 @@ function Query_details() {
                                 Resolution Date
                               </label>
                               <div className="font18 line-ht-11">
-                                DD/MM/YYYY
+                                DD/MMM/YYYY
                               </div>
                             </div>
                             <div>
