@@ -119,7 +119,7 @@ function policydetails() {
                         </div>
                         <div className="col-6 mb-3">
                           <div className="dark-grey-text font18 line-ht-14">
-                            Premium Amount
+                            Premium Amount (with Taxes)
                           </div>
                           <div className="font20 line-ht-11">12,000.00</div>
                         </div>
@@ -128,6 +128,12 @@ function policydetails() {
                             Premium Due Date
                           </div>
                           <div className="font20 line-ht-11">20/Dec/2020</div>
+                        </div>
+                        <div className="col-6 mb-3">
+                          <div className="dark-grey-text font18 line-ht-14">
+                            Policy Status
+                          </div>
+                          <div className="font20 line-ht-11">Active</div>
                         </div>
                       </div>
                     </div>
@@ -318,8 +324,7 @@ function policydetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  20/Dec/2020 | Payment Mode
-                                                  |1,50,000
+                                                  20/Dec/2020 | Cheque |1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -514,7 +519,7 @@ function policydetails() {
                                 </div>
                                 <div
                                   id="flush-collapseTwo"
-                                  className="accordion-collapse collapse show"
+                                  className="accordion-collapse collapse "
                                 >
                                   <div className="accordion-body">
                                     <div className="row">

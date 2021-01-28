@@ -228,11 +228,12 @@ function Customerdetails() {
                                               alt="yellowflag"
                                             />
                                           </div>
-                                          <div className="today">Today</div>
+
                                           <div className="row">
                                             <div className="col-lg-12">
                                               <h3>Birthday</h3>
                                             </div>
+                                            <div className="today">Today</div>
                                           </div>
                                           <div className="row pad-10">
                                             <div className="col-2">
@@ -324,8 +325,7 @@ function Customerdetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  20/Dec/2020 | Payment Mode
-                                                  |1,50,000
+                                                  20/Dec/2020 | Cheque |1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -560,7 +560,7 @@ function Customerdetails() {
                                 </div>
                                 <div
                                   id="flush-collapseTwo"
-                                  className="accordion-collapse collapse show"
+                                  className="accordion-collapse collapse"
                                 >
                                   <div className="accordion-body">
                                     <div className="row">
