@@ -91,7 +91,7 @@ function Customerdetails() {
                 <div className="row">
                   <div className="col-6">
                     <div className="card-div-lrge shadow-normal m-left-0">
-                      <p>Total no. of policy</p>
+                      <p>Total Active Policies</p>
                       <h2>02</h2>
                     </div>
                   </div>

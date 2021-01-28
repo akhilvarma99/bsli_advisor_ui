@@ -652,7 +652,7 @@ function Renewalpaymentdue() {
                             <div className="g-footer text-center">
                               <button type="button" className="btn btn-primary">
                                 <img src={loadmore} alt="loadmore" />
-                                Load More
+                                See More
                               </button>
                             </div>
                           </div>

@@ -225,9 +225,8 @@ function CoustmerListingPage() {
                                   <div className="col-md-7">
                                     <label>
                                       Policy Details
-                                      <img src={sort} alt="sort" />
-                                      <br />
-                                      <span>Sorted by due date</span>
+                                      {/* <img src={sort} alt="sort" /> */}
+                                      {/* <span>Sorted by due date</span> */}
                                     </label>
                                   </div>
                                 </div>
