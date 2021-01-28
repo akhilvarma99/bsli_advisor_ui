@@ -626,6 +626,7 @@ function Customerdetails() {
                                                       <img
                                                         src={greentick}
                                                         alt="greentick"
+                                                        className="greentick"
                                                       />{" "}
                                                       &nbsp; Activated
                                                     </p>

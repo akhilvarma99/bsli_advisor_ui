@@ -170,7 +170,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-3 text-right">
@@ -222,7 +226,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-3 text-right">
@@ -274,7 +282,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-3 text-right">
@@ -326,7 +338,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-3 text-right">
@@ -377,7 +393,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-3 text-right">
@@ -428,7 +448,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-3 text-right">
@@ -521,7 +545,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-1 col-md-3 text-right">
@@ -573,7 +601,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -625,7 +657,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -677,7 +713,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -728,7 +768,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -779,7 +823,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -872,7 +920,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -924,7 +976,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -976,7 +1032,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -1028,7 +1088,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -1079,7 +1143,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
@@ -1130,7 +1198,11 @@ function BirthdayWishes() {
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
                                   <p>
-                                    <img src={starEmpty} alt="starEmpty" />
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
                                   </p>
                                 </div>
                                 {/* <div className="col-lg-2 col-md-3 text-right">
