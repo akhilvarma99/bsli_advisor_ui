@@ -1938,11 +1938,6 @@ function Allcustomers() {
             </div>
           </div>
         </main>
-        {/* <footer class="text-muted">
-  <div class="sample-footer">
-              
-  </div>
-</footer> */}
       </div>
     </div>
   );
