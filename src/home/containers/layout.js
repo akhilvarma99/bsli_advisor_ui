@@ -8,7 +8,6 @@ import BlankHeader from "../../blankheader";
 function Layout() {
   return (
     <div>
-      <BlankHeader />
       <Approuter />
       <Footer />
     </div>

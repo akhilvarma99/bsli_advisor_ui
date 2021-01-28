@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import searchbox from "../../assets/img/icons/search-bx.svg";
@@ -9,6 +10,7 @@ import loadmore from "../../assets/img/icons/load-more.svg";
 function Renewalpaymentdue() {
   return (
     <div>
+      <Header />
       <main className="bg-white " role="main">
         <div className="breadcrubs-div shadow-sm">
           <div className="container">
@@ -57,7 +59,7 @@ function Renewalpaymentdue() {
                   <div className="filter-body-inner">
                     <div className="row">
                       <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>Billing Method (1)</h3>
+                        <h3>Billing Method</h3>
                         <div className="custom-control custom-checkbox check-box-row">
                           <input
                             type="checkbox"
@@ -82,50 +84,6 @@ function Renewalpaymentdue() {
                             htmlFor="customCheckBox2"
                           >
                             ECS
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>Payment Failure</h3>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox3"
-                          />
-                          <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox3"
-                          >
-                            All
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox4"
-                          />
-                          <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox4"
-                          >
-                            Stale Cheque
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            type="checkbox"
-                            className="custom-control-input"
-                            id="customCheckBox5"
-                          />
-                          <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox5"
-                          >
-                            Transaction Failure
                           </label>
                         </div>
                       </div>
@@ -261,7 +219,7 @@ function Renewalpaymentdue() {
                                 <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                   <label>
                                     Contact
-                                    <img src={sort} alt="sort" />
+                                    {/* <img src={sort} alt="sort" /> */}
                                   </label>
                                 </div>
                                 <div className="col-md-4">
@@ -310,7 +268,7 @@ function Renewalpaymentdue() {
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-4 col-md-4">
                                   <p>
-                                    129129229 &nbsp;|&nbsp; 28/12/2020
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
@@ -369,7 +327,7 @@ function Renewalpaymentdue() {
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-4 col-md-4">
                                   <p>
-                                    129129229 &nbsp;|&nbsp; 28/12/2020
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
@@ -428,7 +386,7 @@ function Renewalpaymentdue() {
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-4 col-md-4">
                                   <p>
-                                    129129229 &nbsp;|&nbsp; 28/12/2020
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
@@ -487,7 +445,7 @@ function Renewalpaymentdue() {
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-4 col-md-4">
                                   <p>
-                                    129129229 &nbsp;|&nbsp; 28/12/2020
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
@@ -546,7 +504,7 @@ function Renewalpaymentdue() {
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-4 col-md-4">
                                   <p>
-                                    129129229 &nbsp;|&nbsp; 28/12/2020
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
@@ -605,7 +563,7 @@ function Renewalpaymentdue() {
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-4 col-md-4">
                                   <p>
-                                    129129229 &nbsp;|&nbsp; 28/12/2020
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
@@ -664,7 +622,7 @@ function Renewalpaymentdue() {
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-4 col-md-4">
                                   <p>
-                                    129129229 &nbsp;|&nbsp; 28/12/2020
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
@@ -694,7 +652,7 @@ function Renewalpaymentdue() {
                             <div className="g-footer text-center">
                               <button type="button" className="btn btn-primary">
                                 <img src={loadmore} alt="loadmore" />
-                                Load More
+                                See More
                               </button>
                             </div>
                           </div>
@@ -745,9 +703,6 @@ function Renewalpaymentdue() {
           </div>
         </div>
       </main>
-      <footer className="text-muted">
-        <div className="sample-footer"></div>
-      </footer>
     </div>
   );
 }
