@@ -1,7 +1,6 @@
 import react from "react";
 import abclogo2x from "./assets/img/images/ABCLOGO_2x.png";
 
-
 function BlankHeader() {
   return (
     <header>

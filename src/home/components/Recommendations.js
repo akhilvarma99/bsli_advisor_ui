@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import downloadexcel from "../../assets/img/icons/dlownload-excel.svg";
@@ -47,6 +48,7 @@ function Recommendations() {
   return (
     <div>
       <div>
+        <Header />
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -298,12 +300,14 @@ function Recommendations() {
                           <h3>PASA</h3>
                           <div className="custom-control custom-checkbox check-box-row">
                             <input
-                              type="checkbox"
-                              className="custom-control-input"
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="Mature"
                               id="customCheckBox5"
                             />
                             <label
-                              className="custom-control-label"
+                              className="form-check-label"
                               htmlFor="customCheckBox5"
                             >
                               Today
@@ -311,12 +315,14 @@ function Recommendations() {
                           </div>
                           <div className="custom-control custom-checkbox check-box-row">
                             <input
-                              type="checkbox"
-                              className="custom-control-input"
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="Mature"
                               id="customCheckBox6"
                             />
                             <label
-                              className="custom-control-label"
+                              className="form-check-label"
                               htmlFor="customCheckBox6"
                             >
                               Next Week
@@ -324,12 +330,14 @@ function Recommendations() {
                           </div>
                           <div className="custom-control custom-checkbox check-box-row">
                             <input
-                              type="checkbox"
-                              className="custom-control-input"
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="Mature"
                               id="customCheckBox7"
                             />
                             <label
-                              className="custom-control-label"
+                              className="form-check-label"
                               htmlFor="customCheckBox7"
                             >
                               Next 30 Days
@@ -369,12 +377,14 @@ function Recommendations() {
                           <h3>Hot Leads</h3>
                           <div className="custom-control custom-checkbox check-box-row">
                             <input
-                              type="checkbox"
-                              className="custom-control-input"
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="Mature"
                               id="customCheckBox5"
                             />
                             <label
-                              className="custom-control-label"
+                              className="form-check-label"
                               htmlFor="customCheckBox5"
                             >
                               High
@@ -382,12 +392,14 @@ function Recommendations() {
                           </div>
                           <div className="custom-control custom-checkbox check-box-row">
                             <input
-                              type="checkbox"
-                              className="custom-control-input"
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="Mature"
                               id="customCheckBox6"
                             />
                             <label
-                              className="custom-control-label"
+                              className="form-check-label"
                               htmlFor="customCheckBox6"
                             >
                               Medium
@@ -395,19 +407,23 @@ function Recommendations() {
                           </div>
                           <div className="custom-control custom-checkbox check-box-row">
                             <input
-                              type="checkbox"
-                              className="custom-control-input"
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="Mature"
                               id="customCheckBox7"
                             />
                             <label
-                              className="custom-control-label"
+                              className="form-check-label"
                               htmlFor="customCheckBox7"
                             >
                               Low
                             </label>
                           </div>
                         </div>
-                        <div className="col-lg-6">
+
+                        {/* <div className="col-lg-6"> 
+                        
                           <span>from Date</span>
                           <div className="date-box">
                             <img src={dateicon} alt="dateicon" />
@@ -432,25 +448,120 @@ function Recommendations() {
                               placeholder="dd/mm/yyyy"
                             />
                           </div>
+                        </div>*/}
+                      </div>
+
+                      <div className="row">
+                        <div className="col-lg-12 filter_sub_check_box_row">
+                          <h3>PASA AVAILABLE</h3>
+                          <div className="custom-control custom-checkbox check-box-row">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="Mature"
+                              id="customCheckBox5"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="customCheckBox5"
+                            >
+                              Today
+                            </label>
+                          </div>
+                        </div>
+                        <div className="custom-control custom-checkbox check-box-row">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox6"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="customCheckBox6"
+                          >
+                            Next Week
+                          </label>
+                        </div>
+                        <div className="custom-control custom-checkbox check-box-row">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="retentionRadio"
+                            value="Mature"
+                            id="customCheckBox7"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="customCheckBox7"
+                          >
+                            Next 30 Days
+                          </label>
                         </div>
                       </div>
                     </div>
-                    <div className="filter-footer">
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <button
-                            type="button"
-                            className="btn btn-outline-s-secondary"
+                    <div className="row">
+                      <div className="col-lg-12 filter_sub_check_box_row">
+                        <h3>Recommended Product</h3>
+                        <div className="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            className="custom-control-input"
+                            id="customCheckBox5"
+                          />
+                          <label
+                            className="custom-control-label"
+                            htmlFor="customCheckBox5"
                           >
-                            Reset
-                          </button>{" "}
-                          <button
-                            type="button"
-                            className="btn btn-primary-s mrgn-0"
-                          >
-                            Apply
-                          </button>
+                            Product 1
+                          </label>
                         </div>
+                        <div className="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            className="custom-control-input"
+                            id="customCheckBox6"
+                          />
+                          <label
+                            className="custom-control-label"
+                            htmlFor="customCheckBox6"
+                          >
+                            Product 2
+                          </label>
+                        </div>
+                        <div className="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            className="custom-control-input"
+                            id="customCheckBox7"
+                          />
+                          <label
+                            className="custom-control-label"
+                            htmlFor="customCheckBox7"
+                          >
+                            Product 3
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="filter-footer">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <button
+                          type="button"
+                          className="btn btn-outline-s-secondary"
+                        >
+                          Reset
+                        </button>{" "}
+                        <button
+                          type="button"
+                          className="btn btn-primary-s mrgn-0"
+                        >
+                          Apply
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -963,7 +1074,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1017,7 +1128,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1071,7 +1182,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1125,7 +1236,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1178,7 +1289,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1231,7 +1342,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1330,7 +1441,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1384,7 +1495,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1438,7 +1549,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1492,7 +1603,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1545,7 +1656,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1598,7 +1709,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1704,7 +1815,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1724,12 +1835,12 @@ function Recommendations() {
                                         </p>
                                       </div>
                                       <div className="col-lg-10 col-md-3 text-right">
-                                        <button
+                                        {/* <button
                                           type="button"
                                           className="btn btn-outline-s disabled-btn"
                                         >
                                           Send Congratulations
-                                        </button>
+                                        </button> */}
                                       </div>
                                     </div>
                                   </div>
@@ -1770,7 +1881,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1790,12 +1901,12 @@ function Recommendations() {
                                         </p>
                                       </div>
                                       <div className="col-lg-10 col-md-3 text-right">
-                                        <button
+                                        {/* <button
                                           type="button"
                                           className="btn btn-outline-s disabled-btn"
                                         >
                                           Send Congratulations
-                                        </button>
+                                        </button> */}
                                       </div>
                                     </div>
                                   </div>
@@ -1836,7 +1947,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1856,12 +1967,12 @@ function Recommendations() {
                                         </p>
                                       </div>
                                       <div className="col-lg-10 col-md-3 text-right">
-                                        <button
+                                        {/* <button
                                           type="button"
                                           className="btn btn-outline-s"
                                         >
                                           Send Congratulations
-                                        </button>
+                                        </button> */}
                                       </div>
                                     </div>
                                   </div>
@@ -1902,7 +2013,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1921,1574 +2032,1462 @@ function Recommendations() {
                                           />
                                         </p>
                                       </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <div className="col-lg-10 col-md-3 text-right">
                                         <button
                                           type="button"
                                           className="btn btn-outline-s"
                                         >
                                           Send Congratulations
-                                        </button>
-                                      </div>
+                                        </button> */}
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-4">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-4">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-5">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-5">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary"
-                                >
-                                  <img src={load} alt="loadmore" />
-                                  Load More
-                                </button>
                               </div>
                             </div>
-                          </div>
-
-                          <div
-                            className={
-                              paidUp
-                                ? "tab-pane fade active show"
-                                : "tab-pane fade"
-                            }
-                            id="paidup"
-                            role="tabpanel"
-                            aria-labelledby="next-week"
-                          >
-                            <div className="g-container">
-                              {/* Block */}
-                              <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
-                                <div className="row">
-                                  <div className="col-md-3">
-                                    <label>
-                                      name
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-4">F</div>
+                                    <label>Fohn Crockett</label>
                                   </div>
-                                  <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                  <div className="col-md-4">
-                                    <label>
-                                      Date of PPT ending/Premium
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                  <div className="col-lg-3 pad-0">
-                                    <label>Next Best Offer</label>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-4">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-4">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
                                     <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-4">
+                                          F
+                                        </div>
                                       </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s disabled-btn"
-                                        >
-                                          Send Congratulations
-                                        </button>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-1">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-1">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s disabled-btn"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
                                 </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-2">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
                                     </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-2">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
                                           type="button"
                                           className="btn btn-outline-s"
                                         >
                                           Send Congratulations
-                                        </button>
-                                      </div>
+                                        </button> */}
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-3">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-3">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-4">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-4">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-5">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-5">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary"
-                                >
-                                  <img src={load} alt="loadmore" />
-                                  Load More
-                                </button>
                               </div>
                             </div>
-                          </div>
-
-                          <div
-                            className={
-                              std
-                                ? "tab-pane fade active show"
-                                : "tab-pane fade"
-                            }
-                            id="surrendered"
-                            role="tabpanel"
-                            aria-labelledby="next-week"
-                          >
-                            <div className="g-container">
-                              {/* Block */}
-                              <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
-                                <div className="row">
-                                  <div className="col-md-3">
-                                    <label>
-                                      name
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-5">F</div>
+                                    <label>Fohn Crockett</label>
                                   </div>
-                                  <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                  <div className="col-md-4">
-                                    <label>
-                                      Termination/Surrender/discontinuance
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                  <div className="col-lg-3 pad-0">
-                                    <label>Decision Support System</label>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-4">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-4">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-
-                                  <div className="col-lg-3 col-md-3">
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
                                     <div className="row">
-                                      <div className="col-lg-10 col-md-3 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-5">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-1">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
                                     </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-1">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-10 col-md-3 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-2">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-2">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-10 col-md-3 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-3">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-3">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-10 col-md-3 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-4">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-4">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-10 col-md-3 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-5">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-5">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-10 col-md-3 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */} {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br />
-                                            9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-10 col-md-3 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary"
-                                >
-                                  <img src={load} alt="loadmore" />
-                                  Load More
-                                </button>
                               </div>
                             </div>
-                          </div>
-
-                          <div
-                            className="tab-pane fade"
-                            id="ff"
-                            role="tabpanel"
-                            aria-labelledby="later"
-                          >
-                            <div className="g-container">
-                              {/* Block */}
-                              <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
-                                <div className="row">
-                                  <div className="col-md-3">
-                                    <label>
-                                      matured content
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-6">F</div>
+                                    <label>Fohn Crockett</label>
                                   </div>
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                  <div className="col-md-7">
-                                    <label>
-                                      Policy Details
-                                      <img src={sort} alt="sort" />
-                                      <br />
-                                      <span>Sorted by due date</span>
-                                    </label>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-6">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-1">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
                                     </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-1">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
                                     </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center">
-                                    <p>
-                                      <img src={starEmpty} alt="starempty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s disabled-btn"
-                                    >
-                                      Premium Already Paid
-                                    </button>
                                   </div>
                                 </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-2">
-                                        E
-                                      </div>
-                                      <label>Elisha McFadden</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-2">
-                                            E
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Elisha McFadden
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center">
-                                    <p>
-                                      <img src={starEmpty} alt="starempty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Reminder
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-3">
-                                        A
-                                      </div>
-                                      <label>Abel Cunningham</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-3">
-                                            A
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Abel Cunningham
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center">
-                                    <p>
-                                      <img src={starEmpty} alt="starempty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right indication-span">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Resend Payment Link
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-4">
-                                        R
-                                      </div>
-                                      <label>Richard Nichol</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-4">
-                                            R
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Richard Nichol
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center">
-                                    <p>
-                                      <img src={starEmpty} alt="starempty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Payment Link
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-5">
-                                        D
-                                      </div>
-                                      <label>Degory Kirk</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-5">
-                                            D
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Degory Kirk <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center">
-                                    <p>
-                                      <img src={starEmpty} alt="starempty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Payment Link
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center">
-                                    <p>
-                                      <img src={starEmpty} alt="starempty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Payment Link
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary"
-                                >
-                                  See More
-                                </button>
                               </div>
                             </div>
+                            {/* Block */}
+                            <div className="g-footer text-center">
+                              <button type="button" className="btn btn-primary">
+                                <img src={load} alt="loadmore" />
+                                Load More
+                              </button>
+                            </div>
                           </div>
-                          {/* Fav Content Ends Here */}
                         </div>
+
+                        <div
+                          className={
+                            paidUp
+                              ? "tab-pane fade active show"
+                              : "tab-pane fade"
+                          }
+                          id="paidup"
+                          role="tabpanel"
+                          aria-labelledby="next-week"
+                        >
+                          <div className="g-container">
+                            {/* Block */}
+                            <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                              <div className="row">
+                                <div className="col-md-3">
+                                  <label>
+                                    name
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <label>
+                                    Contact
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-md-4">
+                                  <label>
+                                    Date of PPT ending/Premium
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-lg-3 pad-0">
+                                  <label>Next Best Offer</label>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-4">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-4">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s disabled-btn"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-1">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-1">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s disabled-btn"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-2">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-2">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-3">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-3">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-4">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-4">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-5">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-5">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-6">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-6">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-2 col-md-1 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                    <div className="col-lg-10 col-md-3 text-right">
+                                      {/* <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Send Congratulations
+                                        </button> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            <div className="g-footer text-center">
+                              <button type="button" className="btn btn-primary">
+                                <img src={load} alt="loadmore" />
+                                Load More
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          className={
+                            std ? "tab-pane fade active show" : "tab-pane fade"
+                          }
+                          id="surrendered"
+                          role="tabpanel"
+                          aria-labelledby="next-week"
+                        >
+                          <div className="g-container">
+                            {/* Block */}
+                            <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                              <div className="row">
+                                <div className="col-md-3">
+                                  <label>
+                                    name
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <label>
+                                    Contact
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-md-4">
+                                  <label>
+                                    Termination/Surrender/discontinuance
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-lg-3 pad-0">
+                                  <label>Decision Support System</label>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-4">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-4">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-10 col-md-3 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-1">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-1">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-10 col-md-3 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-2">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-2">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-10 col-md-3 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-3">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-3">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-10 col-md-3 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-4">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-4">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-10 col-md-3 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-5">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-5">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-10 col-md-3 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */} {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-6">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-6">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br />
+                                          9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-4 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <p className="float-left">
+                                    PASA/Product Name
+                                  </p>
+                                </div>
+                                <div className="col-lg-3 col-md-3">
+                                  <div className="row">
+                                    <div className="col-lg-10 col-md-3 text-center">
+                                      <p>
+                                        <img src={starempty} alt="starempty" />
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            <div className="g-footer text-center">
+                              <button type="button" className="btn btn-primary">
+                                <img src={load} alt="loadmore" />
+                                Load More
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          className="tab-pane fade"
+                          id="ff"
+                          role="tabpanel"
+                          aria-labelledby="later"
+                        >
+                          <div className="g-container">
+                            {/* Block */}
+                            <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                              <div className="row">
+                                <div className="col-md-3">
+                                  <label>
+                                    matured content
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <label>
+                                    Contact
+                                    <img src={sort} alt="sort" />
+                                  </label>
+                                </div>
+                                <div className="col-md-7">
+                                  <label>
+                                    Policy Details
+                                    <img src={sort} alt="sort" />
+                                    <br />
+                                    <span>Sorted by due date</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-1">F</div>
+                                    <label>Fohn Crockett</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-1">
+                                          F
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Fohn Crockett
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starEmpty} alt="starempty" />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s disabled-btn"
+                                  >
+                                    Premium Already Paid
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-2">E</div>
+                                    <label>Elisha McFadden</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-2">
+                                          E
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Elisha McFadden
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starEmpty} alt="starempty" />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Reminder
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-3">A</div>
+                                    <label>Abel Cunningham</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-3">
+                                          A
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Abel Cunningham
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starEmpty} alt="starempty" />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right indication-span">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Resend Payment Link
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-4">R</div>
+                                    <label>Richard Nichol</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-4">
+                                          R
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Richard Nichol
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starEmpty} alt="starempty" />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Payment Link
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-5">D</div>
+                                    <label>Degory Kirk</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-5">
+                                          D
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Degory Kirk <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starEmpty} alt="starempty" />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Payment Link
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            {/* Block */}
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-6">C</div>
+                                    <label>Clement Ebaugh</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-6">
+                                          C
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Clement Ebaugh <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                    &nbsp;|&nbsp; 1,50,000.00
+                                  </p>
+                                </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starEmpty} alt="starempty" />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Payment Link
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            {/* Block */}
+                            <div className="g-footer text-center">
+                              <button type="button" className="btn btn-primary">
+                                See More
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        {/* Fav Content Ends Here */}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-3"></div>
-            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-3"></div>
           </div>
         </main>
       </div>

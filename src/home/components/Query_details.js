@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbsarrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import yellowflag from "../../assets/img/icons/yellow-flag.svg";
@@ -7,24 +8,7 @@ function Query_details() {
   return (
     <div>
       <div>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content />
-        <meta
-          name="author"
-          content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-        />
-        <meta name="generator" content="Jekyll v4.1.1" />
-        <title>Query Details</title>
-        {/* Bootstrap core CSS */}
-        <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/custom/index.css" />
-        <header>
-          <div className="sample-header"></div>
-        </header>
+        <Header />
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm d-none d-lg-block d-md-block  d-sm-none">
             <div className="container">
@@ -35,7 +19,7 @@ function Query_details() {
                     <li>
                       <img src={breadcrumbsarrow} alt="breadcrumbsarrow" />
                     </li>
-                    <li className>Query Management System</li>
+                    <li>Query Management System</li>
                     <li>
                       <img src={breadcrumbsarrow} alt="breadcrumbsarrow" />
                     </li>
@@ -525,11 +509,7 @@ function Query_details() {
             </div>
           </div>
         </main>
-        <footer className="text-muted">
-          <div className="sample-footer"></div>
-        </footer>
       </div>
-      );
     </div>
   );
 }

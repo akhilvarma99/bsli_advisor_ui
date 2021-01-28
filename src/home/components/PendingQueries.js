@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import downloadexcel from "../../assets/img/icons/dlownload-excel.svg";
@@ -15,6 +16,7 @@ function PendingQueries() {
   return (
     <div>
       <div>
+        <Header />
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -25,7 +27,7 @@ function PendingQueries() {
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
-                    <li>Customer List</li>
+                    <li>Customer list</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
@@ -270,10 +272,7 @@ function PendingQueries() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -318,7 +317,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -330,9 +329,9 @@ function PendingQueries() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s disabled-btn"
+                                      className="btn btn-outline-s "
                                     >
-                                      Premium Already Paid
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -372,7 +371,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -386,7 +385,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Reminder
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -426,7 +425,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -440,7 +439,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Resend Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -480,7 +479,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -494,7 +493,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -533,7 +532,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -547,7 +546,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -586,7 +585,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -600,7 +599,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -611,6 +610,7 @@ function PendingQueries() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -635,10 +635,7 @@ function PendingQueries() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -685,7 +682,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -697,9 +694,9 @@ function PendingQueries() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s disabled-btn"
+                                      className="btn btn-outline-s "
                                     >
-                                      Premium Already Paid
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -739,7 +736,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -753,7 +750,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Reminder
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -793,7 +790,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -807,10 +804,10 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Resend Payment Link
+                                      View details
                                     </button>
                                   </div>
-                                  F\
+                                  F
                                 </div>
                               </div>
                               {/* Block */}
@@ -848,7 +845,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -862,7 +859,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -901,7 +898,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -915,7 +912,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -954,7 +951,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -968,7 +965,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -979,6 +976,7 @@ function PendingQueries() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1003,10 +1001,7 @@ function PendingQueries() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1053,7 +1048,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1065,9 +1060,9 @@ function PendingQueries() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s disabled-btn"
+                                      className="btn btn-outline-s"
                                     >
-                                      Premium Already Paid
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1107,7 +1102,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1121,7 +1116,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Reminder
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1161,7 +1156,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1175,11 +1170,8 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Resend Payment Link
+                                      View details
                                     </button>
-                                    <div>
-                                      <span>Payment link sent already</span>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1218,7 +1210,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1232,7 +1224,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1271,7 +1263,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1285,7 +1277,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1324,7 +1316,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1338,7 +1330,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1349,6 +1341,7 @@ function PendingQueries() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1373,10 +1366,7 @@ function PendingQueries() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1423,7 +1413,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1437,7 +1427,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s disabled-btn"
                                     >
-                                      Premium Already Paid
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1477,7 +1467,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1491,7 +1481,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Reminder
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1531,7 +1521,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1545,11 +1535,8 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Resend Payment Link
+                                      View details
                                     </button>
-                                    <div>
-                                      <span>Payment link sent already</span>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1588,7 +1575,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1602,7 +1589,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1641,7 +1628,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1655,7 +1642,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1694,7 +1681,7 @@ function PendingQueries() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1708,7 +1695,7 @@ function PendingQueries() {
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
+                                      View details
                                     </button>
                                   </div>
                                 </div>
@@ -1719,6 +1706,7 @@ function PendingQueries() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>

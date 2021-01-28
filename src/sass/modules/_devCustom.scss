@@ -72,4 +72,44 @@
   }
 }
 
+// variable declarations
+$header-pink: #da9089;
+$brown-header: #6a4742;
+$clr-white: #ffffff;
+$media-lg: 768px;
 
+/* input[type="radio"]:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+
+input[type="radio"]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: $advising;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid grey;
+} */
+input[type="radio"]:after {
+  background-color: #d1d3d1;
+}
+
+input[type="radio"]:checked:after {
+  color: #dc3545;
+}

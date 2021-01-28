@@ -34,7 +34,7 @@ function Approuter() {
 
       <Route
         exact
-        path="/Allcustomersnotfound"
+        path="/Allcustomersresultnotfound"
         component={Allcustomersresultnotfound}
       />
       <Route exact path="/Renewalpaymentdue" component={Renewalpaymentdue} />

@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import filter from "../../assets/img/icons/filter.svg";
@@ -8,24 +9,7 @@ import loadmore from "../../assets/img/icons/load-more.svg";
 function Query_list() {
   return (
     <div>
-      <meta charSet="utf-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-      <meta name="description" content />
-      <meta
-        name="author"
-        content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-      />
-      <meta name="generator" content="Jekyll v4.1.1" />
-      <title>Customer List All</title>
-      {/* Bootstrap core CSS */}
-      <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-      <link rel="stylesheet" href="./assets/css/custom/index.css" />
-      <header>
-        <div className="sample-header"></div>
-      </header>
+      <Header />
       <main className="bg-white " role="main">
         <div className="breadcrubs-div shadow-sm">
           <div className="container">
@@ -40,7 +24,7 @@ function Query_list() {
                   <li>
                     <img src={breadcrumbs} alt="breadcrumbs" />
                   </li>
-                  <li className="active-li">Renewal Payment Due</li>
+                  <li className="active-li">Query Management System</li>
                 </ul>
               </div>
             </div>
@@ -375,7 +359,7 @@ function Query_list() {
                             <div className="g-footer text-center">
                               <button type="button" className="btn btn-primary">
                                 <img src={loadmore} />
-                                Load More
+                                See More
                               </button>
                             </div>
                           </div>
@@ -430,9 +414,6 @@ function Query_list() {
           <br />
         </div>
       </main>
-      <footer className="text-muted">
-        <div className="sample-footer"></div>
-      </footer>
     </div>
   );
 }

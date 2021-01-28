@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import downloadxcel from "../../assets/img/icons/dlownload-excel.svg";
@@ -12,6 +13,8 @@ import zoom from "../../assets/img/icons/zoom.svg";
 function Allcustomersresultnotfound() {
   return (
     <div>
+      <Header />
+
       <main className="bg-white " role="main">
         <div className="breadcrubs-div shadow-sm">
           <div className="container">
@@ -141,12 +144,14 @@ function Allcustomersresultnotfound() {
                       <h3>Premium Due Date (1)</h3>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox5"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox5"
                         >
                           Today
@@ -154,12 +159,14 @@ function Allcustomersresultnotfound() {
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox6"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox6"
                         >
                           Next Week
@@ -167,15 +174,17 @@ function Allcustomersresultnotfound() {
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox7"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox7"
                         >
-                          Next 30 Days
+                          Next 30 days
                         </label>
                       </div>
                     </div>
@@ -211,12 +220,14 @@ function Allcustomersresultnotfound() {
                       <h3>lapse date</h3>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox5"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox5"
                         >
                           Today
@@ -224,12 +235,14 @@ function Allcustomersresultnotfound() {
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox6"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox6"
                         >
                           Next Week
@@ -237,16 +250,18 @@ function Allcustomersresultnotfound() {
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox7"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox7"
                         >
-                          Next 30 Days
-                        </label>
+                          30 days
+                        </label>{" "}
                       </div>
                     </div>
                     <div className="col-lg-6">
@@ -281,41 +296,47 @@ function Allcustomersresultnotfound() {
                       <h3>Mature date</h3>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox5"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox5"
                         >
-                          Today
+                          Last 30 days
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox6"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox6"
                         >
-                          Next Week
+                          This Week
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox7"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox7"
                         >
-                          Next 30 Days
+                          Next 30 days
                         </label>
                       </div>
                     </div>
@@ -351,41 +372,47 @@ function Allcustomersresultnotfound() {
                       <h3>Paid up date</h3>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox5"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox5"
                         >
-                          Today
+                          Last 30 days
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox6"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox6"
                         >
-                          Next Week
+                          This Week
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox7"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox7"
                         >
-                          Next 30 Days
+                          Next 30 days
                         </label>
                       </div>
                     </div>
@@ -421,41 +448,47 @@ function Allcustomersresultnotfound() {
                       <h3>Surrendered</h3>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox5"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox5"
                         >
-                          Today
+                          Last 30 days
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
-                          id="customCheckBox6"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
+                          id="customCheckBox5"
                         />
                         <label
-                          className="custom-control-label"
-                          htmlFor="customCheckBox6"
+                          className="form-check-label"
+                          htmlFor="customCheckBox5"
                         >
-                          Next Week
+                          This Week
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox7"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox7"
                         >
-                          Next 30 Days
+                          Next 30 days
                         </label>
                       </div>
                     </div>
@@ -491,41 +524,47 @@ function Allcustomersresultnotfound() {
                       <h3>terminated</h3>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox5"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox5"
                         >
-                          Today
+                          Last 30 days
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox6"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox6"
                         >
-                          Next Week
+                          This Week
                         </label>
                       </div>
                       <div className="custom-control custom-checkbox check-box-row">
                         <input
-                          type="checkbox"
-                          className="custom-control-input"
+                          className="form-check-input"
+                          type="radio"
+                          name="retentionRadio"
+                          value="Mature"
                           id="customCheckBox7"
                         />
                         <label
-                          className="custom-control-label"
+                          className="form-check-label"
                           htmlFor="customCheckBox7"
                         >
-                          Next 30 Days
+                          Next 30 days
                         </label>
                       </div>
                     </div>
@@ -698,7 +737,25 @@ function Allcustomersresultnotfound() {
                           role="tabpanel"
                           aria-labelledby="next-week"
                         >
-                          <h1>2</h1>
+                          <div className="g-header d-none d-lg-block d-md-block d-sm-none d-xs-none ">
+                            <div className="row">
+                              <div className="col-lg-5 col-md-4">
+                                <label>
+                                  name
+                                  <img src={sort} alt="sort" />
+                                </label>
+                              </div>
+                              <div className="col-lg-7 col-md-6">
+                                <label>Contact</label>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Block */}
+                          <div className="search-empty-state">
+                            <img src={zoom} alt="zoom" />
+                            <h3>Search result not found</h3>
+                          </div>
+                          <div className="g-footer text-center"></div>
                         </div>
                         {/* Active Week Content Ends Here */}
                         {/* Fav Content Starts Here ----------------------------------------------------------------------------------------------*/}
@@ -708,7 +765,25 @@ function Allcustomersresultnotfound() {
                           role="tabpanel"
                           aria-labelledby="later"
                         >
-                          <h1>3</h1>
+                          <div className="g-header d-none d-lg-block d-md-block d-sm-none d-xs-none ">
+                            <div className="row">
+                              <div className="col-lg-5 col-md-4">
+                                <label>
+                                  name
+                                  <img src={sort} alt="sort" />
+                                </label>
+                              </div>
+                              <div className="col-lg-7 col-md-6">
+                                <label>Contact</label>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Block */}
+                          <div className="search-empty-state">
+                            <img src={zoom} alt="zoom" />
+                            <h3>Search result not found</h3>
+                          </div>
+                          <div className="g-footer text-center"></div>
                         </div>
                         {/* Fav Content Ends Here */}
                       </div>

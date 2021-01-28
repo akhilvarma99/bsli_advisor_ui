@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import yellowstarfilled from "../../assets/img/icons/yellow-star-filled.svg";
@@ -20,24 +21,8 @@ function Customerdetails() {
   return (
     <div>
       <div>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content />
-        <meta
-          name="author"
-          content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-        />
-        <meta name="generator" content="Jekyll v4.1.1" />
-        <title>Customer Details</title>
-        {/* Bootstrap core CSS */}
-        <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/custom/index.css" />
-        <header>
-          <div className="sample-header"></div>
-        </header>
+        <Header />
+
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -91,7 +76,7 @@ function Customerdetails() {
                         <label>John Fernando</label>
                         <p className="d-flex align-items-center">
                           <img src={phonecall} alt="phonecall" />
-                          9876543213
+                          <a href="tel:9876543210">9876543210</a>
                         </p>
                         <p className="pad-btnm d-flex align-items-center">
                           <img src={mail} alt="mail" />
@@ -258,7 +243,7 @@ function Customerdetails() {
                                                 John Fernando
                                                 <br />{" "}
                                                 <span>
-                                                  Relation . 27.11.1990
+                                                  Relation .20/Dec/2020
                                                 </span>
                                               </p>
                                             </div>
@@ -298,7 +283,7 @@ function Customerdetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  27.11.1990 | 1,50,000
+                                                  20/Dec/2020 | 1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -339,7 +324,7 @@ function Customerdetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  27.11.1990 | Payment Mode
+                                                  20/Dec/2020 | Payment Mode
                                                   |1,50,000
                                                 </span>
                                               </p>
@@ -380,7 +365,9 @@ function Customerdetails() {
                                               <p>
                                                 Policy ID
                                                 <br />{" "}
-                                                <span>27.11.1990|1,50,000</span>
+                                                <span>
+                                                  20/Dec/2020|1,50,000
+                                                </span>
                                               </p>
                                             </div>
                                           </div>
@@ -389,8 +376,6 @@ function Customerdetails() {
                                               <button className="btn btn-outline-s">
                                                 Send Wishes
                                               </button>
-
-                                             
                                             </div>
                                           </div>
                                         </div>
@@ -421,7 +406,7 @@ function Customerdetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>27.11.1990</span>
+                                                <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -458,7 +443,7 @@ function Customerdetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>27.11.1990</span>
+                                                <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -495,7 +480,7 @@ function Customerdetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>27.11.1990</span>
+                                                <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -537,7 +522,7 @@ function Customerdetails() {
                                                 <br />{" "}
                                                 <span>
                                                   1234 **** **** ****
-                                                  |27.11.1990
+                                                  |20/Dec/2020
                                                 </span>
                                               </p>
                                             </div>
@@ -547,7 +532,6 @@ function Customerdetails() {
                                               <button className="btn btn-outline-s">
                                                 Send Remainder
                                               </button>
-                                              
                                             </div>
                                           </div>
                                         </div>
@@ -574,14 +558,10 @@ function Customerdetails() {
                                               />
                                             </div>
                                             <div className="col-10">
-                                            
-                                               <p>
+                                              <p>
                                                 Policy ID
-                                                <br />{" "}
-                                                <span>
-                                                  Policy Owner
-                                                </span>
-                                              </p> 
+                                                <br /> <span>Policy Owner</span>
+                                              </p>
                                             </div>
                                           </div>
                                           <div className="row">
@@ -589,7 +569,6 @@ function Customerdetails() {
                                               <button className="btn btn-outline-s">
                                                 Add family tag
                                               </button>
-                                              
                                             </div>
                                           </div>
                                         </div>
@@ -652,7 +631,7 @@ function Customerdetails() {
                                                         Policy Owner DOB
                                                       </label>{" "}
                                                       <br />
-                                                      12.02.1974
+                                                      20/Dec/2020
                                                     </p>
                                                   </div>
                                                   <div className="col-lg-6 col-md-3 value">
@@ -1191,9 +1170,25 @@ function Customerdetails() {
                                     />
                                   </div>
                                 </div>
+
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
                                     <h3>Policy Documents</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                              <div class="state-box shadow-normal">
+                                <div class="row r1">
+                                  <div class="col-lg-12 text-center">
+                                    <img src={sales} />
+                                  </div>
+                                </div>
+
+                                <div class="row r2">
+                                  <div class="col-lg-12 text-center">
+                                    <h3>Sales Illustration</h3>
                                   </div>
                                 </div>
                               </div>
@@ -1212,7 +1207,7 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-                        
+
                             <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
@@ -1296,7 +1291,6 @@ function Customerdetails() {
                                 <div className="col-10">
                                   <p className="m-top-12">
                                     PASA SUM Assured + Value
-                                
                                   </p>
                                 </div>
                               </div>
@@ -1408,7 +1402,7 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">
-                                          02/15/2020 . 12:23:00 AM
+                                          20/Dec/2020 . 12:23:00 AM
                                         </p>
                                       </div>
                                       <div className="col-lg-4 col-md-4">
@@ -1522,7 +1516,7 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">
-                                          02/15/2020 . 12:23:00 AM
+                                          20/Dec/2020 . 12:23:00 AM
                                         </p>
                                       </div>
                                       <div className="col-lg-4 col-md-4">
@@ -1566,7 +1560,7 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">
-                                          02/15/2020 . 12:23:00 AM
+                                          20/Dec/2020 . 12:23:00 AM
                                         </p>
                                       </div>
                                       <div className="col-lg-4 col-md-4">
@@ -1763,7 +1757,6 @@ function Customerdetails() {
   </div>
 </footer> */}
       </div>
-      ); );
     </div>
   );
 }

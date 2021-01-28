@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import Header from "../../header";
 import breadcrumbsarrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import filter from "../../assets/img/icons/filter.svg";
 import searchbox from "../../assets/img/icons/search-bx.svg";
 import sort from "../../assets/img/icons/sort.svg";
 import loadmore from "../../assets/img/icons/load-more.svg";
 function Querymanagementsystem() {
-  function myFunction() {
+  function myFunction(all) {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
       x.style.display = "block";
@@ -15,24 +16,8 @@ function Querymanagementsystem() {
   }
   return (
     <div>
-      <meta charSet="utf-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-      <meta name="description" content />
-      <meta
-        name="author"
-        content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-      />
-      <meta name="generator" content="Jekyll v4.1.1" />
-      <title>QMS</title>
-      {/* Bootstrap core CSS */}
-      <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-      <link rel="stylesheet" href="./assets/css/custom/index.css" />
-      <header>
-        <div className="sample-header"></div>
-      </header>
+      <Header />
+
       <main className="bg-white pb-4" role="main">
         <div className="breadcrubs-div shadow-sm d-none d-lg-block d-md-block  d-sm-none">
           <div className="container">
@@ -71,7 +56,7 @@ function Querymanagementsystem() {
             </div>
             <div className="col-sm-12 col-12 d-sm-block d-lg-none d-md-none sm-query_btn ">
               <h5>Query List (10)</h5>
-             </div>
+            </div>
             <div className="col-md-3 col-xs-6 text-align-right d-none d-md-block d-lg-block d-sm-none">
               <button className="btn btn-primary px-4">Raise a Query</button>
             </div>
@@ -126,7 +111,11 @@ function Querymanagementsystem() {
                           </div>
                         </div>
                       </div>
-                      <div className="row" id="myDIV">
+                      <div
+                        className="row"
+                        id="myDIV"
+                        onClick={() => myFunction}
+                      >
                         <div className="col-lg-12 filter_sub_check_box_row">
                           <h3>Raised By</h3>
                           <div className="custom-control custom-checkbox check-box-row">
@@ -268,7 +257,7 @@ function Querymanagementsystem() {
                                   aria-controls="all"
                                   aria-selected="true"
                                 >
-                                  All
+                                  Today
                                 </a>
                               </li>
                               <li
@@ -283,9 +272,9 @@ function Querymanagementsystem() {
                                   role="tab"
                                   aria-controls="self"
                                   aria-selected="false"
-                                  onClick={myFunction}
+                                  onClick={() => myFunction}
                                 >
-                                  Self
+                                  Next Week
                                 </a>
                               </li>
                               <li
@@ -301,7 +290,7 @@ function Querymanagementsystem() {
                                   aria-controls="customer"
                                   aria-selected="false"
                                 >
-                                  Customer
+                                  Later
                                 </a>
                               </li>
                             </ul>
@@ -379,7 +368,7 @@ function Querymanagementsystem() {
                                       <span className="d-sm-block d-lg-none d-md-block">
                                         Created Date
                                       </span>
-                                      <p>DD/MM/YYYY 12:10 AM</p>
+                                      <p>DD/MMM/YYYY 12:10 AM</p>
                                     </div>
                                     <div className="col-md-4 col-lg-2  col-6">
                                       <span className="d-sm-block d-lg-none d-md-block">
@@ -420,7 +409,7 @@ function Querymanagementsystem() {
                                       <span className="d-sm-block d-lg-none d-md-block">
                                         Created Date
                                       </span>
-                                      <p>DD/MM/YYYY 12:10 AM</p>
+                                      <p>DD/MMM/YYYY 12:10 AM</p>
                                     </div>
                                     <div className="col-md-4 col-lg-2  col-6">
                                       <span className="d-sm-block d-lg-none d-md-block">
@@ -461,7 +450,7 @@ function Querymanagementsystem() {
                                       <span className="d-sm-block d-lg-none d-md-block">
                                         Created Date
                                       </span>
-                                      <p>DD/MM/YYYY 12:10 AM</p>
+                                      <p>DD/MMM/YYYY 12:10 AM</p>
                                     </div>
                                     <div className="col-md-4 col-lg-2  col-6">
                                       <span className="d-sm-block d-lg-none d-md-block">
@@ -483,7 +472,7 @@ function Querymanagementsystem() {
                                     className="btn btn-primary"
                                   >
                                     <img src={loadmore} alt="loadmore" />
-                                    Load More
+                                    See More
                                   </button>
                                 </div>
                               </div>
@@ -556,7 +545,7 @@ function Querymanagementsystem() {
                                         <span className="d-sm-block d-lg-none d-md-block">
                                           Created Date
                                         </span>
-                                        <p>DD/MM/YYYY 12:10 AM</p>
+                                        <p>DD/MMM/YYYY 12:10 AM</p>
                                       </div>
                                       <div className="col-md-4 col-lg-2  col-6">
                                         <span className="d-sm-block d-lg-none d-md-block">
@@ -598,7 +587,7 @@ function Querymanagementsystem() {
                                       <span className="d-sm-block d-lg-none d-md-block">
                                         Created Date
                                       </span>
-                                      <p>DD/MM/YYYY 12:10 AM</p>
+                                      <p>DD/MMM/YYYY 12:10 AM</p>
                                     </div>
                                     <div className="col-md-4 col-lg-2  col-6">
                                       <span className="d-sm-block d-lg-none d-md-block">
@@ -684,7 +673,7 @@ function Querymanagementsystem() {
                                       <span className="d-sm-block d-lg-none d-md-block">
                                         Created Date
                                       </span>
-                                      <p>DD/MM/YYYY 12:10 AM</p>
+                                      <p>DD/MMM/YYYY 12:10 AM</p>
                                     </div>
                                     <div className="col-md-4 col-lg-2  col-6">
                                       <span className="d-sm-block d-lg-none d-md-block">
@@ -725,7 +714,7 @@ function Querymanagementsystem() {
                                       <span className="d-sm-block d-lg-none d-md-block">
                                         Created Date
                                       </span>
-                                      <p>DD/MM/YYYY 12:10 AM</p>
+                                      <p>DD/MMM/YYYY 12:10 AM</p>
                                     </div>
                                     <div className="col-md-4 col-lg-2  col-6">
                                       <span className="d-sm-block d-lg-none d-md-block">
@@ -755,9 +744,6 @@ function Querymanagementsystem() {
           </div>
         </div>
       </main>
-      <footer className="text-muted">
-        <div className="sample-footer"></div>
-      </footer>
     </div>
   );
 }

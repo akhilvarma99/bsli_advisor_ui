@@ -1,12 +1,14 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbsArrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import starEmpty from "../../assets/img/icons/star-empty.svg";
 import user from "../../assets/img/icons/user.svg";
-import hand from "../../assets/img/icons/hand.svg";
-import wishlist from "../../assets/img/icons/wishlist.svg";
-import help from "../../assets/img/icons/help.svg";
-import invoice from "../../assets/img/icons/invoice.svg";
-import handshake from "../../assets/img/icons/hand-shake.svg";
+import hand from "../../assets/img/icons/hand_w.svg";
+import wishlist from "../../assets/img/icons/wishlist_w.svg";
+import help from "../../assets/img/icons/help_w.svg";
+import invoice from "../../assets/img/icons/invoice_w.svg";
+import load from "../../assets/img/icons/load-more.svg";
+
 import sort from "../../assets/img/icons/sort.svg";
 import { NavLink } from "react-router-dom";
 
@@ -14,25 +16,7 @@ function CoustmerListingPage() {
   return (
     <div>
       <div>
-        {/* Hello world */}
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content />
-        <meta
-          name="author"
-          content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-        />
-        <meta name="generator" content="Jekyll v4.1.1" />
-        <title>Dashboard</title>
-        {/* Bootstrap core CSS */}
-        <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/custom/index.css" />
-        <header>
-          <div className="sample-header"></div>
-        </header>
+        <Header />
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -80,7 +64,7 @@ function CoustmerListingPage() {
                 <div className="quikc-links-card">
                   <h2>Quick Links</h2>
                   <div className="quick-links-inner h-scroll-s">
-                    <ul className>
+                    <ul>
                       <NavLink
                         to="/Allcustomers"
                         style={{
@@ -90,7 +74,7 @@ function CoustmerListingPage() {
                         }}
                       >
                         <li>
-                          <img src={user} alt="user" />
+                          <img src={user} alt="user" className="userIcon" />
                           All Customers
                         </li>
                       </NavLink>
@@ -145,11 +129,11 @@ function CoustmerListingPage() {
                           <img src={invoice} alt="invoice" />
                           Payouts
                         </li>
+                        {/* <li>
+                          <img src={handshake} alt="handshake" />
+                          Business
+                        </li> */}
                       </NavLink>
-                      <li>
-                        <img src={handshake} alt="handshake" />
-                        New Business
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -236,10 +220,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -286,7 +267,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -340,7 +321,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -394,7 +375,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -448,7 +429,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -501,7 +482,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -554,7 +535,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -579,6 +560,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -603,10 +585,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -653,7 +632,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -707,7 +686,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -761,7 +740,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -815,7 +794,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -868,7 +847,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -921,7 +900,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -946,6 +925,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -970,10 +950,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1020,7 +997,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1074,7 +1051,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1128,7 +1105,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1182,7 +1159,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1235,7 +1212,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1288,7 +1265,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      129129229 &nbsp;|&nbsp;28/Dec/2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1313,6 +1290,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1408,10 +1386,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1457,7 +1432,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1511,7 +1486,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1565,7 +1540,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1619,7 +1594,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1672,7 +1647,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1725,7 +1700,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1749,6 +1724,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1773,10 +1749,7 @@ function CoustmerListingPage() {
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
                                     <label>
@@ -1822,7 +1795,370 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-1 text-center">
+                                    <p>
+                                      <img src={starEmpty} alt="starEmpty" />
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-3 text-right">
+                                    <button
+                                      type="button"
+                                      className="btn btn-outline-s"
+                                    >
+                                      Send Wishes
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-3 col-md-4">
+                                    <div className="v-lg d-none d-lg-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-2">
+                                        E
+                                      </div>
+                                      <label>Elisha McFadden</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-2">
+                                            E
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Elisha McFadden
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>
+                                      Sanveetha &nbsp;|&nbsp; Mother
+                                      &nbsp;|&nbsp;20/Dec/2020
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-1 text-center">
+                                    <p>
+                                      <img src={starEmpty} alt="starEmpty" />
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-3 text-right">
+                                    <button
+                                      type="button"
+                                      className="btn btn-outline-s"
+                                    >
+                                      Send Wishes
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-3 col-md-4">
+                                    <div className="v-lg d-none d-lg-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-3">
+                                        A
+                                      </div>
+                                      <label>Abel Cunningham</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-3">
+                                            A
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Abel Cunningham
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>
+                                      Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
+                                      20/Dec/2020
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-1 text-center">
+                                    <p>
+                                      <img src={starEmpty} alt="starEmpty" />
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-3 text-right">
+                                    <button
+                                      type="button"
+                                      className="btn btn-outline-s"
+                                    >
+                                      Send Wishes
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-3 col-md-4">
+                                    <div className="v-lg d-none d-lg-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-4">
+                                        R
+                                      </div>
+                                      <label>Richard Nichol</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-4">
+                                            R
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Richard Nichol
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>
+                                      Randal Patel &nbsp;|&nbsp; Father
+                                      &nbsp;|&nbsp;20/Dec/2020
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-1 text-center">
+                                    <p>
+                                      <img src={starEmpty} alt="starEmpty" />
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-3 text-right">
+                                    <button
+                                      type="button"
+                                      className="btn btn-outline-s"
+                                    >
+                                      Send Wishes
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-3 col-md-4">
+                                    <div className="v-lg d-none d-lg-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-5">
+                                        D
+                                      </div>
+                                      <label>Degory Kirk</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-5">
+                                            D
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Degory Kirk <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>
+                                      Santosh Boyini &nbsp;|&nbsp; Self
+                                      &nbsp;|&nbsp;20/Dec/2020
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-1 text-center">
+                                    <p>
+                                      <img src={starEmpty} alt="starEmpty" />
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-3 text-right">
+                                    <button
+                                      type="button"
+                                      className="btn btn-outline-s"
+                                    >
+                                      Send Wishes
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-3 col-md-4">
+                                    <div className="v-lg d-none d-lg-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-6">
+                                        C
+                                      </div>
+                                      <label>Clement Ebaugh</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-6">
+                                            C
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Clement Ebaugh <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>
+                                      Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
+                                      20/Dec/2020
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-1 text-center">
+                                    <p>
+                                      <img src={starEmpty} alt="starEmpty" />
+                                    </p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-3 text-right">
+                                    <button
+                                      type="button"
+                                      className="btn btn-outline-s"
+                                    >
+                                      Send Wishes
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              <div className="g-footer text-center">
+                                <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  <img src={load} alt="load" />
+                                  See More
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          {/* Next Week Content Ends Here */}
+                          {/* Later Content Starts Here ----------------------------------------------------------------------------------------------*/}
+                          <div
+                            className="tab-pane fade"
+                            id="later1"
+                            role="tabpanel"
+                            aria-labelledby="later"
+                          >
+                            <div className="g-container">
+                              {/* Block */}
+                              <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                <div className="row">
+                                  <div className="col-md-3">
+                                    <label>
+                                      name
+                                      <img src={sort} alt="sort" />
+                                    </label>
+                                  </div>
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                    <label>Contact</label>
+                                  </div>
+                                  <div className="col-md-7">
+                                    <label>
+                                      Details
+                                      <img src={sort} alt="sort" />
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Block */}
+                              {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-3 col-md-4">
+                                    <div className="v-lg d-none d-lg-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-1">
+                                        F
+                                      </div>
+                                      <label>Fohn Crockett</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-1">
+                                            F
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Fohn Crockett
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>
+                                      Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1876,12 +2212,12 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1930,12 +2266,12 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1984,12 +2320,12 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2037,12 +2373,12 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp; 26.11.2020
+                                      &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2090,12 +2426,12 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
+                                      20/Dec/2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src="starEmpty" alt="starEmpty" />
+                                      <img src={starEmpty} alt="starEmpty" />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2114,371 +2450,7 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  See More
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                          {/* Next Week Content Ends Here */}
-                          {/* Later Content Starts Here ----------------------------------------------------------------------------------------------*/}
-                          <div
-                            className="tab-pane fade"
-                            id="later1"
-                            role="tabpanel"
-                            aria-labelledby="later"
-                          >
-                            <div className="g-container">
-                              {/* Block */}
-                              <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
-                                <div className="row">
-                                  <div className="col-md-3">
-                                    <label>
-                                      name
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <label>
-                                      Contact
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                  <div className="col-md-7">
-                                    <label>
-                                      Details
-                                      <img src={sort} alt="sort" />
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-1">
-                                        F
-                                      </div>
-                                      <label>Fohn Crockett</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-1">
-                                            F
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Fohn Crockett
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img src="starEmpty" alt="starEmpty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-2">
-                                        E
-                                      </div>
-                                      <label>Elisha McFadden</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-2">
-                                            E
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Elisha McFadden
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp; 26.11.2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img src="starEmpty" alt="starEmpty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-3">
-                                        A
-                                      </div>
-                                      <label>Abel Cunningham</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-3">
-                                            A
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Abel Cunningham
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      26.11.2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img src="starEmpty" alt="starEmpty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-4">
-                                        R
-                                      </div>
-                                      <label>Richard Nichol</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-4">
-                                            R
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Richard Nichol
-                                            <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp; 26.11.2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img src="starEmpty" alt="starEmpty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-5">
-                                        D
-                                      </div>
-                                      <label>Degory Kirk</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-5">
-                                            D
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Degory Kirk <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp; 26.11.2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img src="starEmpty" alt="starEmpty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      26.11.2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img src="starEmpty" alt="starEmpty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary"
-                                >
+                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -2492,11 +2464,6 @@ function CoustmerListingPage() {
                 </div>
               </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
           </div>
         </main>
       </div>

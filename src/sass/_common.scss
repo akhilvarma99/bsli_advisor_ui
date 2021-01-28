@@ -43,6 +43,12 @@ p {
   display: block;
 }
 
+.sample-header {
+  width: 100%;
+  background-color: $capital-red;
+  padding: 50px;
+}
+
 .sample-footer {
   width: 100%;
   background-color: $dark-grey;
@@ -198,6 +204,21 @@ main {
   color: #fff;
 }
 
+.text-black {
+  color: $black !important;
+}
+
+.no-display {
+  display: none;
+}
+
+.text-align-right {
+  text-align: right;
+}
+.float-right {
+  float: right;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .p-header {
@@ -205,6 +226,9 @@ main {
     img {
       margin-right: 10px;
     }
+  }
+  .small-no-display {
+    display: none;
   }
 }
 
@@ -221,3 +245,5 @@ main {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

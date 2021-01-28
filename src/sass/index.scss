@@ -13,6 +13,11 @@
 @import "./modules/footer";
 @import "./modules/customer_listing";
 @import "./modules/cutomer-details";
+@import "./modules/raise_query";
+@import "./modules/frq";
+@import "./modules/query_details";
+@import "./modules/query_management_system";
+@import "./modules/devCustom";
 
 //Componenets
 @import "./s_cards";
@@ -33,10 +38,11 @@
 @import "./chips";
 @import "./add_family_tag_modal";
 @import "./trouble_cards";
+@import "./frq_box";
+@import "./query_status_card";
 
 // Major CSS
 @import "./common";
 
 @import "./media_query";
-@import "./subHeader";
-@import "./modules/devCustom";
+@import "./modules/subHeader";

@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../../header";
 import breadcrumbsarrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import yellowstarfilled from "../../assets/img/icons/yellow-star-filled.svg";
@@ -20,24 +21,7 @@ function customerdetailsaddfamily() {
   return (
     <div>
       <div>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content />
-        <meta
-          name="author"
-          content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-        />
-        <meta name="generator" content="Jekyll v4.1.1" />
-        <title>Customer Details</title>
-        {/* Bootstrap core CSS */}
-        <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/custom/index.css" />
-        <header>
-          <div className="sample-header"></div>
-        </header>
+        <Header />
         <main className="bg-white " role="main">
           <div className="breadcrubs-div shadow-sm">
             <div className="container">
@@ -258,7 +242,7 @@ function customerdetailsaddfamily() {
                                                 John Fernando
                                                 <br />{" "}
                                                 <span>
-                                                  Relation . 27.11.1990
+                                                  Relation . 20/Dec/2020
                                                 </span>
                                               </p>
                                             </div>
@@ -298,7 +282,7 @@ function customerdetailsaddfamily() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  Relation . 27.11.1990
+                                                  Relation . 20/Dec/2020
                                                 </span>
                                               </p>
                                             </div>
@@ -338,7 +322,7 @@ function customerdetailsaddfamily() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  Relation . 27.11.1990
+                                                  Relation . 20/Dec/2020
                                                 </span>
                                               </p>
                                             </div>
@@ -410,7 +394,7 @@ function customerdetailsaddfamily() {
                                                         Policy Owner DOB
                                                       </label>{" "}
                                                       <br />
-                                                      12.02.1974
+                                                      20/Dec/2020
                                                     </p>
                                                   </div>
                                                   <div className="col-lg-6 col-md-3 value">
@@ -1155,7 +1139,7 @@ function customerdetailsaddfamily() {
                                       </div>
                                       <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">
-                                          02/15/2020 . 12:23:00 AM
+                                          20/Dec/2020 . 12:23:00 AM
                                         </p>
                                       </div>
                                       <div className="col-lg-4 col-md-4">
@@ -1269,7 +1253,7 @@ function customerdetailsaddfamily() {
                                       </div>
                                       <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">
-                                          02/15/2020 . 12:23:00 AM
+                                          20/Dec/2020 . 12:23:00 AM
                                         </p>
                                       </div>
                                       <div className="col-lg-4 col-md-4">
@@ -1313,7 +1297,7 @@ function customerdetailsaddfamily() {
                                       </div>
                                       <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">
-                                          02/15/2020 . 12:23:00 AM
+                                          20/Dec/2020 . 12:23:00 AM
                                         </p>
                                       </div>
                                       <div className="col-lg-4 col-md-4">
