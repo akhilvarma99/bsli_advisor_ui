@@ -757,6 +757,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -820,6 +821,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -883,6 +885,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -946,6 +949,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1009,6 +1013,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1072,6 +1077,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1170,6 +1176,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1233,6 +1240,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1296,6 +1304,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1359,6 +1368,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1422,6 +1432,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1485,6 +1496,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1583,6 +1595,7 @@ function Allcustomers() {
                                           <img
                                             src={starempty}
                                             alt="starempty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1645,7 +1658,8 @@ function Allcustomers() {
                                         <p>
                                           <img
                                             src={starempty}
-                                            alt="starempty"
+                                            alt="starEmpty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1708,7 +1722,8 @@ function Allcustomers() {
                                         <p>
                                           <img
                                             src={starempty}
-                                            alt="starempty"
+                                            alt="starEmpty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1771,7 +1786,8 @@ function Allcustomers() {
                                         <p>
                                           <img
                                             src={starempty}
-                                            alt="starempty"
+                                            alt="starEmpty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1834,7 +1850,8 @@ function Allcustomers() {
                                         <p>
                                           <img
                                             src={starempty}
-                                            alt="starempty"
+                                            alt="starEmpty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>
@@ -1897,7 +1914,8 @@ function Allcustomers() {
                                         <p>
                                           <img
                                             src={starempty}
-                                            alt="starempty"
+                                            alt="starEmpty"
+                                            className="starempty"
                                           />
                                         </p>
                                       </div>

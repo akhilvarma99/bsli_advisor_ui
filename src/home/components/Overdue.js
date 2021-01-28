@@ -608,8 +608,9 @@ function Overdue() {
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
                                             <img
-                                              src={starempty}
-                                              alt="starempty"
+                                              src={starEmpty}
+                                              alt="starEmpty"
+                                              className="starempty"
                                             />
                                           </p>
                                         </div>
@@ -674,8 +675,9 @@ function Overdue() {
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
                                             <img
-                                              src={starempty}
-                                              alt="starempty"
+                                              src={starEmpty}
+                                              alt="starEmpty"
+                                              className="starempty"
                                             />
                                           </p>
                                         </div>
@@ -740,8 +742,9 @@ function Overdue() {
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
                                             <img
-                                              src={starempty}
-                                              alt="starempty"
+                                              src={starEmpty}
+                                              alt="starEmpty"
+                                              className="starempty"
                                             />
                                           </p>
                                         </div>
@@ -806,8 +809,9 @@ function Overdue() {
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
                                             <img
-                                              src={starempty}
-                                              alt="starempty"
+                                              src={starEmpty}
+                                              alt="starEmpty"
+                                              className="starempty"
                                             />
                                           </p>
                                         </div>
@@ -872,8 +876,9 @@ function Overdue() {
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
                                             <img
-                                              src={starempty}
-                                              alt="starempty"
+                                              src={starEmpty}
+                                              alt="starEmpty"
+                                              className="starempty"
                                             />
                                           </p>
                                         </div>
@@ -938,8 +943,9 @@ function Overdue() {
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
                                             <img
-                                              src={starempty}
-                                              alt="starempty"
+                                              src={starEmpty}
+                                              alt="starEmpty"
+                                              className="starempty"
                                             />
                                           </p>
                                         </div>
@@ -1004,8 +1010,9 @@ function Overdue() {
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
                                             <img
-                                              src={starempty}
-                                              alt="starempty"
+                                              src={starEmpty}
+                                              alt="starEmpty"
+                                              className="starempty"
                                             />
                                           </p>
                                         </div>
