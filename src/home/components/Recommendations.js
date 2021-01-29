@@ -153,9 +153,37 @@ function Recommendations() {
                               className="form-check-label"
                               htmlFor="flexRadioDefault1"
                             >
-                              Surrendered|Terminated
-                              <br />
-                              |Discontinued
+                              Surrendered
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="STD"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Terminated
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="STD"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Discontinued
                             </label>
                           </div>
                         </div>

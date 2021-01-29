@@ -11,7 +11,10 @@
 }
 
 .modal {
-  top: 20% !important;
+  // top: 20% !important;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .backArrow {
@@ -112,4 +115,34 @@ input[type="radio"]:after {
 
 input[type="radio"]:checked:after {
   color: #dc3545;
+}
+
+.noDisplay {
+  display: none;
+}
+.fp-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f8f8f8ad;
+  .fp-loader {
+    left: 45%;
+    top: 50%;
+    z-index: 100;
+    position: absolute;
+  }
+}
+
+.yellow-flag {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .fp-container {
+    .fp-loader {
+      left: 39%;
+    }
+  }
 }

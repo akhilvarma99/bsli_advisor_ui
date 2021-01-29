@@ -687,23 +687,23 @@ function policydetails() {
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Policy Billing Method
+                                        Billing Method
                                       </label>
                                       <div className="font18 line-ht-11">
                                         Direct Bill
                                       </div>
                                     </div>
-                                    <div className="col-md-3 mb-3">
+                                    {/* <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Last Premium Due Date
                                       </label>
                                       <div className="font18 line-ht-11">
                                         DD/MM/YYYY
                                       </div>
-                                    </div>
+                                    </div> */}
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Model Premium
+                                        Modal Premium
                                       </label>
                                       <div className="font18 line-ht-11">
                                         20,000
@@ -725,46 +725,46 @@ function policydetails() {
                                         21,000
                                       </div>
                                     </div>
-                                    <div className="col-md-3 mb-3">
+                                    {/* <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         First Year Premium
                                       </label>
                                       <div className="font18 line-ht-11">
                                         12,000
                                       </div>
-                                    </div>
-                                    <div className="col-md-3 mb-3">
+                                    </div> */}
+                                    {/* <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Annual Premium
                                       </label>
                                       <div className="font18 line-ht-11">
                                         20,000
                                       </div>
-                                    </div>
-                                    <div className="col-md-3 mb-3">
+                                    </div> */}
+                                    {/*                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Gross Annual Premium
                                       </label>
                                       <div className="font18 line-ht-11">
                                         21,000
                                       </div>
-                                    </div>
-                                    <div className="col-md-3 mb-3">
+                                    </div> */}
+                                    {/*  <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         G.A.P with Service Tax and Cess
                                       </label>
                                       <div className="font18 line-ht-11">
                                         22,343
                                       </div>
-                                    </div>
-                                    <div className="col-md-3 mb-3">
+                                    </div> */}
+                                    {/*  <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Total Premium Paid
                                       </label>
                                       <div className="font18 line-ht-11">
                                         22,343
                                       </div>
-                                    </div>
+                                    </div> */}
                                   </div>
                                 </div>
                               </div>
