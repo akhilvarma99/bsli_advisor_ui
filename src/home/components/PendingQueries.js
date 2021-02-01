@@ -46,7 +46,7 @@ function PendingQueries() {
                   Pending Queries
                 </h1>
               </div>
-              <div className="col">
+              {/* <div className="col">
                 <ul className="download-report">
                   <li>Export as:</li>
                   <li>
@@ -56,7 +56,7 @@ function PendingQueries() {
                     <img src={downloadpdf} alt="downloadpdf" />
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
             {/* Heading Ends  */}
             <div className="f_Div_outer">
