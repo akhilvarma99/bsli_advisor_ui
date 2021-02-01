@@ -18,10 +18,16 @@ import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
 import circle from "../../assets/img/icons/circle.svg";
 import creative from "../../assets/img/icons/creative.svg";
 function Customerdetails() {
-  const [collapse, setCollapse] = useState(false);
-  const buttonText = () => {
-    setCollapse(!collapse);
-  };
+  function buttonText(accordionId, buttonId) {
+    const accordionClass = document.getElementById(accordionId).classList;
+    console.log(accordionClass[0]);
+    if (accordionClass[2] == "show") {
+      console.log("conditin" + accordionClass);
+      document.getElementById(buttonId).innerHTML = "Show More";
+    } else {
+      document.getElementById(buttonId).innerHTML = "Show Less";
+    }
+  }
 
   return (
     <div>
@@ -145,19 +151,7 @@ function Customerdetails() {
                           Policy Details
                         </a>
                       </li>
-                      <li className="nav-item w-50-p" role="presentation">
-                        <a
-                          className="nav-link"
-                          id="profile-tab"
-                          data-toggle="tab"
-                          href="#policy_statements"
-                          role="tab"
-                          aria-controls="policy_statements"
-                          aria-selected="false"
-                        >
-                          Policy Statements
-                        </a>
-                      </li>
+
                       <li className="nav-item w-50-p" role="presentation">
                         <a
                           className="nav-link"
@@ -846,13 +840,16 @@ function Customerdetails() {
                                             data-toggle="collapse"
                                             data-target={`#collapseExample${index}`}
                                             aria-expanded="false"
-                                            id={index}
+                                            id={`button${index}`}
                                             aria-controls="collapseExample"
-                                            onClick={() => buttonText()}
+                                            onClick={() =>
+                                              buttonText(
+                                                `collapseExample${index}`,
+                                                `button${index}`
+                                              )
+                                            }
                                           >
-                                            {collapse
-                                              ? "Show More"
-                                              : "Show Less"}
+                                            Show More
                                           </button>
                                         </div>
                                       </div>
@@ -1259,208 +1256,136 @@ function Customerdetails() {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="policy-grid-row">
-                                    <div className="row">
-                                      <div
-                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                        data-toggle="collapse"
-                                        data-target="#collapseExample"
-                                        aria-expanded="false"
-                                        aria-controls="collapseExample"
-                                      >
-                                        <img src={threedots} alt="threedots" />
-                                      </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">
-                                          20/Dec/2020 . 12:23:00 AM
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        <label className="d-lg-none d-sm-block">
-                                          Plan name
-                                        </label>
-                                        <p className="color-b">
-                                          Sample text for plan name
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-3">
-                                        <label className="d-lg-none d-sm-block">
-                                          Details
-                                        </label>
-                                        <p className="color-b">1234354ABSdk</p>
-                                      </div>
-                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
+                                  {[1, 2, 3].map((id, index) => (
+                                    <div className="policy-grid-row">
+                                      <div className="row">
+                                        <div
+                                          className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                           data-toggle="collapse"
                                           data-target="#collapseExample"
                                           aria-expanded="false"
                                           aria-controls="collapseExample"
                                         >
-                                          Quick Action
-                                        </button>
+                                          <img
+                                            src={threedots}
+                                            alt="threedots"
+                                          />
+                                        </div>
+                                        <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">
+                                            20/Dec/2020 . 12:23:00 AM
+                                          </p>
+                                        </div>
+                                        <div className="col-lg-4 col-md-4">
+                                          <label className="d-lg-none d-sm-block">
+                                            Plan name
+                                          </label>
+                                          <p className="color-b">
+                                            Sample text for plan name
+                                          </p>
+                                        </div>
+                                        <div className="col-lg-3">
+                                          <label className="d-lg-none d-sm-block">
+                                            Details
+                                          </label>
+                                          <p className="color-b">
+                                            1234354ABSdk
+                                          </p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
+                                          <button
+                                            type="button"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target={`#collapseExample${index}`}
+                                            aria-expanded="false"
+                                            id={`buttons${index}`}
+                                            aria-controls="collapseExample"
+                                            onClick={() =>
+                                              buttonText(
+                                                `collapseExample${index}`,
+                                                `buttons${index}`
+                                              )
+                                            }
+                                          >
+                                            Show More
+                                          </button>
+                                        </div>
                                       </div>
-                                    </div>
-                                    <div
-                                      className="row collapse"
-                                      id="collapseExample"
-                                    >
-                                      <div className="col-lg-12 m-pad-div">
-                                        <div className="expanded-div">
-                                          <div className="row">
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Policy ID
-                                                <br />
-                                                <span>123456798</span>
-                                              </p>
+                                      <div
+                                        className="row collapse"
+                                        id={`collapseExample${index}`}
+                                      >
+                                        <div className="col-lg-12 m-pad-div">
+                                          <div className="expanded-div">
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy ID
+                                                  <br />
+                                                  <span>123456798</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Application No. <br />
+                                                  <span>12343563</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  PInteraction ID
+                                                  <br />
+                                                  <span>123456789</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Source of Interaction
+                                                  <br />
+                                                  <span>Phone</span>
+                                                </p>
+                                              </div>
                                             </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Application No. <br />
-                                                <span>12343563</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                PInteraction ID
-                                                <br />
-                                                <span>123456789</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Source of Interaction
-                                                <br />
-                                                <span>Phone</span>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div className="row">
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Processing department
-                                                <br />
-                                                <span>
-                                                  Processing department name
-                                                </span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Call Category
-                                                <br />
-                                                <span>Call category name</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Call Types
-                                                <br />
-                                                <span>Call type name</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Sub Type
-                                                <br />
-                                                <span>Sub type name</span>
-                                              </p>
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Processing department
+                                                  <br />
+                                                  <span>
+                                                    Processing department name
+                                                  </span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Call Category
+                                                  <br />
+                                                  <span>
+                                                    Call category name
+                                                  </span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Call Types
+                                                  <br />
+                                                  <span>Call type name</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Sub Type
+                                                  <br />
+                                                  <span>Sub type name</span>
+                                                </p>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div className="policy-grid-row">
-                                    <div className="row">
-                                      <div
-                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                        data-toggle="collapse"
-                                        data-target="#collapseExample"
-                                        aria-expanded="false"
-                                        aria-controls="collapseExample"
-                                      >
-                                        <img src={threedots} alt="threedots" />
-                                      </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">
-                                          20/Dec/2020 . 12:23:00 AM
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        <label className="d-lg-none d-sm-block">
-                                          Plan name
-                                        </label>
-                                        <p className="color-b">
-                                          Sample text for plan name
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-3">
-                                        <label className="d-lg-none d-sm-block">
-                                          Details
-                                        </label>
-                                        <p className="color-b">1234354ABSdk</p>
-                                      </div>
-                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                          data-toggle="collapse"
-                                          data-target="#"
-                                          aria-expanded="false"
-                                          aria-controls="collapseExample"
-                                        >
-                                          Quick Action
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="policy-grid-row brdr-none">
-                                    <div className="row">
-                                      <div
-                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                        data-toggle="collapse"
-                                        data-target="#collapseExample"
-                                        aria-expanded="false"
-                                        aria-controls="collapseExample"
-                                      >
-                                        <img src={threedots} alt="threedots" />
-                                      </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">
-                                          20/Dec/2020 . 12:23:00 AM
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        <label className="d-lg-none d-sm-block">
-                                          Plan name
-                                        </label>
-                                        <p className="color-b">
-                                          Sample text for plan name
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-3">
-                                        <label className="d-lg-none d-sm-block">
-                                          Details
-                                        </label>
-                                        <p className="color-b">1234354ABSdk</p>
-                                      </div>
-                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                          data-toggle="collapse"
-                                          data-target="#"
-                                          aria-expanded="false"
-                                          aria-controls="collapseExample"
-                                        >
-                                          Quick Action
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  ))}
                                 </div>
                               </div>
                             </div>
@@ -1845,7 +1770,7 @@ function Customerdetails() {
                             Select Policy
                           </label>
                           <select
-                            className="form-control "
+                            className="form-control"
                             id="exampleFormControlSelect1"
                           >
                             <option>Policy 01</option>

@@ -39,7 +39,7 @@ function policydetails() {
         <link rel="stylesheet" href="./assets/css/custom/index.css" />
 
         <main className="bg-white " role="main">
-          <div className="breadcrubs-div shadow-sm">
+          <div className="breadcrubs-div shadow-sm h-100">
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
@@ -64,13 +64,22 @@ function policydetails() {
           </div>
           <div className="container">
             {/* Heading Starts  */}
-            <div className="row d-none d-lg-block d-sm-none">
-              <div className="col">
-                <h1 className="p-header">
-                  <img src={backarrow} alt="backarrow" />
-                  Policy Details
-                </h1>
+            <div className="d-flex justify-content-between">
+              <div className="row d-none d-lg-block d-sm-none">
+                <div className="col">
+                  <h1 className="p-header">
+                    <img src={backarrow} alt="backarrow" />
+                    Policy Details
+                  </h1>
+                </div>
               </div>
+              <select
+                className="form-control selectPolicy"
+                id="exampleFormControlSelect1"
+              >
+                <option>ABSLI Life Shield Plan (Policy ID)</option>
+                <option>ABSLI Life Shield Plan (Policy ID) - 2</option>
+              </select>
             </div>
             <div className="row">
               <div className="col-lg-6 box-saperation">
@@ -528,26 +537,10 @@ function policydetails() {
                                           <div className="row">
                                             <div className="col-md-3 mb-3">
                                               <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Policy Owner Name
+                                                Policy Number
                                               </label>
                                               <div className="font18 line-ht-11">
-                                                Sangeetha
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Plan Name
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                Plan name goes here
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Product Type
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                Product Type
+                                                123456798
                                               </div>
                                             </div>
                                             <div className="col-md-3 mb-3">
@@ -555,39 +548,7 @@ function policydetails() {
                                                 Policy Status
                                               </label>
                                               <div className="font18 line-ht-11">
-                                                Status goes here
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Policy Number
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                123456789
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Payment Status
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                Paid up
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Payout/Stale Cheque Status
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                Status goes here
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Premium Payment Term
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                2 Years
+                                                Paid Up
                                               </div>
                                             </div>
                                             <div className="col-md-3 mb-3">
@@ -595,15 +556,71 @@ function policydetails() {
                                                 Policy Term
                                               </label>
                                               <div className="font18 line-ht-11">
-                                                5 Years
+                                                5
                                               </div>
                                             </div>
                                             <div className="col-md-3 mb-3">
                                               <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Whatsapp Opt-in Status
+                                                Modal Premium
                                               </label>
                                               <div className="font18 line-ht-11">
-                                                Activated
+                                                12000
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Premium Payment Term
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                2
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Premium Mode
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                Monthly
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                ECS Registration Status
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                Inactive
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Stale Cheque Conditional Status
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                Stale Cheque
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Next Premium Due Date
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                DD/MM/YYYY
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Base Sum Assured
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                20000
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Cease Date
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                DD/MM/YYYY
                                               </div>
                                             </div>
                                           </div>
