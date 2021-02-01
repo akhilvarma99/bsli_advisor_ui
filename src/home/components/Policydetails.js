@@ -630,6 +630,147 @@ function policydetails() {
                                   </div>
                                 </div>
                               </div>
+                              <div className="accordion-item">
+                                <div
+                                  className="accordion-header-wrapper"
+                                  data-toggle="collapse"
+                                  href="#premium-related-details"
+                                  role="button"
+                                  aria-expanded="false"
+                                  aria-controls="premium-related-details"
+                                >
+                                  <h2
+                                    className="accordion-header"
+                                    id="flush-headingOne"
+                                  >
+                                    Premium Related Details
+                                  </h2>
+                                  <i className="arrow-up" />
+                                  <i className="arrow-down" />
+                                </div>
+                                <div
+                                  id="premium-related-details"
+                                  className="accordion-collapse collapse accordion-content"
+                                >
+                                  <div className="accordion-body">
+                                    <div className="row">
+                                      <div className="col-lg-12 text-right">
+                                        <button className="btn btn-primary-s m-bottom-10">
+                                          Download Premium Related Details
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div className="personal-de-card shadow-normal">
+                                      <div className="row">
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Policy Id
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            1234567
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Policy Issue Date
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            20/Dec/2020
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Premium Mode
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            Annual
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Billing Method
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            Direct Bill
+                                          </div>
+                                        </div>
+                                        {/* <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Last Premium Due Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        DD/MM/YYYY
+                                      </div>
+                                    </div> */}
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Modal Premium
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            20,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Service Tax
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            1,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Model Premium with Service Tax
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            21,000
+                                          </div>
+                                        </div>
+                                        {/* <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        First Year Premium
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        12,000
+                                      </div>
+                                    </div> */}
+                                        {/* <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Annual Premium
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        20,000
+                                      </div>
+                                    </div> */}
+                                        {/*                                     <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Gross Annual Premium
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        21,000
+                                      </div>
+                                    </div> */}
+                                        {/*  <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        G.A.P with Service Tax and Cess
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        22,343
+                                      </div>
+                                    </div> */}
+                                        {/*  <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Total Premium Paid
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        22,343
+                                      </div>
+                                    </div> */}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -646,7 +787,7 @@ function policydetails() {
                           className="accordion accordion-flush"
                           id="accordionFlushExample"
                         >
-                          <div className="accordion-item">
+                          <div className="accordion-item d-none">
                             <div
                               className="accordion-header-wrapper"
                               data-toggle="collapse"
