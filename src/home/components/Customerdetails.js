@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
@@ -18,6 +18,11 @@ import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
 import circle from "../../assets/img/icons/circle.svg";
 import creative from "../../assets/img/icons/creative.svg";
 function Customerdetails() {
+  const [collapse, setCollapse] = useState(false);
+  const buttonText = () => {
+    setCollapse(!collapse);
+  };
+
   return (
     <div>
       <div>
@@ -69,8 +74,8 @@ function Customerdetails() {
                     <div className="col-lg-10 col-md-10">
                       <div className="name-details">
                         <div className="category-div">
-                          <p>
-                            Category Name{" "}
+                          <p style = {{color : 'black'}}>
+                            Category Name{"   "}
                             <img
                               src={yellowstarfilled}
                               alt="yellowstarfilled"
@@ -144,7 +149,7 @@ function Customerdetails() {
                           Policy Details
                         </a>
                       </li>
-                      <li className="nav-item w-50-p" role="presentation">
+                      {/* <li className="nav-item w-50-p" role="presentation">
                         <a
                           className="nav-link"
                           id="profile-tab"
@@ -156,7 +161,7 @@ function Customerdetails() {
                         >
                           Policy Statements
                         </a>
-                      </li>
+                      </li> */}
                       <li className="nav-item w-50-p" role="presentation">
                         <a
                           className="nav-link"
@@ -181,6 +186,19 @@ function Customerdetails() {
                           aria-selected="false"
                         >
                           Queries
+                        </a>
+                      </li>
+                      <li className="nav-item w-50-p" role="presentation">
+                        <a
+                          className="nav-link"
+                          id="profile-tab"
+                          data-toggle="tab"
+                          href="#policy_statements"
+                          role="tab"
+                          aria-controls="policy_statements"
+                          aria-selected="false"
+                        >
+                          Policy Statements
                         </a>
                       </li>
                     </ul>
@@ -700,36 +718,8 @@ function Customerdetails() {
                                             </div>
                                             <div className="col-lg-6">
                                               <div className="grey-box">
-                                                <div className="row">
-                                                  <div className="col-lg-12">
-                                                    <p>Contact Details</p>
-                                                  </div>
-                                                </div>
-                                                <div className="row">
-                                                  <div className="col-lg-5 value">
-                                                    <label>Mobile Number</label>
-                                                    <p>
-                                                      <img
-                                                        src={phonecall}
-                                                        alt="phonecall"
-                                                      />
-                                                      9876543213
-                                                    </p>
-                                                  </div>
-                                                  <div className="col-lg-7 value">
-                                                    <label>Email</label>
-                                                    <p>
-                                                      <img
-                                                        src={mail}
-                                                        alt="mail"
-                                                      />
-                                                      sangeetha@adityabirlacapital.com
-                                                    </p>
-                                                  </div>
-                                                  <div className="col-lg-12">
-                                                    <hr />
-                                                  </div>
-                                                </div>
+                                               
+                                                
                                                 <div className="row">
                                                   <div className="col-lg-12">
                                                     <p>Address</p>
@@ -830,289 +820,168 @@ function Customerdetails() {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="policy-grid-row">
-                                    <div className="row">
-                                      <div
-                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                        data-toggle="collapse"
-                                        data-target="#collapseExample"
-                                        aria-expanded="false"
-                                        aria-controls="collapseExample"
-                                      >
-                                        <img src={threedots} alt="threedots" />
-                                      </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">Vijay Singa</p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        <label className="d-lg-none d-sm-block">
-                                          Plan name
-                                        </label>
-                                        <p className="color-b">
-                                          Sample text for plan name
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">
-                                          Model Premium + Service Tax
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4 d-lg-none d-sm-block">
-                                        <label>Policy Status</label>
-                                        <p className="color-b">Paid Up</p>
-                                      </div>
-                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
+                                  {[1, 2, 3, 4, 5, 6].map((id, index) => (
+                                    <div
+                                      className="policy-grid-row"
+                                      key={index}
+                                    >
+                                      <div className="row">
+                                        <div
+                                          className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                           data-toggle="collapse"
                                           data-target="#collapseExample"
                                           aria-expanded="false"
                                           aria-controls="collapseExample"
                                         >
-                                          Quick Action
-                                        </button>
+                                          <img
+                                            src={threedots}
+                                            alt="threedots"
+                                          />
+                                        </div>
+                                        <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">Vijay Singa</p>
+                                        </div>
+                                        <div className="col-lg-4 col-md-4">
+                                          <label className="d-lg-none d-sm-block">
+                                            Plan name
+                                          </label>
+                                          <p className="color-b">
+                                            Sample text for plan name
+                                          </p>
+                                        </div>
+                                        <div className="col-lg-3 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">
+                                            Model Premium + Service Tax
+                                          </p>
+                                        </div>
+                                        <div className="col-lg-4 col-md-4 d-lg-none d-sm-block">
+                                          <label>Policy Status</label>
+                                          <p className="color-b">Paid Up</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
+                                          <button
+                                            type="button"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target={`#collapseExample${index}`}
+                                            aria-expanded="false"
+                                            id={index}
+                                            aria-controls="collapseExample"
+                                            onClick={() => buttonText()}
+                                          >
+                                            {collapse
+                                              ? "Show More"
+                                              : "Show Less"}
+                                          </button>
+                                        </div>
                                       </div>
-                                    </div>
-                                    <div
-                                      className="row collapse"
-                                      id="collapseExample"
-                                    >
-                                      <div className="col-lg-12 m-pad-div">
-                                        <div className="expanded-div">
-                                          <div className="row">
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Policy Number
-                                                <br />
-                                                <span>123456798</span>
-                                              </p>
+                                      <div
+                                        className="row collapse"
+                                        id={`collapseExample${index}`}
+                                      >
+                                        <div className="col-lg-12 m-pad-div">
+                                          <div className="expanded-div">
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy Number
+                                                  <br />
+                                                  <span>123456798</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy Status <br />
+                                                  <span>Paid Up</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy Term
+                                                  <br />
+                                                  <span>5</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Modal Premium
+                                                  <br />
+                                                  <span>12000</span>
+                                                </p>
+                                              </div>
                                             </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Policy Status <br />
-                                                <span>Paid Up</span>
-                                              </p>
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Premium Payment Term
+                                                  <br />
+                                                  <span>2</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Premium Mode
+                                                  <br />
+                                                  <span>Monthly</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  ECS Registration Status
+                                                  <br />
+                                                  <span>Inactive</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Stale Cheque Conditional
+                                                  Status
+                                                  <br />
+                                                  <span>Stale Cheque</span>
+                                                </p>
+                                              </div>
                                             </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Policy Term
-                                                <br />
-                                                <span>5</span>
-                                              </p>
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Next Premium Due Date
+                                                  <br />
+                                                  <span>DD/MM/YYYY</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Base Sum Assured <br />
+                                                  <span>20000</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Cease Date
+                                                  <br />
+                                                  <span>DD/MM/YYYY</span>
+                                                </p>
+                                              </div>
                                             </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Modal Premium
-                                                <br />
-                                                <span>12000</span>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div className="row">
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Premium Payment Term
-                                                <br />
-                                                <span>2</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Premium Mode
-                                                <br />
-                                                <span>Monthly</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                ECS Registration Status
-                                                <br />
-                                                <span>Inactive</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Stale Cheque Conditional Status
-                                                <br />
-                                                <span>Stale Cheque</span>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div className="row">
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Next Premium Due Date
-                                                <br />
-                                                <span>DD/MM/YYYY</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Base Sum Assured <br />
-                                                <span>20000</span>
-                                              </p>
-                                            </div>
-                                            <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
-                                                Cease Date
-                                                <br />
-                                                <span>DD/MM/YYYY</span>
-                                              </p>
-                                            </div>
-                                          </div>
-                                          <div className="row">
-                                            <div className="col-lg-12">
-                                              <ul className="chips-tag">
-                                                <li>
-                                                  Send ECS registration request
-                                                </li>
-                                                <li>Send Payment Link</li>
-                                                <li className="out-line">
-                                                  More Actions
-                                                </li>
-                                              </ul>
+                                            <div className="row">
+                                              <div className="col-lg-12">
+                                                <ul className="chips-tag">
+                                                  <li>
+                                                    Send ECS registration
+                                                    request
+                                                  </li>
+                                                  <li>Send Payment Link</li>
+                                                  <li className="out-line">
+                                                    More Actions
+                                                  </li>
+                                                </ul>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
-                                  <div className="policy-grid-row">
-                                    <div className="row">
-                                      <div
-                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                        data-toggle="collapse"
-                                        data-target="#collapseExample"
-                                        aria-expanded="false"
-                                        aria-controls="collapseExample"
-                                      >
-                                        <img src={threedots} alt="threedots" />
-                                      </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">Vijay Singa</p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        <label className="d-lg-none d-sm-block">
-                                          Plan name
-                                        </label>
-                                        <p className="color-b">
-                                          Sample text for plan name
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">
-                                          Model Premium + Service Tax
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4 d-lg-none d-sm-block">
-                                        <label>Policy Status</label>
-                                        <p className="color-b">Paid Up</p>
-                                      </div>
-                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                          data-toggle="collapse"
-                                          data-target="#"
-                                          aria-expanded="false"
-                                          aria-controls="collapseExample"
-                                        >
-                                          Quick Action
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="policy-grid-row">
-                                    <div className="row">
-                                      <div
-                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                        data-toggle="collapse"
-                                        data-target="#collapseExample"
-                                        aria-expanded="false"
-                                        aria-controls="collapseExample"
-                                      >
-                                        <img src={threedots} alt="threedots" />
-                                      </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">Vijay Singa</p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        <label className="d-lg-none d-sm-block">
-                                          Plan name
-                                        </label>
-                                        <p className="color-b">
-                                          Sample text for plan name
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">
-                                          Model Premium + Service Tax
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4 d-lg-none d-sm-block">
-                                        <label>Policy Status</label>
-                                        <p className="color-b">Paid Up</p>
-                                      </div>
-                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                          data-toggle="collapse"
-                                          data-target="#"
-                                          aria-expanded="false"
-                                          aria-controls="collapseExample"
-                                        >
-                                          Quick Action
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div className="policy-grid-row brdr-none">
-                                    <div className="row">
-                                      <div
-                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                        data-toggle="collapse"
-                                        data-target="#collapseExample"
-                                        aria-expanded="false"
-                                        aria-controls="collapseExample"
-                                      >
-                                        <img src={threedots} alt="threedots" />
-                                      </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">Vijay Singa</p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        <label className="d-lg-none d-sm-block">
-                                          Plan name
-                                        </label>
-                                        <p className="color-b">
-                                          Sample text for plan name
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-3 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">
-                                          Model Premium + Service Tax
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-4 col-md-4 d-lg-none d-sm-block">
-                                        <label>Policy Status</label>
-                                        <p className="color-b">Paid Up</p>
-                                      </div>
-                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                          data-toggle="collapse"
-                                          data-target="#"
-                                          aria-expanded="false"
-                                          aria-controls="collapseExample"
-                                        >
-                                          Quick Action
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  ))}
                                 </div>
                               </div>
                             </div>
@@ -1170,7 +1039,12 @@ function Customerdetails() {
                       >
                         <div className="policy-statement-box">
                           <div className="row">
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                            <div
+                              className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                              data-toggle="modal"
+                              data-target="#Tax-Certificate"
+                              style={{ cursor: "pointer" }}
+                            >
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
@@ -1188,7 +1062,9 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                            <div class="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x" data-toggle="modal"
+                              data-target="#sales-illustration"
+                              style={{ cursor: "pointer" }}>
                               <div class="state-box shadow-normal">
                                 <div class="row r1">
                                   <div class="col-lg-12 text-center">
@@ -1203,7 +1079,7 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"style={{ cursor: "pointer" }} data-toggle="modal" data-target = '#policy-contract'>
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
@@ -1218,7 +1094,7 @@ function Customerdetails() {
                               </div>
                             </div>
 
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x" style={{ cursor: "pointer" }} data-target = '#tds-certificate' data-toggle="modal">
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
@@ -1236,7 +1112,12 @@ function Customerdetails() {
                               </div>
                             </div>
                             <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
-                              <div className="state-box shadow-normal">
+                              <div
+                                className="state-box shadow-normal"
+                                data-toggle="modal"
+                                data-target="#Premium-Due-Certificate"
+                                style={{ cursor: "pointer" }}
+                              >
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
                                     <img
@@ -1252,7 +1133,7 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x" style={{ cursor: "pointer" }} data-target = '#payment-acknowledgement' data-toggle="modal">
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
@@ -1754,6 +1635,1084 @@ function Customerdetails() {
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button className="btn btn-primary">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="modal fade"
+              id="Tax-Certificate"
+              data-backdrop="static"
+              data-keyboard="false"
+              tabIndex={-1}
+              aria-labelledby="forgot-password"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-width-family-tag">
+                <div className="modal-content">
+                  <div className="modal-header brdr-none">
+                    {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body moda-family-tag-body">
+                    <h3>Tax Certificate</h3>
+                    <hr />
+                    <div className="row">
+                      <div className="col-lg-4 col-md-5 col-12">
+                        <div className="form-group">
+                          <label htmlFor="exampleFormControlSelect1">
+                            Select Financial Year
+                          </label>
+                          <select
+                            className="form-control "
+                            id="exampleFormControlSelect1"
+                          >
+                            <option>2019-2020</option>
+                            <option>2020-2021</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-12 mt-2">
+                        <div className="data-card">
+                          <div className="data_card_body">
+                            <div className="row">
+                              <div className="col-md-12" />
+                              <div className="col-md-12 pad-0 ">
+                                <div
+                                  className="tab-content m-pad-normal"
+                                  id="myTabContent"
+                                >
+                                  {/* Today Content Starts Here */}
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="today"
+                                    role="tabpanel"
+                                    aria-labelledby="today"
+                                  >
+                                    <div className="g-container">
+                                      {/* Block */}
+                                      <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <div className="row">
+                                          <div className="col-md-4 text-left ">
+                                            <label className="ml-4">
+                                              Policy No.
+                                            </label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Policy Owner Name</label>
+                                          </div>
+                                          <div className="col-md-4">
+                                            <label>Plan Name</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row modal-cta">
+                      <div className="col-lg-12 text-right">
+                        <button className="btn btn-outline-s">Cancel</button>{" "}
+                        <button
+                          className="btn btn-primary"
+                          style={{ width: "200px" }}
+                        >
+                          Download Tax Certificate
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="modal fade"
+              id = 'sales-illustration'
+              data-backdrop="static"
+              data-keyboard="false"
+              tabIndex={-1}
+              aria-labelledby="forgot-password"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-width-family-tag">
+                <div className="modal-content">
+                  <div className="modal-header brdr-none">
+                    {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body moda-family-tag-body">
+                    <h3>Sales Illustration</h3>
+                    <hr />
+                  
+                    <div className="row">
+                      <div className="col-md-12 mt-2">
+                        <div className="data-card">
+                          <div className="data_card_body">
+                            <div className="row">
+                              <div className="col-md-12" />
+                              <div className="col-md-12 pad-0 ">
+                                <div
+                                  className="tab-content m-pad-normal"
+                                  id="myTabContent"
+                                >
+                                  {/* Today Content Starts Here */}
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="today"
+                                    role="tabpanel"
+                                    aria-labelledby="today"
+                                  >
+                                    <div className="g-container">
+                                      {/* Block */}
+                                      <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <div className="row">
+                                          <div className="col-md-4 text-left ">
+                                            <label className="ml-4">
+                                              Policy No.
+                                            </label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Policy Owner Name</label>
+                                          </div>
+                                          <div className="col-md-4">
+                                            <label>Plan Name</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row modal-cta">
+                      <div className="col-lg-12 text-right">
+                        <button className="btn btn-outline-s">Cancel</button>{" "}
+                        <button
+                          className="btn btn-primary"
+                          style={{ width: "300px" }}
+                        >
+                          Download Sales Illustration
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            <div
+              className="modal fade"
+              id = 'policy-contract'
+              data-backdrop="static"
+              data-keyboard="false"
+              tabIndex={-1}
+              aria-labelledby="forgot-password"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-width-family-tag">
+                <div className="modal-content">
+                  <div className="modal-header brdr-none">
+                    {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body moda-family-tag-body">
+                    <h3>Policy Contract</h3>
+                    <hr />
+                  
+                    <div className="row">
+                      <div className="col-md-12 mt-2">
+                        <div className="data-card">
+                          <div className="data_card_body">
+                            <div className="row">
+                              <div className="col-md-12" />
+                              <div className="col-md-12 pad-0 ">
+                                <div
+                                  className="tab-content m-pad-normal"
+                                  id="myTabContent"
+                                >
+                                  {/* Today Content Starts Here */}
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="today"
+                                    role="tabpanel"
+                                    aria-labelledby="today"
+                                  >
+                                    <div className="g-container">
+                                      {/* Block */}
+                                      <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <div className="row">
+                                          <div className="col-md-4 text-left ">
+                                            <label className="ml-4">
+                                              Policy No.
+                                            </label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Policy Owner Name</label>
+                                          </div>
+                                          <div className="col-md-4">
+                                            <label>Plan Name</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row modal-cta">
+                      <div className="col-lg-12 text-right">
+                        <button className="btn btn-outline-s">Cancel</button>{" "}
+                        <button
+                          className="btn btn-primary"
+                          style={{ width: "300px" }}
+                        >
+                          Download Policy Contract
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div
+              className="modal fade"
+              id = 'tds-certificate'
+              data-backdrop="static"
+              data-keyboard="false"
+              tabIndex={-1}
+              aria-labelledby="forgot-password"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-width-family-tag">
+                <div className="modal-content">
+                  <div className="modal-header brdr-none">
+                    {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body moda-family-tag-body">
+                    <h3>TDS Certificate</h3>
+                    <hr />
+                  
+                    <div className="row">
+                      <div className="col-md-12 mt-2">
+                        <div className="data-card">
+                          <div className="data_card_body">
+                            <div className="row">
+                              <div className="col-md-12" />
+                              <div className="col-md-12 pad-0 ">
+                                <div
+                                  className="tab-content m-pad-normal"
+                                  id="myTabContent"
+                                >
+                                  {/* Today Content Starts Here */}
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="today"
+                                    role="tabpanel"
+                                    aria-labelledby="today"
+                                  >
+                                    <div className="g-container">
+                                      {/* Block */}
+                                      <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <div className="row">
+                                          <div className="col-md-4 text-left ">
+                                            <label className="ml-4">
+                                              Policy No.
+                                            </label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Policy Owner Name</label>
+                                          </div>
+                                          <div className="col-md-4">
+                                            <label>Plan Name</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row modal-cta">
+                      <div className="col-lg-12 text-right">
+                        <button className="btn btn-outline-s">Cancel</button>{" "}
+                        <button
+                          className="btn btn-primary"
+                          style={{ width: "250px" }}
+                        >
+                          Download TDS Certificate
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="modal fade"
+              id = 'payment-acknowledgement'
+              data-backdrop="static"
+              data-keyboard="false"
+              tabIndex={-1}
+              aria-labelledby="forgot-password"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-width-family-tag">
+                <div className="modal-content">
+                  <div className="modal-header brdr-none">
+                    {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body moda-family-tag-body">
+                    <h3>policy-acknowledgement</h3>
+                    <hr />
+                  
+                    <div className="row">
+                      <div className="col-md-12 mt-2">
+                        <div className="data-card">
+                          <div className="data_card_body">
+                            <div className="row">
+                              <div className="col-md-12" />
+                              <div className="col-md-12 pad-0 ">
+                                <div
+                                  className="tab-content m-pad-normal"
+                                  id="myTabContent"
+                                >
+                                  {/* Today Content Starts Here */}
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="today"
+                                    role="tabpanel"
+                                    aria-labelledby="today"
+                                  >
+                                    <div className="g-container">
+                                      {/* Block */}
+                                      <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <div className="row">
+                                          <div className="col-md-4 text-left ">
+                                            <label className="ml-4">
+                                              Policy No.
+                                            </label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Policy Owner Name</label>
+                                          </div>
+                                          <div className="col-md-4">
+                                            <label>Plan Name</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row modal-cta">
+                      <div className="col-lg-12 text-right">
+                        <button className="btn btn-outline-s">Cancel</button>{" "}
+                        <button
+                          className="btn btn-primary"
+                          style={{ width: "300px" }}
+                        >
+                          Download policy-acknowledgement
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="modal fade"
+              id="Premium-Due-Certificate"
+              data-backdrop="static"
+              data-keyboard="false"
+              tabIndex={-1}
+              aria-labelledby="forgot-password"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-width-family-tag">
+                <div className="modal-content">
+                  <div className="modal-header brdr-none">
+                    {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body moda-family-tag-body">
+                    <h3>Premium Due Certificate</h3>
+                    <hr />
+                   
+                    <div className="row">
+                      <div className="col-md-12 mt-2">
+                        <div className="data-card">
+                          <div className="data_card_body">
+                            <div className="row">
+                              <div className="col-md-12" />
+                              <div className="col-md-12 pad-0 ">
+                                <div
+                                  className="tab-content m-pad-normal"
+                                  id="myTabContent"
+                                >
+                                  {/* Today Content Starts Here */}
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="today"
+                                    role="tabpanel"
+                                    aria-labelledby="today"
+                                  >
+                                    <div className="g-container">
+                                      {/* Block */}
+                                      <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <div className="row">
+                                          <div className="col-md-4 text-left ">
+                                            <label className="ml-4">
+                                              Policy No.
+                                            </label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Policy Owner Name</label>
+                                          </div>
+                                          <div className="col-md-4">
+                                            <label>Plan Name</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row modal-cta">
+                      <div className="col-lg-12 text-right">
+                        <button className="btn btn-outline-s">Cancel</button>{" "}
+                        <button
+                          className="btn btn-primary"
+                          style={{ width: "300px" }}
+                        >
+                          Download Premium Due Certificate
+                        </button>
                       </div>
                     </div>
                   </div>
