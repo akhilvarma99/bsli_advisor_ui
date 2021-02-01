@@ -396,7 +396,7 @@ function Customerdetails() {
                                           <div className="row">
                                             <div className="col-lg-12">
                                               <h3>
-                                                To Be Terminated/Discontinued
+                                                To Be Terminated
                                               </h3>
                                             </div>
                                           </div>
@@ -421,6 +421,43 @@ function Customerdetails() {
                                               </button>
                                             </div>
                                           </div>
+                                        </div>
+                                      </div>
+                                      <div className="col-lg-4 col-md-6">
+                                        <div className="smart-card shadow-normal">
+                                          <div className="yellow-flag">
+                                            <img
+                                              src={yellowflag}
+                                              alt="yellowflag"
+                                            />
+                                          </div>
+                                          <div className="today">Today</div>
+                                          <div className="row">
+                                            <div className="col-lg-12">
+                                              <h3>
+                                                To be Discontinued
+                                              </h3>
+                                            </div>
+                                          </div>
+                                          <div className="row pad-10">
+                                            <div className="col-2">
+                                              <img
+                                                src={policyid}
+                                                alt="policyid"
+                                              />
+                                            </div>
+                                            <div className="col-10">
+                                              <p>
+                                                Policy ID
+                                                <br /> <span>20/Dec/2020</span>
+                                              </p>
+                                            </div>
+                                          </div>
+                                          <br/>
+                                          <p style = {{color : '#6c7174'}}>
+                                            Reason For Termination
+                                          </p>
+                                         
                                         </div>
                                       </div>
                                       <div className="col-lg-4 col-md-6">
@@ -628,10 +665,15 @@ function Customerdetails() {
                                                         alt="greentick"
                                                         className="greentick"
                                                       />{" "}
-                                                      &nbsp; Activated
+                                                      &nbsp; Activated  or <button
+                                                        className="btn btn-primary-s"
+                                                       
+                                                      >
+                                                        Activate
+                                                      </button> 
                                                     </p>
                                                   </div>
-                                                  <div className="col-lg-6 col-md-12 value mrgn-0">
+                                                  {/* <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
                                                       <label>
                                                         WhatsApp Opt-in status
@@ -645,7 +687,7 @@ function Customerdetails() {
                                                         Activate
                                                       </button>
                                                     </p>
-                                                  </div>
+                                                  </div> */}
                                                   <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
                                                       <label>KYC Number</label>{" "}
@@ -1242,10 +1284,10 @@ function Customerdetails() {
                               <div className="yellow-flag">
                                 <img src={yellowflag} alt="yellowflag" />
                               </div>
-                              {/* <div className="today">Today</div> */}
+                              <div className="today">Today</div>
                               <div className="row">
                                 <div className="col-lg-12">
-                                  <h3>Upsell Opportunity</h3>
+                                  <h3>PASA Offer</h3>
                                 </div>
                               </div>
                               <div className="row pad-10">
@@ -1255,18 +1297,23 @@ function Customerdetails() {
                                     src={creative}
                                     alt="creative"
                                   />
+                                  
                                 </div>
                                 <div className="col-10">
                                   <p className="m-top-12">
-                                    PASA SUM Assured + Value
+                                    Product name 
+                                  </p>
+                                  <p>
+                                  &#8377;3,73,000
                                   </p>
                                 </div>
                               </div>
+                          
+                                
                               <div className="row">
-                                <div className="col-lg-12 text-right">
-                                  <button className="btn btn-outline-s">
-                                    Send Details
-                                  </button>
+                               
+                               <div className="col-lg-12 text-left">
+                                 <span>The customer will not be required to (PASA Offer Value)</span>
                                 </div>
                               </div>
                             </div>
@@ -1279,7 +1326,7 @@ function Customerdetails() {
                               {/* <div className="today">Today</div> */}
                               <div className="row">
                                 <div className="col-lg-12">
-                                  <h3>Set Up ECS</h3>
+                                  <h3>Next Best Offer</h3>
                                 </div>
                               </div>
                               <div className="row pad-10">
@@ -1287,14 +1334,13 @@ function Customerdetails() {
                                   <img src={circle} alt="circle" />
                                 </div>
                                 <div className="col-10">
-                                  <p className="m-top-12">Policy ID</p>
+                                  <p className="m-top-12">Product name</p>
                                 </div>
                               </div>
                               <div className="row">
-                                <div className="col-lg-12 text-right">
-                                  <button className="btn btn-outline-s">
-                                    Send Registration link
-                                  </button>
+                               
+                               <div className="col-lg-12 text-left">
+                                 <span>Based on data, your customer is likely to buy this product. You should pitch this to the customer</span>
                                 </div>
                               </div>
                             </div>
