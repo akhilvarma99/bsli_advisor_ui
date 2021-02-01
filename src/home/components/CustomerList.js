@@ -8,8 +8,10 @@ import wishlist from "../../assets/img/icons/wishlist_w.svg";
 import help from "../../assets/img/icons/help_w.svg";
 import invoice from "../../assets/img/icons/invoice_w.svg";
 import load from "../../assets/img/icons/load-more.svg";
-
+import copy from "../../assets/img/icons/copy.svg";
+import Dropdown from "react-bootstrap/Dropdown";
 import sort from "../../assets/img/icons/sort.svg";
+import Email from "../../assets/img/icons/mail.svg";
 import { NavLink } from "react-router-dom";
 
 function CoustmerListingPage() {
@@ -281,12 +283,36 @@ function CoustmerListingPage() {
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s disabled-btn"
                                     >
                                       Premium Already Paid
-                                    </button>
+                                    </button> */}
+                                    <Dropdown>
+                                      <Dropdown.Toggle
+                                        variant="Danger"
+                                        className="btn btn-outline-s"
+                                      >
+                                        Send Payment Link
+                                      </Dropdown.Toggle>
+
+                                      <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">
+                                          {/* <img src={Email} alt="Email" />{" "}
+                                          &nbsp;Send Email
+                                           */}
+                                          <img src={copy} alt="copy" />
+                                          &nbsp; Copy Link
+                                        </Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">
+                                          <img src={Email} alt="Email" />{" "}
+                                          &nbsp;Send Email
+                                          {/* <img src={copy} alt="copy" />
+                                          &nbsp; Copy Link */}
+                                        </Dropdown.Item>
+                                      </Dropdown.Menu>
+                                    </Dropdown>
                                   </div>
                                 </div>
                               </div>

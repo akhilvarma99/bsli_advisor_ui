@@ -10,9 +10,9 @@
   background-color: rgb(133, 133, 133);
 }
 
-.modal {
-  top: 20% !important;
-}
+// .modal {
+//   top: 20% !important;
+// }
 
 .backArrow {
   margin-right: 6px;
@@ -112,4 +112,28 @@ input[type="radio"]:after {
 
 input[type="radio"]:checked:after {
   color: #dc3545;
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0.9rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px #cdcece solid;
+  img {
+    margin-top: -5px;
+  }
+}
+
+.dropdown-menu {
+  padding: 0px;
+}
+.filter_sub_heading img {
+  margin-right: 5px;
+  margin-top: -5px;
 }

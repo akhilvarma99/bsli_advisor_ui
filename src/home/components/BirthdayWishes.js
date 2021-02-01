@@ -182,7 +182,7 @@ function BirthdayWishes() {
                                     type="button"
                                     className="btn btn-outline-s  disabled-btn"
                                   >
-                                    Send Wishes
+                                    Already Wished
                                   </button>
                                 </div>
                               </div>

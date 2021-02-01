@@ -610,12 +610,17 @@ function Customerdetails() {
                                                   </div>
                                                   <div className="col-lg-6 col-md-3 value">
                                                     <p>
+                                                      <label>KYC Number</label>{" "}
+                                                      <br />
+                                                      1234 3445 3322
+                                                    </p>
+                                                    {/* <p>
                                                       <label>
                                                         Aadhaar Number
                                                       </label>{" "}
                                                       <br />
                                                       2210 2149 7654
-                                                    </p>
+                                                    </p> */}
                                                   </div>
                                                   <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
@@ -647,11 +652,11 @@ function Customerdetails() {
                                                     </p>
                                                   </div>
                                                   <div className="col-lg-6 col-md-12 value mrgn-0">
-                                                    <p>
+                                                    {/* <p>
                                                       <label>KYC Number</label>{" "}
                                                       <br />
                                                       1234 3445 3322
-                                                    </p>
+                                                    </p> */}
                                                   </div>
                                                 </div>
                                               </div>
@@ -717,14 +722,14 @@ function Customerdetails() {
                                         </div>
                                       </div>
                                     </div>
-                                    <div className="row">
+                                    {/* <div className="row">
                                       <div className="col-md-12 text-center">
                                         <br />
                                         <button className="btn btn-primary">
                                           Raise a New Query
                                         </button>
                                       </div>
-                                    </div>
+                                    </div> */}
                                   </div>
                                 </div>
                               </div>

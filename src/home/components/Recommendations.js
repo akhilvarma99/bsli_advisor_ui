@@ -78,7 +78,7 @@ function Recommendations() {
                   All Customers
                 </h1>
               </div>
-              <div className="col">
+              {/* <div className="col">
                 <ul className="download-report">
                   <li>Export as:</li>
                   <li>
@@ -88,7 +88,7 @@ function Recommendations() {
                     <img src={downloadpdf} alt="downloadpdf" />
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
             {/* Heading Ends  */}
             <div className="f_Div_outer">
@@ -153,9 +153,37 @@ function Recommendations() {
                               className="form-check-label"
                               htmlFor="flexRadioDefault1"
                             >
-                              Surrendered|Terminated
-                              <br />
-                              |Discontinued
+                              Surrendered
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="STD"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Terminated
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="STD"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Discontinued
                             </label>
                           </div>
                         </div>
