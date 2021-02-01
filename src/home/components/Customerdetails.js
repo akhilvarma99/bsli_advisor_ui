@@ -17,6 +17,7 @@ import tdscertificate from "../../assets/img/icons/tds-certificate.svg";
 import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
 import circle from "../../assets/img/icons/circle.svg";
 import creative from "../../assets/img/icons/creative.svg";
+import { NavLink } from "react-router-dom";
 function Customerdetails() {
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
@@ -80,7 +81,7 @@ function Customerdetails() {
                     <div className="col-lg-10 col-md-10">
                       <div className="name-details">
                         <div className="category-div">
-                          <p style = {{color : 'black'}}>
+                          <p>
                             Category Name{"   "}
                             <img
                               src={yellowstarfilled}
@@ -496,7 +497,7 @@ function Customerdetails() {
                                           <div className="today">Next Week</div>
                                           <div className="row">
                                             <div className="col-lg-12">
-                                              <h3>Paid Up Policies</h3>
+                                              <h3>To Be Paid Up</h3>
                                             </div>
                                           </div>
                                           <div className="row pad-10">
@@ -508,8 +509,8 @@ function Customerdetails() {
                                             </div>
                                             <div className="col-10">
                                               <p>
-                                                Policy ID
-                                                <br /> <span>20/Dec/2020</span>
+                                              &#8377;3,33,333
+                                                <br /> <span>(Payout type)</span>
                                               </p>
                                             </div>
                                           </div>
@@ -545,7 +546,7 @@ function Customerdetails() {
                                             </div>
                                             <div className="col-10">
                                               <p>
-                                                Policy ID
+                                              3,33,333
                                                 <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
@@ -670,15 +671,7 @@ function Customerdetails() {
                                                       AKNBH1546E
                                                     </p>
                                                   </div>
-                                                  <div className="col-lg-6 col-md-3 value">
-                                                    <p>
-                                                      <label>
-                                                        Aadhaar Number
-                                                      </label>{" "}
-                                                      <br />
-                                                      2210 2149 7654
-                                                    </p>
-                                                  </div>
+                                                 
                                                   <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
                                                       <label>
@@ -756,14 +749,7 @@ function Customerdetails() {
                                         </div>
                                       </div>
                                     </div>
-                                    <div className="row">
-                                      <div className="col-md-12 text-center">
-                                        <br />
-                                        <button className="btn btn-primary">
-                                          Raise a New Query
-                                        </button>
-                                      </div>
-                                    </div>
+                                   
                                   </div>
                                 </div>
                               </div>
@@ -816,14 +802,20 @@ function Customerdetails() {
                                 <div className="policy-grid-customer">
                                   <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                     <div className="row">
-                                      <div className="col-lg-3">
+                                      <div className="col-lg-2">
                                         <h3>Life Insured Name</h3>
                                       </div>
                                       <div className="col-lg-4">
                                         <h3>Plan Name</h3>
                                       </div>
-                                      <div className="col-lg-5">
+                                      <div className="col-lg-2">
                                         <h3>Premium</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Next Premium Due Date</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>{''}</h3>
                                       </div>
                                     </div>
                                   </div>
@@ -845,24 +837,22 @@ function Customerdetails() {
                                             alt="threedots"
                                           />
                                         </div>
-                                        <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-4 col-md-4">
-                                          <label className="d-lg-none d-sm-block">
-                                            Plan name
-                                          </label>
+                            
                                           <p className="color-b">
                                             Sample text for plan name
                                           </p>
                                         </div>
-                                        <div className="col-lg-3 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
                                           <p className="color-b">
                                             Model Premium + Service Tax
                                           </p>
                                         </div>
-                                        <div className="col-lg-4 col-md-4 d-lg-none d-sm-block">
-                                          <label>Policy Status</label>
+                                        <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                         
                                           <p className="color-b">Paid Up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
@@ -966,24 +956,32 @@ function Customerdetails() {
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Cease Date
-                                                  <br />
-                                                  <span>DD/MM/YYYY</span>
+                                              <p>
+                                                  <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                    WhatsApp Opt-in status
+                                                  </label>{" "}
+                                                  <br />{" "}
+                                                  <img
+                                                    src={greentick}
+                                                    alt="greentick"
+                                                    className="greentick"
+                                                  />{" "}
+                                                  &nbsp; Activated
                                                 </p>
                                               </div>
                                             </div>
                                             <div className="row">
                                               <div className="col-lg-12">
                                                 <ul className="chips-tag">
-                                                  <li>
+                                                  {/* <li>
                                                     Send ECS registration
                                                     request
                                                   </li>
-                                                  <li>Send Payment Link</li>
-                                                  <li className="out-line">
-                                                    More Actions
-                                                  </li>
+                                                  <li>Send Payment Link</li> */}
+                                                  <NavLink class to = '/policydetails' style = {{textDecoration : 'none'}}>
+                                                  <li className="active">
+                                                    Go to Policy Details
+                                                  </li></NavLink>
                                                 </ul>
                                               </div>
                                             </div>

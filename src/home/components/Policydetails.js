@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Header from "../../header";
 import breadcrumbsarrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
@@ -18,7 +18,15 @@ import policyid from "../../assets/img/icons/policy-id.svg";
 import gift from "../../assets/img/icons/gift.svg";
 import greentick from "../../assets/img/icons/green-tick.svg";
 
-function policydetails() {
+function Policydetails() {
+
+   useEffect(() => {
+    window.scrollTo(0, 0);
+   }, [])
+  
+
+
+
   return (
     <div>
       <div>
@@ -63,7 +71,7 @@ function policydetails() {
               </div>
             </div>
           </div>
-          <div className="container">
+          <div autofocus className="container">
             {/* Heading Starts  */}
             <div className="d-flex justify-content-between">
               <div className="row d-none d-lg-block d-sm-none">
@@ -1533,4 +1541,4 @@ function policydetails() {
   );
 }
 
-export default policydetails;
+export default Policydetails;
