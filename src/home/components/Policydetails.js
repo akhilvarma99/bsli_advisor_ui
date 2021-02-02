@@ -16,6 +16,7 @@ import tdscertificate from "../../assets/img/icons/tds-certificate.svg";
 import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
 import policyid from "../../assets/img/icons/policy-id.svg";
 import gift from "../../assets/img/icons/gift.svg";
+import greentick from "../../assets/img/icons/green-tick.svg";
 
 function policydetails() {
   return (
@@ -608,11 +609,19 @@ function policydetails() {
                                               </div>
                                             </div>
                                             <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Base Sum Assured
-                                              </label>
                                               <div className="font18 line-ht-11">
-                                                20000
+                                                <p>
+                                                  <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                    WhatsApp Opt-in status
+                                                  </label>{" "}
+                                                  <br />{" "}
+                                                  <img
+                                                    src={greentick}
+                                                    alt="greentick"
+                                                    className="greentick"
+                                                  />{" "}
+                                                  &nbsp; Activated
+                                                </p>
                                               </div>
                                             </div>
                                             <div className="col-md-3 mb-3">

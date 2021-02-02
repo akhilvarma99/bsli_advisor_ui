@@ -117,7 +117,7 @@ function CoustmerListingPage() {
                           Pending Queries
                         </li>
                       </NavLink>
-                      <NavLink
+                      {/* <NavLink
                         to="/Payouts"
                         style={{
                           listStyle: "none",
@@ -129,11 +129,11 @@ function CoustmerListingPage() {
                           <img src={invoice} alt="invoice" />
                           Payouts
                         </li>
-                        {/* <li>
+                        <li>
                           <img src={handshake} alt="handshake" />
                           Business
-                        </li> */}
-                      </NavLink>
+                        </li> 
+                      </NavLink> */}
                     </ul>
                   </div>
                 </div>
@@ -216,7 +216,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-3">
                                     <label>
                                       name
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -225,7 +225,8 @@ function CoustmerListingPage() {
                                   <div className="col-md-7">
                                     <label>
                                       Policy Details
-                                      {/* <img src={sort} alt="sort" /> */}
+                                      {/* <img src={sort} alt="sort" />
+                                       */}
                                       {/* <span>Sorted by due date</span> */}
                                     </label>
                                   </div>
@@ -272,7 +273,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -326,7 +331,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -380,7 +389,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right indication-span">
@@ -434,7 +447,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -487,7 +504,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -540,7 +561,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -580,7 +605,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-3">
                                     <label>
                                       name
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -589,7 +614,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-7">
                                     <label>
                                       Policy Details
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                       <br />
                                       <span>Sorted by due date</span>
                                     </label>
@@ -637,7 +662,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -691,7 +720,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -745,7 +778,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -799,7 +836,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -852,7 +893,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -905,7 +950,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -945,7 +994,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-3">
                                     <label>
                                       name
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -954,7 +1003,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-7">
                                     <label>
                                       Policy Details
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                       <br />
                                       <span>Sorted by due date</span>
                                     </label>
@@ -1002,7 +1051,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1056,7 +1109,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1110,7 +1167,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1164,7 +1225,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1217,7 +1282,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1270,7 +1339,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1381,17 +1454,14 @@ function CoustmerListingPage() {
                                   <div className="col-md-3">
                                     <label>
                                       name
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>Contact</label>
                                   </div>
                                   <div className="col-md-7">
-                                    <label>
-                                      Details
-                                      <img src={sort} alt="sort" />
-                                    </label>
+                                    <label>Details</label>
                                   </div>
                                 </div>
                               </div>
@@ -1436,7 +1506,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1490,7 +1564,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1544,7 +1622,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1598,7 +1680,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1651,7 +1737,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1704,7 +1794,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1744,7 +1838,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-3">
                                     <label>
                                       name
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -1753,7 +1847,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-7">
                                     <label>
                                       Details
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                 </div>
@@ -1799,7 +1893,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1853,7 +1951,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1907,7 +2009,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -1961,7 +2067,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2014,7 +2124,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2067,7 +2181,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2107,7 +2225,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-3">
                                     <label>
                                       name
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -2116,7 +2234,7 @@ function CoustmerListingPage() {
                                   <div className="col-md-7">
                                     <label>
                                       Details
-                                      <img src={sort} alt="sort" />
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                 </div>
@@ -2162,7 +2280,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2216,7 +2338,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2270,7 +2396,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2324,7 +2454,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2377,7 +2511,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
@@ -2430,7 +2568,11 @@ function CoustmerListingPage() {
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
                                     <p>
-                                      <img src={starEmpty} alt="starEmpty" />
+                                      <img
+                                        src={starEmpty}
+                                        alt="starEmpty"
+                                        className="starempty"
+                                      />
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
