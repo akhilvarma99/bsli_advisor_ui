@@ -471,7 +471,7 @@ function Querymanagementsystem() {
                                     type="button"
                                     className="btn btn-primary"
                                   >
-                                    <img src={loadmore} alt="loadmore" />
+                                    {/*<img src={loadmore} alt="loadmore" />*/}
                                     See More
                                   </button>
                                 </div>

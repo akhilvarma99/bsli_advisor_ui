@@ -17,6 +17,43 @@
     display: none;
   }
 }
+.toastBlock {
+  position: absolute;
+  top: 159px;
+  right: 50px;
+  opacity: 1;
+  z-index: 99;
+  width: 291px;
+  height: 50px;
+  background-color: #fff;
+  padding: 9px 20px;
+  .messageText {
+    margin-top: 3px;
+  }
+}
+
+.iconButton {
+  text-align: left;
+  font: normal normal normal 16px/38px "pf_handbook_proregular";
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  img {
+    width: 12px;
+    height: 12px;
+    margin-right: 7px;
+  }
+}
+.iconButton:hover {
+  background-color: lightgray;
+}
+.line {
+  height: 0px;
+  border: 1px solid #707070;
+  opacity: 0.2;
+  max-width: 100%;
+  margin: 5px 10px;
+}
 
 .backArrow {
   margin-right: 6px;

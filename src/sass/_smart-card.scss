@@ -1,10 +1,10 @@
 .smart-card {
-  padding: 18px 40px;
+  padding: 20px;
   border-radius: 5px;
   border: 1px rgb(230, 230, 230) solid;
   position: relative;
   margin-bottom: 15px;
-  min-height: 200px;
+  min-height: 172px;
 
   h3 {
     font-size: 20px;
@@ -28,13 +28,13 @@
     margin-top: 15px;
     float: right;
     width: 150px;
-    margin-right: -19px;
+    /* margin-right: -4px; */
   }
 
   .today {
     position: absolute;
     top: 15px;
-    right: 14px;
+    right: 20px;
     color: $dark-grey;
     font-size: 18px;
   }
@@ -45,10 +45,47 @@
     left: 10px;
     top: 0px;
   }
-
+  .cardStatus {
+    text-align: left;
+    font: normal normal normal 16px "pf_handbook_proregular";
+    letter-spacing: 0px;
+    color: #f81010;
+    opacity: 1;
+  }
   .pad-10 {
     padding-top: 6px;
   }
+}
+.asOn {
+  h1 {
+    text-align: left;
+    font: normal normal normal 14px/17px "pf_handbook_proregular";
+    letter-spacing: 0px;
+    color: #6c7174;
+    opacity: 1;
+  }
+}
+.loadingText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+  }
+  h1 {
+    text-align: center;
+    font: normal normal normal 16px/7px "pf_handbook_proregular";
+    letter-spacing: 0px;
+    color: #6c7174;
+    opacity: 1;
+    margin-top: 9px;
+  }
+}
+.verticalAlign {
+  vertical-align: middle !important;
+  align-self: center;
 }
 
 .m-bottom-6 {

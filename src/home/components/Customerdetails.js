@@ -250,12 +250,12 @@ function Customerdetails() {
                                     <div className="row">
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
 
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -288,12 +288,12 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">overdue</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -317,11 +317,16 @@ function Customerdetails() {
                                               </p>
                                             </div>
                                           </div>
-                                          <div className="row">
-                                            <div className="col-lg-12 text-right">
-                                              <button className="btn btn-outline-s">
-                                                Send Payment Link
-                                              </button>
+                                          <div className="d-flex justify-content-between align-items-center">
+                                            <p className="cardStatus mt-3">
+                                              Payment Failed
+                                            </p>
+                                            <div className="row">
+                                              <div className="col-lg-12 text-right">
+                                                <button className="btn btn-outline-s">
+                                                  Send Payment Link
+                                                </button>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
@@ -329,12 +334,12 @@ function Customerdetails() {
 
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -370,12 +375,12 @@ function Customerdetails() {
 
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">Tomorrow</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -410,15 +415,15 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">Today</div>
                                           <div className="row">
-                                            <div className="col-lg-12">
+                                            <div className="col-lg-12 ">
                                               <h3>To Be Terminated</h3>
                                             </div>
                                           </div>
@@ -447,12 +452,12 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -474,19 +479,22 @@ function Customerdetails() {
                                             </div>
                                           </div>
                                           <br />
-                                          <p style={{ color: "#6c7174" }}>
+                                          <p
+                                            className="cardStatus"
+                                            style={{ color: "#6c7174" }}
+                                          >
                                             Reason For Termination
                                           </p>
                                         </div>
                                       </div>
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">Next Week</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -518,12 +526,12 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -555,12 +563,12 @@ function Customerdetails() {
                                       </div>
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
-                                          <div className="yellow-flag">
+                                          {/* <div className="yellow-flag">
                                             <img
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div>
+                                          </div> */}
                                           <div className="today">Tomorrow</div>
                                           <div className="row">
                                             <div className="col-lg-12">

@@ -6,6 +6,8 @@ import user from "../../assets/img/icons/user.svg";
 import hand from "../../assets/img/icons/hand_w.svg";
 import wishlist from "../../assets/img/icons/wishlist_w.svg";
 import help from "../../assets/img/icons/help_w.svg";
+import Dropdown from "../Utils/Dropdown";
+import Toasts from "../Utils/Toasts";
 import invoice from "../../assets/img/icons/invoice_w.svg";
 import load from "../../assets/img/icons/load-more.svg";
 
@@ -13,6 +15,8 @@ import sort from "../../assets/img/icons/sort.svg";
 import { NavLink } from "react-router-dom";
 
 function CoustmerListingPage() {
+  const copyLinkToast = () => {};
+  const copyMailToast = () => {};
   return (
     <div>
       <div>
@@ -38,6 +42,7 @@ function CoustmerListingPage() {
               <div className="col-md-12">
                 <h1>Customer List</h1>
               </div>
+              <Toasts message={"hello bro"} />
             </div>
             <div className="row h-scroll-s">
               <div className="col-md-12 h-scroll-s">
@@ -455,12 +460,26 @@ function CoustmerListingPage() {
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/* <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Payment Link
-                                    </button>
+                                    </button> */}
+                                    <Dropdown
+                                      title={"Send Payment Link"}
+                                      items={[
+                                        {
+                                          logo: "",
+                                          title: "Copy link",
+                                          fuction: copyLinkToast(),
+                                        },
+                                        {
+                                          logo: "",
+                                          title: "Send Email",
+                                          function: copyMailToast(),
+                                        },
+                                      ]}
+                                    />
                                   </div>
                                 </div>
                               </div>
@@ -584,7 +603,6 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -973,7 +991,6 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1362,7 +1379,6 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -1817,7 +1833,6 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -2204,7 +2219,6 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>
@@ -2591,7 +2605,6 @@ function CoustmerListingPage() {
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
                                 </button>
                               </div>

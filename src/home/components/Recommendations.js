@@ -89,6 +89,9 @@ function Recommendations() {
                   </li>
                 </ul>
               </div> */}
+              <div className="asOn verticalAlign mr-3">
+                <h1>As on: 26 Jan 2021</h1>
+              </div>
             </div>
             {/* Heading Ends  */}
             <div className="f_Div_outer">
@@ -1024,14 +1027,15 @@ function Recommendations() {
                                 </div>
                               </div>
                               {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
+                              <div className="g-footer text-center loadingText">
+                                {/* <button
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
-                                </button>
+                                </button> */}
+                                <img src={load} />
+                                <h1>Loading...</h1>
                               </div>
                             </div>
                           </div>
@@ -1392,14 +1396,15 @@ function Recommendations() {
                                 </div>
                               </div>
                               {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
+                              <div className="g-footer text-center loadingText">
+                                {/* <button
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
-                                </button>
+                                </button> */}
+                                <img src={load} />
+                                <h1>Loading...</h1>
                               </div>
                             </div>
                           </div>
@@ -1760,14 +1765,15 @@ function Recommendations() {
                                 </div>
                               </div>
                               {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
+                              <div className="g-footer text-center loadingText">
+                                {/* <button
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
-                                </button>
+                                </button> */}
+                                <img src={load} />
+                                <h1>Loading...</h1>
                               </div>
                             </div>
                           </div>
@@ -2260,11 +2266,15 @@ function Recommendations() {
                               </div>
                             </div>
                             {/* Block */}
-                            <div className="g-footer text-center">
-                              <button type="button" className="btn btn-primary">
-                                <img src={load} alt="loadmore" />
-                                See More
-                              </button>
+                            <div className="g-footer text-center loadingText">
+                              {/* <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  See More
+                                </button> */}
+                              <img src={load} />
+                              <h1>Loading...</h1>
                             </div>
                           </div>
 
@@ -3592,14 +3602,15 @@ function Recommendations() {
                                 </div>
                               </div>
                               {/* Block */}
-                              <div className="g-footer text-center">
-                                <button
+                              <div className="g-footer text-center loadingText">
+                                {/* <button
                                   type="button"
                                   className="btn btn-primary"
                                 >
-                                  <img src={load} alt="load" />
                                   See More
-                                </button>
+                                </button> */}
+                                <img src={load} />
+                                <h1>Loading...</h1>
                               </div>
                             </div>
                           </div>
