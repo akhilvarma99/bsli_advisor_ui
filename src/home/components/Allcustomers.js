@@ -10,6 +10,8 @@ import dateicon from "../../assets/img/icons/date-icon.svg";
 import starempty from "../../assets/img/icons/star-empty.svg";
 import load from "../../assets/img/icons/load-more.svg";
 import sort from "../../assets/img/icons/sort.svg";
+import FilterDropdown from "../../utils/FilterDropdown";
+
 function Allcustomers() {
   return (
     <div>
@@ -140,6 +142,15 @@ function Allcustomers() {
                             Product Name 04
                           </label>
                         </div>
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div className="col-lg-12"></div>
+                      <div className="col-lg-12 filter_sub_check_box_row filterDropdown">
+                        <h6>Product</h6>
+                        <FilterDropdown
+                          options={["Premium Due Date", "lapse date"]}
+                        />
                       </div>
                     </div>
 

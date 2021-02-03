@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../header";
 import breadcrumbsArrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import starEmpty from "../../assets/img/icons/star-empty.svg";
@@ -6,8 +6,8 @@ import user from "../../assets/img/icons/user.svg";
 import hand from "../../assets/img/icons/hand_w.svg";
 import wishlist from "../../assets/img/icons/wishlist_w.svg";
 import help from "../../assets/img/icons/help_w.svg";
-import Dropdown from "../Utils/Dropdown";
-import Toasts from "../Utils/Toasts";
+import Dropdown from "../../utils/Dropdown";
+import Toasts from "../../utils/Toasts";
 import invoice from "../../assets/img/icons/invoice_w.svg";
 import load from "../../assets/img/icons/load-more.svg";
 
@@ -15,8 +15,25 @@ import sort from "../../assets/img/icons/sort.svg";
 import { NavLink } from "react-router-dom";
 
 function CoustmerListingPage() {
-  const copyLinkToast = () => {};
-  const copyMailToast = () => {};
+  /* -----------------Toast-Functions---------------------- */
+  const [message, setMessage] = useState();
+  const openToast = (message) => {
+    if (message !== null) {
+      document.getElementById("toastBlock").classList.add("showToast");
+      setTimeout(function () {
+        document.getElementById("toastBlock").classList.remove("showToast");
+      }, 3000);
+    } else {
+      document.getElementById("toastBlock").classList.remove("showToast");
+    }
+    setMessage(message);
+    console.log("anvesh");
+  };
+  const closeButton = () => {
+    document.getElementById("toastBlock").style.visibility = "hidden";
+  };
+  /* ------------------Toast-Functions----------------------- */
+
   return (
     <div>
       <div>
@@ -42,7 +59,7 @@ function CoustmerListingPage() {
               <div className="col-md-12">
                 <h1>Customer List</h1>
               </div>
-              <Toasts message={"hello bro"} />
+              <Toasts closeButton={closeButton} message={message} />
             </div>
             <div className="row h-scroll-s">
               <div className="col-md-12 h-scroll-s">
@@ -471,12 +488,14 @@ function CoustmerListingPage() {
                                         {
                                           logo: "",
                                           title: "Copy link",
-                                          fuction: copyLinkToast(),
+                                          anvesh: openToast,
+                                          message: "Success: Link copied",
                                         },
                                         {
                                           logo: "",
                                           title: "Send Email",
-                                          function: copyMailToast(),
+                                          anvesh: openToast,
+                                          message: "Success: Payment Link sent",
                                         },
                                       ]}
                                     />

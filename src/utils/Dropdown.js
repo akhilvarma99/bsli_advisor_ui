@@ -1,8 +1,10 @@
 import React from "react";
 
 export default function Dropdown(props) {
+  console.log(props);
+
   return (
-    <div className="dropdown">
+    <div className="dropdown dropdown-toggle">
       <button
         className="btn btn-outline-s"
         type="button"
@@ -15,21 +17,21 @@ export default function Dropdown(props) {
       </button>
       <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
         {props.items.map((item, index) => (
-          <>
+          <React.Fragment key={index}>
             <li
               className="iconButton"
-              onClick={() => props.function}
+              onClick={() => item.anvesh(item.message)}
               type="button"
             >
               <img src={item.logo} />
               {item.title}
             </li>
             {index + 1 < props.items.length ? (
-              <div classNameName="line"></div>
+              <div className="line"></div>
             ) : (
               <></>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>

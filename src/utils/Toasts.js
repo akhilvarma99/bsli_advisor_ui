@@ -6,7 +6,7 @@ export default function Toasts(props) {
       aria-atomic="true"
       style={{ position: "relative", minHeight: "200px" }}
     > */
-    <div className="toast toastBlock">
+    <div id="toastBlock" className="toast">
       {/* <img src= className="rounded mr-2" alt="..." /> */}
       <strong class="messageText">{props.message}</strong>
       <button
@@ -15,7 +15,9 @@ export default function Toasts(props) {
         data-dismiss="toast"
         aria-label="Close"
       >
-        <span aria-hidden="true">&times;</span>
+        <span aria-hidden="true" onClick={props.closeButton}>
+          &times;
+        </span>
       </button>
     </div>
     /*     </div>
