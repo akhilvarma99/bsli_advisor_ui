@@ -104,7 +104,7 @@ function Login(props) {
                     </NavLink>
                   </div>
                   <div className="col-md-4   ">
-                    <NavLink to="/password">
+                  
                       {" "}
                       <button
                         type="button"
@@ -113,7 +113,7 @@ function Login(props) {
                       >
                         Next
                       </button>
-                    </NavLink>
+                    
                   </div>
                   <div className="col-md-8 show-xs">
                     <br />

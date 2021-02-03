@@ -1,4 +1,5 @@
-import React,{useEffect} from "react";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import Header from "../../header";
 import breadcrumbsarrow from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
@@ -17,37 +18,50 @@ import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
 import policyid from "../../assets/img/icons/policy-id.svg";
 import gift from "../../assets/img/icons/gift.svg";
 import greentick from "../../assets/img/icons/green-tick.svg";
-
+import dateicon from "../../assets/img/icons/date-icon.svg";
+import threedots from "../../assets/img/icons/three-dots.svg";
+import taxcertIcon from "../../assets/img/icons/Taxcertificate.svg";
+import tdscertIcon from "../../assets/img/icons/Tdscertificate.svg";
+import salesillIcon from "../../assets/img/icons/SalesIllustration.svg";
+import policycontractIcon from "../../assets/img/icons/Policycontract.svg";
+import paymentAcknowledgeIcon from "../../assets/img/icons/form.svg";
+import premiumDueIcon from "../../assets/img/icons/premium.svg";
+import paymentFailureIcon from "../../assets/img/icons/payment-failed.svg";
+import paymentRenewalIcon from "../../assets/img/icons/Payment-renewal.svg";
+import creditIcon from "../../assets/img/icons/credit-card.svg";
+import terminatedIcon from "../../assets/img/icons/Terminated.svg";
+import discontinueIcon from "../../assets/img/icons/Discontinue.svg";
+import paidupIcon from "../../assets/img/icons/Paidup.svg";
+import payoutIcon from "../../assets/img/icons/payout.svg";
 function Policydetails() {
+  const [forgotmodal, setforgotmodal] = useState(false);
+  const [switchFundmodal, setswitchFundmodal] = useState(false);
 
-   useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
-   }, [])
-  
+  }, []);
 
-
+  function buttonText(accordionId, buttonId) {
+    const accordionClass = document.getElementById(accordionId).classList;
+    console.log(accordionClass[0]);
+    if (accordionClass[2] == "show") {
+      console.log("conditin" + accordionClass);
+      document.getElementById(buttonId).innerHTML = "Show More";
+    } else {
+      document.getElementById(buttonId).innerHTML = "Show Less";
+    }
+  }
 
   return (
     <div>
       <div>
         <Header />
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="description" content />
-        <meta
-          name="author"
-          content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-        />
-        <meta name="generator" content="Jekyll v4.1.1" />
-        <title>Policy Details</title>
-        {/* Bootstrap core CSS */}
-        <link href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/custom/index.css" />
 
-        <main className="bg-white " role="main">
+        <main
+          className="bg-white "
+          role="main"
+          style={{ paddingBottom: "25px" }}
+        >
           <div className="breadcrubs-div shadow-sm h-100">
             <div className="container">
               <div className="row">
@@ -292,8 +306,8 @@ function Policydetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={premiumDueIcon}
+                                                alt="premiumDueIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -333,8 +347,8 @@ function Policydetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={paymentRenewalIcon}
+                                                alt="paymentRenewalIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -361,8 +375,8 @@ function Policydetails() {
                                         <div className="smart-card shadow-normal">
                                           <div className="yellow-flag">
                                             <img
-                                              src={yellowflag}
-                                              alt="yellowflag"
+                                              src={paymentRenewalIcon}
+                                              alt="paymentRenewalIcon"
                                             />
                                           </div>
                                           <div className="today">Tomorrow</div>
@@ -374,8 +388,8 @@ function Policydetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={paymentRenewalIcon}
+                                                alt="paymentRenewalIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -408,16 +422,14 @@ function Policydetails() {
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
-                                              <h3>
-                                                To Be Terminated/Discontinued
-                                              </h3>
+                                              <h3>To Be Terminated</h3>
                                             </div>
                                           </div>
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={terminatedIcon}
+                                                alt="terminatedIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -453,8 +465,8 @@ function Policydetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={paidupIcon}
+                                                alt="paidupIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -490,8 +502,8 @@ function Policydetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={payoutIcon}
+                                                alt="payoutIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -647,10 +659,289 @@ function Policydetails() {
                                   </div>
                                 </div>
                               </div>
+                              <div className="accordion-item">
+                                <div
+                                  className="accordion-header-wrapper"
+                                  data-toggle="collapse"
+                                  href="#premium-related-details"
+                                  role="button"
+                                  aria-expanded="false"
+                                  aria-controls="premium-related-details"
+                                >
+                                  <h2
+                                    className="accordion-header"
+                                    id="flush-headingOne"
+                                  >
+                                    Premium Related Details
+                                  </h2>
+                                  <i className="arrow-up" />
+                                  <i className="arrow-down" />
+                                </div>
+                                <div
+                                  id="premium-related-details"
+                                  className="accordion-collapse collapse  accordion-content"
+                                >
+                                  <div className="accordion-body">
+                                    <div className="row">
+                                      <div className="col-lg-12 text-right">
+                                        <button className="btn btn-primary-s m-bottom-10">
+                                          Download Premium Related Details
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div className="personal-de-card shadow-normal">
+                                      <div className="row">
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Next Premium Due Date
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            DD/MM/YYYY
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Premium Mode
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            Annual
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Policy Billing Method
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            Direct Bill
+                                          </div>
+                                        </div>
+                                        {/* <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                      Last Premium Due Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                      DD/MM/YYYY
+                                      </div>
+                                    </div> */}
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Last Premium Paid Date
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            DD/MM/YYYY
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Modal Premium
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            20,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Service Tax
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            1,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Model Premium with Service Tax
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            21,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            First Year Premium
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            12,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Annual Premium
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            20,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Gross Annual Premium
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            21,000
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            G.A.P with Service Tax and Cess
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            22,343
+                                          </div>
+                                        </div>
+                                        <div className="col-md-3 mb-3">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Total Premium Paid
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            22,343
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="accordion-item">
+                                <div
+                                  className="accordion-header-wrapper"
+                                  data-toggle="collapse"
+                                  href="#Portfolio-Details"
+                                  role="button"
+                                  aria-expanded="false"
+                                  aria-controls="premium-related-details"
+                                >
+                                  <h2
+                                    className="accordion-header"
+                                    id="flush-headingOne"
+                                  >
+                                    Portfolio Details
+                                  </h2>
+                                  <i className="arrow-up" />
+                                  <i className="arrow-down" />
+                                </div>
+                                <div
+                                  id="Portfolio-Details"
+                                  className="accordion-collapse collapse  accordion-content"
+                                >
+                                  <div className="accordion-body">
+                                    <div className="row">
+                                      <div className="col-lg-12 text-right">
+                                        <button
+                                          data-toggle="modal"
+                                          data-target="#switch-fund"
+                                          className="btn btn-primary-s m-bottom-10"
+                                        >
+                                          Switch Fund
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div className="personal-de-card shadow-normal">
+                                      <div className="row">
+                                        <div className="col-md-2 mb-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Fund Name
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            Fund Name
+                                          </div>
+                                        </div>
+                                        <div className="col-md-2 mb-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Allocation %
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            xxxxxxxxxxxx
+                                          </div>
+                                        </div>
+                                        <div className="col-md-2 mb-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Unit Fund Value
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            xxxx
+                                          </div>
+                                        </div>
+                                        <div className="col-md-2 mb-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Unit price
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            xxxxxx
+                                          </div>
+                                        </div>
+
+                                        <div className="col-md-2 mb-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            No. of Units
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            xxxx
+                                          </div>
+                                        </div>
+                                        <div className="col-md-2 mb-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Total Fund Value
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            xxxxx
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div className="accordion-item">
+                                <div
+                                  className="accordion-header-wrapper"
+                                  data-toggle="collapse"
+                                  href="#Commision-Details"
+                                  role="button"
+                                  aria-expanded="false"
+                                  aria-controls="premium-related-details"
+                                >
+                                  <h2
+                                    className="accordion-header"
+                                    id="flush-headingOne"
+                                  >
+                                    Commision Details
+                                  </h2>
+                                  <i className="arrow-up" />
+                                  <i className="arrow-down" />
+                                </div>
+                                <div
+                                  id="Commision-Details"
+                                  className="accordion-collapse collapse accordion-content"
+                                >
+                                  <div className="accordion-body">
+                                    {/* <div className="row">
+                                  <div className="col-lg-12 text-right">
+                                    <button className="btn btn-primary-s m-bottom-10">
+                                      Switch Fund
+                                    </button>
+                                  </div>
+                                </div> */}
+                                    <div className="personal-de-card shadow-normal">
+                                      <div className="row">
+                                        <div className="col-md-2 mb-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Policy
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            xxxxx
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+
                       {/* Today Content Ends Here */}
                       {/* Active Content Starts Here -------------------------------------------------------------------------------- */}
                       <div
@@ -676,7 +967,7 @@ function Policydetails() {
                                 className="accordion-header"
                                 id="flush-headingOne"
                               >
-                                Premium Related Details
+                                Transaction History
                               </h2>
                               <i className="arrow-up" />
                               <i className="arrow-down" />
@@ -687,118 +978,443 @@ function Policydetails() {
                             >
                               <div className="accordion-body">
                                 <div className="row">
-                                  <div className="col-lg-12 text-right">
+                                  <div className="col-lg-1">
+                                    <span>from Date</span>
+                                    <div className="date-box">
+                                      <input
+                                        type="email"
+                                        className="form-control data-search-box"
+                                        id="search"
+                                        aria-describedby="data-search"
+                                        placeholder="dd/mm/yyyy"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="col-lg-1">
+                                    <span>To Date</span>
+                                    <div className="date-box">
+                                      <input
+                                        type="email"
+                                        className="form-control data-search-box"
+                                        id="search"
+                                        aria-describedby="data-search"
+                                        placeholder="dd/mm/yyyy"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div className="col-lg-10 text-right">
                                     <button className="btn btn-primary-s m-bottom-10">
                                       Download Premium Related Details
                                     </button>
                                   </div>
                                 </div>
-                                <div className="personal-de-card shadow-normal">
-                                  <div className="row">
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Policy Id
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        1234567
+
+                                <div className="policy-grid-customer">
+                                  <div className="policy-grid-header d-none d-lg-block d-sm-none">
+                                    <div className="row">
+                                      <div className="col-lg-2">
+                                        <h3>Deposit Date</h3>
+                                      </div>
+                                      <div className="col-lg-3">
+                                        <h3>Total Amount Due</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Total Amount Paid</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Payment Status</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>{""}</h3>
                                       </div>
                                     </div>
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Policy Issue Date
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        20/Dec/2020
+                                  </div>
+                                  {[1, 2].map((id, index) => (
+                                    <div
+                                      className="policy-grid-row"
+                                      key={index}
+                                    >
+                                      <div className="row">
+                                        <div
+                                          className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                          data-toggle="collapse"
+                                          data-target="#collapseExample"
+                                          aria-expanded="false"
+                                          aria-controls="collapseExample"
+                                        >
+                                          <img
+                                            src={threedots}
+                                            alt="threedots"
+                                          />
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">DD/MM/YYYY</p>
+                                        </div>
+                                        <div className="col-lg-3 col-md-3">
+                                          <p className="color-b">1,00,000</p>
+                                        </div>
+                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">2,22,222</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                          <p className="color-b">Failed</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
+                                          <button
+                                            type="button"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target={`#collapseExample${index}`}
+                                            aria-expanded="false"
+                                            id={`button${index}`}
+                                            aria-controls="collapseExample"
+                                            onClick={() =>
+                                              buttonText(
+                                                `collapseExample${index}`,
+                                                `button${index}`
+                                              )
+                                            }
+                                          >
+                                            Show More
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="row collapse"
+                                        id={`collapseExample${index}`}
+                                      >
+                                        <div className="col-lg-12 m-pad-div">
+                                          <div className="expanded-div">
+                                            <div className="row">
+                                              <p className="grey-text">
+                                                Reason
+                                              </p>
+                                              <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod tempor incididunt ut
+                                                labore et dolore magna aliqua.
+                                                Ut enim ad minim veniam, quis
+                                                nostrud exercitation ullamco
+                                                laboris nisi ut aliquip ex ea
+                                                commodo consequat. Duis aute
+                                                irure dolor in reprehenderit in
+                                                voluptate velit esse cillum
+                                                dolore eu fugiat nulla pariatur.
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Premium Mode
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        Annual
+                                  ))}
+                                  <div className="policy-grid-row">
+                                    <div className="row">
+                                      <div
+                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                        data-toggle="collapse"
+                                        data-target="#collapseExample"
+                                        aria-expanded="false"
+                                        aria-controls="collapseExample"
+                                      >
+                                        <img src={threedots} alt="threedots" />
+                                      </div>
+                                      <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">DD/MM/YYYY</p>
+                                      </div>
+                                      <div className="col-lg-3 col-md-3">
+                                        <p className="color-b">1,00,000</p>
+                                      </div>
+                                      <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">2,22,222</p>
+                                      </div>
+                                      <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                        <p className="color-b">Success</p>
                                       </div>
                                     </div>
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Billing Method
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        Direct Bill
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="accordion-item">
+                            <div
+                              className="accordion-header-wrapper"
+                              data-toggle="collapse"
+                              href="#Unit-Allocation-Period-Wise"
+                              role="button"
+                              aria-expanded="false"
+                              aria-controls="premium-related-details"
+                            >
+                              <h2
+                                className="accordion-header"
+                                id="flush-headingOne"
+                              >
+                                Unit Allocation Period Wise
+                              </h2>
+                              <i className="arrow-up" />
+                              <i className="arrow-down" />
+                            </div>
+                            <div
+                              id="Unit-Allocation-Period-Wise"
+                              className="accordion-collapse collapse accordion-content"
+                            >
+                              <div className="accordion-body">
+                                <div className="policy-grid-customer">
+                                  <div className="policy-grid-header d-none d-lg-block d-sm-none">
+                                    <div className="row">
+                                      <div className="col-lg-2">
+                                        <h3>Date of Transaction</h3>
+                                      </div>
+                                      <div className="col-lg-3">
+                                        <h3>Amount Allowed</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Total Deduction</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Fund Name</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>{""}</h3>
                                       </div>
                                     </div>
-                                    {/* <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Last Premium Due Date
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                  </div>
+                                  {[1, 2, 3].map((id, index) => (
+                                    <div
+                                      className="policy-grid-row"
+                                      key={index}
+                                    >
+                                      <div className="row">
+                                        <div
+                                          className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                          data-toggle="collapse"
+                                          data-target="#collapseExample"
+                                          aria-expanded="false"
+                                          aria-controls="collapseExample"
+                                        >
+                                          <img
+                                            src={threedots}
+                                            alt="threedots"
+                                          />
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">DD/MM/YYYY</p>
+                                        </div>
+                                        <div className="col-lg-3 col-md-3">
+                                          <p className="color-b">4,00,000</p>
+                                        </div>
+                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">2,22,222</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                          <p className="color-b">Fund Name</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-block d-sm-none">
+                                          <button
+                                            type="button"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target={`#collapsed${index}`}
+                                            aria-expanded="false"
+                                            id={`button${index}`}
+                                            aria-controls="collapseExample"
+                                            onClick={() =>
+                                              buttonText(
+                                                `collapseExample${index}`,
+                                                `button${index}`
+                                              )
+                                            }
+                                          >
+                                            Show More
+                                          </button>
+                                        </div>
                                       </div>
-                                    </div> */}
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Modal Premium
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        20,000
+                                      <div
+                                        className="row collapse"
+                                        id={`collapsed${index}`}
+                                      >
+                                        <div className="col-lg-12 m-pad-div">
+                                          <div className="expanded-div">
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Fund Value
+                                                  <br />
+                                                  <span>1,00,000</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Unit Price <br />
+                                                  <span>3</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  No of Units <br />
+                                                  <span>1000</span>
+                                                </p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Service Tax
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        1,000
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="accordion-item">
+                            <div
+                              className="accordion-header-wrapper"
+                              data-toggle="collapse"
+                              href="#Payouts"
+                              role="button"
+                              aria-expanded="false"
+                              aria-controls="premium-related-details"
+                            >
+                              <h2
+                                className="accordion-header"
+                                id="flush-headingOne"
+                              >
+                                Payouts
+                              </h2>
+                              <i className="arrow-up" />
+                              <i className="arrow-down" />
+                            </div>
+                            <div
+                              id="Payouts"
+                              className="accordion-collapse collapse accordion-content"
+                            >
+                              <div className="accordion-body">
+                                <div className="policy-grid-customer">
+                                  <div className="policy-grid-header d-none d-lg-block d-sm-none">
+                                    <div className="row">
+                                      <div className="col-lg-2">
+                                        <h3>Transaction Date</h3>
+                                      </div>
+                                      <div className="col-lg-3">
+                                        <h3>Payout Type</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Amount</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Status</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>{""}</h3>
                                       </div>
                                     </div>
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Model Premium with Service Tax
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        21,000
+                                  </div>
+                                  {[1, 2, 3].map((id, index) => (
+                                    <div
+                                      className="policy-grid-row"
+                                      key={index}
+                                    >
+                                      <div className="row">
+                                        <div
+                                          className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                          data-toggle="collapse"
+                                          data-target="#collapseExample"
+                                          aria-expanded="false"
+                                          aria-controls="collapseExample"
+                                        >
+                                          <img
+                                            src={threedots}
+                                            alt="threedots"
+                                          />
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">DD/MM/YYYY</p>
+                                        </div>
+                                        <div className="col-lg-3 col-md-3">
+                                          <p className="color-b">payout type</p>
+                                        </div>
+                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">2,22,222</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                          <p className="color-b">Failed</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-block d-sm-none">
+                                          <button
+                                            type="button"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target={`#collapse${index}`}
+                                            aria-expanded="false"
+                                            id={`button${index}`}
+                                            aria-controls="collapseExample"
+                                            onClick={() =>
+                                              buttonText(
+                                                `collapseExample${index}`,
+                                                `button${index}`
+                                              )
+                                            }
+                                          >
+                                            Show More
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="row collapse"
+                                        id={`collapse${index}`}
+                                      >
+                                        <div className="col-lg-12 m-pad-div">
+                                          <div className="expanded-div">
+                                            <div className="row">
+                                              <p className="grey-text">
+                                                Reason
+                                              </p>
+                                              <p>
+                                                Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing elit, sed
+                                                do eiusmod tempor incididunt ut
+                                                labore et dolore magna aliqua.
+                                                Ut enim ad minim veniam, quis
+                                                nostrud exercitation ullamco
+                                                laboris nisi ut aliquip ex ea
+                                                commodo consequat. Duis aute
+                                                irure dolor in reprehenderit in
+                                                voluptate velit esse cillum
+                                                dolore eu fugiat nulla pariatur.
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
-                                    {/* <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        First Year Premium
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        12,000
+                                  ))}
+                                  <div className="policy-grid-row">
+                                    <div className="row">
+                                      <div
+                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                        data-toggle="collapse"
+                                        data-target="#collapseExample"
+                                        aria-expanded="false"
+                                        aria-controls="collapseExample"
+                                      >
+                                        <img src={threedots} alt="threedots" />
                                       </div>
-                                    </div> */}
-                                    {/* <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Annual Premium
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        20,000
+                                      <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">DD/MM/YYYY</p>
                                       </div>
-                                    </div> */}
-                                    {/*                                     <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Gross Annual Premium
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        21,000
+                                      <div className="col-lg-3 col-md-3">
+                                        <p className="color-b">1,00,000</p>
                                       </div>
-                                    </div> */}
-                                    {/*  <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        G.A.P with Service Tax and Cess
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        22,343
+                                      <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">2,22,222</p>
                                       </div>
-                                    </div> */}
-                                    {/*  <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Total Premium Paid
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        22,343
+                                      <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                        <p className="color-b">Success</p>
                                       </div>
-                                    </div> */}
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -806,6 +1422,7 @@ function Policydetails() {
                           </div>
                         </div>
                       </div>
+
                       {/* Active Week Content Ends Here */}
                       {/* Fav Content Starts Here ----------------------------------------------------------------------------------------------*/}
                       <div
@@ -1205,6 +1822,130 @@ function Policydetails() {
                               </div>
                             </div>
                           </div>
+
+                          <div className="accordion-item">
+                            <div
+                              className="accordion-header-wrapper"
+                              data-toggle="collapse"
+                              href="#other-details"
+                              role="button"
+                              aria-expanded="false"
+                              aria-controls="other-details"
+                            >
+                              <h2
+                                className="accordion-header"
+                                id="flush-headingOne"
+                              >
+                                Policy Dispatch Details
+                              </h2>
+                              <i className="arrow-up" />
+                              <i className="arrow-down" />
+                            </div>
+                            <div
+                              id="other-details"
+                              className="accordion-collapse collapse show accordion-content"
+                            >
+                              <div className="accordion-body">
+                                <div className="personal-de-card shadow-normal">
+                                  <section>
+                                    <div className="section-header font20 line-ht-14 mb-2">
+                                      Coverage Information
+                                    </div>
+                                    <div className="row">
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Coverage Status
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          Inforce
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Base Sum Assured
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          2,10,000
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </section>
+                                  <div className="grey-horizontal-separator mb-3 mt-2" />
+                                  <section>
+                                    <div className="section-header font20 line-ht-14 mb-2">
+                                      Other Information
+                                    </div>
+                                    <div className="row">
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Application Number
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          XXXXXX
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Policy Issue Date
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          DD/MM/YYYY
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          EIA ID
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          XXXXXX
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Branch Received Date
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          DD/MM/YYYY
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Policy Paid Up Date
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          DD/MM/YYYY
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Maturity Date
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          DD/MM/YYYY
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Partial Withdrawal Amount
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          -
+                                        </div>
+                                      </div>
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Advisor Code
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          Code goes here
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </section>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       {/* Fav Content Ends Here */}
@@ -1295,10 +2036,7 @@ function Policydetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img
-                                      src={taxcertificate}
-                                      alt="taxcertificate"
-                                    />
+                                    <img src={taxcertIcon} alt="taxcertIcon" />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1312,7 +2050,10 @@ function Policydetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img src={policycontract} alt="sales" />
+                                    <img
+                                      src={policycontractIcon}
+                                      alt="policycontractIcon"
+                                    />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1326,7 +2067,10 @@ function Policydetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img src={sales} alt="sales" />
+                                    <img
+                                      src={salesillIcon}
+                                      alt="salesillIcon"
+                                    />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1340,7 +2084,10 @@ function Policydetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img src={policycontract} alt="sales" />
+                                    <img
+                                      src={policycontractIcon}
+                                      alt="policycontractIcon"
+                                    />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1355,8 +2102,8 @@ function Policydetails() {
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
                                     <img
-                                      src={policycontract}
-                                      alt="policycontract"
+                                      src={policycontractIcon}
+                                      alt="policycontractIcon"
                                     />
                                   </div>
                                 </div>
@@ -1371,10 +2118,7 @@ function Policydetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img
-                                      src={tdscertificate}
-                                      alt="tdscertificate"
-                                    />
+                                    <img src={tdscertIcon} alt="tdscertIcon" />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1389,8 +2133,8 @@ function Policydetails() {
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
                                     <img
-                                      src={tdscertificate}
-                                      alt="tdscertificate"
+                                      src={premiumDueIcon}
+                                      alt="premiumDueIcon"
                                     />
                                   </div>
                                 </div>
@@ -1405,7 +2149,10 @@ function Policydetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img src={acknowledge} alt="acknowledge" />
+                                    <img
+                                      src={paymentAcknowledgeIcon}
+                                      alt="paymentAcknowledgeIcon"
+                                    />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1530,12 +2277,104 @@ function Policydetails() {
               <div className="col-lg-3"></div>
             </div>
           </div>
+
+          <div
+            className={forgotmodal ? `modal fade show` : "modal fade"}
+            style={forgotmodal ? { display: "block" } : { display: "none" }}
+            id="forgot-userid"
+            data-backdrop="static"
+            data-keyboard="false"
+            tabIndex={-1}
+            aria-labelledby="forgot-password"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title  bold" id="staticBackdropLabel">
+                    Switch Fund
+                  </h5>
+                  <button
+                    type="button"
+                    className="close modal-close-button"
+                    data-dismiss="modal"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setforgotmodal(false);
+                    }}
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div className="modal-body">
+                  <p>
+                    Clicking on switch fund option will redirect you to customer
+                    portal
+                  </p>
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setforgotmodal(false);
+                    }}
+                    data-dismiss="modal"
+                  >
+                    OK
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="modal fade"
+            id="switch-fund"
+            data-backdrop="static"
+            data-keyboard="false"
+            tabIndex={-1}
+            aria-labelledby="forgot-password"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-width-family-tag">
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title  bold" id="staticBackdropLabel">
+                      Switch Fund
+                    </h5>
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body">
+                    <p>
+                      Clicking on switch fund option will redirect you to
+                      Customer Portal
+                    </p>
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-dismiss="modal"
+                    >
+                      OK
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
-        {/* <footer class="text-muted">
-  <div class="sample-footer">
-              
-  </div>
-</footer> */}
       </div>
     </div>
   );

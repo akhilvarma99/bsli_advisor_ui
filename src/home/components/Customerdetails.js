@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
@@ -6,6 +7,15 @@ import yellowstarfilled from "../../assets/img/icons/yellow-star-filled.svg";
 import phonecall from "../../assets/img/icons/phone-call.svg";
 import mail from "../../assets/img/icons/mail.svg";
 import yellowflag from "../../assets/img/icons/yellow-flag.svg";
+import premiumDueIcon from "../../assets/img/icons/premium.svg";
+import reinstatementIcon from "../../assets/img/icons/Reinstatement.svg";
+import paymentFailureIcon from "../../assets/img/icons/payment-failed.svg";
+import paymentRenewalIcon from "../../assets/img/icons/Payment-renewal.svg";
+import creditIcon from "../../assets/img/icons/credit-card.svg";
+import terminatedIcon from "../../assets/img/icons/Terminated.svg";
+import discontinueIcon from "../../assets/img/icons/Discontinue.svg";
+import paidupIcon from "../../assets/img/icons/Paidup.svg";
+import payoutIcon from "../../assets/img/icons/payout.svg";
 import policyid from "../../assets/img/icons/policy-id.svg";
 import gift from "../../assets/img/icons/gift.svg";
 import greentick from "../../assets/img/icons/green-tick.svg";
@@ -17,6 +27,12 @@ import tdscertificate from "../../assets/img/icons/tds-certificate.svg";
 import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
 import circle from "../../assets/img/icons/circle.svg";
 import creative from "../../assets/img/icons/creative.svg";
+import taxcertIcon from "../../assets/img/icons/Taxcertificate.svg";
+import tdscertIcon from "../../assets/img/icons/Tdscertificate.svg";
+import salesillIcon from "../../assets/img/icons/SalesIllustration.svg";
+import policycontractIcon from "../../assets/img/icons/Policycontract.svg";
+import paymentAcknowledgeIcon from "../../assets/img/icons/form.svg";
+
 import { NavLink } from "react-router-dom";
 function Customerdetails() {
   function buttonText(accordionId, buttonId) {
@@ -28,6 +44,29 @@ function Customerdetails() {
     } else {
       document.getElementById(buttonId).innerHTML = "Show Less";
     }
+  }
+
+  async function downloadPDF() {
+    let policyresponse = await axios.post(
+      "http://localhost:4000/api/v1/customer/policy/getPolicyAccountStatement",
+      {
+        PolicyID: "001572067",
+        StartDate: "13-05-2019",
+        EndDate: "25-05-2019",
+        AgentCode: "a2p9i9",
+        Email: "kamalnath.LP-v@adityabirlacapital.com",
+        Mobileno: "9443385464",
+      }
+    );
+    console.log(policyresponse.data.data.pdfBytes);
+
+    const linkSource = `data:application/pdf;base64,${policyresponse.data.data.pdfBytes}`;
+    const downloadLink = document.createElement("a");
+    const fileName = "tax-certificate.pdf";
+
+    downloadLink.href = linkSource;
+    downloadLink.download = fileName;
+    downloadLink.click();
   }
 
   return (
@@ -292,8 +331,8 @@ function Customerdetails() {
                                         <div className="smart-card shadow-normal">
                                           <div className="yellow-flag">
                                             <img
-                                              src={yellowflag}
-                                              alt="yellowflag"
+                                              src={premiumDueIcon}
+                                              alt="premiumDueIcon"
                                             />
                                           </div>
                                           <div className="today">overdue</div>
@@ -305,8 +344,8 @@ function Customerdetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={premiumDueIcon}
+                                                alt="premiumDueIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -333,8 +372,8 @@ function Customerdetails() {
                                         <div className="smart-card shadow-normal">
                                           <div className="yellow-flag">
                                             <img
-                                              src={yellowflag}
-                                              alt="yellowflag"
+                                              src={paymentFailureIcon}
+                                              alt="paymentFailureIcon"
                                             />
                                           </div>
                                           <div className="today">Today</div>
@@ -346,8 +385,8 @@ function Customerdetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={paymentFailureIcon}
+                                                alt="paymentFailureIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -374,8 +413,8 @@ function Customerdetails() {
                                         <div className="smart-card shadow-normal">
                                           <div className="yellow-flag">
                                             <img
-                                              src={yellowflag}
-                                              alt="yellowflag"
+                                              src={paymentRenewalIcon}
+                                              alt="paymentRenewalIcon"
                                             />
                                           </div>
                                           <div className="today">Tomorrow</div>
@@ -387,8 +426,8 @@ function Customerdetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={paymentRenewalIcon}
+                                                alt="paymentRenewalIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -421,16 +460,14 @@ function Customerdetails() {
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
-                                              <h3>
-                                                To Be Terminated
-                                              </h3>
+                                              <h3>To Be Terminated</h3>
                                             </div>
                                           </div>
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={terminatedIcon}
+                                                alt="terminatedIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -460,16 +497,14 @@ function Customerdetails() {
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
-                                              <h3>
-                                                To be Discontinued
-                                              </h3>
+                                              <h3>To be Discontinued</h3>
                                             </div>
                                           </div>
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={discontinueIcon}
+                                                alt="discontinueIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -479,11 +514,10 @@ function Customerdetails() {
                                               </p>
                                             </div>
                                           </div>
-                                          <br/>
-                                          <p style = {{color : '#6c7174'}}>
+                                          <br />
+                                          <p style={{ color: "#6c7174" }}>
                                             Reason For Termination
                                           </p>
-                                         
                                         </div>
                                       </div>
                                       <div className="col-lg-4 col-md-6">
@@ -503,17 +537,22 @@ function Customerdetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={paidupIcon}
+                                                alt="paidupIcon"
                                               />
                                             </div>
                                             <div className="col-10">
-                                              <p>
-                                              &#8377;3,33,333
-                                                <br /> <span>(Payout type)</span>
-                                              </p>
+                                              <p>&#8377;3,33,333</p>
                                             </div>
                                           </div>
+                                          <br />
+                                          <p
+                                            className="float-left"
+                                            style={{ color: "grey" }}
+                                          >
+                                            status
+                                          </p>
+
                                           {/* <div className="row">
                                             <div className="col-lg-12 text-right">
                                               <button className="btn btn-outline-s">
@@ -540,13 +579,13 @@ function Customerdetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={payoutIcon}
+                                                alt="payoutIcon"
                                               />
                                             </div>
                                             <div className="col-10">
                                               <p>
-                                              3,33,333
+                                                3,33,333
                                                 <br /> <span>20/Dec/2020</span>
                                               </p>
                                             </div>
@@ -579,8 +618,8 @@ function Customerdetails() {
                                           <div className="row pad-10">
                                             <div className="col-2">
                                               <img
-                                                src={policyid}
-                                                alt="policyid"
+                                                src={creditIcon}
+                                                alt="creditIcon"
                                               />
                                             </div>
                                             <div className="col-10">
@@ -671,7 +710,7 @@ function Customerdetails() {
                                                       AKNBH1546E
                                                     </p>
                                                   </div>
-                                                 
+
                                                   <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
                                                       <label>
@@ -683,12 +722,10 @@ function Customerdetails() {
                                                         alt="greentick"
                                                         className="greentick"
                                                       />{" "}
-                                                      &nbsp; Activated  or <button
-                                                        className="btn btn-primary-s"
-                                                       
-                                                      >
+                                                      &nbsp; Activated or{" "}
+                                                      <button className="btn btn-primary-s">
                                                         Activate
-                                                      </button> 
+                                                      </button>
                                                     </p>
                                                   </div>
                                                   {/* <div className="col-lg-6 col-md-12 value mrgn-0">
@@ -718,8 +755,6 @@ function Customerdetails() {
                                             </div>
                                             <div className="col-lg-6">
                                               <div className="grey-box">
-                                               
-                                                
                                                 <div className="row">
                                                   <div className="col-lg-12">
                                                     <p>Address</p>
@@ -749,7 +784,160 @@ function Customerdetails() {
                                         </div>
                                       </div>
                                     </div>
-                                   
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                className="tab-pane active show fade"
+                                id="transactions"
+                                role="tabpanel"
+                                aria-labelledby="next-week"
+                              >
+                                <div
+                                  className="accordion accordion-flush"
+                                  id="accordionFlushExample"
+                                >
+                                  <div className="accordion-item">
+                                    <div
+                                      className="accordion-header-wrapper"
+                                      data-toggle="collapse"
+                                      href="#premium-related-details"
+                                      role="button"
+                                      aria-expanded="false"
+                                      aria-controls="premium-related-details"
+                                    >
+                                      <h2
+                                        className="accordion-header"
+                                        id="flush-headingOne"
+                                      >
+                                        Premium Related Details
+                                      </h2>
+                                      <i className="arrow-up" />
+                                      <i className="arrow-down" />
+                                    </div>
+                                    <div
+                                      id="premium-related-details"
+                                      className="accordion-collapse collapse show accordion-content"
+                                    >
+                                      <div className="accordion-body">
+                                        <div className="row">
+                                          <div className="col-lg-12 text-right">
+                                            <button className="btn btn-primary-s m-bottom-10">
+                                              Download Premium Related Details
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div className="personal-de-card shadow-normal">
+                                          <div className="row">
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Policy Id
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                1234567
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Policy Issue Date
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                20/Dec/2020
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Premium Mode
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                Annual
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Billing Method
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                Direct Bill
+                                              </div>
+                                            </div>
+                                            {/* <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Last Premium Due Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        DD/MM/YYYY
+                                      </div>
+                                    </div> */}
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Modal Premium
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                20,000
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Service Tax
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                1,000
+                                              </div>
+                                            </div>
+                                            <div className="col-md-3 mb-3">
+                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                                Model Premium with Service Tax
+                                              </label>
+                                              <div className="font18 line-ht-11">
+                                                21,000
+                                              </div>
+                                            </div>
+                                            {/* <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        First Year Premium
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        12,000
+                                      </div>
+                                    </div> */}
+                                            {/* <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Annual Premium
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        20,000
+                                      </div>
+                                    </div> */}
+                                            {/*                                     <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Gross Annual Premium
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        21,000
+                                      </div>
+                                    </div> */}
+                                            {/*  <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        G.A.P with Service Tax and Cess
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        22,343
+                                      </div>
+                                    </div> */}
+                                            {/*  <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Total Premium Paid
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        22,343
+                                      </div>
+                                    </div> */}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -815,7 +1003,7 @@ function Customerdetails() {
                                         <h3>Next Premium Due Date</h3>
                                       </div>
                                       <div className="col-lg-2">
-                                        <h3>{''}</h3>
+                                        <h3>{""}</h3>
                                       </div>
                                     </div>
                                   </div>
@@ -841,7 +1029,6 @@ function Customerdetails() {
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-4 col-md-4">
-                            
                                           <p className="color-b">
                                             Sample text for plan name
                                           </p>
@@ -852,7 +1039,6 @@ function Customerdetails() {
                                           </p>
                                         </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                         
                                           <p className="color-b">Paid Up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
@@ -956,7 +1142,7 @@ function Customerdetails() {
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
-                                              <p>
+                                                <p>
                                                   <label className="dark-grey-text font16 line-ht-14 mb-0">
                                                     WhatsApp Opt-in status
                                                   </label>{" "}
@@ -978,10 +1164,17 @@ function Customerdetails() {
                                                     request
                                                   </li>
                                                   <li>Send Payment Link</li> */}
-                                                  <NavLink class to = '/policydetails' style = {{textDecoration : 'none'}}>
-                                                  <li className="active">
-                                                    Go to Policy Details
-                                                  </li></NavLink>
+                                                  <NavLink
+                                                    class
+                                                    to="/policydetails"
+                                                    style={{
+                                                      textDecoration: "none",
+                                                    }}
+                                                  >
+                                                    <li className="active">
+                                                      Go to Policy Details
+                                                    </li>
+                                                  </NavLink>
                                                 </ul>
                                               </div>
                                             </div>
@@ -1056,10 +1249,7 @@ function Customerdetails() {
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img
-                                      src={taxcertificate}
-                                      alt="taxcertificate"
-                                    />
+                                    <img src={taxcertIcon} alt="taxcertIcon" />
                                   </div>
                                 </div>
 
@@ -1070,13 +1260,19 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-                            <div class="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x" data-toggle="modal"
+                            <div
+                              class="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                              data-toggle="modal"
                               data-target="#sales-illustration"
-                              style={{ cursor: "pointer" }}>
+                              style={{ cursor: "pointer" }}
+                            >
                               <div class="state-box shadow-normal">
                                 <div class="row r1">
                                   <div class="col-lg-12 text-center">
-                                    <img src={sales} />
+                                    <img
+                                      src={salesillIcon}
+                                      alt="salesillIcon"
+                                    />
                                   </div>
                                 </div>
 
@@ -1087,11 +1283,19 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"style={{ cursor: "pointer" }} data-toggle="modal" data-target = '#policy-contract'>
+                            <div
+                              className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                              style={{ cursor: "pointer" }}
+                              data-toggle="modal"
+                              data-target="#policy-contract"
+                            >
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img src={policycontract} alt="sales" />
+                                    <img
+                                      src={policycontractIcon}
+                                      alt="policycontractIcon"
+                                    />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1102,12 +1306,17 @@ function Customerdetails() {
                               </div>
                             </div>
 
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x" style={{ cursor: "pointer" }} data-target = '#tds-certificate' data-toggle="modal">
+                            <div
+                              className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                              style={{ cursor: "pointer" }}
+                              data-target="#tds-certificate"
+                              data-toggle="modal"
+                            >
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
                                     <img
-                                      src={tdscertificate}
+                                      src={tdscertIcon}
                                       alt="tdscertificate"
                                     />
                                   </div>
@@ -1129,8 +1338,8 @@ function Customerdetails() {
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
                                     <img
-                                      src={tdscertificate}
-                                      alt="tdscertificate"
+                                      src={premiumDueIcon}
+                                      alt="premiumDueIcon"
                                     />
                                   </div>
                                 </div>
@@ -1141,11 +1350,19 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x" style={{ cursor: "pointer" }} data-target = '#payment-acknowledgement' data-toggle="modal">
+                            <div
+                              className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                              style={{ cursor: "pointer" }}
+                              data-target="#payment-acknowledgement"
+                              data-toggle="modal"
+                            >
                               <div className="state-box shadow-normal">
                                 <div className="row r1">
                                   <div className="col-lg-12 text-center">
-                                    <img src={acknowledge} alt="acknowledge" />
+                                    <img
+                                      src={paymentAcknowledgeIcon}
+                                      alt="paymentAcknowledgeIcon"
+                                    />
                                   </div>
                                 </div>
                                 <div className="row r2">
@@ -1186,23 +1403,19 @@ function Customerdetails() {
                                     src={creative}
                                     alt="creative"
                                   />
-                                  
                                 </div>
                                 <div className="col-10">
-                                  <p className="m-top-12">
-                                    Product name 
-                                  </p>
-                                  <p>
-                                  &#8377;3,73,000
-                                  </p>
+                                  <p className="m-top-12">Product name</p>
+                                  <p>&#8377;3,73,000</p>
                                 </div>
                               </div>
-                          
-                                
+
                               <div className="row">
-                               
-                               <div className="col-lg-12 text-left">
-                                 <span>The customer will not be required to (PASA Offer Value)</span>
+                                <div className="col-lg-12 text-left">
+                                  <span>
+                                    The customer will not be required to (PASA
+                                    Offer Value)
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -1227,9 +1440,12 @@ function Customerdetails() {
                                 </div>
                               </div>
                               <div className="row">
-                               
-                               <div className="col-lg-12 text-left">
-                                 <span>Based on data, your customer is likely to buy this product. You should pitch this to the customer</span>
+                                <div className="col-lg-12 text-left">
+                                  <span>
+                                    Based on data, your customer is likely to
+                                    buy this product. You should pitch this to
+                                    the customer
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -1763,6 +1979,7 @@ function Customerdetails() {
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
+                          onClick={downloadPDF}
                           className="btn btn-primary"
                           style={{ width: "200px" }}
                         >
@@ -1776,7 +1993,7 @@ function Customerdetails() {
             </div>
             <div
               className="modal fade"
-              id = 'sales-illustration'
+              id="sales-illustration"
               data-backdrop="static"
               data-keyboard="false"
               tabIndex={-1}
@@ -1799,7 +2016,7 @@ function Customerdetails() {
                   <div className="modal-body moda-family-tag-body">
                     <h3>Sales Illustration</h3>
                     <hr />
-                  
+
                     <div className="row">
                       <div className="col-lg-4 col-md-5 col-12">
                         <div className="form-group">
@@ -1961,6 +2178,7 @@ function Customerdetails() {
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
+                          onClick={downloadPDF}
                           className="btn btn-primary"
                           style={{ width: "300px" }}
                         >
@@ -1972,10 +2190,10 @@ function Customerdetails() {
                 </div>
               </div>
             </div>
-             
+
             <div
               className="modal fade"
-              id = 'policy-contract'
+              id="policy-contract"
               data-backdrop="static"
               data-keyboard="false"
               tabIndex={-1}
@@ -1998,7 +2216,7 @@ function Customerdetails() {
                   <div className="modal-body moda-family-tag-body">
                     <h3>Policy Contract</h3>
                     <hr />
-                  
+
                     <div className="row">
                       <div className="col-md-12 mt-2">
                         <div className="data-card">
@@ -2144,6 +2362,7 @@ function Customerdetails() {
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
+                          onClick={downloadPDF}
                           className="btn btn-primary"
                           style={{ width: "300px" }}
                         >
@@ -2155,10 +2374,10 @@ function Customerdetails() {
                 </div>
               </div>
             </div>
-            
+
             <div
               className="modal fade"
-              id = 'tds-certificate'
+              id="tds-certificate"
               data-backdrop="static"
               data-keyboard="false"
               tabIndex={-1}
@@ -2181,7 +2400,7 @@ function Customerdetails() {
                   <div className="modal-body moda-family-tag-body">
                     <h3>TDS Certificate</h3>
                     <hr />
-                  
+
                     <div className="row">
                       <div className="col-md-12 mt-2">
                         <div className="data-card">
@@ -2327,6 +2546,7 @@ function Customerdetails() {
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
+                          onClick={downloadPDF}
                           className="btn btn-primary"
                           style={{ width: "250px" }}
                         >
@@ -2341,7 +2561,7 @@ function Customerdetails() {
 
             <div
               className="modal fade"
-              id = 'payment-acknowledgement'
+              id="payment-acknowledgement"
               data-backdrop="static"
               data-keyboard="false"
               tabIndex={-1}
@@ -2364,7 +2584,7 @@ function Customerdetails() {
                   <div className="modal-body moda-family-tag-body">
                     <h3>policy-acknowledgement</h3>
                     <hr />
-                  
+
                     <div className="row">
                       <div className="col-md-12 mt-2">
                         <div className="data-card">
@@ -2510,6 +2730,7 @@ function Customerdetails() {
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
+                          onClick={downloadPDF}
                           className="btn btn-primary"
                           style={{ width: "300px" }}
                         >
@@ -2547,7 +2768,7 @@ function Customerdetails() {
                   <div className="modal-body moda-family-tag-body">
                     <h3>Premium Due Certificate</h3>
                     <hr />
-                   
+
                     <div className="row">
                       <div className="col-md-12 mt-2">
                         <div className="data-card">
@@ -2660,6 +2881,7 @@ function Customerdetails() {
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
+                          onClick={downloadPDF}
                           className="btn btn-primary"
                           style={{ width: "300px" }}
                         >
