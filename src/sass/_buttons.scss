@@ -2,25 +2,23 @@
   background-color: $capital-red;
   border: 0px !important;
   font-size: 18px;
-}
-
-.btn-primary:hover {
-  background-color: $capital-red !important;
-  outline: 0 !important;
-  border-color: $capital-dark-red !important;
-}
-
-.btn-primary:active {
-  background-color: $capital-dark-red !important;
-  border-color: $capital-dark-red !important;
-  outline: 0 !important;
-}
-
-.btn-primary:focus {
-  background-color: $capital-dark-red !important;
-  border-color: $capital-dark-red !important;
-  outline: 0 !important;
-  box-shadow: none !important;
+  &:active {
+    background-color: $capital-dark-red !important;
+    border-color: $capital-dark-red !important;
+    outline: 0 !important;
+  }
+  &:hover {
+    background-color: $capital-red !important;
+    outline: 0 !important;
+    border-color: $capital-dark-red !important;
+  }
+  &:focus {
+    background-color: $capital-dark-red !important;
+    border-color: $capital-dark-red !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+  
 }
 
 .btn-primary-lrg {
@@ -45,7 +43,7 @@
   color: $white;
 }
 
-.btn-primary-lrg:focus {
+.btn-primary-lrg:focus, .btn-primary-lrg:hover {
   background-color: $capital-dark-red !important;
   border-color: $capital-dark-red !important;
   outline: 0 !important;
