@@ -4,7 +4,7 @@ export default function Dropdown(props) {
   console.log(props);
 
   return (
-    <div className="dropdown dropdown-toggle">
+    <div className="dropdown ">
       <button
         className="btn btn-outline-s"
         type="button"

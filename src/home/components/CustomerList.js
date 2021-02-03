@@ -30,7 +30,7 @@ function CoustmerListingPage() {
     console.log("anvesh");
   };
   const closeButton = () => {
-    document.getElementById("toastBlock").style.visibility = "hidden";
+    document.getElementById("toastBlock").classList.remove("showToast");
   };
   /* ------------------Toast-Functions----------------------- */
 

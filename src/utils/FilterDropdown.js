@@ -6,7 +6,7 @@ export default function Dropdown(props) {
   return (
     <div className="filterDropdown">
       <button
-        className="filterDropdownButton"
+        className="filterDropdownButton collapsed"
         type=""
         id=""
         data-toggle="dropdown"

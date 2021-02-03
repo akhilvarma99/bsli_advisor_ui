@@ -43,7 +43,7 @@ function Policydetails() {
 
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
-    console.log(accordionClass[0]);
+    console.log(accordionClass);
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
       document.getElementById(buttonId).innerHTML = "Show More";
@@ -521,7 +521,7 @@ function Policydetails() {
                             </div>
                             <div className="accordion-item">
                               <div
-                                className="accordion-header-wrapper"
+                                className="accordion-header-wrapper collapsed"
                                 data-toggle="collapse"
                                 href="#flush-collapseTwo"
                                 role="button"
@@ -642,14 +642,14 @@ function Policydetails() {
                                               </p>
                                             </div>
                                           </div>
-                                          <div className="col-md-3 mb-3">
+                                          {/*                                           <div className="col-md-3 mb-3">
                                             <label className="dark-grey-text font16 line-ht-14 mb-0">
                                               Cease Date
                                             </label>
                                             <div className="font18 line-ht-11">
                                               DD/MM/YYYY
                                             </div>
-                                          </div>
+                                          </div> */}
                                         </div>
                                       </div>
                                     </div>
@@ -657,9 +657,9 @@ function Policydetails() {
                                 </div>
                               </div>
                             </div>
-                            <div className="accordion-item">
+                            {/* <div className="accordion-item">
                               <div
-                                className="accordion-header-wrapper"
+                                className="accordion-header-wrapper collapsed"
                                 data-toggle="collapse"
                                 href="#premium-related-details"
                                 role="button"
@@ -728,32 +728,26 @@ function Policydetails() {
                                       <div className="font18 line-ht-11">
                                         DD/MM/YYYY
                                       </div>
-                                    </div> */}
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Modal Premium
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          20,000
-                                        </div>
-                                      </div>
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Service Tax
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          1,000
-                                        </div>
-                                      </div>
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Model Premium with Service Tax
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          21,000
-                                        </div>
-                                      </div>
-                                      {/* <div className="col-md-3 mb-3">
+                                    </div> 
+                            <div className="col-md-3 mb-3">
+                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                Modal Premium
+                              </label>
+                              <div className="font18 line-ht-11">20,000</div>
+                            </div>
+                            <div className="col-md-3 mb-3">
+                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                Service Tax
+                              </label>
+                              <div className="font18 line-ht-11">1,000</div>
+                            </div>
+                            <div className="col-md-3 mb-3">
+                              <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                Model Premium with Service Tax
+                              </label>
+                              <div className="font18 line-ht-11">21,000</div>
+                            </div>
+                            {/* <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         First Year Premium
                                       </label>
@@ -761,7 +755,7 @@ function Policydetails() {
                                         12,000
                                       </div>
                                     </div> */}
-                                      {/* <div className="col-md-3 mb-3">
+                            {/* <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Annual Premium
                                       </label>
@@ -769,7 +763,7 @@ function Policydetails() {
                                         20,000
                                       </div>
                                     </div> */}
-                                      {/*                                     <div className="col-md-3 mb-3">
+                            {/*                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Gross Annual Premium
                                       </label>
@@ -777,7 +771,7 @@ function Policydetails() {
                                         21,000
                                       </div>
                                     </div> */}
-                                      {/*  <div className="col-md-3 mb-3">
+                            {/*  <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         G.A.P with Service Tax and Cess
                                       </label>
@@ -785,22 +779,22 @@ function Policydetails() {
                                         22,343
                                       </div>
                                     </div> */}
-                                      {/*  <div className="col-md-3 mb-3">
+                            {/*  <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Total Premium Paid
                                       </label>
                                       <div className="font18 line-ht-11">
                                         22,343
                                       </div>
-                                    </div> */}
+                                    </div> 
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
                             <div className="accordion-item">
                               <div
-                                className="accordion-header-wrapper"
+                                className="accordion-header-wrapper collapsed"
                                 data-toggle="collapse"
                                 href="#premium-related-details"
                                 role="button"
@@ -942,7 +936,7 @@ function Policydetails() {
 
                             <div className="accordion-item">
                               <div
-                                className="accordion-header-wrapper"
+                                className="accordion-header-wrapper collapsed"
                                 data-toggle="collapse"
                                 href="#Portfolio-Details"
                                 role="button"
@@ -1033,7 +1027,7 @@ function Policydetails() {
 
                             <div className="accordion-item">
                               <div
-                                className="accordion-header-wrapper"
+                                className="accordion-header-wrapper collapsed"
                                 data-toggle="collapse"
                                 href="#Commision-Details"
                                 role="button"
@@ -1169,7 +1163,183 @@ function Policydetails() {
                                     </div>
                                   </div>
                                 </div>
-                                {[1, 2].map((id, index) => (
+                                {[1].map((id, index) => (
+                                  <div className="policy-grid-row" key={index}>
+                                    <div className="row">
+                                      <div
+                                        className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                        data-toggle="collapse"
+                                        data-target="#collapseExample"
+                                        aria-expanded="false"
+                                        aria-controls="collapseExample"
+                                      >
+                                        <img src={threedots} alt="threedots" />
+                                      </div>
+                                      <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">DD/MM/YYYY</p>
+                                      </div>
+                                      <div className="col-lg-3 col-md-3">
+                                        <p className="color-b">1,00,000</p>
+                                      </div>
+                                      <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">2,22,222</p>
+                                      </div>
+                                      <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                        <p className="color-b">Failed</p>
+                                      </div>
+                                      <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
+                                        <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                          data-toggle="collapse"
+                                          data-target={`#collapseExample${index}`}
+                                          aria-expanded="false"
+                                          id={`buttonel${index}`}
+                                          aria-controls="collapseExample"
+                                          onClick={() =>
+                                            buttonText(
+                                              `collapseExample${index}`,
+                                              `buttonel${index}`
+                                            )
+                                          }
+                                        >
+                                          Show More
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div
+                                      className="row collapse"
+                                      id={`collapseExample${index}`}
+                                    >
+                                      <div className="col-lg-12 m-pad-div">
+                                        <div className="expanded-div">
+                                          <div className="row">
+                                            <p className="grey-text">Reason</p>
+                                            <p>
+                                              Lorem ipsum dolor sit amet,
+                                              consectetur adipiscing elit, sed
+                                              do eiusmod tempor incididunt ut
+                                              labore et dolore magna aliqua. Ut
+                                              enim ad minim veniam, quis nostrud
+                                              exercitation ullamco laboris nisi
+                                              ut aliquip ex ea commodo
+                                              consequat. Duis aute irure dolor
+                                              in reprehenderit in voluptate
+                                              velit esse cillum dolore eu fugiat
+                                              nulla pariatur.
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                                <div className="policy-grid-row">
+                                  <div className="row">
+                                    <div
+                                      className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                      data-toggle="collapse"
+                                      data-target="#collapseExample"
+                                      aria-expanded="false"
+                                      aria-controls="collapseExample"
+                                    >
+                                      <img src={threedots} alt="threedots" />
+                                    </div>
+                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                      <p className="color-b">DD/MM/YYYY</p>
+                                    </div>
+                                    <div className="col-lg-3 col-md-3">
+                                      <p className="color-b">1,00,000</p>
+                                    </div>
+                                    <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                      <p className="color-b">2,22,222</p>
+                                    </div>
+                                    <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                      <p className="color-b">Success</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="accordion-item">
+                          <div
+                            className="accordion-header-wrapper"
+                            data-toggle="collapse"
+                            href="#premium-related-details"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="premium-related-details"
+                          >
+                            <h2
+                              className="accordion-header"
+                              id="flush-headingOne"
+                            >
+                              Transaction History
+                            </h2>
+                            <i className="arrow-up" />
+                            <i className="arrow-down" />
+                          </div>
+                          <div
+                            id="premium-related-details"
+                            className="accordion-collapse collapse show accordion-content"
+                          >
+                            <div className="accordion-body">
+                              <div className="row">
+                                <div className="col-lg-1">
+                                  <span>from Date</span>
+                                  <div className="date-box">
+                                    <input
+                                      type="email"
+                                      className="form-control data-search-box"
+                                      id="search"
+                                      aria-describedby="data-search"
+                                      placeholder="dd/mm/yyyy"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="col-lg-1">
+                                  <span>To Date</span>
+                                  <div className="date-box">
+                                    <input
+                                      type="email"
+                                      className="form-control data-search-box"
+                                      id="search"
+                                      aria-describedby="data-search"
+                                      placeholder="dd/mm/yyyy"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div className="col-lg-10 text-right">
+                                  <button className="btn btn-primary-s m-bottom-10">
+                                    Download Premium Related Details
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div className="policy-grid-customer">
+                                <div className="policy-grid-header d-none d-lg-block d-sm-none">
+                                  <div className="row">
+                                    <div className="col-lg-2">
+                                      <h3>Deposit Date</h3>
+                                    </div>
+                                    <div className="col-lg-3">
+                                      <h3>Total Amount Due</h3>
+                                    </div>
+                                    <div className="col-lg-2">
+                                      <h3>Total Amount Paid</h3>
+                                    </div>
+                                    <div className="col-lg-2">
+                                      <h3>Payment Status</h3>
+                                    </div>
+                                    <div className="col-lg-2">
+                                      <h3>{""}</h3>
+                                    </div>
+                                  </div>
+                                </div>
+                                {[1, 2, 3].map((id, index) => (
                                   <div className="policy-grid-row" key={index}>
                                     <div className="row">
                                       <div
@@ -1269,10 +1439,9 @@ function Policydetails() {
                             </div>
                           </div>
                         </div>
-
                         <div className="accordion-item">
                           <div
-                            className="accordion-header-wrapper"
+                            className="accordion-header-wrapper collapsed"
                             data-toggle="collapse"
                             href="#Unit-Allocation-Period-Wise"
                             role="button"
@@ -1344,12 +1513,12 @@ function Policydetails() {
                                           data-toggle="collapse"
                                           data-target={`#collapsed${index}`}
                                           aria-expanded="false"
-                                          id={`button${index}`}
+                                          id={`buttons${index}`}
                                           aria-controls="collapseExample"
                                           onClick={() =>
                                             buttonText(
                                               `collapseExample${index}`,
-                                              `button${index}`
+                                              `buttons${index}`
                                             )
                                           }
                                         >
@@ -1396,7 +1565,7 @@ function Policydetails() {
 
                         <div className="accordion-item">
                           <div
-                            className="accordion-header-wrapper"
+                            className="accordion-header-wrapper collapsed"
                             data-toggle="collapse"
                             href="#Payouts"
                             role="button"
@@ -1468,12 +1637,12 @@ function Policydetails() {
                                           data-toggle="collapse"
                                           data-target={`#collapse${index}`}
                                           aria-expanded="false"
-                                          id={`button${index}`}
+                                          id={`buttoner${index}`}
                                           aria-controls="collapseExample"
                                           onClick={() =>
                                             buttonText(
                                               `collapseExample${index}`,
-                                              `button${index}`
+                                              `buttoner${index}`
                                             )
                                           }
                                         >
@@ -1711,7 +1880,7 @@ function Policydetails() {
                       >
                         <div className="accordion-item">
                           <div
-                            className="accordion-header-wrapper"
+                            className="accordion-header-wrapper collapsed"
                             data-toggle="collapse"
                             href="#bank-details"
                             role="button"
@@ -1729,7 +1898,7 @@ function Policydetails() {
                           </div>
                           <div
                             id="bank-details"
-                            className="accordion-collapse collapse show accordion-content"
+                            className="accordion-collapse collapse accordion-content"
                           >
                             <div className="accordion-body">
                               <div className="personal-de-card shadow-normal">
@@ -1818,7 +1987,7 @@ function Policydetails() {
                       >
                         <div className="accordion-item">
                           <div
-                            className="accordion-header-wrapper"
+                            className="accordion-header-wrapper collapsed"
                             data-toggle="collapse"
                             href="#other-details"
                             role="button"
@@ -1836,7 +2005,7 @@ function Policydetails() {
                           </div>
                           <div
                             id="other-details"
-                            className="accordion-collapse collapse show accordion-content"
+                            className="accordion-collapse collapse accordion-content"
                           >
                             <div className="accordion-body">
                               <div className="personal-de-card shadow-normal">
@@ -1940,7 +2109,7 @@ function Policydetails() {
 
                         <div className="accordion-item">
                           <div
-                            className="accordion-header-wrapper"
+                            className="accordion-header-wrapper collapsed"
                             data-toggle="collapse"
                             href="#other-details"
                             role="button"
@@ -1958,7 +2127,7 @@ function Policydetails() {
                           </div>
                           <div
                             id="other-details"
-                            className="accordion-collapse collapse show accordion-content"
+                            className="accordion-collapse collapse accordion-content"
                           >
                             <div className="accordion-body">
                               <div className="personal-de-card shadow-normal">

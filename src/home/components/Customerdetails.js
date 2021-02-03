@@ -37,7 +37,7 @@ import { NavLink } from "react-router-dom";
 function Customerdetails() {
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
-    console.log(accordionClass[0]);
+    console.log(accordionClass);
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
       document.getElementById(buttonId).innerHTML = "Show More";
@@ -807,7 +807,7 @@ function Customerdetails() {
                                 >
                                   <div className="accordion-item">
                                     <div
-                                      className="accordion-header-wrapper"
+                                      className="accordion-header-wrapper collapsed"
                                       data-toggle="collapse"
                                       href="#premium-related-details"
                                       role="button"
@@ -825,7 +825,7 @@ function Customerdetails() {
                                     </div>
                                     <div
                                       id="premium-related-details"
-                                      className="accordion-collapse collapse show accordion-content"
+                                      className="accordion-collapse collapse accordion-content"
                                     >
                                       <div className="accordion-body">
                                         <div className="row">
