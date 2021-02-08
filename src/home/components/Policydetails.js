@@ -1134,6 +1134,14 @@ function Policydetails() {
                                       </div>
                                     </div>
                                   </div>
+                                  <div className="g-footer text-center top-padding">
+                                    <button
+                                      type="button"
+                                      className="btn btn-primary"
+                                    >
+                                      See More
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1264,6 +1272,14 @@ function Policydetails() {
                                       </div>
                                     </div>
                                   ))}
+                                  <div className="g-footer text-center top-padding">
+                                    <button
+                                      type="button"
+                                      className="btn btn-primary"
+                                    >
+                                      See More
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1415,6 +1431,14 @@ function Policydetails() {
                                         <p className="color-b">Success</p>
                                       </div>
                                     </div>
+                                  </div>
+                                  <div className="g-footer text-center top-padding">
+                                    <button
+                                      type="button"
+                                      className="btn btn-primary"
+                                    >
+                                      See More
+                                    </button>
                                   </div>
                                 </div>
                               </div>
