@@ -451,7 +451,7 @@ function Overdue() {
                             <div className="date-search-outer d-search d-none d-lg-block">
                               <div className="data-search-inner">
                                 <div className="data-search">
-                                  <img src={searchbox} alt="searchbox" />
+                                  {/* <img src={searchbox} alt="searchbox" /> */}
                                   <input
                                     type="email"
                                     className="form-control data-search-box"

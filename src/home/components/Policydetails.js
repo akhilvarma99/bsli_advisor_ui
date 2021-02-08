@@ -289,13 +289,13 @@ function Policydetails() {
                                             alt="yellowflag"
                                           />
                                         </div>
-                                        <div className="today">overdue</div>
                                         <div className="row">
-                                          <div className="col-lg-12">
+                                          <div className="col-lg-12 d-flex justify-content-between">
                                             <h3>Premium Due</h3>
+                                            <div className="today">overdue</div>
                                           </div>
                                         </div>
-                                        <div className="row pad-10">
+                                        <div className="row pad-10 card-body">
                                           <div className="col-2">
                                             <img
                                               src={premiumDueIcon}
@@ -330,13 +330,13 @@ function Policydetails() {
                                             alt="yellowflag"
                                           />
                                         </div>
-                                        <div className="today">Today</div>
                                         <div className="row">
-                                          <div className="col-lg-12">
+                                          <div className="col-lg-12 d-flex justify-content-between">
                                             <h3>Payment Failures</h3>
+                                            <div className="today">Today</div>
                                           </div>
                                         </div>
-                                        <div className="row pad-10">
+                                        <div className="row pad-10 card-body">
                                           <div className="col-2">
                                             <img
                                               src={paymentRenewalIcon}
@@ -371,13 +371,15 @@ function Policydetails() {
                                             alt="paymentRenewalIcon"
                                           />
                                         </div>
-                                        <div className="today">Tomorrow</div>
                                         <div className="row">
-                                          <div className="col-lg-12">
+                                          <div className="col-lg-12 d-flex justify-content-between">
                                             <h3>To be Matured</h3>
+                                            <div className="today">
+                                              Tomorrow
+                                            </div>
                                           </div>
                                         </div>
-                                        <div className="row pad-10">
+                                        <div className="row pad-10 card-body">
                                           <div className="col-2">
                                             <img
                                               src={paymentRenewalIcon}
@@ -409,13 +411,13 @@ function Policydetails() {
                                             alt="yellowflag"
                                           />
                                         </div>
-                                        <div className="today">Today</div>
                                         <div className="row">
-                                          <div className="col-lg-12">
+                                          <div className="col-lg-12 d-flex justify-content-between">
                                             <h3>To Be Terminated</h3>
+                                            <div className="today">Today</div>
                                           </div>
                                         </div>
-                                        <div className="row pad-10">
+                                        <div className="row pad-10 card-body">
                                           <div className="col-2">
                                             <img
                                               src={terminatedIcon}
@@ -446,13 +448,15 @@ function Policydetails() {
                                             alt="yellowflag"
                                           />
                                         </div>
-                                        <div className="today">Next Week</div>
                                         <div className="row">
-                                          <div className="col-lg-12">
+                                          <div className="col-lg-12 d-flex justify-content-between">
                                             <h3>Paid Up Policies</h3>
+                                            <div className="today">
+                                              Next Week
+                                            </div>
                                           </div>
                                         </div>
-                                        <div className="row pad-10">
+                                        <div className="row pad-10 card-body">
                                           <div className="col-2">
                                             <img
                                               src={paidupIcon}
@@ -483,13 +487,13 @@ function Policydetails() {
                                             alt="yellowflag"
                                           />
                                         </div>
-                                        <div className="today">Today</div>
                                         <div className="row">
-                                          <div className="col-lg-12">
+                                          <div className="col-lg-12 d-flex justify-content-between">
                                             <h3>Payouts Released</h3>
+                                            <div className="today">Today</div>
                                           </div>
                                         </div>
-                                        <div className="row pad-10">
+                                        <div className="row pad-10 card-body">
                                           <div className="col-2">
                                             <img
                                               src={payoutIcon}
@@ -1234,6 +1238,7 @@ function Policydetails() {
                                     </div>
                                   </div>
                                 ))}
+
                                 <div className="policy-grid-row">
                                   <div className="row">
                                     <div
@@ -1435,6 +1440,14 @@ function Policydetails() {
                                     </div>
                                   </div>
                                 </div>
+                                <div className="g-footer text-center top-padding">
+                                  <button
+                                    type="button"
+                                    className="btn btn-primary"
+                                  >
+                                    See More
+                                  </button>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1558,6 +1571,14 @@ function Policydetails() {
                                     </div>
                                   </div>
                                 ))}
+                                <div className="g-footer text-center top-padding">
+                                  <button
+                                    type="button"
+                                    className="btn btn-primary"
+                                  >
+                                    See More
+                                  </button>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1677,6 +1698,7 @@ function Policydetails() {
                                     </div>
                                   </div>
                                 ))}
+
                                 <div className="policy-grid-row">
                                   <div className="row">
                                     <div
@@ -1701,6 +1723,14 @@ function Policydetails() {
                                       <p className="color-b">Success</p>
                                     </div>
                                   </div>
+                                </div>
+                                <div className="g-footer text-center top-padding">
+                                  <button
+                                    type="button"
+                                    className="btn btn-primary"
+                                  >
+                                    See More
+                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -2516,11 +2546,11 @@ function Policydetails() {
                         </p>
                       </div>
                     </div>
-                    <div className="row">
+                    {/* <div className="row">
                       <div className="col-lg-12">
                         <p>*Policy detail open in new tab</p>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="row">
                       <div className="col-lg-4 col-md-5 col-12">
                         <div className="form-group">

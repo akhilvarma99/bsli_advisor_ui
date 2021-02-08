@@ -627,7 +627,7 @@ function Allcustomersresultnotfound() {
                         <div className="date-search-outer d-search d-none d-lg-block">
                           <div className="data-search-inner">
                             <div className="data-search">
-                              <img src={searchbox} alt="serarchbox" />
+                              {/* <img src={searchbox} alt="serarchbox" /> */}
                               <input
                                 type="email"
                                 className="form-control data-search-box"

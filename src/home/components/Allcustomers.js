@@ -642,13 +642,13 @@ function Allcustomers() {
                           <div className="date-search-outer d-search d-none d-lg-block">
                             <div className="data-search-inner">
                               <div className="data-search">
-                                <img src={search} alt="search" />
+                                {/* <img src={search} alt="search" /> */}
                                 <input
                                   type="email"
                                   className="form-control data-search-box"
                                   id="search"
                                   aria-describedby="data-search"
-                                  placeholder="Search by Customer Name, Policy No,Mobile No."
+                                  placeholder="Search by Customer Name, Policy No, Mobile No."
                                 />
                                 <button
                                   type="button"

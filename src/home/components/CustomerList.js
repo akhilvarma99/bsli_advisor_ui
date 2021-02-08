@@ -73,7 +73,7 @@ function CoustmerListingPage() {
                   <h2>Value</h2>
                 </div>
                 <div className="card-div">
-                  <p>Persistency</p>
+                  <p>Persistency(NOP)</p>
                   <h2>40%</h2>
                 </div>
               </div>
