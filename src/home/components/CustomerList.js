@@ -27,11 +27,8 @@ function CoustmerListingPage() {
       document.getElementById("toastBlock").classList.remove("showToast");
     }
     setMessage(message);
-    console.log("anvesh");
   };
-  const closeButton = () => {
-    document.getElementById("toastBlock").classList.remove("showToast");
-  };
+
   /* ------------------Toast-Functions----------------------- */
 
   return (
@@ -59,7 +56,7 @@ function CoustmerListingPage() {
               <div className="col-md-12">
                 <h1>Customer List</h1>
               </div>
-              <Toasts closeButton={closeButton} message={message} />
+              <Toasts message={message} />
             </div>
             <div className="row h-scroll-s">
               <div className="col-md-12 h-scroll-s">

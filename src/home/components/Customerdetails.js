@@ -8,23 +8,13 @@ import phonecall from "../../assets/img/icons/phone-call.svg";
 import mail from "../../assets/img/icons/mail.svg";
 import yellowflag from "../../assets/img/icons/yellow-flag.svg";
 import premiumDueIcon from "../../assets/img/icons/premium.svg";
-import reinstatementIcon from "../../assets/img/icons/Reinstatement.svg";
-import paymentFailureIcon from "../../assets/img/icons/payment-failed.svg";
-import paymentRenewalIcon from "../../assets/img/icons/Payment-renewal.svg";
-import creditIcon from "../../assets/img/icons/credit-card.svg";
-import terminatedIcon from "../../assets/img/icons/Terminated.svg";
-import discontinueIcon from "../../assets/img/icons/Discontinue.svg";
-import paidupIcon from "../../assets/img/icons/Paidup.svg";
-import payoutIcon from "../../assets/img/icons/payout.svg";
-import policyid from "../../assets/img/icons/policy-id.svg";
+import user from "../../assets/img/icons/user.svg";
+import hand from "../../assets/img/icons/hand_w.svg";
+import wishlist from "../../assets/img/icons/wishlist_w.svg";
+import help from "../../assets/img/icons/help_w.svg";
 import gift from "../../assets/img/icons/gift.svg";
 import greentick from "../../assets/img/icons/green-tick.svg";
 import threedots from "../../assets/img/icons/three-dots.svg";
-import taxcertificate from "../../assets/img/icons/tax-certificate.svg";
-import sales from "../../assets/img/icons/sales.svg";
-import policycontract from "../../assets/img/icons/policy-contract.svg";
-import tdscertificate from "../../assets/img/icons/tds-certificate.svg";
-import acknowledge from "../../assets/img/icons/payment-acknolodge.svg";
 import circle from "../../assets/img/icons/circle.svg";
 import creative from "../../assets/img/icons/creative.svg";
 import taxcertIcon from "../../assets/img/icons/Taxcertificate.svg";
@@ -34,6 +24,8 @@ import policycontractIcon from "../../assets/img/icons/Policycontract.svg";
 import paymentAcknowledgeIcon from "../../assets/img/icons/form.svg";
 
 import { NavLink } from "react-router-dom";
+import Card from "../../utils/Card";
+import Toasts from "../../utils/Toasts";
 function Customerdetails() {
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
@@ -68,6 +60,121 @@ function Customerdetails() {
     downloadLink.download = fileName;
     downloadLink.click();
   }
+
+  const cardInfo = [
+    {
+      id: "Wishes",
+      headerTitle: "Today",
+      cardTitle: "Birthday",
+      icon: gift,
+      bodyTitle: "John Fernando",
+      body: "Relation . 20/Dec/2020",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Payments",
+      headerTitle: "Overdue",
+      cardTitle: "Premium Due",
+      icon: gift,
+      bodyTitle: "Policy ID",
+      body: "27.11.1990 . Rs.1,00,000",
+      status: "Payment Failed",
+      buttonText: "Send Payment Link",
+    },
+    {
+      id: "Payments",
+      headerTitle: "Tommorrow",
+      cardTitle: "Credit Card/Debit Card Expiry",
+      icon: gift,
+      bodyTitle: "Policy ID",
+      body: "XXXX XXXX XXXX 6077 . Rs.1,00,000",
+      status: "",
+      buttonText: "Send Payment Link",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Terminated",
+      icon: gift,
+      bodyTitle: "Policy ID",
+      body: "27/Dec/1990",
+      status: "",
+      buttonText: "Contact Customer",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Discontinued",
+      icon: gift,
+      bodyTitle: "Policy ID",
+      body: "27/Dec/1990",
+      status: "Reason For Termination",
+      buttonText: "Contact Customer",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Paid Up",
+      icon: gift,
+      bodyTitle: "₹ 1,00,000",
+      body: "(Payout Type)",
+      status: "",
+      buttonText: "Contact Customer",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "Payouts Released",
+      icon: gift,
+      bodyTitle: "₹ 1,00,000",
+      body: "27/Dec/1990",
+      status: "",
+      buttonText: "Contact Customer",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "Policy Matured Wishes",
+      icon: gift,
+      bodyTitle: "Policy ID",
+      body: "27.11.1990 . Rs.1,00,000",
+      status: "",
+      buttonText: "Send Payment Link",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "",
+      cardTitle: "Reinstatement Requirement",
+      icon: gift,
+      bodyTitle: "Policy ID",
+      body: "27.11.1990 . Rs.1,00,000",
+      status: "COI | COVID Questionaire | Medical",
+      buttonText: "Send Payment Link",
+    },
+  ];
+  let filterFunc = (arrayName, filterName) =>
+    arrayName.filter(function (e) {
+      return e.id == filterName;
+    });
+
+  const [filter, setFilter] = useState("Wishes");
+  let filterFunction = (filter) => {
+    setFilter(filter);
+  };
+  const [message, setMessage] = useState();
+
+  const openToast = (message) => {
+    if (message !== null) {
+      document.getElementById("toastBlock").classList.add("showToast");
+      setTimeout(function () {
+        document.getElementById("toastBlock").classList.remove("showToast");
+      }, 3000);
+    } else {
+      document.getElementById("toastBlock").classList.remove("showToast");
+    }
+    setMessage(message);
+  };
 
   return (
     <div>
@@ -107,6 +214,7 @@ function Customerdetails() {
                   Customers Details
                 </h1>
               </div>
+              <Toasts message={message} />
             </div>
             <div className="row">
               <div className="col-lg-6 box-saperation">
@@ -288,6 +396,61 @@ function Customerdetails() {
                                 >
                                   <div className="accordion-body">
                                     <div className="row">
+                                      <div className="col-md-12">
+                                        <div className="quikc-links-card-cd">
+                                          <div className="quick-links-inner h-scroll-s">
+                                            <ul>
+                                              <li
+                                                onClick={() =>
+                                                  filterFunction("Wishes")
+                                                }
+                                              >
+                                                Wishes
+                                              </li>
+                                              <li
+                                                onClick={() =>
+                                                  filterFunction("Payments")
+                                                }
+                                              >
+                                                Payments
+                                              </li>
+                                              <li
+                                                onClick={() =>
+                                                  filterFunction(
+                                                    "Policy Status"
+                                                  )
+                                                }
+                                              >
+                                                Policy Status
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="row">
+                                      {filterFunc(cardInfo, filter).map(
+                                        (key, index) => (
+                                          <div className="col-lg-4 col-md-6">
+                                            <Card
+                                              key={index}
+                                              cardInfo={{
+                                                headerTitle: key.headerTitle,
+                                                cardTitle: key.cardTitle,
+                                                icon: key.icon,
+                                                bodyTitle: key.bodyTitle,
+                                                body: key.body,
+                                                status: key.status,
+                                                buttonText: key.buttonText,
+                                              }}
+                                              openToast={openToast}
+                                            />
+                                          </div>
+                                        )
+                                      )}
+                                    </div>
+
+                                    {/* <div className="row">
                                       <div className="col-lg-4 col-md-6">
                                         <div className="smart-card shadow-normal">
                                           {/* <div className="yellow-flag">
@@ -295,9 +458,9 @@ function Customerdetails() {
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div> */}
+                                          </div> 
 
-                                          <div className="row">
+                                          <div className="row ">
                                             <div className="col-lg-12">
                                               <h3>Birthday</h3>
                                             </div>
@@ -333,7 +496,7 @@ function Customerdetails() {
                                               src={premiumDueIcon}
                                               alt="premiumDueIcon"
                                             />
-                                          </div> */}
+                                          </div> 
                                           <div className="today">overdue</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -350,7 +513,7 @@ function Customerdetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br />{" "}
+                                                <br />
                                                 <span>
                                                   20/Dec/2020 | 1,50,000
                                                 </span>
@@ -379,7 +542,7 @@ function Customerdetails() {
                                               src={paymentFailureIcon}
                                               alt="paymentFailureIcon"
                                             />
-                                          </div> */}
+                                          </div> 
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -420,7 +583,7 @@ function Customerdetails() {
                                               src={paymentRenewalIcon}
                                               alt="paymentRenewalIcon"
                                             />
-                                          </div> */}
+                                          </div> 
                                           <div className="today">Tomorrow</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -460,7 +623,7 @@ function Customerdetails() {
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div> */}
+                                          </div> 
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -497,7 +660,7 @@ function Customerdetails() {
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div> */}
+                                          </div> 
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -534,7 +697,7 @@ function Customerdetails() {
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div> */}
+                                          </div>
                                           <div className="today">Next Week</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -566,7 +729,7 @@ function Customerdetails() {
                                                 Send Payment Link
                                               </button>
                                             </div>
-                                          </div> */}
+                                          </div> 
                                         </div>
                                       </div>
                                       <div className="col-lg-4 col-md-6">
@@ -576,7 +739,7 @@ function Customerdetails() {
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div> */}
+                                          </div> 
                                           <div className="today">Today</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -613,7 +776,7 @@ function Customerdetails() {
                                               src={yellowflag}
                                               alt="yellowflag"
                                             />
-                                          </div> */}
+                                          </div> 
                                           <div className="today">Tomorrow</div>
                                           <div className="row">
                                             <div className="col-lg-12">
@@ -649,7 +812,7 @@ function Customerdetails() {
                                           </div>
                                         </div>
                                       </div>
-                                    </div>
+                                    </div> */}
                                   </div>
                                 </div>
                               </div>

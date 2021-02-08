@@ -1,5 +1,8 @@
 import React from "react";
 export default function Toasts(props) {
+  const closeButton = () => {
+    document.getElementById("toastBlock").classList.remove("showToast");
+  };
   return (
     /*  <div
       aria-live="polite"
@@ -15,12 +18,27 @@ export default function Toasts(props) {
         data-dismiss="toast"
         aria-label="Close"
       >
-        <span aria-hidden="true" onClick={props.closeButton}>
+        <span aria-hidden="true" onClick={closeButton}>
           &times;
         </span>
       </button>
     </div>
-    /*     </div>
-     */
   );
 }
+/* <Dropdown
+                title={props.cardInfo.buttonText}
+                items={[
+                  {
+                    logo: "",
+                    title: "Copy link",
+                    anvesh: props.openToast,
+                    message: "Success: Link copied",
+                  },
+                  {
+                    logo: "",
+                    title: "Send Email",
+                    anvesh: props.openToast,
+                    message: "Success: Payment Link sent",
+                  },
+                ]}
+              /> */

@@ -5,6 +5,9 @@
   position: relative;
   margin-bottom: 15px;
   min-height: 172px;
+  .card-body {
+    margin-bottom: 7px;
+  }
 
   h3 {
     font-size: 20px;
@@ -25,18 +28,17 @@
   }
 
   button {
-    margin-top: 15px;
     float: right;
     width: 150px;
     /* margin-right: -4px; */
   }
 
   .today {
-    position: absolute;
-    top: 15px;
-    right: 20px;
     color: $dark-grey;
-    font-size: 18px;
+    text-align: left;
+    font: normal normal normal 16px/29px "pf_handbook_proregular";
+    letter-spacing: 0px;
+    opacity: 1;
   }
 
   .yellow-flag {
