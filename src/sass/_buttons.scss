@@ -18,7 +18,6 @@
     outline: 0 !important;
     box-shadow: none !important;
   }
-  
 }
 
 .btn-primary-lrg {
@@ -43,7 +42,8 @@
   color: $white;
 }
 
-.btn-primary-lrg:focus, .btn-primary-lrg:hover {
+.btn-primary-lrg:focus,
+.btn-primary-lrg:hover {
   background-color: $capital-dark-red !important;
   border-color: $capital-dark-red !important;
   outline: 0 !important;
@@ -62,11 +62,23 @@
   color: #c7222a;
   border: 1px #c7222a solid;
   margin-top: 3px;
+  outline: none !important;
 }
 
 .btn-outline-s:hover {
-  background-color: $capital-red;
-  color: #fff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.3);
+  color: #c7222a;
+}
+.btn-outline-s:active {
+  border: 1px $capital-dark-red solid;
+  font-size: 15px;
+  color: $capital-dark-red;
+  border: 1px $capital-dark-red solid;
+  margin-top: 3px;
+  box-shadow: none !important;
+  outline: 0;
 }
 
 .btn-outline-s-secondary {

@@ -54,6 +54,51 @@
     margin-right: 5px;
   }
 }
+.quikc-links-card-cd {
+  .quick-links-inner {
+    padding-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+
+  ul li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border: 1px #cdcece solid;
+    padding: 4px 25px;
+    display: inline-flex;
+    border-radius: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    font: normal normal normal 20px/27px "pf_handbook_proregular";
+  }
+
+  ul li:hover {
+    color: #fff;
+    background-color: $capital-red;
+    border: 1px $capital-red solid;
+    transition-duration: 0.3s;
+    img {
+      filter: invert(1);
+    }
+  }
+
+  ul li.ative {
+    background-color: $capital-red !important;
+    color: #fff;
+  }
+
+  ul li img {
+    margin-right: 5px;
+  }
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -92,8 +137,39 @@
       margin-right: 5px;
     }
   }
-}
 
+  .quikc-links-card-cd {
+    margin-bottom: 15px;
+    h2 {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    ul li {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      border: 1px #cdcece solid;
+      padding: 4px 10px;
+      display: inline-flex;
+      border-radius: 20px;
+      margin-right: 5px;
+      font-size: 14px;
+
+      cursor: pointer;
+    }
+
+    ul li img {
+      margin-right: 5px;
+    }
+  }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 }
