@@ -8,13 +8,13 @@
     outline: 0 !important;
   }
   &:hover {
-    background-color: $capital-red !important;
-    outline: 0 !important;
-    border-color: $capital-dark-red !important;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.12);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.12);
+    box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.12);
   }
   &:focus {
-    background-color: $capital-dark-red !important;
-    border-color: $capital-dark-red !important;
+    background-color: $capital-red !important;
+    border-color: $capital-red !important;
     outline: 0 !important;
     box-shadow: none !important;
   }
