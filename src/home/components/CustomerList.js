@@ -547,12 +547,29 @@ function CoustmerListingPage() {
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/*  <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Payment Link
-                                    </button>
+                                    </button> */}
+                                    <Dropdown
+                                      title={"Send Payment Link"}
+                                      items={[
+                                        {
+                                          logo: "",
+                                          title: "Copy link",
+                                          anvesh: openToast,
+                                          message: "Success: Link copied",
+                                        },
+                                        {
+                                          logo: "",
+                                          title: "Send Email",
+                                          anvesh: openToast,
+                                          message: "Success: Payment Link sent",
+                                        },
+                                      ]}
+                                    />
                                   </div>
                                 </div>
                               </div>
@@ -604,12 +621,29 @@ function CoustmerListingPage() {
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    <button
+                                    {/*  <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Payment Link
-                                    </button>
+                                    </button> */}
+                                    <Dropdown
+                                      title={"Send Payment Link"}
+                                      items={[
+                                        {
+                                          logo: "",
+                                          title: "Copy link",
+                                          anvesh: openToast,
+                                          message: "Success: Link copied",
+                                        },
+                                        {
+                                          logo: "",
+                                          title: "Send Email",
+                                          anvesh: openToast,
+                                          message: "Success: Payment Link sent",
+                                        },
+                                      ]}
+                                    />
                                   </div>
                                 </div>
                               </div>

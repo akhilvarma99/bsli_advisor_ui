@@ -22,7 +22,8 @@ import tdscertIcon from "../../assets/img/icons/Tdscertificate.svg";
 import salesillIcon from "../../assets/img/icons/SalesIllustration.svg";
 import policycontractIcon from "../../assets/img/icons/Policycontract.svg";
 import paymentAcknowledgeIcon from "../../assets/img/icons/form.svg";
-
+import Upsell from "../../assets/img/icons/Upsell opportunity.svg";
+import Setup from "../../assets/img/icons/Setup ECS.svg";
 import { NavLink } from "react-router-dom";
 import Card from "../../utils/Card";
 import Toasts from "../../utils/Toasts";
@@ -1560,32 +1561,31 @@ function Customerdetails() {
                               <div className="yellow-flag">
                                 <img src={yellowflag} alt="yellowflag" />
                               </div>
-                              <div className="today">Today</div>
                               <div className="row">
-                                <div className="col-lg-12">
-                                  <h3>PASA Offer</h3>
+                                <div className="col-lg-12 d-flex justify-content-between">
+                                  <h3>Upsell Opportunity</h3>
+                                  <div className="today">Today</div>
                                 </div>
                               </div>
-                              <div className="row pad-10">
+                              <div className="row pad-10 card-body">
                                 <div className="col-2">
                                   <img
                                     className="m-bottom-6"
-                                    src={creative}
+                                    src={Upsell}
                                     alt="creative"
                                   />
                                 </div>
                                 <div className="col-10">
-                                  <p className="m-top-12">Product name</p>
-                                  <p>&#8377;3,73,000</p>
+                                  <p className="m-top-12">
+                                    Plan Name Goes here
+                                  </p>
                                 </div>
                               </div>
-
                               <div className="row">
-                                <div className="col-lg-12 text-left">
-                                  <span>
-                                    The customer will not be required to (PASA
-                                    Offer Value)
-                                  </span>
+                                <div className="col-lg-12 text-right">
+                                  <button className="btn btn-outline-s">
+                                    Send Details
+                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -1595,27 +1595,25 @@ function Customerdetails() {
                               <div className="yellow-flag">
                                 <img src={yellowflag} alt="yellowflag" />
                               </div>
-                              {/* <div className="today">Today</div> */}
                               <div className="row">
-                                <div className="col-lg-12">
-                                  <h3>Next Best Offer</h3>
+                                <div className="col-lg-12 d-flex justify-content-between">
+                                  <h3>Set Up ECS</h3>
+                                  <div className="today">Today</div>
                                 </div>
                               </div>
-                              <div className="row pad-10">
+                              <div className="row pad-10 card-body">
                                 <div className="col-2">
-                                  <img src={circle} alt="circle" />
+                                  <img src={Setup} alt="circle" />
                                 </div>
                                 <div className="col-10">
-                                  <p className="m-top-12">Product name</p>
+                                  <p className="m-top-12">Policy ID</p>
                                 </div>
                               </div>
                               <div className="row">
-                                <div className="col-lg-12 text-left">
-                                  <span>
-                                    Based on data, your customer is likely to
-                                    buy this product. You should pitch this to
-                                    the customer
-                                  </span>
+                                <div className="col-lg-12 text-right">
+                                  <button className="btn btn-outline-s">
+                                    Send Register Request
+                                  </button>
                                 </div>
                               </div>
                             </div>

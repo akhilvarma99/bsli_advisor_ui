@@ -41,7 +41,7 @@ function Payouts() {
               <div className="col">
                 <h1 className="p-header">
                   <img src={backarrow} alt="backarrow" />
-                  All Customers
+                  Payouts
                 </h1>
               </div>
               {/*               <div className="col">
@@ -58,7 +58,7 @@ function Payouts() {
             </div>
             {/* Heading Ends  */}
             <div className="f_Div_outer">
-              <div className="f_Div_c1 d-none d-lg-block">
+              {/* <div className="f_Div_c1 d-none d-lg-block">
                 <div className="filter-div-l shadow-normal">
                   <div className="filter_header">
                     <div className="row">
@@ -589,6 +589,194 @@ function Payouts() {
                           type="button"
                           className="btn btn-primary-s mrgn-0"
                         >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+              <div class="f_Div_c1 d-none d-lg-block">
+                <div class="filter-div-l shadow-normal">
+                  <div class="filter_header">
+                    <div class="row">
+                      <div class="col-lg-12 filter_sub_heading">
+                        <h2 class="d-flex align-items-center">
+                          <img src={filter} alt="filter" />
+                          Filter (1)
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter_body">
+                    <div class="row">
+                      <div class="col-lg-12"></div>
+                      <div class="col-lg-12 filter_sub_check_box_row">
+                        <h3>Type of Payout (Maturity,Survival,Claims,...)</h3>
+                        <div class="data-search">
+                          <img src={search} alt="search" />
+
+                          <input
+                            type="email"
+                            class="form-control data-search-box"
+                            id="search"
+                            aria-describedby="data-search"
+                            placeholder="Search Product"
+                          />
+                        </div>
+
+                        <div class="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox1"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="customCheckBox1"
+                          >
+                            Product Name 01
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox2"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="customCheckBox2"
+                          >
+                            Product Name 02
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox3"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="customCheckBox3"
+                          >
+                            Product Name 03
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox4"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="customCheckBox4"
+                          >
+                            Product Name 04
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-12 filter_sub_check_box_row">
+                        <select class="custom-select custom-select-sm m-bottom-10">
+                          <option selected>- Select -</option>
+                          <option value="1">Next Month</option>
+                          <option value="2">
+                            Custom Date Range (Default - next 3 months)
+                          </option>
+                          <option value="3">Mature date</option>
+                          <option value="4">Paid up Date</option>
+                          <option value="4">Surrendered</option>
+                          <option value="4">Terminated</option>
+                        </select>
+
+                        <div class="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox5"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="customCheckBox5"
+                          >
+                            Today
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox6"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="customCheckBox6"
+                          >
+                            Next Week
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox check-box-row">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox7"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="customCheckBox7"
+                          >
+                            Next 30 Days
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6">
+                        <span>from Date</span>
+                        <div class="date-box">
+                          <img src={dateicon} alt="dateicon" />
+
+                          <input
+                            type="email"
+                            class="form-control data-search-box"
+                            id="search"
+                            aria-describedby="data-search"
+                            placeholder="dd/mm/yyyy"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6">
+                        <span>To Date</span>
+                        <div class="date-box">
+                          <img src={dateicon} alt="dateicon" />
+
+                          <input
+                            type="email"
+                            class="form-control data-search-box"
+                            id="search"
+                            aria-describedby="data-search"
+                            placeholder="dd/mm/yyyy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-footer">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <button
+                          type="button"
+                          class="btn btn-outline-s-secondary"
+                        >
+                          Reset
+                        </button>
+                        <button type="button" class="btn btn-primary-s mrgn-0">
                           Apply
                         </button>
                       </div>

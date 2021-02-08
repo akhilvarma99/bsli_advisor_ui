@@ -63,546 +63,166 @@ function Allcustomers() {
             </div>
             {/* Heading Ends  */}
             <div className="f_Div_outer">
-              <div className="f_Div_c1 d-none d-lg-block">
-                <div className="filter-div-l shadow-normal">
-                  <div className="filter_header">
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_heading">
-                        <h2>
+              <div class="f_Div_c1 d-none d-lg-block">
+                <div class="filter-div-l shadow-normal">
+                  <div class="filter_header">
+                    <div class="row">
+                      <div class="col-lg-12 filter_sub_heading">
+                        <h2 class="d-flex align-items-center">
                           <img src={filter} alt="filter" />
                           Filter (1)
                         </h2>
                       </div>
                     </div>
                   </div>
-                  <div className="filter_body" id="style-3">
-                    <div className="row">
-                      <div className="col-lg-12"></div>
-                      <div className="col-lg-12 filter_sub_check_box_row">
+                  <div class="filter_body">
+                    <div class="row">
+                      <div class="col-lg-12"></div>
+                      <div class="col-lg-12 filter_sub_check_box_row">
                         <h3>Product</h3>
-                        <div className="data-search">
+                        <div class="data-search">
                           <img src={search} alt="search" />
+
                           <input
                             type="email"
-                            className="form-control data-search-box"
+                            class="form-control data-search-box"
                             id="search"
                             aria-describedby="data-search"
                             placeholder="Search Product"
                           />
                         </div>
-                        <div className="custom-control custom-checkbox check-box-row">
+
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
                             type="checkbox"
-                            className="custom-control-input"
+                            class="custom-control-input"
                             id="customCheckBox1"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox1"
+                            class="custom-control-label"
+                            for="customCheckBox1"
                           >
                             Product Name 01
                           </label>
                         </div>
-                        <div className="custom-control custom-checkbox check-box-row">
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
                             type="checkbox"
-                            className="custom-control-input"
+                            class="custom-control-input"
                             id="customCheckBox2"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox2"
+                            class="custom-control-label"
+                            for="customCheckBox2"
                           >
                             Product Name 02
                           </label>
                         </div>
-                        <div className="custom-control custom-checkbox check-box-row">
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
                             type="checkbox"
-                            className="custom-control-input"
+                            class="custom-control-input"
                             id="customCheckBox3"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox3"
+                            class="custom-control-label"
+                            for="customCheckBox3"
                           >
                             Product Name 03
                           </label>
                         </div>
-                        <div className="custom-control custom-checkbox check-box-row">
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
                             type="checkbox"
-                            className="custom-control-input"
+                            class="custom-control-input"
                             id="customCheckBox4"
                           />
                           <label
-                            className="custom-control-label"
-                            htmlFor="customCheckBox4"
+                            class="custom-control-label"
+                            for="customCheckBox4"
                           >
                             Product Name 04
                           </label>
                         </div>
                       </div>
                     </div>
-                    <div className="row">
-                      <div className="col-lg-12"></div>
-                      <div className="col-lg-12 filter_sub_check_box_row filterDropdown">
-                        <h6>Product</h6>
-                        <FilterDropdown
-                          options={["Premium Due Date", "lapse date"]}
-                        />
-                      </div>
-                    </div>
 
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>Premium Due Date (1)</h3>
-                        <div className="custom-control custom-checkbox check-box-row">
+                    <div class="row">
+                      <div class="col-lg-12 filter_sub_check_box_row">
+                        <select class="custom-select custom-select-sm m-bottom-10">
+                          <option selected>- Select -</option>
+                          <option value="1">Premium Due Date</option>
+                          <option value="2">Lapse Date</option>
+                          <option value="3">Mature Date</option>
+                          <option value="4">Paid up Date</option>
+                          <option value="4">Surrendered</option>
+                          <option value="4">Terminated</option>
+                        </select>
+
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
+                            type="checkbox"
+                            class="custom-control-input"
                             id="customCheckBox5"
                           />
                           <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox5"
+                            class="custom-control-label"
+                            for="customCheckBox5"
                           >
                             Today
                           </label>
                         </div>
-                        <div className="custom-control custom-checkbox check-box-row">
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
+                            type="checkbox"
+                            class="custom-control-input"
                             id="customCheckBox6"
                           />
                           <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox6"
+                            class="custom-control-label"
+                            for="customCheckBox6"
                           >
                             Next Week
                           </label>
                         </div>
-                        <div className="custom-control custom-checkbox check-box-row">
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
+                            type="checkbox"
+                            class="custom-control-input"
                             id="customCheckBox7"
                           />
                           <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox7"
+                            class="custom-control-label"
+                            for="customCheckBox7"
                           >
                             Next 30 Days
                           </label>
                         </div>
                       </div>
-                      <div className="col-lg-6">
+
+                      <div class="col-lg-6">
                         <span>from Date</span>
-                        <div className="date-box">
+                        <div class="date-box">
                           <img src={dateicon} alt="dateicon" />
+
                           <input
                             type="email"
-                            className="form-control data-search-box"
+                            class="form-control data-search-box"
                             id="search"
                             aria-describedby="data-search"
                             placeholder="dd/mm/yyyy"
                           />
                         </div>
                       </div>
-                      <div className="col-lg-6">
+
+                      <div class="col-lg-6">
                         <span>To Date</span>
-                        <div className="date-box">
+                        <div class="date-box">
                           <img src={dateicon} alt="dateicon" />
+
                           <input
                             type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>lapse date</h3>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox8"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox8"
-                          >
-                            Today
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox10"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox10"
-                          >
-                            Next Week
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox5"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox5"
-                          >
-                            Next 30 Days
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>from Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>To Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>Mature date</h3>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox11"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox11"
-                          >
-                            Today
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox13"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox13"
-                          >
-                            Next Week
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox5"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox5"
-                          >
-                            Next 30 Days
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>from Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>To Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>Paid up date</h3>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox14"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox14"
-                          >
-                            Today
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox15"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox15"
-                          >
-                            Next Week
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox16"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox16"
-                          >
-                            Next 30 Days
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>from Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>To Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>Surrendered</h3>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox17"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox17"
-                          >
-                            Today
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox18"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox18"
-                          >
-                            Last Week
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox19"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox19"
-                          >
-                            Last 30 Days
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>from Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>To Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-12 filter_sub_check_box_row">
-                        <h3>terminated</h3>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox20"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox20"
-                          >
-                            Today
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox6"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox6"
-                          >
-                            Last Week
-                          </label>
-                        </div>
-                        <div className="custom-control custom-checkbox check-box-row">
-                          <input
-                            className="form-check-input"
-                            type="radio"
-                            name="retentionRadio"
-                            value="Mature"
-                            id="customCheckBox21"
-                          />
-                          <label
-                            className="form-check-label"
-                            htmlFor="customCheckBox21"
-                          >
-                            Last 30 Days
-                          </label>
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>from Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
-                            id="search"
-                            aria-describedby="data-search"
-                            placeholder="dd/mm/yyyy"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <span>To Date</span>
-                        <div className="date-box">
-                          <img src={dateicon} alt="dateicon" />
-                          <input
-                            type="email"
-                            className="form-control data-search-box"
+                            class="form-control data-search-box"
                             id="search"
                             aria-describedby="data-search"
                             placeholder="dd/mm/yyyy"
@@ -611,19 +231,17 @@ function Allcustomers() {
                       </div>
                     </div>
                   </div>
-                  <div className="filter-footer">
-                    <div className="row">
-                      <div className="col-lg-12">
+
+                  <div class="filter-footer">
+                    <div class="row">
+                      <div class="col-lg-12">
                         <button
                           type="button"
-                          className="btn btn-outline-s-secondary"
+                          class="btn btn-outline-s-secondary"
                         >
                           Reset
-                        </button>{" "}
-                        <button
-                          type="button"
-                          className="btn btn-primary-s mrgn-0"
-                        >
+                        </button>
+                        <button type="button" class="btn btn-primary-s mrgn-0">
                           Apply
                         </button>
                       </div>

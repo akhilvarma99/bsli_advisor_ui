@@ -8,8 +8,8 @@ import phonecall from "../../assets/img/icons/phone-call.svg";
 import mail from "../../assets/img/icons/mail.svg";
 import yellowflag from "../../assets/img/icons/yellow-flag.svg";
 import dollar from "../../assets/img/icons/dollar-icon.svg";
-import creative from "../../assets/img/icons/creative.svg";
-import circle from "../../assets/img/icons/circle.svg";
+import Upsell from "../../assets/img/icons/Upsell opportunity.svg";
+import Setup from "../../assets/img/icons/Setup ECS.svg";
 import taxcertificate from "../../assets/img/icons/tax-certificate.svg";
 import sales from "../../assets/img/icons/sales.svg";
 import policycontract from "../../assets/img/icons/policy-contract.svg";
@@ -33,6 +33,8 @@ import terminatedIcon from "../../assets/img/icons/Terminated.svg";
 import discontinueIcon from "../../assets/img/icons/Discontinue.svg";
 import paidupIcon from "../../assets/img/icons/Paidup.svg";
 import payoutIcon from "../../assets/img/icons/payout.svg";
+import Dropdown from "../../utils/Dropdown";
+import Toasts from "../../utils/Toasts";
 function Policydetails() {
   const [forgotmodal, setforgotmodal] = useState(false);
   const [switchFundmodal, setswitchFundmodal] = useState(false);
@@ -51,6 +53,20 @@ function Policydetails() {
       document.getElementById(buttonId).innerHTML = "Show Less";
     }
   }
+
+  const [message, setMessage] = useState();
+
+  const openToast = (message) => {
+    if (message !== null) {
+      document.getElementById("toastBlock").classList.add("showToast");
+      setTimeout(function () {
+        document.getElementById("toastBlock").classList.remove("showToast");
+      }, 3000);
+    } else {
+      document.getElementById("toastBlock").classList.remove("showToast");
+    }
+    setMessage(message);
+  };
 
   return (
     <div>
@@ -90,6 +106,7 @@ function Policydetails() {
                   Policy Details
                 </h1>
               </div>
+              <Toasts message={message} />
             </div>
             <select
               className="form-control selectPolicy"
@@ -314,9 +331,25 @@ function Policydetails() {
                                         </div>
                                         <div className="row">
                                           <div className="col-lg-12 text-right">
-                                            <button className="btn btn-outline-s">
-                                              Send Payment Link
-                                            </button>
+                                            <Dropdown
+                                              title="Send Payment Link"
+                                              items={[
+                                                {
+                                                  logo: "",
+                                                  title: "Copy link",
+                                                  anvesh: openToast,
+                                                  message:
+                                                    "Success: Link copied",
+                                                },
+                                                {
+                                                  logo: "",
+                                                  title: "Send Email",
+                                                  anvesh: openToast,
+                                                  message:
+                                                    "Success: Payment Link sent",
+                                                },
+                                              ]}
+                                            />
                                           </div>
                                         </div>
                                       </div>
@@ -355,9 +388,25 @@ function Policydetails() {
                                         </div>
                                         <div className="row">
                                           <div className="col-lg-12 text-right">
-                                            <button className="btn btn-outline-s">
-                                              Send Payment Link
-                                            </button>
+                                            <Dropdown
+                                              title="Send Payment Link"
+                                              items={[
+                                                {
+                                                  logo: "",
+                                                  title: "Copy link",
+                                                  anvesh: openToast,
+                                                  message:
+                                                    "Success: Link copied",
+                                                },
+                                                {
+                                                  logo: "",
+                                                  title: "Send Email",
+                                                  anvesh: openToast,
+                                                  message:
+                                                    "Success: Payment Link sent",
+                                                },
+                                              ]}
+                                            />
                                           </div>
                                         </div>
                                       </div>
@@ -822,7 +871,7 @@ function Policydetails() {
                                   <div className="row">
                                     <div className="col-lg-12 text-right">
                                       <button className="btn btn-primary-s m-bottom-10">
-                                        Download Premium Related Details
+                                        download transaction history
                                       </button>
                                     </div>
                                   </div>
@@ -1142,7 +1191,7 @@ function Policydetails() {
 
                                 <div className="col-lg-10 text-right">
                                   <button className="btn btn-primary-s m-bottom-10">
-                                    Download Premium Related Details
+                                    download transaction history
                                   </button>
                                 </div>
                               </div>
@@ -1319,7 +1368,7 @@ function Policydetails() {
 
                                 <div className="col-lg-10 text-right">
                                   <button className="btn btn-primary-s m-bottom-10">
-                                    Download Premium Related Details
+                                    download transaction history
                                   </button>
                                 </div>
                               </div>
@@ -2141,7 +2190,7 @@ function Policydetails() {
                           <div
                             className="accordion-header-wrapper collapsed"
                             data-toggle="collapse"
-                            href="#other-details"
+                            href="#other-detail"
                             role="button"
                             aria-expanded="false"
                             aria-controls="other-details"
@@ -2156,7 +2205,7 @@ function Policydetails() {
                             <i className="arrow-down" />
                           </div>
                           <div
-                            id="other-details"
+                            id="other-detail"
                             className="accordion-collapse collapse accordion-content"
                           >
                             <div className="accordion-body">
@@ -2275,17 +2324,17 @@ function Policydetails() {
                             <div className="yellow-flag">
                               <img src={yellowflag} alt="yellowflag" />
                             </div>
-                            <div className="today">Today</div>
                             <div className="row">
-                              <div className="col-lg-12">
+                              <div className="col-lg-12 d-flex justify-content-between">
                                 <h3>Upsell Opportunity</h3>
+                                <div className="today">Today</div>
                               </div>
                             </div>
-                            <div className="row pad-10">
+                            <div className="row pad-10 card-body">
                               <div className="col-2">
                                 <img
                                   className="m-bottom-6"
-                                  src={creative}
+                                  src={Upsell}
                                   alt="creative"
                                 />
                               </div>
@@ -2307,15 +2356,15 @@ function Policydetails() {
                             <div className="yellow-flag">
                               <img src={yellowflag} alt="yellowflag" />
                             </div>
-                            <div className="today">Today</div>
                             <div className="row">
-                              <div className="col-lg-12">
+                              <div className="col-lg-12 d-flex justify-content-between">
                                 <h3>Set Up ECS</h3>
+                                <div className="today">Today</div>
                               </div>
                             </div>
-                            <div className="row pad-10">
+                            <div className="row pad-10 card-body">
                               <div className="col-2">
-                                <img src={circle} alt="circle" />
+                                <img src={Setup} alt="circle" />
                               </div>
                               <div className="col-10">
                                 <p className="m-top-12">Policy ID</p>

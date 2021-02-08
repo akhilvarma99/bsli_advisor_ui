@@ -6,7 +6,7 @@ import searchbox from "../../assets/img/icons/search-bx.svg";
 import sort from "../../assets/img/icons/sort.svg";
 import filter from "../../assets/img/icons/filter.svg";
 import starempty from "../../assets/img/icons/star-empty.svg";
-import loadmore from "../../assets/img/icons/load-more.svg";
+import loadmore from "../../assets/img/icons/load-more-white.svg";
 function Renewalpaymentdue() {
   return (
     <div>
@@ -651,7 +651,11 @@ function Renewalpaymentdue() {
                             {/* Block */}
                             <div className="g-footer text-center">
                               <button type="button" className="btn btn-primary">
-                                <img src={loadmore} alt="loadmore" />
+                                <img
+                                  src={loadmore}
+                                  alt="loadmore"
+                                  style={{ paddingBottom: "7px" }}
+                                />
                                 See More
                               </button>
                             </div>
