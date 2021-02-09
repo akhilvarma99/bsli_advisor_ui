@@ -41,7 +41,7 @@ function Payouts() {
               <div className="col">
                 <h1 className="p-header">
                   <img src={backarrow} alt="backarrow" />
-                  All Customers
+                  Payouts
                 </h1>
               </div>
               {/*               <div className="col">

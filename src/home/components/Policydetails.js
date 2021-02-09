@@ -47,8 +47,10 @@ function Policydetails() {
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
       document.getElementById(buttonId).innerHTML = "Show More";
+      document.getElementById(buttonId).classList.remove("background-red");
     } else {
       document.getElementById(buttonId).innerHTML = "Show Less";
+      document.getElementById(buttonId).classList.add("background-red");
     }
   }
 

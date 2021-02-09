@@ -33,8 +33,10 @@ function Customerdetails() {
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
       document.getElementById(buttonId).innerHTML = "Show More";
+      document.getElementById(buttonId).classList.remove("background-red");
     } else {
       document.getElementById(buttonId).innerHTML = "Show Less";
+      document.getElementById(buttonId).classList.add("background-red");
     }
   }
 
@@ -239,7 +241,9 @@ function Customerdetails() {
                         <label>John Fernando</label>
                         <p className="d-flex align-items-center">
                           <img src={phonecall} alt="phonecall" />
-                          <a href="tel:9876543210">9876543210</a>
+                          <a className="anchor-style" href="tel:9876543210">
+                            9876543210
+                          </a>
                         </p>
                         <p className="pad-btnm d-flex align-items-center">
                           <img src={mail} alt="mail" />
@@ -2022,7 +2026,7 @@ function Customerdetails() {
                                     role="tabpanel"
                                     aria-labelledby="today"
                                   >
-                                    <div className="g-container">
+                                    <div className="g-container scroll-vertical">
                                       {/* Block */}
                                       <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <div className="row">
@@ -2105,6 +2109,96 @@ function Customerdetails() {
                                       {/* Block */}
                                       {/* Block */}
 
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
                                       <div className="g-row">
                                         <div className="row">
                                           <div className="col-lg-4 col-md-4 text-left ">

@@ -11,6 +11,7 @@ import starempty from "../../assets/img/icons/star-empty.svg";
 import load from "../../assets/img/icons/load-more.svg";
 import sort from "../../assets/img/icons/sort.svg";
 import FilterDropdown from "../../utils/FilterDropdown";
+import Calendar from "react-calendar";
 
 function Allcustomers() {
   return (
@@ -205,6 +206,7 @@ function Allcustomers() {
                       </div>
                       <div className="col-lg-6">
                         <span>from Date</span>
+                        <Calendar />
                         <div className="date-box">
                           <img src={dateicon} alt="dateicon" />
                           <input

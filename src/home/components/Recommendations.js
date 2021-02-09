@@ -75,7 +75,7 @@ function Recommendations() {
               <div className="col">
                 <h1 className="p-header">
                   <img src={backarrow} alt="backarrow" />
-                  All Customers
+                  Recommendations
                 </h1>
               </div>
               {/* <div className="col">
@@ -1857,30 +1857,16 @@ function Recommendations() {
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
                                     <p className="float-left">
                                       PASA/Product Name
                                     </p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        {/* <button
-                                          type="button"
-                                          className="btn btn-outline-s disabled-btn"
-                                        >
-                                          Send Congratulations
-                                        </button> */}
-                                      </div>
-                                    </div>
+
+                                  <div className="col-lg-1 col-md-1 text-center">
+                                    <p>
+                                      <img src={starempty} alt="starempty" />
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -1923,30 +1909,15 @@ function Recommendations() {
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
                                     <p className="float-left">
                                       PASA/Product Name
                                     </p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        {/* <button
-                                          type="button"
-                                          className="btn btn-outline-s disabled-btn"
-                                        >
-                                          Send Congratulations
-                                        </button> */}
-                                      </div>
-                                    </div>
+                                  <div className="col-lg-1 col-md-1 text-center">
+                                    <p>
+                                      <img src={starempty} alt="starempty" />
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -1989,30 +1960,15 @@ function Recommendations() {
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
                                     <p className="float-left">
                                       PASA/Product Name
                                     </p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      <div className="col-lg-10 col-md-3 text-right">
-                                        {/* <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button> */}
-                                      </div>
-                                    </div>
+                                  <div className="col-lg-1 col-md-1 text-center">
+                                    <p>
+                                      <img src={starempty} alt="starempty" />
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -2055,29 +2011,15 @@ function Recommendations() {
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
-                                  <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
                                     <p className="float-left">
                                       PASA/Product Name
                                     </p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3">
-                                    <div className="row">
-                                      <div className="col-lg-2 col-md-1 text-center">
-                                        <p>
-                                          <img
-                                            src={starempty}
-                                            alt="starempty"
-                                          />
-                                        </p>
-                                      </div>
-                                      {/* <div className="col-lg-10 col-md-3 text-right">
-                                        <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button> */}
-                                    </div>
+                                  <div className="col-lg-1 col-md-1 text-center">
+                                    <p>
+                                      <img src={starempty} alt="starempty" />
+                                    </p>
                                   </div>
                                 </div>
                               </div>
@@ -2119,27 +2061,15 @@ function Recommendations() {
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
-                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
                                   <p className="float-left">
                                     PASA/Product Name
                                   </p>
                                 </div>
-                                <div className="col-lg-3 col-md-3">
-                                  <div className="row">
-                                    <div className="col-lg-2 col-md-1 text-center">
-                                      <p>
-                                        <img src={starempty} alt="starempty" />
-                                      </p>
-                                    </div>
-                                    <div className="col-lg-10 col-md-3 text-right">
-                                      {/* <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button> */}
-                                    </div>
-                                  </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starempty} alt="starempty" />
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -2180,91 +2110,19 @@ function Recommendations() {
                                     &nbsp;|&nbsp; 1,50,000.00
                                   </p>
                                 </div>
-                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
                                   <p className="float-left">
                                     PASA/Product Name
                                   </p>
                                 </div>
-                                <div className="col-lg-3 col-md-3">
-                                  <div className="row">
-                                    <div className="col-lg-2 col-md-1 text-center">
-                                      <p>
-                                        <img src={starempty} alt="starempty" />
-                                      </p>
-                                    </div>
-                                    <div className="col-lg-10 col-md-3 text-right">
-                                      {/* <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button> */}
-                                    </div>
-                                  </div>
+                                <div className="col-lg-1 col-md-1 text-center">
+                                  <p>
+                                    <img src={starempty} alt="starempty" />
+                                  </p>
                                 </div>
                               </div>
                             </div>
                             {/* Block */} {/* Block */}
-                            <div className="g-row">
-                              <div className="row">
-                                <div className="col-lg-3 col-md-4">
-                                  <div className="v-lg d-none d-lg-block">
-                                    <div className="ini-gap" />
-                                    <div className="name_circle color-6">F</div>
-                                    <label>Fohn Crockett</label>
-                                  </div>
-                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                    <div className="row">
-                                      <div className="p-3 bd-highlight">
-                                        <div className="name_circle color-6">
-                                          F
-                                        </div>
-                                      </div>
-                                      <div className="p-9 bd-highlight">
-                                        <label>
-                                          Fohn Crockett
-                                          <br />
-                                          9876543213
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Hidden sm xs */}
-                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                  <p>9876543213</p>
-                                </div>
-                                {/* Hidden sm xs */}
-                                <div className="col-lg-4 col-md-4">
-                                  <p>
-                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                    &nbsp;|&nbsp; 1,50,000.00
-                                  </p>
-                                </div>
-                                <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                  <p className="float-left">
-                                    PASA/Product Name
-                                  </p>
-                                </div>
-                                <div className="col-lg-3 col-md-3">
-                                  <div className="row">
-                                    <div className="col-lg-2 col-md-1 text-center">
-                                      <p>
-                                        <img src={starempty} alt="starempty" />
-                                      </p>
-                                    </div>
-                                    <div className="col-lg-10 col-md-3 text-right">
-                                      {/* <button
-                                          type="button"
-                                          className="btn btn-outline-s"
-                                        >
-                                          Send Congratulations
-                                        </button> */}
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                             {/* Block */}
                             <div className="g-footer text-center loadingText">
                               {/* <button

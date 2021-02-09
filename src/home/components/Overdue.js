@@ -602,7 +602,7 @@ function Overdue() {
                                       </p>
                                     </div>
                                     <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left">
+                                      <p className="float-left line-height">
                                         Credit Card Expiry
                                       </p>
                                     </div>
@@ -669,7 +669,7 @@ function Overdue() {
                                       </p>
                                     </div>
                                     <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left">
+                                      <p className="float-left line-height">
                                         Cheque Dishonour
                                       </p>
                                     </div>
@@ -736,7 +736,7 @@ function Overdue() {
                                       </p>
                                     </div>
                                     <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left">
+                                      <p className="float-left line-height">
                                         Insufficient Funds{" "}
                                       </p>
                                     </div>
@@ -803,7 +803,7 @@ function Overdue() {
                                       </p>
                                     </div>
                                     <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left">
+                                      <p className="float-left line-height">
                                         Credit Card Expiry
                                       </p>
                                     </div>
@@ -870,7 +870,7 @@ function Overdue() {
                                       </p>
                                     </div>
                                     <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left">
+                                      <p className="float-left line-height">
                                         insufficient funds
                                       </p>
                                     </div>
@@ -937,7 +937,7 @@ function Overdue() {
                                       </p>
                                     </div>
                                     <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left">
+                                      <p className="float-left line-height">
                                         Cheque Dishonour{" "}
                                       </p>
                                     </div>
@@ -1004,7 +1004,7 @@ function Overdue() {
                                       </p>
                                     </div>
                                     <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left">
+                                      <p className="float-left line-height">
                                         Insufficient Funds
                                       </p>
                                     </div>
