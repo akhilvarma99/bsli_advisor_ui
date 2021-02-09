@@ -543,7 +543,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -599,7 +599,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -655,7 +655,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -711,7 +711,7 @@ function BirthdayWishes() {
                                     &nbsp;|&nbsp; 26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -766,7 +766,7 @@ function BirthdayWishes() {
                                     &nbsp;|&nbsp; 26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -821,7 +821,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -918,7 +918,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -974,7 +974,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -1030,7 +1030,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -1086,7 +1086,7 @@ function BirthdayWishes() {
                                     &nbsp;|&nbsp; 26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -1141,7 +1141,7 @@ function BirthdayWishes() {
                                     &nbsp;|&nbsp; 26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}
@@ -1196,7 +1196,7 @@ function BirthdayWishes() {
                                     26/Dec/2020
                                   </p>
                                 </div>
-                                <div className="col-lg-2 col-md-1 text-center">
+                                <div className="col-lg-3 col-md-1 text-right">
                                   <p>
                                     <img
                                       src={starEmpty}

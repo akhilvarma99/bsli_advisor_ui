@@ -75,7 +75,9 @@ function customerdetailsaddfamily() {
                         <label>John Fernando</label>
                         <p className="d-flex align-items-center">
                           <img src={phonecall} alt="phonecall" />
-                          9876543213
+                          <a className="anchor-style" href="tel:9876543210">
+                            9876543210
+                          </a>
                         </p>
                         <p className="pad-btnm d-flex align-items-center">
                           <img src={mail} alt="mail" />
@@ -440,7 +442,12 @@ function customerdetailsaddfamily() {
                                                         src={phonecall}
                                                         alt="phonecall"
                                                       />
-                                                      9876543213
+                                                      <a
+                                                        className="anchor-style"
+                                                        href="tel:9876543210"
+                                                      >
+                                                        9876543210
+                                                      </a>
                                                     </p>
                                                   </div>
                                                   <div className="col-lg-7 value">

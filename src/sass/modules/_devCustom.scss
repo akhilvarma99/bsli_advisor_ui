@@ -288,3 +288,31 @@ input[type="radio"]:checked:after {
 .top-padding {
   padding: 20px;
 }
+
+.anchor-style {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.background-red {
+  background: #c7222a;
+  color: white;
+  &:hover {
+    background: #c7222a !important;
+    color: white !important;
+  }
+}
+
+.scroll-vertical {
+  height: 192px;
+  overflow-y: auto;
+}
+
+.line-height {
+  line-height: 17px;
+}
