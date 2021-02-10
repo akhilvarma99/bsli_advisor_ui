@@ -136,7 +136,13 @@
 .btn-primary:hover:enabled {
   background-color: $capital-red !important;
   outline: 0 !important;
-  border-color: $capital-dark-red !important;
+  border-color: $capital-red !important;
+}
+
+.btn-primary:active {
+  background-color: $capital-dark-red !important;
+  outline: 0 !important;
+  border-color: $capital-red !important;
 }
 
 .form-control:focus {

@@ -1956,7 +1956,7 @@ function CoustmerListingPage() {
                                       20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2014,7 +2014,7 @@ function CoustmerListingPage() {
                                       &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2072,7 +2072,7 @@ function CoustmerListingPage() {
                                       20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2130,7 +2130,7 @@ function CoustmerListingPage() {
                                       &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2187,7 +2187,7 @@ function CoustmerListingPage() {
                                       &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2244,7 +2244,7 @@ function CoustmerListingPage() {
                                       20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2342,7 +2342,7 @@ function CoustmerListingPage() {
                                       20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2400,7 +2400,7 @@ function CoustmerListingPage() {
                                       &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2458,7 +2458,7 @@ function CoustmerListingPage() {
                                       20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2516,7 +2516,7 @@ function CoustmerListingPage() {
                                       &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2573,7 +2573,7 @@ function CoustmerListingPage() {
                                       &nbsp;|&nbsp;20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}
@@ -2630,7 +2630,7 @@ function CoustmerListingPage() {
                                       20/Dec/2020
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
+                                  <div className="col-lg-3 col-md-1 text-right">
                                     <p>
                                       <img
                                         src={starEmpty}

@@ -1,6 +1,7 @@
 .btn-primary {
   background-color: $capital-red;
   border: 0px !important;
+
   font-size: 18px;
   &:active {
     background-color: $capital-dark-red !important;
@@ -8,9 +9,9 @@
     outline: 0 !important;
   }
   &:hover {
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.12);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.12);
-    box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.12);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.35);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.35);
+    box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.35);
   }
   &:focus {
     background-color: $capital-red !important;
