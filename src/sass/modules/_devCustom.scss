@@ -306,19 +306,35 @@ input[type="radio"]:checked:after {
 }
 
 .background-red {
-  background: #c7222a;
-  color: white;
-  &:hover {
-    background: #c7222a !important;
-    color: white !important;
-  }
+  background: #c7222a !important;
+  color: white !important;
 }
 
 .scroll-vertical {
-  height: 192px;
+  height: 245px;
   overflow-y: auto;
 }
 
 .line-height {
   line-height: 17px;
+}
+
+.collapse-inner {
+  background-color: #f1f3f6;
+  padding: 10px 20px 20px 20px;
+  margin-top: 20px;
+}
+
+.width-194 {
+  width: 194px !important;
+}
+.width-153 {
+  width: 153px !important;
+}
+
+.bottom-26 {
+  margin-bottom: -36px !important;
+}
+.grey {
+  color: #6c7174 !important;
 }

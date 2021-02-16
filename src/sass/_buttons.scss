@@ -1,24 +1,26 @@
 .btn-primary {
   background-color: $capital-red;
   border: 0px !important;
-
   font-size: 18px;
-  &:active {
-    background-color: $capital-dark-red !important;
-    border-color: $capital-dark-red !important;
-    outline: 0 !important;
-  }
-  &:hover {
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.35);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.35);
-    box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.35);
-  }
-  &:focus {
-    background-color: $capital-red !important;
-    border-color: $capital-red !important;
-    outline: 0 !important;
-    box-shadow: none !important;
-  }
+}
+
+.btn-primary:hover {
+  background-color: $capital-red !important;
+  outline: 0 !important;
+  border-color: $capital-dark-red !important;
+}
+
+.btn-primary:active {
+  background-color: $capital-dark-red !important;
+  border-color: $capital-dark-red !important;
+  outline: 0 !important;
+}
+
+.btn-primary:focus {
+  background-color: $capital-dark-red !important;
+  border-color: $capital-dark-red !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 
 .btn-primary-lrg {
@@ -43,8 +45,7 @@
   color: $white;
 }
 
-.btn-primary-lrg:focus,
-.btn-primary-lrg:hover {
+.btn-primary-lrg:focus {
   background-color: $capital-dark-red !important;
   border-color: $capital-dark-red !important;
   outline: 0 !important;
@@ -63,23 +64,24 @@
   color: #c7222a;
   border: 1px #c7222a solid;
   margin-top: 3px;
-  outline: none !important;
 }
 
 .btn-outline-s:hover {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.3);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.3);
-  box-shadow: 0px 0px 5px 0px rgba(30, 30, 30, 0.3);
-  color: #c7222a;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
+  color: #c7222a !important;
+  background: white !important;
 }
+
+.btn-outline-s:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .btn-outline-s:active {
-  border: 1px $capital-dark-red solid;
-  font-size: 15px;
   color: $capital-dark-red;
   border: 1px $capital-dark-red solid;
-  margin-top: 3px;
-  box-shadow: none !important;
-  outline: 0;
 }
 
 .btn-outline-s-secondary {
@@ -102,16 +104,24 @@
 }
 
 .btn-primary-s:hover {
-  border: 1px $dark-red solid;
+  border: 1px $capital-red solid;
   padding: 4px 10px;
   font-size: 15px;
-  background-color: $dark-red;
+  background-color: $capital-red;
   color: #fff;
   margin-top: 3px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
+  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
 }
 
 .btn-primary-s:active {
-  box-shadow: none;
+  border: 1px $capital-dark-red solid;
+  padding: 4px 10px;
+  font-size: 15px;
+  background-color: $capital-dark-red;
+  color: #fff;
+  margin-top: 3px;
 }
 
 .btn-primary-s:focus {
@@ -245,3 +255,5 @@
     }
   }
 }
+
+// Modal Close

@@ -422,6 +422,9 @@ function CoustmerListingPage() {
                                     >
                                       Resend Payment Link
                                     </button>
+                                    <div>
+                                      <span>Payment link sent already</span>
+                                    </div>
                                   </div>
                                 </div>
                               </div>

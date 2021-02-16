@@ -104,16 +104,14 @@ function Login(props) {
                     </NavLink>
                   </div>
                   <div className="col-md-4   ">
-                  
-                      {" "}
-                      <button
-                        type="button"
-                        disabled
-                        className="btn btn-primary float-right checkNext"
-                      >
-                        Next
-                      </button>
-                    
+                    {" "}
+                    <button
+                      type="button"
+                      disabled
+                      className="btn btn-primary float-right checkNext"
+                    >
+                      Next
+                    </button>
                   </div>
                   <div className="col-md-8 show-xs">
                     <br />

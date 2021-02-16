@@ -14,6 +14,18 @@ import starEmpty from "../../assets/img/icons/star-empty.svg";
 import searchbox from "../../assets/img/icons/search-bx.svg";
 
 function Overdue() {
+  function buttonText(accordionId, buttonId) {
+    const accordionClass = document.getElementById(accordionId).classList;
+    console.log(accordionClass);
+    if (accordionClass[2] == "show") {
+      console.log("conditin" + accordionClass);
+      document.getElementById(buttonId).innerHTML = "Show More";
+      document.getElementById(buttonId).classList.remove("background-red");
+    } else {
+      document.getElementById(buttonId).innerHTML = "Show Less";
+      document.getElementById(buttonId).classList.add("background-red");
+    }
+  }
   return (
     <div>
       <div>
@@ -183,7 +195,7 @@ function Overdue() {
                             <div className="date-search-outer d-search d-none d-lg-block">
                               <div className="data-search-inner">
                                 <div className="data-search">
-                                  {/* <img src={searchbox} alt="searchbox" /> */}
+                                  <img src={searchbox} alt="searchbox" />
                                   <input
                                     type="email"
                                     className="form-control data-search-box"
@@ -289,9 +301,9 @@ function Overdue() {
                                         <span>Sorted by due date</span>
                                       </label>
                                     </div>
-                                    <div className="col-lg-3 pad-0">
-                                      <label>Payment Failure Type</label>
-                                    </div>
+                                    {/* <div className="col-lg-2 ">
+                                      <label>Reason</label>
+                                    </div> */}
                                   </div>
                                 </div>
                                 {/* Block */}
@@ -327,17 +339,17 @@ function Overdue() {
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-4 col-md-4">
+                                    <div className="col-lg-5 col-md-5">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
-                                    <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
+                                    {/* <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
                                       <p className="float-left line-height">
                                         Credit Card Expiry
                                       </p>
-                                    </div>
+                                    </div> */}
                                     <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
@@ -352,12 +364,56 @@ function Overdue() {
                                         <div className="col-lg-10 col-md-3 text-right">
                                           <button
                                             type="button"
-                                            className="btn btn-outline-s disabled-btn"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample"
+                                            aria-expanded="false"
+                                            id="buttonel"
+                                            aria-controls="collapseExample"
+                                            onClick={() =>
+                                              buttonText(
+                                                "collapseExample",
+                                                "buttonel"
+                                              )
+                                            }
                                           >
-                                            Send Reminder
+                                            Show More
                                           </button>
                                         </div>
                                       </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="row collapse"
+                                    id="collapseExample"
+                                  >
+                                    <div className="col-lg-12 m-pad-div">
+                                      <div className="expanded-div collapse-inner">
+                                        <div className="row">
+                                          <p className="grey-text">Reason</p>
+                                          <p>
+                                            Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore
+                                            et dolore magna aliqua. Ut enim ad
+                                            minim veniam, quis nostrud
+                                            exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.
+                                            Duis aute irure dolor in
+                                            reprehenderit in voluptate velit
+                                            esse cillum dolore eu fugiat nulla
+                                            pariatur.
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="col-lg-12 col-md-3 text-right">
+                                      <button
+                                        type="button"
+                                        className="btn btn-outline-s disabled-btn"
+                                      >
+                                        Send Reminder
+                                      </button>
                                     </div>
                                   </div>
                                 </div>
@@ -394,17 +450,13 @@ function Overdue() {
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-4 col-md-4">
+                                    <div className="col-lg-5 col-md-5">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
-                                    <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left line-height">
-                                        Cheque Dishonour
-                                      </p>
-                                    </div>
+
                                     <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
@@ -419,9 +471,14 @@ function Overdue() {
                                         <div className="col-lg-10 col-md-3 text-right">
                                           <button
                                             type="button"
-                                            className="btn btn-outline-s disabled-btn"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample1"
+                                            aria-expanded="false"
+                                            id="buttonel"
+                                            aria-controls="collapseExample"
                                           >
-                                            Send Reminder
+                                            Show More
                                           </button>
                                         </div>
                                       </div>
@@ -461,17 +518,13 @@ function Overdue() {
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-4 col-md-4">
+                                    <div className="col-lg-5 col-md-5">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
-                                    <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left line-height">
-                                        Insufficient Funds{" "}
-                                      </p>
-                                    </div>
+
                                     <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
@@ -487,8 +540,13 @@ function Overdue() {
                                           <button
                                             type="button"
                                             className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample1"
+                                            aria-expanded="false"
+                                            id="buttonel"
+                                            aria-controls="collapseExample"
                                           >
-                                            Send Payment Link
+                                            Show More
                                           </button>
                                         </div>
                                       </div>
@@ -528,17 +586,13 @@ function Overdue() {
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-4 col-md-4">
+                                    <div className="col-lg-5 col-md-5">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
-                                    <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left line-height">
-                                        Credit Card Expiry
-                                      </p>
-                                    </div>
+
                                     <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
@@ -554,8 +608,13 @@ function Overdue() {
                                           <button
                                             type="button"
                                             className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample1"
+                                            aria-expanded="false"
+                                            id="buttonel"
+                                            aria-controls="collapseExample"
                                           >
-                                            Send Payment Link
+                                            Show More
                                           </button>
                                         </div>
                                       </div>
@@ -595,17 +654,13 @@ function Overdue() {
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-4 col-md-4">
+                                    <div className="col-lg-5 col-md-5">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
-                                    <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left line-height">
-                                        insufficient funds
-                                      </p>
-                                    </div>
+
                                     <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
@@ -621,8 +676,13 @@ function Overdue() {
                                           <button
                                             type="button"
                                             className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample1"
+                                            aria-expanded="false"
+                                            id="buttonel"
+                                            aria-controls="collapseExample"
                                           >
-                                            Send Payment Link
+                                            Show More
                                           </button>
                                         </div>
                                       </div>
@@ -662,17 +722,13 @@ function Overdue() {
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-4 col-md-4">
+                                    <div className="col-lg-5 col-md-5">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
-                                    <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left line-height">
-                                        Cheque Dishonour{" "}
-                                      </p>
-                                    </div>
+
                                     <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
@@ -688,8 +744,13 @@ function Overdue() {
                                           <button
                                             type="button"
                                             className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample1"
+                                            aria-expanded="false"
+                                            id="buttonel"
+                                            aria-controls="collapseExample"
                                           >
-                                            Send Payment Link
+                                            Show More
                                           </button>
                                         </div>
                                       </div>
@@ -729,17 +790,13 @@ function Overdue() {
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-4 col-md-4">
+                                    <div className="col-lg-5 col-md-5">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
-                                    <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
-                                      <p className="float-left line-height">
-                                        Insufficient Funds
-                                      </p>
-                                    </div>
+
                                     <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
@@ -755,8 +812,13 @@ function Overdue() {
                                           <button
                                             type="button"
                                             className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample1"
+                                            aria-expanded="false"
+                                            id="buttonel"
+                                            aria-controls="collapseExample"
                                           >
-                                            Send Payment Link
+                                            Show More
                                           </button>
                                         </div>
                                       </div>

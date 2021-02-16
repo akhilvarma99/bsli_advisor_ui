@@ -1,204 +1,151 @@
-.personal-de-card{
+.personal-de-card {
+  padding: 20px;
+  border: 1px rgb(230, 230, 230) solid;
+  border-radius: 5px;
 
-padding: 20px;
-border:1px rgb(230, 230, 230) solid;
-border-radius: 5px;
-
-.name-c1{
+  .name-c1 {
     width: 60px;
     height: 60px;
     float: left;
     border-radius: 50px;
 
-    p{
-        color: #ffffff;
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 0px;
-    margin-top: 10px;
-
+    p {
+      color: #ffffff;
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 0px;
+      margin-top: 10px;
     }
-}
+  }
 
+  .name-c2 {
+    p {
+      color: $black;
+      font-size: 18px;
+      margin-bottom: 0px;
+      margin-left: -52px;
 
-.name-c2{
-   
-    p{
-    color: $black;
-    font-size: 18px;
-    margin-bottom: 0px;
-    margin-left: -52px;
-
-    label{
+      label {
         color: $dark-grey;
         font-size: 18px;
         margin-bottom: 0px;
-        }
+      }
     }
+  }
 
-   
-}
-
-
-
-.value-div{
+  .value-div {
     padding: 20px;
 
-    .value{
+    .value {
+      margin-bottom: 40px;
 
-        margin-bottom: 40px;
-
-        p{
-            color: $black;
-            font-size: 18px;
-            margin-bottom: 0px;
-        
-            line-height: 17px;
-            
-            label{
-                color: $dark-grey;
-                font-size: 18px;
-            }
-        }
-    }
-    
-}
-
-
-
-}
-
-.dot{
-    height: 4px;
-    width: 4px;
-    background: #6C7174;
-    border-radius: 50%;
-    display: block;    
-    margin: 0 6px;
-}
-
-
-.grey-box{
-
-    background-color: #FBFBFB;
-    padding: 20px 25px;
-
-    p{
-        font-size: 20px;
-        font-weight: 600;
+      p {
         color: $black;
-    }
+        font-size: 18px;
+        margin-bottom: 0px;
 
-    .value{
+        line-height: 17px;
 
-        label{
-            color: $dark-grey;
-            font-size: 18px;
-            margin-bottom: 0px;
+        label {
+          color: $dark-grey;
+          font-size: 18px;
         }
-
-        p{
-            color:$black;
-            font-size: 18px;
-            color: #000;
-            font-weight: 500;
-            img{
-                margin-right: 10px;
-            }
-        }
-
-       
+      }
     }
-
-    
-
+  }
 }
 
+.dot {
+  height: 4px;
+  width: 4px;
+  background: #6c7174;
+  border-radius: 50%;
+  display: block;
+  margin: 0 6px;
+}
 
+.grey-box {
+  background-color: #fbfbfb;
+  padding: 20px 25px;
 
+  .value {
+    label {
+      color: $dark-grey;
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
 
-
-
+    p {
+      color: $black;
+      font-size: 18px;
+      color: #000;
+      font-weight: 500;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
-.value-div{
+  .value-div {
     padding: 10px !important;
 
-    .value{
+    .value {
+      margin-bottom: 20px !important;
 
-        margin-bottom: 20px !important;
-
-        p{
-            color: $black;
+      p {
+        color: $black;
         font-size: 18px;
         margin-bottom: 0px;
-        
+
         line-height: 17px;
-            
-            label{
-                color: $dark-grey;
-                font-size: 16px;
-            }
+
+        label {
+          color: $dark-grey;
+          font-size: 16px;
         }
+      }
     }
-}
+  }
 
-
-
-
-.personal-de-card{
+  .personal-de-card {
     padding: 10px;
-    .name-c2{
-       
-        p{
+    .name-c2 {
+      p {
         color: $black;
         font-size: 18px;
         margin-bottom: 0px;
         margin-left: 7px !important;
-    
-        label{
-            color: $dark-grey;
-            font-size: 16px;
-            margin-bottom: 0px;
-            }
+
+        label {
+          color: $dark-grey;
+          font-size: 16px;
+          margin-bottom: 0px;
         }
-    
+      }
     }
+  }
 
-}
-
-.grey-box {
-    background-color: #FBFBFB;
+  .grey-box {
+    background-color: #fbfbfb;
     padding: 10px 10px;
+  }
 }
 
-
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
 }
-    
-    
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {    
-       
-        
-    }
-    
-    
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-        
-    
-    }
-    
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-       
-       
-    }
-    
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-        
-    }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

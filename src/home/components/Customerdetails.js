@@ -27,7 +27,17 @@ import Setup from "../../assets/img/icons/Setup ECS.svg";
 import { NavLink } from "react-router-dom";
 import Card from "../../utils/Card";
 import Toasts from "../../utils/Toasts";
+import creditIcon from "../../assets/img/icons/credit-card.svg";
+import terminatedIcon from "../../assets/img/icons/Terminated.svg";
+import discontinueIcon from "../../assets/img/icons/Discontinue.svg";
+import paidupIcon from "../../assets/img/icons/Paidup.svg";
+import payoutIcon from "../../assets/img/icons/payout.svg";
+import paymentRenewalIcon from "../../assets/img/icons/Payment-renewal.svg";
+import reinstatementIcon from "../../assets/img/icons/Reinstatement.svg";
+
 function Customerdetails() {
+  const [activeState, setActivestate] = useState("wishes");
+
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
     console.log(accordionClass);
@@ -79,81 +89,100 @@ function Customerdetails() {
       id: "Payments",
       headerTitle: "Overdue",
       cardTitle: "Premium Due",
-      icon: gift,
+      icon: premiumDueIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 . Rs.1,00,000",
+      body: "27.11.1990 . ₹ 1,00,000",
       status: "Payment Failed",
-      buttonText: "Send Payment Link",
-    },
-    {
-      id: "Payments",
-      headerTitle: "Tommorrow",
-      cardTitle: "Credit Card/Debit Card Expiry",
-      icon: gift,
-      bodyTitle: "Policy ID",
-      body: "XXXX XXXX XXXX 6077 . Rs.1,00,000",
-      status: "",
       buttonText: "Send Payment Link",
     },
     {
       id: "Policy Status",
       headerTitle: "Today",
       cardTitle: "To Be Terminated",
-      icon: gift,
+      icon: terminatedIcon,
       bodyTitle: "Policy ID",
       body: "27/Dec/1990",
       status: "",
-      buttonText: "Contact Customer",
+      buttonText: "Send Remainder",
     },
+
     {
       id: "Policy Status",
-      headerTitle: "Today",
-      cardTitle: "To Be Discontinued",
-      icon: gift,
-      bodyTitle: "Policy ID",
-      body: "27/Dec/1990",
-      status: "Reason For Termination",
-      buttonText: "Contact Customer",
-    },
-    {
-      id: "Policy Status",
-      headerTitle: "Today",
-      cardTitle: "To Be Paid Up",
-      icon: gift,
-      bodyTitle: "₹ 1,00,000",
-      body: "(Payout Type)",
-      status: "",
-      buttonText: "Contact Customer",
-    },
-    {
-      id: "Policy Status",
-      headerTitle: "Today",
       cardTitle: "Payouts Released",
-      icon: gift,
-      bodyTitle: "₹ 1,00,000",
-      body: "27/Dec/1990",
-      status: "",
-      buttonText: "Contact Customer",
+      icon: payoutIcon,
+      bodyTitle: "Policy ID",
+      body: "27/Dec/1990 | Type | ₹ 1,00,000",
+      status: "Payouts Released",
+      buttonText: "Send Congratulations",
+    },
+    {
+      id: "Policy Status",
+      cardTitle: "Payouts To Be Released",
+      icon: payoutIcon,
+      bodyTitle: "Policy ID",
+      body: "27/Dec/1990 | Type ",
+      status: "Payouts Released",
+      buttonText: "Send Congratulations",
     },
     {
       id: "Policy Status",
       headerTitle: "Today",
-      cardTitle: "Policy Matured Wishes",
-      icon: gift,
+      cardTitle: "Policy Matured",
+      icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 . Rs.1,00,000",
+      body: "27.11.1990 | ₹ 1,00,000",
       status: "",
-      buttonText: "Send Payment Link",
+      buttonText: "Send Wishes",
     },
     {
       id: "Policy Status",
-      headerTitle: "",
-      cardTitle: "Reinstatement Requirement",
-      icon: gift,
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 . Rs.1,00,000",
-      status: "COI | COVID Questionaire | Medical",
-      buttonText: "Send Payment Link",
+      body: "27.11.1990 | ₹ 1,00,000",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27.11.1990 | ₹ 1,00,000",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27.11.1990 | ₹ 1,00,000",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27.11.1990 | ₹ 1,00,000",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27.11.1990 | ₹ 1,00,000",
+      status: "",
+      buttonText: "Send Wishes",
     },
   ];
   let filterFunc = (arrayName, filterName) =>
@@ -161,7 +190,7 @@ function Customerdetails() {
       return e.id == filterName;
     });
 
-  const [filter, setFilter] = useState("Wishes");
+  const [filter, setFilter] = useState("Payments");
   let filterFunction = (filter) => {
     setFilter(filter);
   };
@@ -194,15 +223,16 @@ function Customerdetails() {
               <div className="row">
                 <div className="col-md-12">
                   <ul>
-                    <li>Dashboard</li>
-                    <li>
-                      <img src={breadcrumbs} alt="breadcrumbs" />
-                    </li>
+                    {/* <li>Dashboard</li> */}
                     <li>Customer List</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
                     <li className="active-li">All Customer</li>
+                    <li>
+                      <img src={breadcrumbs} alt="breadcrumbs" />
+                    </li>
+                    <li>Customer Details</li>
                   </ul>
                 </div>
               </div>
@@ -242,13 +272,22 @@ function Customerdetails() {
                         <label>John Fernando</label>
                         <p className="d-flex align-items-center">
                           <img src={phonecall} alt="phonecall" />
-                          <a className="anchor-style" href="tel:9876543210">
-                            9876543210
-                          </a>
+                          {window.screen.width < 600 ? (
+                            <a className="anchor-style" href="tel:9876543210">
+                              9876543210
+                            </a>
+                          ) : (
+                            <span>9876543210</span>
+                          )}
                         </p>
                         <p className="pad-btnm d-flex align-items-center">
                           <img src={mail} alt="mail" />
-                          sangeetha@adityabirlacapital.com
+                          <a
+                            className="anchor-style"
+                            href="mailto:dakhilvarma@gmail.com"
+                          >
+                            dakhilvarma@gmail.com
+                          </a>
                         </p>
                       </div>
                     </div>
@@ -334,7 +373,7 @@ function Customerdetails() {
                           Recommendations
                         </a>
                       </li>
-                      <li className="nav-item w-50-p" role="presentation">
+                      {/* <li className="nav-item w-50-p" role="presentation">
                         <a
                           className="nav-link"
                           id="profile-tab"
@@ -346,7 +385,7 @@ function Customerdetails() {
                         >
                           Queries
                         </a>
-                      </li>
+                      </li> */}
                       <li className="nav-item w-50-p" role="presentation">
                         <a
                           className="nav-link"
@@ -386,12 +425,18 @@ function Customerdetails() {
                                   aria-expanded="false"
                                   aria-controls="flush-collapseOne"
                                 >
-                                  <h2
-                                    className="accordion-header"
-                                    id="flush-headingOne"
-                                  >
-                                    Action Required
-                                  </h2>
+                                  <div>
+                                    <h2
+                                      className="accordion-header text-left"
+                                      id="flush-headingOne"
+                                    >
+                                      Action Required
+                                    </h2>
+                                    <div className="accordion-header text-right">
+                                      As on Date 18/dec/2020
+                                    </div>
+                                  </div>
+
                                   <i className="arrow-up" />
                                   <i className="arrow-down" />
                                 </div>
@@ -406,13 +451,11 @@ function Customerdetails() {
                                           <div className="quick-links-inner h-scroll-s">
                                             <ul>
                                               <li
-                                                onClick={() =>
-                                                  filterFunction("Wishes")
+                                                className={
+                                                  filter === "Payments"
+                                                    ? "background-red"
+                                                    : ""
                                                 }
-                                              >
-                                                Wishes
-                                              </li>
-                                              <li
                                                 onClick={() =>
                                                   filterFunction("Payments")
                                                 }
@@ -420,6 +463,23 @@ function Customerdetails() {
                                                 Payments
                                               </li>
                                               <li
+                                                className={
+                                                  filter === "Wishes"
+                                                    ? "background-red"
+                                                    : ""
+                                                }
+                                                onClick={() =>
+                                                  filterFunction("Wishes")
+                                                }
+                                              >
+                                                Wishes
+                                              </li>
+                                              <li
+                                                className={
+                                                  filter === "Policy Status"
+                                                    ? "background-red"
+                                                    : ""
+                                                }
                                                 onClick={() =>
                                                   filterFunction(
                                                     "Policy Status"
@@ -453,6 +513,21 @@ function Customerdetails() {
                                           </div>
                                         )
                                       )}
+                                    </div>
+                                    <div
+                                      className="g-footer text-center top-padding"
+                                      style={
+                                        filter === "Policy Status"
+                                          ? { display: "block" }
+                                          : { display: "none" }
+                                      }
+                                    >
+                                      <button
+                                        type="button"
+                                        className="btn btn-primary"
+                                      >
+                                        See More
+                                      </button>
                                     </div>
 
                                     {/* <div className="row">
@@ -882,7 +957,10 @@ function Customerdetails() {
                                                     <p>
                                                       <label>PAN Number</label>{" "}
                                                       <br />
-                                                      AKNBH1546E
+                                                      AKNBH1546E &nbsp;
+                                                      <button className="btn btn-primary-s">
+                                                        UPDATE
+                                                      </button>
                                                     </p>
                                                   </div>
 
@@ -897,12 +975,21 @@ function Customerdetails() {
                                                         alt="greentick"
                                                         className="greentick"
                                                       />{" "}
-                                                      &nbsp; Activated or{" "}
+                                                      &nbsp; Activated or{"  "}
                                                       <button className="btn btn-primary-s">
                                                         Activate
                                                       </button>
                                                     </p>
                                                   </div>
+                                                  {/* <div className="col-lg-6 col-md-12 value mrgn-0">
+                                                    <p>
+                                                      <label>Pan Details</label>{" "}
+                                                      <br />{" "}
+                                                      <button className="btn btn-primary-s">
+                                                        Edit
+                                                      </button>
+                                                    </p>
+                                                  </div> */}
                                                   {/* <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
                                                       <label>
@@ -962,160 +1049,6 @@ function Customerdetails() {
                                   </div>
                                 </div>
                               </div>
-
-                              <div
-                                className="tab-pane active show fade"
-                                id="transactions"
-                                role="tabpanel"
-                                aria-labelledby="next-week"
-                              >
-                                <div
-                                  className="accordion accordion-flush"
-                                  id="accordionFlushExample"
-                                >
-                                  <div className="accordion-item">
-                                    <div
-                                      className="accordion-header-wrapper collapsed"
-                                      data-toggle="collapse"
-                                      href="#premium-related-details"
-                                      role="button"
-                                      aria-expanded="false"
-                                      aria-controls="premium-related-details"
-                                    >
-                                      <h2
-                                        className="accordion-header"
-                                        id="flush-headingOne"
-                                      >
-                                        Premium Related Details
-                                      </h2>
-                                      <i className="arrow-up" />
-                                      <i className="arrow-down" />
-                                    </div>
-                                    <div
-                                      id="premium-related-details"
-                                      className="accordion-collapse collapse accordion-content"
-                                    >
-                                      <div className="accordion-body">
-                                        <div className="row">
-                                          <div className="col-lg-12 text-right">
-                                            <button className="btn btn-primary-s m-bottom-10">
-                                              Download Premium Related Details
-                                            </button>
-                                          </div>
-                                        </div>
-                                        <div className="personal-de-card shadow-normal">
-                                          <div className="row">
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Policy Id
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                1234567
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Policy Issue Date
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                20/Dec/2020
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Premium Mode
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                Annual
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Billing Method
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                Direct Bill
-                                              </div>
-                                            </div>
-                                            {/* <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Last Premium Due Date
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
-                                      </div>
-                                    </div> */}
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Modal Premium
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                20,000
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Service Tax
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                1,000
-                                              </div>
-                                            </div>
-                                            <div className="col-md-3 mb-3">
-                                              <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                Model Premium with Service Tax
-                                              </label>
-                                              <div className="font18 line-ht-11">
-                                                21,000
-                                              </div>
-                                            </div>
-                                            {/* <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        First Year Premium
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        12,000
-                                      </div>
-                                    </div> */}
-                                            {/* <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Annual Premium
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        20,000
-                                      </div>
-                                    </div> */}
-                                            {/*                                     <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Gross Annual Premium
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        21,000
-                                      </div>
-                                    </div> */}
-                                            {/*  <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        G.A.P with Service Tax and Cess
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        22,343
-                                      </div>
-                                    </div> */}
-                                            {/*  <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Total Premium Paid
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        22,343
-                                      </div>
-                                    </div> */}
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -1141,12 +1074,18 @@ function Customerdetails() {
                               aria-expanded="false"
                               aria-controls="flush-collapseOne"
                             >
-                              <h2
-                                className="accordion-header"
-                                id="flush-headingOne"
-                              >
-                                Policies Owned by Customer
-                              </h2>
+                              <div>
+                                <h2
+                                  className="accordion-header text-left"
+                                  id="flush-headingOne"
+                                >
+                                  Policies Owned by Customer
+                                </h2>
+                                <div className="accordion-header">
+                                  As on Date 18/dec/2020
+                                </div>
+                              </div>
+
                               <i className="arrow-up" />
                               <i className="arrow-down" />
                             </div>
@@ -1155,34 +1094,27 @@ function Customerdetails() {
                               className="accordion-collapse collapse show accordion-content"
                             >
                               <div className="accordion-body">
-                                <div className="row">
-                                  <div className="col-lg-12 text-right">
-                                    <button className="btn btn-primary-s m-bottom-10">
-                                      Download Policy Owned by customer
-                                    </button>
-                                  </div>
-                                </div>
                                 <div className="policy-grid-customer">
                                   <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                     <div className="row">
                                       <div className="col-lg-2">
                                         <h3>Life Insured Name</h3>
                                       </div>
-                                      <div className="col-lg-4">
+                                      <div className="col-lg-2">
                                         <h3>Plan Name</h3>
                                       </div>
                                       <div className="col-lg-2">
                                         <h3>Premium</h3>
                                       </div>
                                       <div className="col-lg-2">
-                                        <h3>Next Premium Due Date</h3>
+                                        <h3>Policy Status</h3>
                                       </div>
                                       <div className="col-lg-2">
-                                        <h3>{""}</h3>
+                                        <h3>Next Premium Due Date</h3>
                                       </div>
                                     </div>
                                   </div>
-                                  {[1, 2, 3, 4, 5, 6].map((id, index) => (
+                                  {[1, 2, 3, 4, 5].map((id, index) => (
                                     <div
                                       className="policy-grid-row"
                                       key={index}
@@ -1203,18 +1135,21 @@ function Customerdetails() {
                                         <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
-                                        <div className="col-lg-4 col-md-4">
+                                        <div className="col-lg-2 col-md-2">
                                           <p className="color-b">
                                             Sample text for plan name
                                           </p>
                                         </div>
                                         <div className="col-lg-2 d-none d-lg-block d-sm-none">
                                           <p className="color-b">
-                                            Model Premium + Service Tax
+                                            &#8377;1,22,222
                                           </p>
                                         </div>
+                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">Paid up</p>
+                                        </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                          <p className="color-b">Paid Up</p>
+                                          <p className="color-b">28/Dec/2020</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
                                           <button
@@ -1252,85 +1187,49 @@ function Customerdetails() {
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Status <br />
-                                                  <span>Paid Up</span>
+                                                  Product Type <br />
+                                                  <span>*****</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Term
+                                                  Policy Insurance Date
                                                   <br />
-                                                  <span>5</span>
+                                                  <span>28/Dec/2020</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Modal Premium
+                                                  Premium Payment Term
                                                   <br />
-                                                  <span>12000</span>
+                                                  <span>*****</span>
                                                 </p>
                                               </div>
                                             </div>
                                             <div className="row">
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Premium Payment Term
+                                                  Policy Term
                                                   <br />
                                                   <span>2</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Premium Mode
+                                                  Auto Pay Status
                                                   <br />
-                                                  <span>Monthly</span>
+                                                  <span>****</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  ECS Registration Status
+                                                  Total Sum Assured
                                                   <br />
-                                                  <span>Inactive</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Stale Cheque Conditional
-                                                  Status
-                                                  <br />
-                                                  <span>Stale Cheque</span>
+                                                  <span>₹ 28,22,222</span>
                                                 </p>
                                               </div>
                                             </div>
-                                            <div className="row">
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Next Premium Due Date
-                                                  <br />
-                                                  <span>DD/MM/YYYY</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Base Sum Assured <br />
-                                                  <span>20000</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                                    WhatsApp Opt-in status
-                                                  </label>{" "}
-                                                  <br />{" "}
-                                                  <img
-                                                    src={greentick}
-                                                    alt="greentick"
-                                                    className="greentick"
-                                                  />{" "}
-                                                  &nbsp; Activated
-                                                </p>
-                                              </div>
-                                            </div>
+
                                             <div className="row">
                                               <div className="col-lg-12">
                                                 <ul className="chips-tag">
@@ -1358,6 +1257,14 @@ function Customerdetails() {
                                       </div>
                                     </div>
                                   ))}
+                                  <div className="g-footer text-center top-padding">
+                                    <button
+                                      type="button"
+                                      className="btn btn-primary"
+                                    >
+                                      See More
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1376,29 +1283,216 @@ function Customerdetails() {
                               aria-expanded="false"
                               aria-controls="flush-collapseOne"
                             >
-                              <h2
-                                className="accordion-header"
-                                id="flush-headingOne"
-                              >
-                                Policies Owned by Family
-                              </h2>
+                              <div>
+                                <h2
+                                  className="accordion-header text-left"
+                                  id="flush-headingOne"
+                                >
+                                  Policies Owned By Family
+                                </h2>
+                                <div className="accordion-header ">
+                                  As on Date 18/dec/2020
+                                </div>
+                              </div>
+
                               <i className="arrow-up" />
                               <i className="arrow-down" />
                             </div>
                             <div
                               id="policy-owned-f"
-                              className="accordion-collapse collapse show accordion-content"
+                              className="accordion-collapse collapse  accordion-content"
                             >
                               <div className="accordion-body">
-                                <div className="mt-card">
-                                  <p>Start adding your family members</p>
-                                  <button
-                                    className="btn btn-primary-s"
-                                    data-toggle="modal"
-                                    data-target="#forgot-password"
-                                  >
-                                    Add Family
-                                  </button>
+                                <div className="policy-grid-customer">
+                                  <div className="policy-grid-header d-none d-lg-block d-sm-none">
+                                    <div className="row">
+                                      <div className="col-lg-2">
+                                        <h3>Life Insured Name</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Plan Name</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Premium</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Policy Status</h3>
+                                      </div>
+                                      <div className="col-lg-2">
+                                        <h3>Next Premium Due Date</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {[1, 2, 3].map((id, index) => (
+                                    <div
+                                      className="policy-grid-row"
+                                      key={index}
+                                    >
+                                      <div className="row">
+                                        <div
+                                          className="m-menu-dots d-lg-none d-md-none d-sm-block"
+                                          data-toggle="collapse"
+                                          data-target="#collapseExample"
+                                          aria-expanded="false"
+                                          aria-controls="collapseExample"
+                                        >
+                                          <img
+                                            src={threedots}
+                                            alt="threedots"
+                                          />
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">Vijay Singa</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-2">
+                                          <p className="color-b">
+                                            Sample text for plan name
+                                          </p>
+                                        </div>
+                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">
+                                            &#8377;1,22,222
+                                          </p>
+                                        </div>
+                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                          <p className="color-b">Paid up</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                          <p className="color-b">28/Dec/2020</p>
+                                        </div>
+                                        <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
+                                          <button
+                                            type="button"
+                                            className="btn btn-outline-s"
+                                            data-toggle="collapse"
+                                            data-target={`#collapseExamplef${index}`}
+                                            aria-expanded="false"
+                                            id={`buttonf${index}`}
+                                            aria-controls="collapseExample"
+                                            onClick={() =>
+                                              buttonText(
+                                                `collapseExamplef${index}`,
+                                                `buttonf${index}`
+                                              )
+                                            }
+                                          >
+                                            Show More
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="row collapse"
+                                        id={`collapseExamplef${index}`}
+                                      >
+                                        <div className="col-lg-12 m-pad-div">
+                                          <div className="expanded-div">
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy Number
+                                                  <br />
+                                                  <span>123456798</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Product Type <br />
+                                                  <span>*****</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy Insurance Date
+                                                  <br />
+                                                  <span>28/Dec/2020</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Premium Payment Term
+                                                  <br />
+                                                  <span>*****</span>
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy Term
+                                                  <br />
+                                                  <span>2</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Auto Pay Status
+                                                  <br />
+                                                  <span>****</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Total Sum Assured
+                                                  <br />
+                                                  <span>₹ 28,22,222</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Customer Name
+                                                  <br />
+                                                  <span>John</span>
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Relation
+                                                  <br />
+                                                  <span>Father</span>
+                                                </p>
+                                              </div>
+                                            </div>
+
+                                            <div className="row">
+                                              <div className="col-lg-12">
+                                                <ul className="chips-tag">
+                                                  {/* <li>
+                                                    Send ECS registration
+                                                    request
+                                                  </li>
+                                                  <li>Send Payment Link</li> */}
+                                                  <NavLink
+                                                    class
+                                                    to="/policydetails"
+                                                    style={{
+                                                      textDecoration: "none",
+                                                    }}
+                                                  >
+                                                    <li>
+                                                      Go to Policy Details
+                                                    </li>
+                                                  </NavLink>
+                                                  <li>Remove Family Tag</li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  ))}
+                                  <div className="g-footer text-center top-padding">
+                                    {/* <p>Start adding your family members</p> */}
+                                    <button
+                                      className="text-center btn btn-primary-s"
+                                      data-toggle="modal"
+                                      data-target="#forgot-password"
+                                    >
+                                      Add Family
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1431,6 +1525,50 @@ function Customerdetails() {
                                 <div className="row r2">
                                   <div className="col-lg-12 text-center">
                                     <h3>Tax Certificate</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                              style={{ cursor: "pointer" }}
+                              data-target="#policyAccountStatement"
+                              data-toggle="modal"
+                            >
+                              <div className="state-box shadow-normal">
+                                <div className="row r1">
+                                  <div className="col-lg-12 text-center">
+                                    <img
+                                      src={paymentAcknowledgeIcon}
+                                      alt="paymentAcknowledgeIcon"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="row r2">
+                                  <div className="col-lg-12 text-center">
+                                    <h3>Policy Account Statement</h3>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                              <div
+                                className="state-box shadow-normal"
+                                data-toggle="modal"
+                                data-target="#Premium-Due-Certificate"
+                                style={{ cursor: "pointer" }}
+                              >
+                                <div className="row r1">
+                                  <div className="col-lg-12 text-center">
+                                    <img
+                                      src={premiumDueIcon}
+                                      alt="premiumDueIcon"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="row r2">
+                                  <div className="col-lg-12 text-center">
+                                    <h3>Premium Due Certificate</h3>
                                   </div>
                                 </div>
                               </div>
@@ -1480,73 +1618,6 @@ function Customerdetails() {
                                 </div>
                               </div>
                             </div>
-
-                            <div
-                              className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
-                              style={{ cursor: "pointer" }}
-                              data-target="#tds-certificate"
-                              data-toggle="modal"
-                            >
-                              <div className="state-box shadow-normal">
-                                <div className="row r1">
-                                  <div className="col-lg-12 text-center">
-                                    <img
-                                      src={tdscertIcon}
-                                      alt="tdscertificate"
-                                    />
-                                  </div>
-                                </div>
-                                <div className="row r2">
-                                  <div className="col-lg-12 text-center">
-                                    <h3>TDS Certificate</h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
-                              <div
-                                className="state-box shadow-normal"
-                                data-toggle="modal"
-                                data-target="#Premium-Due-Certificate"
-                                style={{ cursor: "pointer" }}
-                              >
-                                <div className="row r1">
-                                  <div className="col-lg-12 text-center">
-                                    <img
-                                      src={premiumDueIcon}
-                                      alt="premiumDueIcon"
-                                    />
-                                  </div>
-                                </div>
-                                <div className="row r2">
-                                  <div className="col-lg-12 text-center">
-                                    <h3>Premium Due Certificate</h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
-                              style={{ cursor: "pointer" }}
-                              data-target="#payment-acknowledgement"
-                              data-toggle="modal"
-                            >
-                              <div className="state-box shadow-normal">
-                                <div className="row r1">
-                                  <div className="col-lg-12 text-center">
-                                    <img
-                                      src={paymentAcknowledgeIcon}
-                                      alt="paymentAcknowledgeIcon"
-                                    />
-                                  </div>
-                                </div>
-                                <div className="row r2">
-                                  <div className="col-lg-12 text-center">
-                                    <h3>Payment Acknowledgement</h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -1574,7 +1645,7 @@ function Customerdetails() {
                               <div className="row pad-10 card-body">
                                 <div className="col-2">
                                   <img
-                                    className="m-bottom-6"
+                                    className="m-bottom-6 bottom-26"
                                     src={Upsell}
                                     alt="creative"
                                   />
@@ -1583,12 +1654,23 @@ function Customerdetails() {
                                   <p className="m-top-12">
                                     Plan Name Goes here
                                   </p>
+                                  <span className="grey">&#8377; 2,22,222</span>
                                 </div>
                               </div>
                               <div className="row">
-                                <div className="col-lg-12 text-right">
+                                {/* <div className="col-lg-6 text-right">
                                   <button className="btn btn-outline-s">
                                     Send Details
+                                  </button>
+                                </div> */}
+                                <div className="col-lg-6 text-left">
+                                  <button
+                                    type="button"
+                                    class="btn btn-outline-s width-153"
+                                    data-toggle="modal"
+                                    data-target="#pasaKnowMore"
+                                  >
+                                    Know more
                                   </button>
                                 </div>
                               </div>
@@ -1601,22 +1683,39 @@ function Customerdetails() {
                               </div>
                               <div className="row">
                                 <div className="col-lg-12 d-flex justify-content-between">
-                                  <h3>Set Up ECS</h3>
+                                  <h3>Upsell Opportunity</h3>
                                   <div className="today">Today</div>
                                 </div>
                               </div>
                               <div className="row pad-10 card-body">
                                 <div className="col-2">
-                                  <img src={Setup} alt="circle" />
+                                  <img
+                                    className="m-bottom-6 bottom-26"
+                                    src={Upsell}
+                                    alt="creative"
+                                  />
                                 </div>
                                 <div className="col-10">
-                                  <p className="m-top-12">Policy ID</p>
+                                  <p className="m-top-12">
+                                    Plan Name Goes here
+                                  </p>
+                                  <span className="grey">&#8377; 2,22,222</span>
                                 </div>
                               </div>
                               <div className="row">
-                                <div className="col-lg-12 text-right">
+                                {/* <div className="col-lg-6 text-right">
                                   <button className="btn btn-outline-s">
-                                    Send Register Request
+                                    Send Details
+                                  </button>
+                                </div> */}
+                                <div className="col-lg-6 text-left">
+                                  <button
+                                    type="button"
+                                    class="btn btn-outline-s width-153"
+                                    data-toggle="modal"
+                                    data-target="#pasaKnowMore2"
+                                  >
+                                    Know more
                                   </button>
                                 </div>
                               </div>
@@ -1626,237 +1725,6 @@ function Customerdetails() {
                       </div>
                       {/* Fav Content Ends Here */}
                       {/* Fav Content Starts Here ----------------------------------------------------------------------------------------------*/}
-                      <div
-                        className="tab-pane fade"
-                        id="queries"
-                        role="tabpanel"
-                        aria-labelledby="later"
-                      >
-                        <div
-                          className="accordion accordion-flush"
-                          id="accordionFlushExample"
-                        >
-                          <div className="accordion-item">
-                            <div
-                              className="accordion-header-wrapper collapsed"
-                              data-toggle="collapse"
-                              href="#pending-queries"
-                              role="button"
-                              aria-expanded="false"
-                              aria-controls="flush-collapseOne"
-                            >
-                              <h2
-                                className="accordion-header"
-                                id="flush-headingOne"
-                              >
-                                Pending Queries (Self)
-                              </h2>
-                              <i className="arrow-up" />
-                              <i className="arrow-down" />
-                            </div>
-                            <div
-                              id="pending-queries"
-                              className="accordion-collapse collapse show accordion-content"
-                            >
-                              <div className="accordion-body">
-                                <div className="row">
-                                  <div className="col-lg-12 text-right">
-                                    <button className="btn btn-primary-s m-bottom-10">
-                                      Download Policy Owned by customer
-                                    </button>
-                                  </div>
-                                </div>
-                                <div className="policy-grid-customer">
-                                  <div className="policy-grid-header d-none d-lg-block d-sm-none">
-                                    <div className="row">
-                                      <div className="col-lg-3">
-                                        <h3>Created Date &amp; Time</h3>
-                                      </div>
-                                      <div className="col-lg-4">
-                                        <h3>Plan Name</h3>
-                                      </div>
-                                      <div className="col-lg-5">
-                                        <h3>Details</h3>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {[1, 2, 3].map((id, index) => (
-                                    <div className="policy-grid-row">
-                                      <div className="row">
-                                        <div
-                                          className="m-menu-dots d-lg-none d-md-none d-sm-block"
-                                          data-toggle="collapse"
-                                          data-target="#collapseExample"
-                                          aria-expanded="false"
-                                          aria-controls="collapseExample"
-                                        >
-                                          <img
-                                            src={threedots}
-                                            alt="threedots"
-                                          />
-                                        </div>
-                                        <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
-                                          <p className="color-b">
-                                            20/Dec/2020 . 12:23:00 AM
-                                          </p>
-                                        </div>
-                                        <div className="col-lg-4 col-md-4">
-                                          <label className="d-lg-none d-sm-block">
-                                            Plan name
-                                          </label>
-                                          <p className="color-b">
-                                            Sample text for plan name
-                                          </p>
-                                        </div>
-                                        <div className="col-lg-3">
-                                          <label className="d-lg-none d-sm-block">
-                                            Details
-                                          </label>
-                                          <p className="color-b">
-                                            1234354ABSdk
-                                          </p>
-                                        </div>
-                                        <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
-                                          <button
-                                            type="button"
-                                            className="btn btn-outline-s"
-                                            data-toggle="collapse"
-                                            data-target={`#collapseExample${index}`}
-                                            aria-expanded="false"
-                                            id={`buttons${index}`}
-                                            aria-controls="collapseExample"
-                                            onClick={() =>
-                                              buttonText(
-                                                `collapseExample${index}`,
-                                                `buttons${index}`
-                                              )
-                                            }
-                                          >
-                                            Show More
-                                          </button>
-                                        </div>
-                                      </div>
-                                      <div
-                                        className="row collapse"
-                                        id={`collapseExample${index}`}
-                                      >
-                                        <div className="col-lg-12 m-pad-div">
-                                          <div className="expanded-div">
-                                            <div className="row">
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Policy ID
-                                                  <br />
-                                                  <span>123456798</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Application No. <br />
-                                                  <span>12343563</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  PInteraction ID
-                                                  <br />
-                                                  <span>123456789</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Source of Interaction
-                                                  <br />
-                                                  <span>Phone</span>
-                                                </p>
-                                              </div>
-                                            </div>
-                                            <div className="row">
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Processing department
-                                                  <br />
-                                                  <span>
-                                                    Processing department name
-                                                  </span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Call Category
-                                                  <br />
-                                                  <span>
-                                                    Call category name
-                                                  </span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Call Types
-                                                  <br />
-                                                  <span>Call type name</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Sub Type
-                                                  <br />
-                                                  <span>Sub type name</span>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="accordion accordion-flush"
-                          id="accordionFlushExample"
-                        >
-                          <div className="accordion-item">
-                            <div
-                              className="accordion-header-wrapper collapsed"
-                              data-toggle="collapse"
-                              href="#pending-query-customer"
-                              role="button"
-                              aria-expanded="false"
-                              aria-controls="flush-collapseOne"
-                            >
-                              <h2
-                                className="accordion-header"
-                                id="flush-headingOne"
-                              >
-                                Pending Queries (Customer)
-                              </h2>
-                              <i className="arrow-up" />
-                              <i className="arrow-down" />
-                            </div>
-                            <div
-                              id="pending-query-customer"
-                              className="accordion-collapse collapse show accordion-content"
-                            >
-                              <div className="accordion-body">
-                                <div className="mt-card">
-                                  <p>Currently No Customer Queries</p>
-                                  <button
-                                    className="btn btn-primary-s"
-                                    data-toggle="modal"
-                                    data-target="#"
-                                  >
-                                    Raise a New Query
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       {/* Fav Content Ends Here */}
                     </div>
                   </div>
@@ -2006,6 +1874,11 @@ function Customerdetails() {
                         </div>
                       </div>
                     </div>
+                    <span className="grey">
+                      Tax Certificates are available only for last two Financial
+                      Years. Please raise a query in CRM to get older Tax
+                      Certificates
+                    </span>
                     <div className="row">
                       <div className="col-md-12 mt-2">
                         <div className="data-card">
@@ -2026,9 +1899,9 @@ function Customerdetails() {
                                   >
                                     <div className="g-container scroll-vertical">
                                       {/* Block */}
-                                      <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                      <div className="g-header d-nones d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <div className="row">
-                                          <div className="col-md-4 text-left ">
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                             <label className="ml-4">
                                               Policy No.
                                             </label>
@@ -2036,7 +1909,7 @@ function Customerdetails() {
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                             <label>Policy Owner Name</label>
                                           </div>
-                                          <div className="col-md-4">
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                             <label>Plan Name</label>
                                           </div>
                                         </div>
@@ -2239,7 +2112,6 @@ function Customerdetails() {
                     </div>
                     <div className="row modal-cta">
                       <div className="col-lg-12 text-right">
-                        <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
@@ -2247,12 +2119,309 @@ function Customerdetails() {
                         >
                           Download Tax Certificate
                         </button>
+                        <button className="btn btn-primary">Share</button>{" "}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div
+              className="modal fade"
+              id="policyAccountStatement"
+              data-backdrop="static"
+              data-keyboard="false"
+              tabIndex={-1}
+              aria-labelledby="forgot-password"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog modal-width-family-tag">
+                <div className="modal-content">
+                  <div className="modal-header brdr-none">
+                    {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div className="modal-body moda-family-tag-body">
+                    <h3>Policy Account Statement</h3>
+                    <hr />
+                    <div className="row">
+                      <div className="col-lg-4 col-md-5 col-12">
+                        <div className="form-group">
+                          <label htmlFor="exampleFormControlSelect1">
+                            Select Financial Year
+                          </label>
+                          <select
+                            className="form-control "
+                            id="exampleFormControlSelect1"
+                          >
+                            <option>2018-2019</option>
+                            <option>2019-2020</option>
+                            <option>2020-2021</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <span className="grey">
+                      Tax Certificates are available only for last 3 Financial
+                      Years. Please raise a query in CRM to get older Tax
+                      Certificates
+                    </span>
+                    <div className="row">
+                      <div className="col-md-12 mt-2">
+                        <div className="data-card">
+                          <div className="data_card_body">
+                            <div className="row">
+                              <div className="col-md-12" />
+                              <div className="col-md-12 pad-0 ">
+                                <div
+                                  className="tab-content m-pad-normal"
+                                  id="myTabContent"
+                                >
+                                  {/* Today Content Starts Here */}
+                                  <div
+                                    className="tab-pane fade show active"
+                                    id="today"
+                                    role="tabpanel"
+                                    aria-labelledby="today"
+                                  >
+                                    <div className="g-container scroll-vertical">
+                                      {/* Block */}
+                                      <div className="g-header d-nones d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <div className="row">
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                            <label className="ml-4">
+                                              Policy No.
+                                            </label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Policy Owner Name</label>
+                                          </div>
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                            <label>Plan Name</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                      {/* Block */}
+
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      {/* Block */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="row modal-cta">
+                      <div className="col-lg-12 text-right">
+                        <button
+                          onClick={downloadPDF}
+                          className="btn btn-primary"
+                          style={{ width: "200px" }}
+                        >
+                          Download Policy Statement
+                        </button>
+                        <button className="btn btn-primary">Share</button>{" "}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div
               className="modal fade"
               id="sales-illustration"
@@ -2317,7 +2486,7 @@ function Customerdetails() {
                                       {/* Block */}
                                       <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <div className="row">
-                                          <div className="col-md-4 text-left ">
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                             <label className="ml-4">
                                               Policy No.
                                             </label>
@@ -2325,7 +2494,7 @@ function Customerdetails() {
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                             <label>Policy Owner Name</label>
                                           </div>
-                                          <div className="col-md-4">
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                             <label>Plan Name</label>
                                           </div>
                                         </div>
@@ -2393,6 +2562,67 @@ function Customerdetails() {
                                           {/* Hidden sm xs */}
                                         </div>
                                       </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+                                      <div className="g-row">
+                                        <div className="row">
+                                          <div className="col-lg-4 col-md-4 text-left ">
+                                            <div className="pl-3">
+                                              <input
+                                                className="form-check-input "
+                                                type="radio"
+                                                name="retentionRadio"
+                                                value="Mature"
+                                                id="customCheckBox5"
+                                              />
+
+                                              <div
+                                                className="form-check-label ml-1 "
+                                                htmlFor="customCheckBox5"
+                                              >
+                                                12345678
+                                              </div>
+                                            </div>
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                          <div className="col-lg-4 col-md-4">
+                                            Sangeetha
+                                          </div>
+                                          <div className="col-lg-4 col-md-4">
+                                            Plan Name goes here
+                                          </div>
+                                          {/* Hidden sm xs */}
+                                        </div>
+                                      </div>
+
                                       {/* Block */}
                                       {/* Block */}
 
@@ -2438,7 +2668,6 @@ function Customerdetails() {
                     </div>
                     <div className="row modal-cta">
                       <div className="col-lg-12 text-right">
-                        <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
@@ -2446,6 +2675,7 @@ function Customerdetails() {
                         >
                           Download Sales Illustration
                         </button>
+                        <button className="btn btn-primary">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -2501,7 +2731,7 @@ function Customerdetails() {
                                       {/* Block */}
                                       <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <div className="row">
-                                          <div className="col-md-4 text-left ">
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                             <label className="ml-4">
                                               Policy No.
                                             </label>
@@ -2509,7 +2739,7 @@ function Customerdetails() {
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                             <label>Policy Owner Name</label>
                                           </div>
-                                          <div className="col-md-4">
+                                          <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                             <label>Plan Name</label>
                                           </div>
                                         </div>
@@ -2622,7 +2852,6 @@ function Customerdetails() {
                     </div>
                     <div className="row modal-cta">
                       <div className="col-lg-12 text-right">
-                        <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
@@ -2630,6 +2859,7 @@ function Customerdetails() {
                         >
                           Download Policy Contract
                         </button>
+                        <button className="btn btn-primary">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -2844,7 +3074,7 @@ function Customerdetails() {
                     </button>
                   </div>
                   <div className="modal-body moda-family-tag-body">
-                    <h3>policy-acknowledgement</h3>
+                    <h3>Payment-acknowledgement</h3>
                     <hr />
 
                     <div className="row">
@@ -2994,9 +3224,9 @@ function Customerdetails() {
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "300px" }}
+                          style={{ width: "248px" }}
                         >
-                          Download policy-acknowledgement
+                          Download Payment Acknowledgement
                         </button>
                       </div>
                     </div>
@@ -3141,14 +3371,14 @@ function Customerdetails() {
                     </div>
                     <div className="row modal-cta">
                       <div className="col-lg-12 text-right">
-                        <button className="btn btn-outline-s">Cancel</button>{" "}
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "300px" }}
+                          style={{ width: "248px" }}
                         >
                           Download Premium Due Certificate
                         </button>
+                        <button className="btn btn-primary">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -3159,12 +3389,86 @@ function Customerdetails() {
               <div className="col-lg-3"></div>
             </div>
           </div>
+
+          <div
+            class="modal fade"
+            id="pasaKnowMore"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Pasa Offer
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Based on data, your customer does not need to undergo any
+                  medicals or provide financial documentations to buy this plan
+                  for a Sum Assured upto &#8377;2,22,222
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="pasaKnowMore2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    High Propensity
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Based on data, your customer is likely to buy this product.
+                  You should pitch this to the customer
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
-        {/* <footer class="text-muted">
-  <div class="sample-footer">
-              
-  </div>
-</footer> */}
       </div>
     </div>
   );

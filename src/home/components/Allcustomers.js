@@ -12,6 +12,7 @@ import load from "../../assets/img/icons/load-more.svg";
 import sort from "../../assets/img/icons/sort.svg";
 import FilterDropdown from "../../utils/FilterDropdown";
 import Calendar from "react-calendar";
+import yellowstarfilled from "../../assets/img/icons/yellow-star-filled.svg";
 
 function Allcustomers() {
   return (
@@ -38,6 +39,7 @@ function Allcustomers() {
               </div>
             </div>
           </div>
+
           <div className="container">
             {/* Heading Starts  */}
             <div className="row">
@@ -200,6 +202,7 @@ function Allcustomers() {
                           </label>
                         </div>
                       </div>
+                      <Calendar />
                       <div className="col-lg-6">
                         <span>from Date</span>
                         <div className="date-box">
@@ -257,7 +260,7 @@ function Allcustomers() {
                           <div className="date-search-outer d-search d-none d-lg-block">
                             <div className="data-search-inner">
                               <div className="data-search">
-                                {/* <img src={search} alt="search" /> */}
+                                <img src={search} alt="search" />
                                 <input
                                   type="email"
                                   className="form-control data-search-box"
@@ -1235,8 +1238,8 @@ function Allcustomers() {
                                       <div className="col-lg-12 col-md-12 text-center">
                                         <p>
                                           <img
-                                            src={starempty}
-                                            alt="starempty"
+                                            src={yellowstarfilled}
+                                            alt="yellowstarfilled"
                                             className="starempty"
                                           />
                                         </p>
@@ -1299,8 +1302,8 @@ function Allcustomers() {
                                       <div className="col-lg-12 col-md-12 text-center">
                                         <p>
                                           <img
-                                            src={starempty}
-                                            alt="starEmpty"
+                                            src={yellowstarfilled}
+                                            alt="yellowstarfilled"
                                             className="starempty"
                                           />
                                         </p>
@@ -1363,8 +1366,8 @@ function Allcustomers() {
                                       <div className="col-lg-12 col-md-12 text-center">
                                         <p>
                                           <img
-                                            src={starempty}
-                                            alt="starEmpty"
+                                            src={yellowstarfilled}
+                                            alt="yellowstarfilled"
                                             className="starempty"
                                           />
                                         </p>
@@ -1427,8 +1430,8 @@ function Allcustomers() {
                                       <div className="col-lg-12 col-md-12 text-center">
                                         <p>
                                           <img
-                                            src={starempty}
-                                            alt="starEmpty"
+                                            src={yellowstarfilled}
+                                            alt="yellowstarfilled"
                                             className="starempty"
                                           />
                                         </p>
@@ -1491,8 +1494,8 @@ function Allcustomers() {
                                       <div className="col-lg-12 col-md-12 text-center">
                                         <p>
                                           <img
-                                            src={starempty}
-                                            alt="starEmpty"
+                                            src={yellowstarfilled}
+                                            alt="yellowstarfilled"
                                             className="starempty"
                                           />
                                         </p>
@@ -1555,8 +1558,8 @@ function Allcustomers() {
                                       <div className="col-lg-12 col-md-12 text-center">
                                         <p>
                                           <img
-                                            src={starempty}
-                                            alt="starEmpty"
+                                            src={yellowstarfilled}
+                                            alt="yellowstarfilled"
                                             className="starempty"
                                           />
                                         </p>
