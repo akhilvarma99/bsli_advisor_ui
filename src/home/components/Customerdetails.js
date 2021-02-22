@@ -44,10 +44,10 @@ function Customerdetails() {
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
       document.getElementById(buttonId).innerHTML = "Show More";
-      document.getElementById(buttonId).classList.remove("background-red");
+      document.getElementById(buttonId).classList.remove("checked-state");
     } else {
       document.getElementById(buttonId).innerHTML = "Show Less";
-      document.getElementById(buttonId).classList.add("background-red");
+      document.getElementById(buttonId).classList.add("checked-state");
     }
   }
 
@@ -81,7 +81,7 @@ function Customerdetails() {
       cardTitle: "Birthday",
       icon: gift,
       bodyTitle: "John Fernando",
-      body: "Relation . 20/Dec/2020",
+      body: "Relation | 20/Dec/2020",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -91,7 +91,7 @@ function Customerdetails() {
       cardTitle: "Premium Due",
       icon: premiumDueIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 . ₹ 1,00,000",
+      body: "20/Dec/2020 | ₹ 1,00,000",
       status: "Payment Failed",
       buttonText: "Send Payment Link",
     },
@@ -130,7 +130,7 @@ function Customerdetails() {
       cardTitle: "Policy Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 | ₹ 1,00,000",
+      body: "27/Dec/1990 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -140,7 +140,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 | ₹ 1,00,000",
+      body: "27/Dec/1990 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -150,7 +150,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 | ₹ 1,00,000",
+      body: "27/Dec/1990 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -160,7 +160,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 | ₹ 1,00,000",
+      body: "27/Dec/1990 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -170,7 +170,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 | ₹ 1,00,000",
+      body: "27/Dec/1990 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -180,7 +180,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27.11.1990 | ₹ 1,00,000",
+      body: "27/Dec/1990 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -228,11 +228,11 @@ function Customerdetails() {
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
-                    <li className="active-li">All Customer</li>
+                    <li>All Customer</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
-                    <li>Customer Details</li>
+                    <li className="active-li">Customer Details</li>
                   </ul>
                 </div>
               </div>
@@ -447,7 +447,10 @@ function Customerdetails() {
                                   <div className="accordion-body">
                                     <div className="row">
                                       <div className="col-md-12">
-                                        <div className="quikc-links-card-cd">
+                                        <div
+                                          className="quikc-links-card"
+                                          style={{ paddingLeft: "20px" }}
+                                        >
                                           <div className="quick-links-inner h-scroll-s">
                                             <ul>
                                               <li
@@ -1643,14 +1646,20 @@ function Customerdetails() {
                                 </div>
                               </div>
                               <div className="row pad-10 card-body">
-                                <div className="col-2">
+                                <div
+                                  className="col-2"
+                                  style={{ padding: "0px" }}
+                                >
                                   <img
                                     className="m-bottom-6 bottom-26"
                                     src={Upsell}
                                     alt="creative"
                                   />
                                 </div>
-                                <div className="col-10">
+                                <div
+                                  className="col-10"
+                                  style={{ paddingLeft: "0px" }}
+                                >
                                   <p className="m-top-12">
                                     Plan Name Goes here
                                   </p>
@@ -1688,14 +1697,20 @@ function Customerdetails() {
                                 </div>
                               </div>
                               <div className="row pad-10 card-body">
-                                <div className="col-2">
+                                <div
+                                  className="col-2"
+                                  style={{ padding: "0px" }}
+                                >
                                   <img
                                     className="m-bottom-6 bottom-26"
                                     src={Upsell}
                                     alt="creative"
                                   />
                                 </div>
-                                <div className="col-10">
+                                <div
+                                  className="col-10"
+                                  style={{ paddingLeft: "0px" }}
+                                >
                                   <p className="m-top-12">
                                     Plan Name Goes here
                                   </p>

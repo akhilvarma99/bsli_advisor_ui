@@ -12,6 +12,8 @@ import starempty from "../../assets/img/icons/star-empty.svg";
 import sort from "../../assets/img/icons/sort.svg";
 import starEmpty from "../../assets/img/icons/star-empty.svg";
 import searchbox from "../../assets/img/icons/search-bx.svg";
+import { NavLink } from "react-bootstrap";
+import closeIcon from "../../assets/img/icons/f_close.svg";
 
 function Overdue() {
   function buttonText(accordionId, buttonId) {
@@ -20,10 +22,10 @@ function Overdue() {
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
       document.getElementById(buttonId).innerHTML = "Show More";
-      document.getElementById(buttonId).classList.remove("background-red");
+      document.getElementById(buttonId).classList.remove("checked-state");
     } else {
       document.getElementById(buttonId).innerHTML = "Show Less";
-      document.getElementById(buttonId).classList.add("background-red");
+      document.getElementById(buttonId).classList.add("checked-state");
     }
   }
   return (
@@ -36,7 +38,7 @@ function Overdue() {
               <div className="row">
                 <div className="col-md-12">
                   <ul>
-                    <li>Dashboard</li>
+                    <li>Login</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
@@ -77,61 +79,90 @@ function Overdue() {
                       </div>
                     </div>
                   </div>
-                  <div class="filter_body">
+                  <div class="filter_body ">
                     <div class="row">
                       <div class="col-lg-12 filter_sub_check_box_row">
-                        <select class="custom-select custom-select-sm m-bottom-10">
-                          <option selected>- Select -</option>
-                          <option value="1">PREMIUM DUE DATE </option>
-                          <option value="2">TRANSACTION FAILURE DATE</option>
-                          <option value="3">PAYMENT MODE</option>
-                          <option value="4">ACTIVE</option>
-                          <option value="5">GRACE</option>
-                          <option value="6">LAPSED</option>
-                          <option value="7">TYPE</option>
-                        </select>
+                        <h3>Premium Due Date</h3>
+                        <div className="form-check">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="premiumduedateRadio"
+                            value="active"
+                            id="flexRadioDefault1"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
+                          >
+                            Yesterday
+                          </label>
+                        </div>
+                        <div className="form-check">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="premiumduedateRadio"
+                            value="active"
+                            id="flexRadioDefault1"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
+                          >
+                            Last 7 days
+                          </label>
+                        </div>
+                        <div className="form-check">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="premiumduedateRadio"
+                            value="active"
+                            id="flexRadioDefault1"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
+                          >
+                            Earlier
+                          </label>
+                        </div>
+                        <br />
 
-                        <div class="custom-control custom-checkbox check-box-row">
+                        <h3>Payment Mode</h3>
+                        <div className="form-check">
                           <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="customCheckBox5"
+                            className="form-check-input"
+                            type="radio"
+                            name="paymentRadio"
+                            value="active"
+                            id="flexRadioDefault1"
                           />
                           <label
-                            class="custom-control-label"
-                            for="customCheckBox5"
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
                           >
-                            Today
+                            Manual Payment
                           </label>
                         </div>
-                        <div class="custom-control custom-checkbox check-box-row">
+                        <div className="form-check">
                           <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="customCheckBox6"
+                            className="form-check-input"
+                            type="radio"
+                            name="paymentRadio"
+                            value="lapsed"
+                            id="flexRadioDefault1"
                           />
                           <label
-                            class="custom-control-label"
-                            for="customCheckBox6"
+                            className="form-check-label"
+                            htmlFor="flexRadioDefault1"
                           >
-                            Next Week
-                          </label>
-                        </div>
-                        <div class="custom-control custom-checkbox check-box-row">
-                          <input
-                            type="checkbox"
-                            class="custom-control-input"
-                            id="customCheckBox7"
-                          />
-                          <label
-                            class="custom-control-label"
-                            for="customCheckBox7"
-                          >
-                            Next 30 Days
+                            Auto debit
                           </label>
                         </div>
                       </div>
-
+                      {/* 
                       <div class="col-lg-6">
                         <span>from Date</span>
                         <div class="date-box">
@@ -145,9 +176,9 @@ function Overdue() {
                             placeholder="dd/mm/yyyy"
                           />
                         </div>
-                      </div>
+                      </div> */}
 
-                      <div class="col-lg-6">
+                      {/* <div class="col-lg-6">
                         <span>To Date</span>
                         <div class="date-box">
                           <img src={dateicon} alt="dateicon" />
@@ -160,17 +191,14 @@ function Overdue() {
                             placeholder="dd/mm/yyyy"
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
                   <div class="filter-footer">
                     <div class="row">
                       <div class="col-lg-12">
-                        <button
-                          type="button"
-                          class="btn btn-outline-s-secondary"
-                        >
+                        <button type="button" class="btn btn-outline-s">
                           Reset
                         </button>
                         <button type="button" class="btn btn-primary-s mrgn-0">
@@ -233,34 +261,13 @@ function Overdue() {
                                   Payment Overdue
                                 </a>
                               </li>
-                              <li
-                                className="nav-item w-50-p"
-                                role="presentation"
-                              >
-                                <a
-                                  className="nav-link"
-                                  id="profile-tab"
-                                  data-toggle="tab"
-                                  href="#next-week"
-                                  role="tab"
-                                  aria-controls="profile"
-                                  aria-selected="false"
-                                ></a>
-                              </li>
-                              <li
-                                className="nav-item w-50-p"
-                                role="presentation"
-                              >
-                                <a
-                                  className="nav-link"
-                                  id="profile-tab"
-                                  data-toggle="tab"
-                                  href="#later"
-                                  role="tab"
-                                  aria-controls="profile"
-                                  aria-selected="false"
-                                ></a>
-                              </li>
+                              <img
+                                className="filter-image d-lg-none"
+                                src={filter}
+                                alt="filter"
+                                data-toggle="modal"
+                                data-target="#bottom_modal_success"
+                              />
                             </ul>
                             {/* <div class="date-search-outer">
         
@@ -287,7 +294,7 @@ function Overdue() {
                                         <img src={sort} alt="sort" />
                                       </label>
                                     </div>
-                                    <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                    <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                       <label>
                                         Contact
                                         {/* <img src={sort} alt="sort" /> */}
@@ -335,11 +342,11 @@ function Overdue() {
                                       </div>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-5 col-md-5">
+                                    <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
@@ -350,7 +357,7 @@ function Overdue() {
                                         Credit Card Expiry
                                       </p>
                                     </div> */}
-                                    <div className="col-lg-3 col-md-3">
+                                    <div className="col-lg-3 col-md-4">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
@@ -390,30 +397,79 @@ function Overdue() {
                                     <div className="col-lg-12 m-pad-div">
                                       <div className="expanded-div collapse-inner">
                                         <div className="row">
-                                          <p className="grey-text">Reason</p>
-                                          <p>
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipiscing elit, sed do
-                                            eiusmod tempor incididunt ut labore
-                                            et dolore magna aliqua. Ut enim ad
-                                            minim veniam, quis nostrud
-                                            exercitation ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat.
-                                            Duis aute irure dolor in
-                                            reprehenderit in voluptate velit
-                                            esse cillum dolore eu fugiat nulla
-                                            pariatur.
-                                          </p>
+                                          <div className="col-lg-12 m-pad-div">
+                                            <div className="expanded-div">
+                                              <div className="row">
+                                                <div className="col-lg-3 col-md-3 col-sm-12">
+                                                  <p className="black-fade">
+                                                    Billing Method
+                                                    <br />
+                                                    <span className="black">
+                                                      Cheque
+                                                    </span>
+                                                  </p>
+                                                </div>
+                                                <div className="col-lg-3 col-md-3 col-sm-12">
+                                                  <p className="black-fade">
+                                                    Payment Status <br />
+                                                    <span className="black">
+                                                      Failed
+                                                    </span>
+                                                  </p>
+                                                </div>
+                                                <div className="col-lg-3 col-md-3 col-sm-12">
+                                                  <p className="black-fade">
+                                                    Policy Lapse Date
+                                                    <br />
+                                                    <span className="black">
+                                                      28/Dec/2020
+                                                    </span>
+                                                  </p>
+                                                </div>
+                                              </div>
+                                              <div className="row">
+                                                <div className="col-lg-12 col-md-12 col-sm-12">
+                                                  <p className="black-fade">
+                                                    Reason
+                                                    <br />
+                                                    <span className="black">
+                                                      Lorem ipsum dolor sit
+                                                      amet, consectetur
+                                                      adipiscing elit, sed do
+                                                      eiusmod tempor incididunt
+                                                      ut labore et dolore magna
+                                                      aliqua
+                                                    </span>
+                                                  </p>
+                                                </div>
+                                              </div>
+
+                                              <div className="row">
+                                                <div className="col-lg-12">
+                                                  <ul className="chips-tag">
+                                                    {/* <li>
+                                                    Send ECS registration
+                                                    request
+                                                  </li>
+                                                  <li>Send Payment Link</li> */}
+                                                    <NavLink
+                                                      className="padding-none margin-top-10"
+                                                      to="#"
+                                                      style={{
+                                                        textDecoration: "none",
+                                                      }}
+                                                    >
+                                                      <li className="active">
+                                                        Send Payment link
+                                                      </li>
+                                                    </NavLink>
+                                                  </ul>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div className="col-lg-12 col-md-3 text-right">
-                                      <button
-                                        type="button"
-                                        className="btn btn-outline-s disabled-btn"
-                                      >
-                                        Send Reminder
-                                      </button>
                                     </div>
                                   </div>
                                 </div>
@@ -446,18 +502,18 @@ function Overdue() {
                                       </div>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-5 col-md-5">
+                                    <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
 
-                                    <div className="col-lg-3 col-md-3">
+                                    <div className="col-lg-3 col-md-4">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
@@ -514,18 +570,18 @@ function Overdue() {
                                       </div>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-5 col-md-5">
+                                    <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
 
-                                    <div className="col-lg-3 col-md-3">
+                                    <div className="col-lg-3 col-md-4">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
@@ -582,18 +638,18 @@ function Overdue() {
                                       </div>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-5 col-md-5">
+                                    <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
 
-                                    <div className="col-lg-3 col-md-3">
+                                    <div className="col-lg-3 col-md-4">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
@@ -650,86 +706,18 @@ function Overdue() {
                                       </div>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                       <p>9876543213</p>
                                     </div>
                                     {/* Hidden sm xs */}
-                                    <div className="col-lg-5 col-md-5">
+                                    <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28/Dec/2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
 
-                                    <div className="col-lg-3 col-md-3">
-                                      <div className="row">
-                                        <div className="col-lg-2 col-md-1 text-center">
-                                          <p>
-                                            <img
-                                              src={starEmpty}
-                                              alt="starEmpty"
-                                              className="starempty"
-                                            />
-                                          </p>
-                                        </div>
-                                        <div className="col-lg-10 col-md-3 text-right">
-                                          <button
-                                            type="button"
-                                            className="btn btn-outline-s"
-                                            data-toggle="collapse"
-                                            data-target="#collapseExample1"
-                                            aria-expanded="false"
-                                            id="buttonel"
-                                            aria-controls="collapseExample"
-                                          >
-                                            Show More
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Block */}
-                                {/* Block */}
-                                <div className="g-row">
-                                  <div className="row">
                                     <div className="col-lg-3 col-md-4">
-                                      <div className="v-lg d-none d-lg-block">
-                                        <div className="ini-gap" />
-                                        <div className="name_circle color-5">
-                                          F
-                                        </div>
-                                        <label>Fohn Crockett</label>
-                                      </div>
-                                      <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                        <div className="row">
-                                          <div className="p-3 bd-highlight">
-                                            <div className="name_circle color-5">
-                                              F
-                                            </div>
-                                          </div>
-                                          <div className="p-9 bd-highlight">
-                                            <label>
-                                              Fohn Crockett
-                                              <br /> 9876543213
-                                            </label>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    {/* Hidden sm xs */}
-                                    <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                      <p>9876543213</p>
-                                    </div>
-                                    {/* Hidden sm xs */}
-                                    <div className="col-lg-5 col-md-5">
-                                      <p>
-                                        129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                        &nbsp;|&nbsp; 1,50,000.00
-                                      </p>
-                                    </div>
-
-                                    <div className="col-lg-3 col-md-3">
                                       <div className="row">
                                         <div className="col-lg-2 col-md-1 text-center">
                                           <p>
@@ -758,73 +746,7 @@ function Overdue() {
                                   </div>
                                 </div>
                                 {/* Block */}
-                                {/* Block */}
-                                <div className="g-row">
-                                  <div className="row">
-                                    <div className="col-lg-3 col-md-4">
-                                      <div className="v-lg d-none d-lg-block">
-                                        <div className="ini-gap" />
-                                        <div className="name_circle color-6">
-                                          F
-                                        </div>
-                                        <label>Fohn Crockett</label>
-                                      </div>
-                                      <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                        <div className="row">
-                                          <div className="p-3 bd-highlight">
-                                            <div className="name_circle color-6">
-                                              F
-                                            </div>
-                                          </div>
-                                          <div className="p-9 bd-highlight">
-                                            <label>
-                                              Fohn Crockett
-                                              <br /> 9876543213
-                                            </label>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    {/* Hidden sm xs */}
-                                    <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                      <p>9876543213</p>
-                                    </div>
-                                    {/* Hidden sm xs */}
-                                    <div className="col-lg-5 col-md-5">
-                                      <p>
-                                        129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                        &nbsp;|&nbsp; 1,50,000.00
-                                      </p>
-                                    </div>
 
-                                    <div className="col-lg-3 col-md-3">
-                                      <div className="row">
-                                        <div className="col-lg-2 col-md-1 text-center">
-                                          <p>
-                                            <img
-                                              src={starEmpty}
-                                              alt="starEmpty"
-                                              className="starempty"
-                                            />
-                                          </p>
-                                        </div>
-                                        <div className="col-lg-10 col-md-3 text-right">
-                                          <button
-                                            type="button"
-                                            className="btn btn-outline-s"
-                                            data-toggle="collapse"
-                                            data-target="#collapseExample1"
-                                            aria-expanded="false"
-                                            id="buttonel"
-                                            aria-controls="collapseExample"
-                                          >
-                                            Show More
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
                                 {/* Block */}
                                 <div className="g-footer text-center loadingText">
                                   {/* <button
@@ -833,7 +755,7 @@ function Overdue() {
                                 >
                                   See More
                                 </button> */}
-                                  <img src={loadmore} />
+                                  <img src={loadmore} alt="loadmore" />
                                   <h1>Loading...</h1>
                                 </div>
                               </div>
@@ -852,6 +774,141 @@ function Overdue() {
               <div className="col-lg-3"></div>
             </div>
           </div>
+
+          <div
+            className="modal bottom mobile-filter fade"
+            id="bottom_modal_success"
+            tabIndex={-1}
+            role="dialog"
+            aria-labelledby="bottom_modal"
+          >
+            <div className="modal-dialog" role="document">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <div className="col-lg-12 filter_sub_heading f_btn">
+                    <h2 className="d-flex align-items-center mrgn-0">
+                      <img src={filter} alt="filter" />
+                      Filter (1)
+                    </h2>
+                    <span
+                      className="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <img src={closeIcon} alt="close" />
+                    </span>
+                  </div>
+                </div>
+                <div className="modal-body text-left">
+                  <div className="filter-div-l">
+                    <div className="filter_body1">
+                      <div className="space-height" />
+                      <div className="row">
+                        <div className="col-lg-12"></div>
+                        <div className="col-lg-12 filter_sub_check_box_row m_filter">
+                          <h3>Premium Due Date</h3>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Yesterday
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Last 7 days
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Earlier
+                            </label>
+                          </div>
+                          <br />
+
+                          <h3>Payment Mode</h3>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="paymentRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Manual Payment
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="paymentRadio"
+                              value="lapsed"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Auto debit
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="empty-div"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal-footer">
+                <div className="row">
+                  <div className="col-6">
+                    <button type="button" className="btn btn-outline-s">
+                      Reset
+                    </button>
+                  </div>
+                  <div className="col-6">
+                    <button type="button" className="btn btn-primary-s mrgn-0">
+                      Apply
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
         {/* <footer class="text-muted">
   <div class="sample-footer">
@@ -859,7 +916,6 @@ function Overdue() {
   </div>
 </footer> */}
       </div>
-      ); );
     </div>
   );
 }

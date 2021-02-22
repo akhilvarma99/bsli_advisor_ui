@@ -221,10 +221,10 @@ $brown-header: #6a4742;
 $clr-white: #ffffff;
 $media-lg: 768px;
 
-/* input[type="radio"]:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 1px;
+input[type="radio"]:after {
+  width: 18px;
+  height: 18px;
+  border-radius: 75px;
   top: -2px;
   left: -1px;
   position: relative;
@@ -235,27 +235,26 @@ $media-lg: 768px;
   border: 2px solid white;
 }
 
-
 input[type="radio"]:checked:after {
   width: 15px;
   height: 15px;
-  border-radius: 1px;
-  top: -2px;
-  left: -1px;
+  border-radius: 75px;
+  top: -3px;
+  left: 0px;
   position: relative;
   background-color: $advising;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 1px solid grey;
-} */
-input[type="radio"]:after {
-  background-color: #d1d3d1;
 }
+// input[type="radio"]:after {
+//   background-color: #d1d3d1;
+// }
 
-input[type="radio"]:checked:after {
-  color: #dc3545;
-}
+// input[type="radio"]:checked:after {
+//   color: #dc3545;
+// }
 
 .noDisplay {
   display: none;
@@ -337,4 +336,100 @@ input[type="radio"]:checked:after {
 }
 .grey {
   color: #6c7174 !important;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.float-right {
+  float: right !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.font-12 {
+  font-size: 12px !important;
+}
+
+.padding-none {
+  padding: 0 !important;
+}
+
+.margin-top-10 {
+  margin-top: 10px !important;
+}
+.black-fade {
+  color: #3b3e40 !important;
+}
+
+.black {
+  color: black !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #c7222a;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.checked-state {
+  color: #660d0a !important;
+  border: solid 1px #660d0a !important;
+  box-shadow: 0 0 0px 0 #cdcece !important;
+}
+
+.margin-bottom-none {
+  margin-bottom: 0px !important ;
+}
+
+.margin-right-zero {
+  margin-right: 0px !important;
+}
+
+.modal-content-mobile {
+  padding: 0 !important;
+}
+.padding-right-6 {
+  padding-right: 6px !important;
+}
+
+.padding-top-10 {
+  padding-top: 10px;
+}
+.search-allign {
+  bottom: -13px !important;
+}
+
+.height-none {
+  height: auto !important;
+}
+
+.filter-image {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+}
+.input-style {
+  padding: 0px !important;
+  height: 30px;
+  border: none;
+  border-bottom: 1px #cdcece solid;
+  border-radius: 0px;
+  padding: 0px 3px !important;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-left: 20px !important;
+  box-shadow: none !important;
+}
+.empty-div {
+  margin-top: 58px;
+  padding-top: 59px;
 }

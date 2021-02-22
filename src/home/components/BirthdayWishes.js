@@ -4,7 +4,7 @@ import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
 import sort from "../../assets/img/icons/sort.svg";
 import starEmpty from "../../assets/img/icons/star-empty.svg";
-import load from "../../assets/img/icons/load-more.svg";
+import loadmore from "../../assets/img/icons/load-more.svg";
 function BirthdayWishes() {
   return (
     <div>
@@ -180,7 +180,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-2 col-md-3 text-right">
                                   <button
                                     type="button"
-                                    className="btn btn-outline-s  disabled-btn"
+                                    className="btn btn-outline-s"
                                   >
                                     Send Wishes
                                   </button>
@@ -466,11 +466,21 @@ function BirthdayWishes() {
                               </div>
                             </div>
                             {/* Block */}
-                            <div className="g-footer text-center">
+                            {/* <div className="g-footer text-center">
                               <button type="button" className="btn btn-primary">
                                 <img src={load} alt="load" />
                                 See More
                               </button>
+                            </div> */}
+                            <div className="g-footer text-center loadingText">
+                              {/* <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  See More
+                                </button> */}
+                              <img src={loadmore} alt="loadmore" />
+                              <h1>Loading...</h1>
                             </div>
                           </div>
                         </div>
@@ -841,11 +851,15 @@ function BirthdayWishes() {
                               </div>
                             </div>
                             {/* Block */}
-                            <div className="g-footer text-center">
-                              <button type="button" className="btn btn-primary">
-                                <img src={load} alt="load" />
-                                See More
-                              </button>
+                            <div className="g-footer text-center loadingText">
+                              {/* <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  See More
+                                </button> */}
+                              <img src={loadmore} alt="loadmore" />
+                              <h1>Loading...</h1>
                             </div>
                           </div>
                         </div>
@@ -1216,11 +1230,15 @@ function BirthdayWishes() {
                               </div>
                             </div>
                             {/* Block */}
-                            <div className="g-footer text-center">
-                              <button type="button" className="btn btn-primary">
-                                <img src={load} alt="load" />
-                                See More
-                              </button>
+                            <div className="g-footer text-center loadingText">
+                              {/* <button
+                                  type="button"
+                                  className="btn btn-primary"
+                                >
+                                  See More
+                                </button> */}
+                              <img src={loadmore} alt="loadmore" />
+                              <h1>Loading...</h1>
                             </div>
                           </div>
                         </div>

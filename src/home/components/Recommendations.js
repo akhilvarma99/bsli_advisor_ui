@@ -110,7 +110,7 @@ function Recommendations() {
                     </div>
                     <div className="filter_body" id="style-3">
                       <div className="row">
-                        <div className="col-lg-12"></div>
+                        {/* <div className="col-lg-12"></div> */}
                         <div className="col-lg-12 filter_sub_check_box_row">
                           <h3>Type</h3>
 

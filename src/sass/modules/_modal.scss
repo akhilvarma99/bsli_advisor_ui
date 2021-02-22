@@ -5,9 +5,6 @@
   background: $black !important;
   color: $white !important;
   padding: 7px 13px !important;
-  &:focus {
-    outline: none;
-  }
 }
 
 .modal-dialog-terms-conditions {
@@ -189,8 +186,17 @@
   .modal-body {
     padding: 0px;
     text-align: center;
-    padding: 20px 15px;
+    padding: 20px 10px;
     padding-top: 0px;
+
+    .tab-content .filter-div-l {
+      border: 0px !important;
+
+      .filter_body .data-search img {
+        right: 18px;
+        bottom: -10px;
+      }
+    }
 
     p {
       text-align: left;
@@ -240,6 +246,10 @@
     padding: 20px 15px;
     padding-top: 0px;
 
+    // .tab-content .filter-div-l{
+    //   border: 0px !important;
+    // }
+
     p {
       text-align: left;
       color: #8d9092;
@@ -261,6 +271,130 @@
     }
   }
 }
+
+.modal.mobile-filter .modal-content {
+  border-radius: 0 !important;
+  border: none;
+  padding: 0px;
+  border-radius: 0px !important;
+
+  img {
+    margin: 20px 0px;
+  }
+
+  .modal-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .modal-header {
+    border: none;
+    padding-bottom: 0px;
+    text-align: center;
+  }
+
+  .modal-body {
+    padding: 0px;
+    text-align: center;
+    padding: 0px;
+    padding-top: 0px;
+
+    p {
+      text-align: left;
+      color: #8d9092;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    button {
+      min-width: 250px;
+      margin-bottom: 15px;
+    }
+
+    .btn-txt {
+      color: #c7222a;
+      font-size: 18px;
+      text-align: center;
+      border: none;
+      background: none;
+    }
+  }
+}
+
+// New Mobile Filter Css
+
+.mobile-filter {
+  .modal-dialog {
+    height: 100vh !important;
+  }
+
+  .modal-header {
+    border: none;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px #cdcece solid !important;
+    padding: 0px;
+    .f_btn {
+      margin: 5px 8px;
+    }
+
+    span {
+      position: absolute;
+      right: 10px;
+      top: 2px;
+    }
+  }
+
+  .modal-body {
+    .filter-div-l {
+      border: none;
+
+      .filter_body1 {
+        padding: 15px 22px;
+        max-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-top: 0px;
+
+        .space-height {
+          height: 65px;
+        }
+      }
+
+      .space-height {
+        height: 65px;
+      }
+    }
+  }
+
+  .modal-content {
+    height: 100vh !important;
+    overflow-y: auto;
+  }
+
+  .modal-footer {
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+    width: 100%;
+    background-color: #fff;
+
+    .row {
+      width: 100%;
+
+      button {
+        width: 100%;
+        margin-top: 2px !important;
+      }
+    }
+  }
+}
+
+// New Mobile Filter Css
 
 .modal.left .modal-dialog.modal-sm,
 .modal.right .modal-dialog.modal-sm {

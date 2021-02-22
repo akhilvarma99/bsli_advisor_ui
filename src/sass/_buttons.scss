@@ -67,21 +67,25 @@
 }
 
 .btn-outline-s:hover {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
-  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
+  box-shadow: 0 0 6px 0 #cdcece !important;
+  background-color: #ffffff !important;
   color: #c7222a !important;
-  background: white !important;
+  border: solid 1px #c7222a !important;
+  // color: #c7222a !important;
+  // background: white !important;
 }
 
 .btn-outline-s:focus {
-  outline: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 0 6px 0 #cdcece !important;
+  background-color: #ffffff !important;
+
+  border: solid 1px #c7222a !important;
 }
 
 .btn-outline-s:active {
-  color: $capital-dark-red;
-  border: 1px $capital-dark-red solid;
+  color: #660d0a !important;
+
+  border: solid 1px #660d0a !important;
 }
 
 .btn-outline-s-secondary {
@@ -110,9 +114,7 @@
   background-color: $capital-red;
   color: #fff;
   margin-top: 3px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
-  box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.11);
+  box-shadow: 0 0 6px 0 #cdcece !important;
 }
 
 .btn-primary-s:active {

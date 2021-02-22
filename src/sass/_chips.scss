@@ -15,8 +15,15 @@
   }
 
   li:hover {
-    background-color: $dark-red;
-    color: $white;
+    box-shadow: 0 0 6px 0 #cdcece;
+  }
+
+  li:focus {
+    box-shadow: 0 0 6px 0 #cdcece;
+  }
+
+  li:active {
+    background-color: #660d0a;
   }
 
   .out-line {

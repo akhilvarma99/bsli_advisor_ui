@@ -18,10 +18,10 @@ export default function Card(props) {
           </div>
         </div>
         <div className="row pad-10 card-body">
-          <div className="col-2">
+          <div className="col-2" style={{ padding: "0px" }}>
             <img src={props.cardInfo.icon} alt="premiumDueIcon" />
           </div>
-          <div className="col-10">
+          <div className="col-10" style={{ paddingLeft: "0px" }}>
             <p>
               {props.cardInfo.bodyTitle}
               <br />
