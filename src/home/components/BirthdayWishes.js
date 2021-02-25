@@ -32,11 +32,14 @@ function BirthdayWishes() {
         <div className="container">
           {/* Heading Starts  */}
           <div className="row">
-            <div className="col-md-12">
+            <div className="col">
               <h1 className="p-header">
                 <img src={backarrow} alt="backarrow" />
                 Birthday Wishes (10)
               </h1>
+            </div>
+            <div className="asOn verticalAlign mr-3">
+              <h1>As on: 26-Jan-2021</h1>
             </div>
           </div>
           {/* Heading Ends  */}
@@ -165,7 +168,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
@@ -221,7 +224,223 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Vijay Singa &nbsp;|&nbsp; Son &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-1 text-center">
+                                  <p>
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Wishes
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-2">E</div>
+                                    <label>Elisha McFadden</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-2">
+                                          E
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Elisha McFadden
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    Vijay Singa &nbsp;|&nbsp; Son &nbsp;|&nbsp;
+                                    26-dec-2020
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-1 text-center">
+                                  <p>
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Wishes
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-2">E</div>
+                                    <label>Elisha McFadden</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-2">
+                                          E
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Elisha McFadden
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    Vijay Singa &nbsp;|&nbsp; Son &nbsp;|&nbsp;
+                                    26-dec-2020
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-1 text-center">
+                                  <p>
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Wishes
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-2">E</div>
+                                    <label>Elisha McFadden</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-2">
+                                          E
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Elisha McFadden
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    Vijay Singa &nbsp;|&nbsp; Son &nbsp;|&nbsp;
+                                    26-dec-2020
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-1 text-center">
+                                  <p>
+                                    <img
+                                      src={starEmpty}
+                                      alt="starEmpty"
+                                      className="starempty"
+                                    />
+                                  </p>
+                                </div>
+                                <div className="col-lg-2 col-md-3 text-right">
+                                  <button
+                                    type="button"
+                                    className="btn btn-outline-s"
+                                  >
+                                    Send Wishes
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="g-row">
+                              <div className="row">
+                                <div className="col-lg-3 col-md-4">
+                                  <div className="v-lg d-none d-lg-block">
+                                    <div className="ini-gap" />
+                                    <div className="name_circle color-2">E</div>
+                                    <label>Elisha McFadden</label>
+                                  </div>
+                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
+                                    <div className="row">
+                                      <div className="p-3 bd-highlight">
+                                        <div className="name_circle color-2">
+                                          E
+                                        </div>
+                                      </div>
+                                      <div className="p-9 bd-highlight">
+                                        <label>
+                                          Elisha McFadden
+                                          <br /> 9876543213
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                  <p>9876543213</p>
+                                </div>
+                                {/* Hidden sm xs */}
+                                <div className="col-lg-3 col-md-4">
+                                  <p>
+                                    Vijay Singa &nbsp;|&nbsp; Son &nbsp;|&nbsp;
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
@@ -277,7 +496,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
@@ -333,7 +552,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Randal Patel &nbsp;|&nbsp; Father
-                                    &nbsp;|&nbsp; 26/Dec/2020
+                                    &nbsp;|&nbsp; 26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
@@ -388,7 +607,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Santosh Boyini &nbsp;|&nbsp; Self
-                                    &nbsp;|&nbsp; 26/Dec/2020
+                                    &nbsp;|&nbsp; 26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
@@ -443,7 +662,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-2 col-md-1 text-center">
@@ -550,7 +769,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -606,7 +825,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Sanveetha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -662,7 +881,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -718,7 +937,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Randal Patel &nbsp;|&nbsp; Father
-                                    &nbsp;|&nbsp; 26/Dec/2020
+                                    &nbsp;|&nbsp; 26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -773,7 +992,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Santosh Boyini &nbsp;|&nbsp; Self
-                                    &nbsp;|&nbsp; 26/Dec/2020
+                                    &nbsp;|&nbsp; 26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -828,7 +1047,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -929,7 +1148,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -985,7 +1204,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Vijay Singa &nbsp;|&nbsp; Son &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -1041,7 +1260,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -1097,7 +1316,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Randal Patel &nbsp;|&nbsp; Father
-                                    &nbsp;|&nbsp; 26/Dec/2020
+                                    &nbsp;|&nbsp; 26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -1152,7 +1371,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Santosh Boyini &nbsp;|&nbsp; Self
-                                    &nbsp;|&nbsp; 26/Dec/2020
+                                    &nbsp;|&nbsp; 26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">
@@ -1207,7 +1426,7 @@ function BirthdayWishes() {
                                 <div className="col-lg-3 col-md-4">
                                   <p>
                                     Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                    26/Dec/2020
+                                    26-dec-2020
                                   </p>
                                 </div>
                                 <div className="col-lg-3 col-md-1 text-right">

@@ -81,7 +81,7 @@ function Customerdetails() {
       cardTitle: "Birthday",
       icon: gift,
       bodyTitle: "John Fernando",
-      body: "Relation | 20/Dec/2020",
+      body: "Relation | 20-dec-2020",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -91,7 +91,7 @@ function Customerdetails() {
       cardTitle: "Premium Due",
       icon: premiumDueIcon,
       bodyTitle: "Policy ID",
-      body: "20/Dec/2020 | ₹ 1,00,000",
+      body: "20-dec-2020 | ₹ 1,00,000",
       status: "Payment Failed",
       buttonText: "Send Payment Link",
     },
@@ -433,7 +433,7 @@ function Customerdetails() {
                                       Action Required
                                     </h2>
                                     <div className="accordion-header text-right">
-                                      As on Date 18/dec/2020
+                                      As on Date 18-dec-2020
                                     </div>
                                   </div>
 
@@ -558,7 +558,7 @@ function Customerdetails() {
                                                 John Fernando
                                                 <br />{" "}
                                                 <span>
-                                                  Relation .20/Dec/2020
+                                                  Relation .20-dec-2020
                                                 </span>
                                               </p>
                                             </div>
@@ -598,7 +598,7 @@ function Customerdetails() {
                                                 Policy ID
                                                 <br />
                                                 <span>
-                                                  20/Dec/2020 | 1,50,000
+                                                  20-dec-2020 | 1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -644,7 +644,7 @@ function Customerdetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  20/Dec/2020 | Cheque |1,50,000
+                                                  20-dec-2020 | Cheque |1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -685,7 +685,7 @@ function Customerdetails() {
                                                 Policy ID
                                                 <br />{" "}
                                                 <span>
-                                                  20/Dec/2020|1,50,000
+                                                  20-dec-2020|1,50,000
                                                 </span>
                                               </p>
                                             </div>
@@ -723,7 +723,7 @@ function Customerdetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>20/Dec/2020</span>
+                                                <br /> <span>20-dec-2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -760,7 +760,7 @@ function Customerdetails() {
                                             <div className="col-10">
                                               <p>
                                                 Policy ID
-                                                <br /> <span>20/Dec/2020</span>
+                                                <br /> <span>20-dec-2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -839,7 +839,7 @@ function Customerdetails() {
                                             <div className="col-10">
                                               <p>
                                                 3,33,333
-                                                <br /> <span>20/Dec/2020</span>
+                                                <br /> <span>20-dec-2020</span>
                                               </p>
                                             </div>
                                           </div>
@@ -881,7 +881,7 @@ function Customerdetails() {
                                                 <br />{" "}
                                                 <span>
                                                   1234 **** **** ****
-                                                  |20/Dec/2020
+                                                  |20-dec-2020
                                                 </span>
                                               </p>
                                             </div>
@@ -953,7 +953,7 @@ function Customerdetails() {
                                                         Policy Owner DOB
                                                       </label>{" "}
                                                       <br />
-                                                      20/Dec/2020
+                                                      20-dec-2020
                                                     </p>
                                                   </div>
                                                   <div className="col-lg-6 col-md-3 value">
@@ -1019,7 +1019,7 @@ function Customerdetails() {
                                               </div>
                                             </div>
                                             <div className="col-lg-6">
-                                              <div className="grey-box">
+                                              <div className="grey-box min-height-300">
                                                 <div className="row">
                                                   <div className="col-lg-12">
                                                     <p>Address</p>
@@ -1085,7 +1085,7 @@ function Customerdetails() {
                                   Policies Owned by Customer
                                 </h2>
                                 <div className="accordion-header">
-                                  As on Date 18/dec/2020
+                                  As on Date 18-dec-2020
                                 </div>
                               </div>
 
@@ -1152,7 +1152,7 @@ function Customerdetails() {
                                           <p className="color-b">Paid up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                          <p className="color-b">28/Dec/2020</p>
+                                          <p className="color-b">28-dec-2020</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
                                           <button
@@ -1198,7 +1198,7 @@ function Customerdetails() {
                                                 <p>
                                                   Policy Insurance Date
                                                   <br />
-                                                  <span>28/Dec/2020</span>
+                                                  <span>28-dec-2020</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
@@ -1294,7 +1294,7 @@ function Customerdetails() {
                                   Policies Owned By Family
                                 </h2>
                                 <div className="accordion-header ">
-                                  As on Date 18/dec/2020
+                                  As on Date 18-dec-2020
                                 </div>
                               </div>
 
@@ -1361,7 +1361,7 @@ function Customerdetails() {
                                           <p className="color-b">Paid up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                          <p className="color-b">28/Dec/2020</p>
+                                          <p className="color-b">28-dec-2020</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
                                           <button
@@ -1407,7 +1407,7 @@ function Customerdetails() {
                                                 <p>
                                                   Policy Insurance Date
                                                   <br />
-                                                  <span>28/Dec/2020</span>
+                                                  <span>28-dec-2020</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
@@ -1641,8 +1641,8 @@ function Customerdetails() {
                               </div>
                               <div className="row">
                                 <div className="col-lg-12 d-flex justify-content-between">
-                                  <h3>Upsell Opportunity</h3>
-                                  <div className="today">Today</div>
+                                  <h3>Pre-Approved Offers</h3>
+                                  <div className="today">Term</div>
                                 </div>
                               </div>
                               <div className="row pad-10 card-body">
@@ -1660,10 +1660,8 @@ function Customerdetails() {
                                   className="col-10"
                                   style={{ paddingLeft: "0px" }}
                                 >
-                                  <p className="m-top-12">
-                                    Plan Name Goes here
-                                  </p>
-                                  <span className="grey">&#8377; 2,22,222</span>
+                                  <p className="m-top-12">&#8377; 2,22,222</p>
+                                  <span className="grey">Product Name</span>
                                 </div>
                               </div>
                               <div className="row">
@@ -1692,8 +1690,8 @@ function Customerdetails() {
                               </div>
                               <div className="row">
                                 <div className="col-lg-12 d-flex justify-content-between">
-                                  <h3>Upsell Opportunity</h3>
-                                  <div className="today">Today</div>
+                                  <h3>Pre-Approved Offers</h3>
+                                  <div className="today">Non-Term</div>
                                 </div>
                               </div>
                               <div className="row pad-10 card-body">
@@ -1711,10 +1709,8 @@ function Customerdetails() {
                                   className="col-10"
                                   style={{ paddingLeft: "0px" }}
                                 >
-                                  <p className="m-top-12">
-                                    Plan Name Goes here
-                                  </p>
-                                  <span className="grey">&#8377; 2,22,222</span>
+                                  <p className="m-top-12">&#8377; 2,22,222</p>
+                                  <span className="grey">Product Name</span>
                                 </div>
                               </div>
                               <div className="row">
@@ -3416,7 +3412,7 @@ function Customerdetails() {
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">
-                    Pasa Offer
+                    Pre-approved Offer
                   </h5>
                   <button
                     type="button"
@@ -3428,9 +3424,19 @@ function Customerdetails() {
                   </button>
                 </div>
                 <div class="modal-body">
-                  Based on data, your customer does not need to undergo any
-                  medicals or provide financial documentations to buy this plan
-                  for a Sum Assured upto &#8377;2,22,222
+                  Pre Approved Offers (PASA) are available for Akhil
+                  <br />
+                  • No Medicals <br />• No Income Proof
+                  <p>
+                    Term PASA available, You can offer any Term Product to ** up
+                    to a Sum Assured of **. Recommended Products for this
+                    Customer - ****
+                  </p>
+                  <p className="dark-grey-text font-12">
+                    <b> Disclaimer:</b> Subject to Underwriting approvals based
+                    on actual information provided in the application form.
+                    <br />
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button
@@ -3456,7 +3462,7 @@ function Customerdetails() {
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">
-                    High Propensity
+                    Pre-approved Offer
                   </h5>
                   <button
                     type="button"
@@ -3468,8 +3474,19 @@ function Customerdetails() {
                   </button>
                 </div>
                 <div class="modal-body">
-                  Based on data, your customer is likely to buy this product.
-                  You should pitch this to the customer
+                  Pre Approved Offers (PASA) are available for Akhil
+                  <br />
+                  • No Medicals <br />• No Income Proof
+                  <p>
+                    Non-Term PASA available, You can offer any Non-Term Product
+                    to Akhil up to a Sum Assured of ****. Recommended Products
+                    for this Customer - *****" If Term PASA available
+                  </p>
+                  <p className="dark-grey-text font-12">
+                    <b> Disclaimer:</b> Subject to Underwriting approvals based
+                    on actual information provided in the application form.
+                    <br />
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button

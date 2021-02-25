@@ -6,7 +6,7 @@ export default function Dropdown(props) {
   return (
     <div className="dropdown ">
       <button
-        className="btn btn-outline-s"
+        className="btn btn-outline-s w-144"
         type="button"
         id="dropdownMenu2"
         data-toggle="dropdown"

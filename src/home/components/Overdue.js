@@ -62,7 +62,7 @@ function Overdue() {
                 </h1>
               </div>
               <div className="asOn verticalAlign mr-3">
-                <h1>As on: 26 Jan 2021</h1>
+                <h1>As on: 26-Jan-2021</h1>
               </div>
             </div>
             {/* Heading Ends  */}
@@ -229,7 +229,7 @@ function Overdue() {
                                     className="form-control data-search-box"
                                     id="search"
                                     aria-describedby="data-search"
-                                    placeholder="Search by customer name, policy no., PAN, Mobile No."
+                                    placeholder="Search by customer name, policy no., mobile no."
                                   />
                                   <button
                                     type="button"
@@ -348,7 +348,7 @@ function Overdue() {
                                     {/* Hidden sm xs */}
                                     <div className="col-lg-4 col-md-4">
                                       <p>
-                                        129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                        129129229 &nbsp;|&nbsp; 28-dec-2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
@@ -422,7 +422,7 @@ function Overdue() {
                                                     Policy Lapse Date
                                                     <br />
                                                     <span className="black">
-                                                      28/Dec/2020
+                                                      28-dec-2020
                                                     </span>
                                                   </p>
                                                 </div>
@@ -508,7 +508,7 @@ function Overdue() {
                                     {/* Hidden sm xs */}
                                     <div className="col-lg-4 col-md-4">
                                       <p>
-                                        129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                        129129229 &nbsp;|&nbsp; 28-dec-2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
@@ -576,7 +576,7 @@ function Overdue() {
                                     {/* Hidden sm xs */}
                                     <div className="col-lg-4 col-md-4">
                                       <p>
-                                        129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                        129129229 &nbsp;|&nbsp; 28-dec-2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
@@ -644,7 +644,7 @@ function Overdue() {
                                     {/* Hidden sm xs */}
                                     <div className="col-lg-4 col-md-4">
                                       <p>
-                                        129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                        129129229 &nbsp;|&nbsp; 28-dec-2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
@@ -712,7 +712,7 @@ function Overdue() {
                                     {/* Hidden sm xs */}
                                     <div className="col-lg-4 col-md-4">
                                       <p>
-                                        129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                        129129229 &nbsp;|&nbsp; 28-dec-2020
                                         &nbsp;|&nbsp; 1,50,000.00
                                       </p>
                                     </div>
