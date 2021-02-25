@@ -53,8 +53,14 @@ function CoustmerListingPage() {
           </div>
           <div className="container">
             <div className="row">
-              <div className="col-md-12">
+              <div className="col">
                 <h1>Customer List</h1>
+                {/* <div className="asOn verticalAlign mr-3 ">
+                  <h1>As on: 26 Jan 2021</h1>
+                </div> */}
+              </div>
+              <div className="asOn verticalAlign mr-3">
+                <h1>As on: 26-Jan-2021</h1>
               </div>
               <Toasts message={message} />
             </div>
@@ -123,7 +129,7 @@ function CoustmerListingPage() {
                           Recommendations
                         </li>
                       </NavLink>
-                      <NavLink
+                      {/* <NavLink
                         to="/PendingQueries"
                         style={{
                           listStyle: "none",
@@ -135,7 +141,7 @@ function CoustmerListingPage() {
                           <img src={help} alt="help" />
                           Pending Queries
                         </li>
-                      </NavLink>
+                      </NavLink> */}
                       {/* <NavLink
                         to="/Payouts"
                         style={{
@@ -165,6 +171,7 @@ function CoustmerListingPage() {
                   {/* d-none d-lg-block d-md-block d-sm-none  */}
                   <div className="data-card_header">
                     <h2>Renewal Payment Due (10)</h2>
+                    <p className="margin-bottom-none">As on Date 18-dec-2020</p>
                   </div>
                   <div className="data_card_body">
                     <div className="row">
@@ -286,7 +293,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -302,9 +309,9 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s disabled-btn"
+                                      className="btn btn-outline-s w-144"
                                     >
-                                      Premium Already Paid
+                                      Send Reminder
                                     </button>
                                   </div>
                                 </div>
@@ -344,7 +351,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -360,7 +367,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Reminder
                                     </button>
@@ -402,7 +409,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -418,13 +425,10 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right indication-span">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Resend Payment Link
                                     </button>
-                                    <div>
-                                      <span>Payment link sent already</span>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -463,7 +467,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -536,7 +540,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -578,78 +582,7 @@ function CoustmerListingPage() {
                               </div>
                               {/* Block */}
                               {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img
-                                        src={starEmpty}
-                                        alt="starEmpty"
-                                        className="starempty"
-                                      />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    {/*  <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Payment Link
-                                    </button> */}
-                                    <Dropdown
-                                      title={"Send Payment Link"}
-                                      items={[
-                                        {
-                                          logo: "",
-                                          title: "Copy link",
-                                          anvesh: openToast,
-                                          message: "Success: Link copied",
-                                        },
-                                        {
-                                          logo: "",
-                                          title: "Send Email",
-                                          anvesh: openToast,
-                                          message: "Success: Payment Link sent",
-                                        },
-                                      ]}
-                                    />
-                                  </div>
-                                </div>
-                              </div>
+
                               {/* Block */}
                               <div className="g-footer text-center">
                                 <button
@@ -687,7 +620,7 @@ function CoustmerListingPage() {
                                       Policy Details
                                       {/* <img src={sort} alt="sort" /> */}
                                       <br />
-                                      <span>Sorted by due date</span>
+                                      {/* <span>Sorted by due date</span> */}
                                     </label>
                                   </div>
                                 </div>
@@ -727,7 +660,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -743,7 +676,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -785,7 +718,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -801,7 +734,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -843,7 +776,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -859,7 +792,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -901,7 +834,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -917,7 +850,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -958,7 +891,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -974,7 +907,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -983,61 +916,7 @@ function CoustmerListingPage() {
                               </div>
                               {/* Block */}
                               {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img
-                                        src={starEmpty}
-                                        alt="starEmpty"
-                                        className="starempty"
-                                      />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Payment Link
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
+
                               {/* Block */}
                               <div className="g-footer text-center">
                                 <button
@@ -1075,7 +954,7 @@ function CoustmerListingPage() {
                                       Policy Details
                                       {/* <img src={sort} alt="sort" /> */}
                                       <br />
-                                      <span>Sorted by due date</span>
+                                      {/* <span>Sorted by due date</span> */}
                                     </label>
                                   </div>
                                 </div>
@@ -1115,7 +994,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1131,7 +1010,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -1173,7 +1052,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1189,7 +1068,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -1231,7 +1110,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1247,7 +1126,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -1289,7 +1168,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1305,7 +1184,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -1346,7 +1225,7 @@ function CoustmerListingPage() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
+                                      129129229 &nbsp;|&nbsp;28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1362,7 +1241,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-2 col-md-3 text-right">
                                     <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
                                       Send Payment Link
                                     </button>
@@ -1371,61 +1250,7 @@ function CoustmerListingPage() {
                               </div>
                               {/* Block */}
                               {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp;28/Dec/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img
-                                        src={starEmpty}
-                                        alt="starEmpty"
-                                        className="starempty"
-                                      />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Payment Link
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
+
                               {/* Block */}
                               <div className="g-footer text-center">
                                 <button
@@ -1570,7 +1395,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      20/Dec/2020
+                                      20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1628,7 +1453,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1686,7 +1511,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      20/Dec/2020
+                                      20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1744,7 +1569,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1801,7 +1626,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1825,61 +1650,7 @@ function CoustmerListingPage() {
                               </div>
                               {/* Block */}
                               {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      20/Dec/2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-1 text-center">
-                                    <p>
-                                      <img
-                                        src={starEmpty}
-                                        alt="starEmpty"
-                                        className="starempty"
-                                      />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
+
                               {/* Block */}
                               <div className="g-footer text-center">
                                 <button
@@ -1956,7 +1727,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      20/Dec/2020
+                                      20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2014,7 +1785,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sanveetha &nbsp;|&nbsp; Mother
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2072,7 +1843,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      20/Dec/2020
+                                      20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2130,7 +1901,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2187,7 +1958,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2211,61 +1982,7 @@ function CoustmerListingPage() {
                               </div>
                               {/* Block */}
                               {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      20/Dec/2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-1 text-right">
-                                    <p>
-                                      <img
-                                        src={starEmpty}
-                                        alt="starEmpty"
-                                        className="starempty"
-                                      />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    {/* <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button> */}
-                                  </div>
-                                </div>
-                              </div>
+
                               {/* Block */}
                               <div className="g-footer text-center">
                                 <button
@@ -2342,7 +2059,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Sangeetha &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      20/Dec/2020
+                                      20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2400,7 +2117,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Vijay Singa &nbsp;|&nbsp; Son
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2458,7 +2175,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Ayesha &nbsp;|&nbsp; Mother &nbsp;|&nbsp;
-                                      20/Dec/2020
+                                      20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2516,7 +2233,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Randal Patel &nbsp;|&nbsp; Father
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2573,7 +2290,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       Santosh Boyini &nbsp;|&nbsp; Self
-                                      &nbsp;|&nbsp;20/Dec/2020
+                                      &nbsp;|&nbsp;20-dec-2020
                                     </p>
                                   </div>
                                   <div className="col-lg-3 col-md-1 text-right">
@@ -2597,61 +2314,7 @@ function CoustmerListingPage() {
                               </div>
                               {/* Block */}
                               {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>
-                                      Digbijay &nbsp;|&nbsp; Self &nbsp;|&nbsp;
-                                      20/Dec/2020
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-3 col-md-1 text-right">
-                                    <p>
-                                      <img
-                                        src={starEmpty}
-                                        alt="starEmpty"
-                                        className="starempty"
-                                      />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    {/* <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Wishes
-                                    </button> */}
-                                  </div>
-                                </div>
-                              </div>
+
                               {/* Block */}
                               <div className="g-footer text-center">
                                 <button

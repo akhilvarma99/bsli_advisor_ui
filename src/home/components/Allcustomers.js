@@ -152,7 +152,7 @@ function Allcustomers() {
                 </ul>
               </div> */}
               <div className="asOn verticalAlign mr-3">
-                <h1>As on: 26 Jan 2021</h1>
+                <h1>As on: 26-Jan-2021</h1>
               </div>
             </div>
             {/* Heading Ends  */}
@@ -706,7 +706,7 @@ function Allcustomers() {
                                   className="form-control data-search-box"
                                   id="search"
                                   aria-describedby="data-search"
-                                  placeholder="Search by Customer Name, Policy No, Mobile No."
+                                  placeholder="Search by Customer Name, Policy No, mobile no."
                                 />
                                 <button
                                   type="button"
@@ -946,6 +946,254 @@ function Allcustomers() {
                                 </div>
                               </div>
                               {/* Block */}
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-5 col-md-4">
+                                    <div className="v-lg d-none d-lg-block d-md-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-2">
+                                        F
+                                      </div>
+                                      <label>Fohn Crockett</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-none d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-2">
+                                            F
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Fohn Crockett
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  {/* Visible SM */}
+                                  <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
+                                    <p>
+                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      &nbsp;|&nbsp; 1,50,000.00
+                                    </p>
+                                  </div>
+                                  {/* Visible SM */}
+                                  <div className="col-lg-2 col-md-3">
+                                    <div className="row">
+                                      <div className="col-lg-12 col-md-12 text-center">
+                                        <p>
+                                          <img
+                                            src={starempty}
+                                            alt="starempty"
+                                            className="starempty"
+                                          />
+                                        </p>
+                                      </div>
+                                      <div className="col-lg-10 col-md-3 text-right d-lg-none d-md-none d-sm-block">
+                                        <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Premium Already Paid
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-5 col-md-4">
+                                    <div className="v-lg d-none d-lg-block d-md-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-2">
+                                        F
+                                      </div>
+                                      <label>Fohn Crockett</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-none d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-2">
+                                            F
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Fohn Crockett
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  {/* Visible SM */}
+                                  <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
+                                    <p>
+                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      &nbsp;|&nbsp; 1,50,000.00
+                                    </p>
+                                  </div>
+                                  {/* Visible SM */}
+                                  <div className="col-lg-2 col-md-3">
+                                    <div className="row">
+                                      <div className="col-lg-12 col-md-12 text-center">
+                                        <p>
+                                          <img
+                                            src={starempty}
+                                            alt="starempty"
+                                            className="starempty"
+                                          />
+                                        </p>
+                                      </div>
+                                      <div className="col-lg-10 col-md-3 text-right d-lg-none d-md-none d-sm-block">
+                                        <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Premium Already Paid
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-5 col-md-4">
+                                    <div className="v-lg d-none d-lg-block d-md-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-2">
+                                        F
+                                      </div>
+                                      <label>Fohn Crockett</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-none d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-2">
+                                            F
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Fohn Crockett
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  {/* Visible SM */}
+                                  <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
+                                    <p>
+                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      &nbsp;|&nbsp; 1,50,000.00
+                                    </p>
+                                  </div>
+                                  {/* Visible SM */}
+                                  <div className="col-lg-2 col-md-3">
+                                    <div className="row">
+                                      <div className="col-lg-12 col-md-12 text-center">
+                                        <p>
+                                          <img
+                                            src={starempty}
+                                            alt="starempty"
+                                            className="starempty"
+                                          />
+                                        </p>
+                                      </div>
+                                      <div className="col-lg-10 col-md-3 text-right d-lg-none d-md-none d-sm-block">
+                                        <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Premium Already Paid
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="g-row">
+                                <div className="row">
+                                  <div className="col-lg-5 col-md-4">
+                                    <div className="v-lg d-none d-lg-block d-md-block">
+                                      <div className="ini-gap" />
+                                      <div className="name_circle color-2">
+                                        F
+                                      </div>
+                                      <label>Fohn Crockett</label>
+                                    </div>
+                                    <div className="v-md-sm-xs d-lg-none d-md-none d-sm-block">
+                                      <div className="row">
+                                        <div className="p-3 bd-highlight">
+                                          <div className="name_circle color-2">
+                                            F
+                                          </div>
+                                        </div>
+                                        <div className="p-9 bd-highlight">
+                                          <label>
+                                            Fohn Crockett
+                                            <br /> 9876543213
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  <div className="col-lg-5 col-md-5 d-none d-lg-block d-md-block d-sm-none d-xs-none">
+                                    <p>9876543213</p>
+                                  </div>
+                                  {/* Hidden sm xs */}
+                                  {/* Visible SM */}
+                                  <div className="col-lg-4 col-md-4 d-lg-none d-md-none d-sm-block">
+                                    <p>
+                                      129129229 &nbsp;|&nbsp; 28/12/2020
+                                      &nbsp;|&nbsp; 1,50,000.00
+                                    </p>
+                                  </div>
+                                  {/* Visible SM */}
+                                  <div className="col-lg-2 col-md-3">
+                                    <div className="row">
+                                      <div className="col-lg-12 col-md-12 text-center">
+                                        <p>
+                                          <img
+                                            src={starempty}
+                                            alt="starempty"
+                                            className="starempty"
+                                          />
+                                        </p>
+                                      </div>
+                                      <div className="col-lg-10 col-md-3 text-right d-lg-none d-md-none d-sm-block">
+                                        <button
+                                          type="button"
+                                          className="btn btn-outline-s"
+                                        >
+                                          Premium Already Paid
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                               {/* Block */}
                               <div className="g-row">
                                 <div className="row">

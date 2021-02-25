@@ -11,6 +11,8 @@ import starempty from "../../assets/img/icons/star-empty.svg";
 import load from "../../assets/img/icons/load-more.svg";
 import sort from "../../assets/img/icons/sort.svg";
 import starEmpty from "../../assets/img/icons/star-empty.svg";
+import moment from "moment";
+import closeIcon from "../../assets/img/icons/f_close.svg";
 
 function Recommendations() {
   const [tabHandler, setTabHandler] = useState(false);
@@ -90,7 +92,7 @@ function Recommendations() {
                 </ul>
               </div> */}
               <div className="asOn verticalAlign mr-3">
-                <h1>As on: 26 Jan 2021</h1>
+                <h1>As on: 26-Jan-2021</h1>
               </div>
             </div>
             {/* Heading Ends  */}
@@ -195,29 +197,38 @@ function Recommendations() {
                         <div className="col-lg-12 filter_sub_check_box_row">
                           <h3>Date</h3>
                         </div>
-                        <div className="col-lg-6">
-                          <span>from Date</span>
+                        <div className="col-lg-12 ">
+                          <span className="font-12">from Date</span>
+
                           <div className="date-box">
-                            <img src={dateicon} alt="dateicon" />
+                            {/* <img src={dateicon} alt="dateicon" /> */}
                             <input
-                              type="email"
+                              type="date"
                               className="form-control data-search-box"
                               id="search"
                               aria-describedby="data-search"
                               placeholder="dd/mm/yyyy"
+                              min={moment()
+                                .subtract(5, "years")
+
+                                .format("YYYY-MM-DD")}
                             />
                           </div>
                         </div>
-                        <div className="col-lg-6">
-                          <span>To Date</span>
+                        <div className="col-lg-12">
+                          <span className="font-12"> To Date</span>
                           <div className="date-box">
-                            <img src={dateicon} alt="dateicon" />
+                            {/* <img src={dateicon} alt="dateicon" /> */}
                             <input
-                              type="email"
+                              type="date"
                               className="form-control data-search-box"
                               id="search"
                               aria-describedby="data-search"
                               placeholder="dd/mm/yyyy"
+                              max={moment()
+                                .add(2, "years")
+
+                                .format("YYYY-MM-DD")}
                             />
                           </div>
                         </div>
@@ -245,549 +256,10 @@ function Recommendations() {
                   </div>
                 </div>
               ) : (
-                <div className="f_Div_c1 d-none d-lg-block ">
-                  {/*                   <div className="filter-div-l shadow-normal ">
-                    <div className="filter_header">
-                      <div className="row">
-                        <div className="col-lg-12 filter_sub_heading">
-                          <h2>
-                            <img src={filter} alt="filter" />
-                            Filter (1)
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="filter_body" id="style-3">
-                      <div className="row">
-                        <div className="col-lg-12"></div>
-                        <div className="col-lg-12 filter_sub_check_box_row">
-                          <h3>All</h3>
-                          <div className="data-search">
-                            <img src={search} alt="search" />
-                            <input
-                              type="email"
-                              className="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="Search Product"
-                            />
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox1"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox1"
-                            >
-                              Product Name 01
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox2"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox2"
-                            >
-                              Product Name 02
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox3"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox3"
-                            >
-                              Product Name 03
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox4"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox4"
-                            >
-                              Product Name 04
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-lg-12 filter_sub_check_box_row">
-                          <h3>PASA</h3>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox5"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox5"
-                            >
-                              Today
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox6"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox6"
-                            >
-                              Next Week
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox7"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox7"
-                            >
-                              Next 30 Days
-                            </label>
-                          </div>
-                        </div>
-
-                        <div className="col-lg-6">
-                          <span>from Date</span>
-                          <div className="date-box">
-                            <img src={dateicon} alt="dateicon" />
-                            <input
-                              type="email"
-                              className="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="dd/mm/yyyy"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-lg-6">
-                          <span>To Date</span>
-                          <div className="date-box">
-                            <img src={dateicon} alt="dateicon" />
-                            <input
-                              type="email"
-                              className="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="dd/mm/yyyy"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-lg-12 filter_sub_check_box_row">
-                          <h3>Hot Leads</h3>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox5"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox5"
-                            >
-                              High
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox6"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox6"
-                            >
-                              Medium
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox7"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox7"
-                            >
-                              Low
-                            </label>
-                          </div>
-                        </div>
-
-                        {/* <div className="col-lg-6"> 
-                        
-                          <span>from Date</span>
-                          <div className="date-box">
-                            <img src={dateicon} alt="dateicon" />
-                            <input
-                              type="email"
-                              className="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="dd/mm/yyyy"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-lg-6">
-                          <span>To Date</span>
-                          <div className="date-box">
-                            <img src={dateicon} alt="dateicon" />
-                            <input
-                              type="email"
-                              className="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="dd/mm/yyyy"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="row">
-                        <div className="col-lg-12 filter_sub_check_box_row">
-                          <h3>PASA AVAILABLE</h3>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox5"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox5"
-                            >
-                              Today
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox6"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox6"
-                            >
-                              Next Week
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="Mature"
-                              id="customCheckBox7"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="customCheckBox7"
-                            >
-                              Next 30 Days
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="row">
-                        <div className="col-lg-12 filter_sub_check_box_row">
-                          <h3>Recommended Product</h3>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox5"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox5"
-                            >
-                              Product 1
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox6"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox6"
-                            >
-                              Product 2
-                            </label>
-                          </div>
-                          <div className="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              className="custom-control-input"
-                              id="customCheckBox7"
-                            />
-                            <label
-                              className="custom-control-label"
-                              htmlFor="customCheckBox7"
-                            >
-                              Product 3
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="filter-footer">
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <button
-                            type="button"
-                            className="btn btn-outline-s-secondary"
-                          >
-                            Reset
-                          </button>{" "}
-                          <button
-                            type="button"
-                            className="btn btn-primary-s mrgn-0"
-                          >
-                            Apply
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-                  <div class="filter-div-l shadow-normal">
-                    <div class="filter_header">
-                      <div class="row">
-                        <div class="col-lg-12 filter_sub_heading">
-                          <h2 class="d-flex align-items-center">
-                            <img src={filter} alt="filter" />
-                            Filter (1)
-                          </h2>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="filter_body">
-                      <div class="row">
-                        <div class="col-lg-12"></div>
-                        <div class="col-lg-12 filter_sub_check_box_row">
-                          <h3>Product</h3>
-                          <div class="data-search">
-                            <img src={search} alt="search" />
-
-                            <input
-                              type="email"
-                              class="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="Search Product"
-                            />
-                          </div>
-
-                          <div class="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheckBox1"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="customCheckBox1"
-                            >
-                              Product Name 01
-                            </label>
-                          </div>
-                          <div class="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheckBox2"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="customCheckBox2"
-                            >
-                              Product Name 02
-                            </label>
-                          </div>
-                          <div class="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheckBox3"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="customCheckBox3"
-                            >
-                              Product Name 03
-                            </label>
-                          </div>
-                          <div class="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheckBox4"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="customCheckBox4"
-                            >
-                              Product Name 04
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-lg-12 filter_sub_check_box_row">
-                          <select class="custom-select custom-select-sm m-bottom-10">
-                            <option selected>- Select -</option>
-                            <option value="1">PASA</option>
-                            <option value="2">Hot Leads</option>
-                            <option value="3">PASA Available</option>
-                            <option value="4">Recommendations</option>
-                            <option value="4">Products</option>
-                          </select>
-
-                          <div class="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheckBox5"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="customCheckBox5"
-                            >
-                              Today
-                            </label>
-                          </div>
-                          <div class="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheckBox6"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="customCheckBox6"
-                            >
-                              Next Week
-                            </label>
-                          </div>
-                          <div class="custom-control custom-checkbox check-box-row">
-                            <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheckBox7"
-                            />
-                            <label
-                              class="custom-control-label"
-                              for="customCheckBox7"
-                            >
-                              Next 30 Days
-                            </label>
-                          </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                          <span>from Date</span>
-                          <div class="date-box">
-                            <img src={dateicon} alt="dateicon" />
-
-                            <input
-                              type="email"
-                              class="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="dd/mm/yyyy"
-                            />
-                          </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                          <span>To Date</span>
-                          <div class="date-box">
-                            <img src={dateicon} alt="dateicon" />
-
-                            <input
-                              type="email"
-                              class="form-control data-search-box"
-                              id="search"
-                              aria-describedby="data-search"
-                              placeholder="dd/mm/yyyy"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="filter-footer">
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <button
-                            type="button"
-                            class="btn btn-outline-s-secondary"
-                          >
-                            Reset
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn-primary-s mrgn-0"
-                          >
-                            Apply
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ""
               )}
 
-              <div className="f_Div_c2">
+              <div className={tabHandler ? "f_Div_c2" : ""}>
                 <div className="data-card">
                   {/* d-none d-lg-block d-md-block d-sm-none  */}
                   <div className="data_card_body">
@@ -804,7 +276,7 @@ function Recommendations() {
                                   className="form-control data-search-box"
                                   id="search"
                                   aria-describedby="data-search"
-                                  placeholder="Search by customer name, policy no., PAN, Mobile No."
+                                  placeholder="Search by customer name, policy no., mobile no."
                                 />
                                 <button
                                   type="button"
@@ -840,7 +312,7 @@ function Recommendations() {
                                 aria-controls="all"
                                 aria-selected="true"
                               >
-                                Upsell
+                                Pre-Approved Offers
                               </a>
                             </li>
                             <li
@@ -865,6 +337,15 @@ function Recommendations() {
                               >
                                 Retention
                               </a>
+                              {tabHandler && (
+                                <img
+                                  className="filter-image d-lg-none"
+                                  src={filter}
+                                  alt="filter"
+                                  data-toggle="modal"
+                                  data-target="#bottom_modal_success"
+                                />
+                              )}
                             </li>
                           </ul>
                         </div>
@@ -899,10 +380,18 @@ function Recommendations() {
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
-                                  <div className="col-md-7">
+                                  <div className="col-md-2">
                                     <label>
-                                      Next Best Offer
-                                      {/* <img src={sort} alt="sort" />*/}
+                                      Sum Assured Term
+                                      <img src={sort} alt="sort" />
+                                      <br />
+                                      {/*<span>Sorted by due date</span>*/}
+                                    </label>
+                                  </div>
+                                  <div className="col-md-2">
+                                    <label>
+                                      Sum Assured Non-Term
+                                      <img src={sort} alt="sort" />
                                       <br />
                                       {/*<span>Sorted by due date</span>*/}
                                     </label>
@@ -942,20 +431,25 @@ function Recommendations() {
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>PASA/Product</p>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
                                       <img src={starEmpty} alt="starempty" />
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
+                                  <div className="col-lg-1 col-md-3 text-right">
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
+                                      data-toggle="modal"
+                                      data-target="#pasaKnowMore"
                                     >
-                                      Send Message
+                                      Know More
                                     </button>
                                   </div>
                                 </div>
@@ -993,20 +487,23 @@ function Recommendations() {
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>PASA/Product</p>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
                                       <img src={starEmpty} alt="starempty" />
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
+                                  <div className="col-lg-1 col-md-3 text-right">
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Message
+                                      Know More
                                     </button>
                                   </div>
                                 </div>
@@ -1044,20 +541,23 @@ function Recommendations() {
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>PASA/Product</p>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
                                       <img src={starEmpty} alt="starempty" />
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-3 text-right indication-span">
+                                  <div className="col-lg-1 col-md-3 text-right">
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Message
+                                      Know More
                                     </button>
                                   </div>
                                 </div>
@@ -1095,20 +595,23 @@ function Recommendations() {
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>PASA/Product</p>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
                                       <img src={starEmpty} alt="starempty" />
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
+                                  <div className="col-lg-1 col-md-3 text-right">
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Message
+                                      Know More
                                     </button>
                                   </div>
                                 </div>
@@ -1145,74 +648,30 @@ function Recommendations() {
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>PASA/Product</p>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
+                                  </div>
+                                  <div className="col-lg-2 col-md-2">
+                                    <p>₹ 2,22,222</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
                                       <img src={starEmpty} alt="starempty" />
                                     </p>
                                   </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
+                                  <div className="col-lg-1 col-md-3 text-right">
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
-                                      Send Message
+                                      Know More
                                     </button>
                                   </div>
                                 </div>
                               </div>
                               {/* Block */}
                               {/* Block */}
-                              <div className="g-row">
-                                <div className="row">
-                                  <div className="col-lg-3 col-md-4">
-                                    <div className="v-lg d-none d-lg-block">
-                                      <div className="ini-gap" />
-                                      <div className="name_circle color-6">
-                                        C
-                                      </div>
-                                      <label>Clement Ebaugh</label>
-                                    </div>
-                                    <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                      <div className="row">
-                                        <div className="p-3 bd-highlight">
-                                          <div className="name_circle color-6">
-                                            C
-                                          </div>
-                                        </div>
-                                        <div className="p-9 bd-highlight">
-                                          <label>
-                                            Clement Ebaugh <br /> 9876543213
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
-                                    <p>9876543213</p>
-                                  </div>
-                                  {/* Hidden sm xs */}
-                                  <div className="col-lg-3 col-md-4">
-                                    <p>PASA/Product</p>
-                                  </div>
-                                  <div className="col-lg-1 col-md-1 text-center">
-                                    <p>
-                                      <img src={starEmpty} alt="starempty" />
-                                    </p>
-                                  </div>
-                                  <div className="col-lg-2 col-md-3 text-right">
-                                    <button
-                                      type="button"
-                                      className="btn btn-outline-s"
-                                    >
-                                      Send Message
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
+
                               {/* Block */}
                               <div className="g-footer text-center loadingText">
                                 {/* <button
@@ -1295,7 +754,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1349,7 +808,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1403,7 +862,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1457,7 +916,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1510,7 +969,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1563,7 +1022,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1664,7 +1123,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1718,7 +1177,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1772,7 +1231,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1826,7 +1285,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1879,7 +1338,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1932,7 +1391,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -1988,20 +1447,23 @@ function Recommendations() {
                                       <img src={sort} alt="sort" />
                                     </label>
                                   </div>
-                                  <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <label>
                                       Contact
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
-                                  <div className="col-md-4">
+                                  <div className="col-md-3">
                                     <label>
-                                      Date of PPT ending/PayoutAmount
-                                      <img src={sort} alt="sort" />
+                                      Policy ID | Date
+                                      {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
                                   <div className="col-lg-3 pad-0">
-                                    <label>Next Best Offer</label>
+                                    <label>
+                                      Policy Status{" "}
+                                      <img src={sort} alt="sort" />
+                                    </label>
                                   </div>
                                 </div>
                               </div>
@@ -2034,20 +1496,15 @@ function Recommendations() {
                                     </div>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
                                   <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
+                                    <p className="float-left">Paid up</p>
                                   </div>
 
                                   <div className="col-lg-1 col-md-1 text-center">
@@ -2086,20 +1543,15 @@ function Recommendations() {
                                     </div>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
                                   <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
+                                    <p className="float-left">Paid up</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -2137,20 +1589,15 @@ function Recommendations() {
                                     </div>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
                                   <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
+                                    <p className="float-left">Paid up</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -2188,20 +1635,15 @@ function Recommendations() {
                                     </div>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                  <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <p>9876543213</p>
                                   </div>
                                   {/* Hidden sm xs */}
-                                  <div className="col-lg-4 col-md-4">
-                                    <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                      &nbsp;|&nbsp; 1,50,000.00
-                                    </p>
+                                  <div className="col-lg-3 col-md-4">
+                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
                                   <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
-                                    <p className="float-left">
-                                      PASA/Product Name
-                                    </p>
+                                    <p className="float-left">Paid up</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -2238,20 +1680,15 @@ function Recommendations() {
                                   </div>
                                 </div>
                                 {/* Hidden sm xs */}
-                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
+                                <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                   <p>9876543213</p>
                                 </div>
                                 {/* Hidden sm xs */}
-                                <div className="col-lg-4 col-md-4">
-                                  <p>
-                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                    &nbsp;|&nbsp; 1,50,000.00
-                                  </p>
+                                <div className="col-lg-3 col-md-4">
+                                  <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                 </div>
                                 <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
-                                  <p className="float-left">
-                                    PASA/Product Name
-                                  </p>
+                                  <p className="float-left">Paid up</p>
                                 </div>
                                 <div className="col-lg-1 col-md-1 text-center">
                                   <p>
@@ -2261,54 +1698,6 @@ function Recommendations() {
                               </div>
                             </div>
                             {/* Block */} {/* Block */}
-                            <div className="g-row">
-                              <div className="row">
-                                <div className="col-lg-3 col-md-4">
-                                  <div className="v-lg d-none d-lg-block">
-                                    <div className="ini-gap" />
-                                    <div className="name_circle color-5">F</div>
-                                    <label>Fohn Crockett</label>
-                                  </div>
-                                  <div className="v-md-sm-xs d-lg-none d-md-block d-sm-block">
-                                    <div className="row">
-                                      <div className="p-3 bd-highlight">
-                                        <div className="name_circle color-5">
-                                          F
-                                        </div>
-                                      </div>
-                                      <div className="p-9 bd-highlight">
-                                        <label>
-                                          Fohn Crockett
-                                          <br />
-                                          9876543213
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Hidden sm xs */}
-                                <div className="col-lg-1 col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
-                                  <p>9876543213</p>
-                                </div>
-                                {/* Hidden sm xs */}
-                                <div className="col-lg-4 col-md-4">
-                                  <p>
-                                    129129229 &nbsp;|&nbsp; 28/Dec/2020
-                                    &nbsp;|&nbsp; 1,50,000.00
-                                  </p>
-                                </div>
-                                <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
-                                  <p className="float-left">
-                                    PASA/Product Name
-                                  </p>
-                                </div>
-                                <div className="col-lg-1 col-md-1 text-center">
-                                  <p>
-                                    <img src={starempty} alt="starempty" />
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
                             {/* Block */} {/* Block */}
                             {/* Block */}
                             <div className="g-footer text-center loadingText">
@@ -2395,7 +1784,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2461,7 +1850,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2527,7 +1916,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2593,7 +1982,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2659,7 +2048,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2725,7 +2114,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2791,7 +2180,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2907,7 +2296,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -2966,7 +2355,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3024,7 +2413,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3082,7 +2471,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3140,7 +2529,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3198,7 +2587,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3256,7 +2645,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-4 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3359,7 +2748,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3413,7 +2802,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3467,7 +2856,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3521,7 +2910,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3574,7 +2963,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3627,7 +3016,7 @@ function Recommendations() {
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
                                     <p>
-                                      129129229 &nbsp;|&nbsp; 28/Dec/2020
+                                      129129229 &nbsp;|&nbsp; 28-dec-2020
                                       &nbsp;|&nbsp; 1,50,000.00
                                     </p>
                                   </div>
@@ -3667,8 +3056,230 @@ function Recommendations() {
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-3"></div>
+
+            <div
+              class="modal fade"
+              id="pasaKnowMore"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Pasa Offer
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Pre Approved Offers (PASA) are available for Akhil
+                    <br />
+                    • No Medicals <br />• No Income Proof
+                    <p>
+                      <p>&nbsp;</p>
+                      Non-Term PASA available, You can offer any Non-Term
+                      Product to Akhil up to a Sum Assured of ****. Recommended
+                      Products for this Customer - *****" If Term PASA available
+                    </p>
+                    <p>
+                      Term PASA available, You can offer any Term Product to **
+                      up to a Sum Assured of **. Recommended Products for this
+                      Customer - ****
+                    </p>
+                    <p className="dark-grey-text font-12">
+                      <b> Disclaimer:</b> Subject to Underwriting approvals
+                      based on actual information provided in the application
+                      form.
+                      <br />
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="modal bottom mobile-filter fade"
+            id="bottom_modal_success"
+            tabIndex={-1}
+            role="dialog"
+            aria-labelledby="bottom_modal"
+          >
+            <div className="modal-dialog" role="document">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <div className="col-lg-12 filter_sub_heading f_btn">
+                    <h2 className="d-flex align-items-center mrgn-0">
+                      <img src={filter} alt="filter" />
+                      Filter (1)
+                    </h2>
+                    <span
+                      className="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <img src={closeIcon} alt="close" />
+                    </span>
+                  </div>
+                </div>
+                <div className="modal-body text-left">
+                  <div className="filter-div-l">
+                    <div className="filter_body1">
+                      <div className="space-height" />
+                      <div className="row">
+                        <div className="col-lg-12"></div>
+                        <div className="col-lg-12 filter_sub_check_box_row m_filter">
+                          <h3>Premium Due Date</h3>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Matured
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Paid-up
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Surrendered
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Terminated
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Discontinued
+                            </label>
+                          </div>
+                          <br />
+                        </div>
+                      </div>
+                      <div className="col-lg-12  padding-left-none">
+                        <span>from Date</span>
+
+                        <div className="date-box">
+                          {/* <img src={dateicon} alt="dateicon" /> */}
+                          <input
+                            type="date"
+                            className="form-control data-search-box"
+                            id="search"
+                            aria-describedby="data-search"
+                            placeholder="dd/mm/yyyy"
+                            min={moment()
+                              .subtract(5, "years")
+
+                              .format("YYYY-MM-DD")}
+                          />
+                        </div>
+                        <br />
+                      </div>
+                      <div className="col-lg-12 padding-left-none">
+                        <span> To Date</span>
+                        <div className="date-box">
+                          {/* <img src={dateicon} alt="dateicon" /> */}
+                          <input
+                            type="date"
+                            className="form-control data-search-box"
+                            id="search"
+                            aria-describedby="data-search"
+                            placeholder="dd/mm/yyyy"
+                            max={moment()
+                              .add(2, "years")
+
+                              .format("YYYY-MM-DD")}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="empty-div"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal-footer">
+                <div className="row">
+                  <div className="col-6">
+                    <button type="button" className="btn btn-outline-s">
+                      Reset
+                    </button>
+                  </div>
+                  <div className="col-6">
+                    <button type="button" className="btn btn-primary-s mrgn-0">
+                      Apply
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </main>

@@ -217,7 +217,7 @@ function Query_list() {
                                 className="form-control data-search-box"
                                 id="search"
                                 aria-describedby="data-search"
-                                placeholder="Search by customer name, policy no., PAN, Mobile No."
+                                placeholder="Search by customer name, policy no., mobile no."
                               />
                               <button
                                 type="button"
