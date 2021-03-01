@@ -17,6 +17,7 @@ import Query_details from "./Query_details";
 import Querymanagementsystem from "./Querymanagementsystem";
 import Query_list from "./Query_list";
 import Raise_query from "./Raise_query";
+import Dashboard from "../containers/dashboard";
 
 import Trouble from "./trouble";
 function Approuter() {
@@ -45,6 +46,7 @@ function Approuter() {
         path="/customerdetailsfamily"
         component={Customerdetailsaddfamily}
       />
+      <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/Query_details" component={Query_details} />
       <Route
         exact

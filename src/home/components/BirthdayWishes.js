@@ -15,14 +15,14 @@ function BirthdayWishes() {
             <div className="row">
               <div className="col-md-12">
                 <ul>
-                  <li>Dashboard</li>
+                  <li>Home</li>
                   <li>
                     <img src={breadcrumbs} alt="breadcrumbs" />
                   </li>
-                  <li className>Customer List</li>
+                  {/* <li className>Customer List</li>
                   <li>
                     <img src={breadcrumbs} alt="breadcrumbs" />
-                  </li>
+                  </li> */}
                   <li className="active-li">Birthday Wishes</li>
                 </ul>
               </div>

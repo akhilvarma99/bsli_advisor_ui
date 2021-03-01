@@ -259,3 +259,17 @@
 }
 
 // Modal Close
+.btn-disabled-state {
+  opacity: 0.5 important;
+  color: #ffffff important;
+  background-color: #cdcece !important;
+}
+.btn-disabled-state:hover,
+.btn-disabled-state:focus {
+  color: #ffffff !important;
+  background-color: #cdcece !important;
+}
+.btn-disabled-state:disabled {
+  color: #333 important;
+  text-decoration: none important;
+}

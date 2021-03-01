@@ -41,11 +41,11 @@ function CoustmerListingPage() {
               <div className="row">
                 <div className="col-md-12">
                   <ul>
-                    <li>Dashboard</li>
-                    <li>
+                    <li className="active-li">Home</li>
+                    {/* <li>
                       <img src={breadcrumbsArrow} alt="breadcrumbsArrow" />
                     </li>
-                    <li className="active-li">Customer List</li>
+                    <li className="active-li">Customer List</li> */}
                   </ul>
                 </div>
               </div>
@@ -294,7 +294,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -352,7 +352,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -410,7 +410,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -468,7 +468,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -541,7 +541,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -661,7 +661,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -719,7 +719,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -777,7 +777,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -835,7 +835,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -892,7 +892,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -995,7 +995,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1053,7 +1053,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1111,7 +1111,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1169,7 +1169,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">
@@ -1226,7 +1226,7 @@ function CoustmerListingPage() {
                                   <div className="col-lg-3 col-md-4">
                                     <p>
                                       129129229 &nbsp;|&nbsp;28-dec-2020
-                                      &nbsp;|&nbsp; 1,50,000.00
+                                      &nbsp;|&nbsp; ₹ 1,00,000
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-1 text-center">

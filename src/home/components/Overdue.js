@@ -38,14 +38,14 @@ function Overdue() {
               <div className="row">
                 <div className="col-md-12">
                   <ul>
-                    <li>Login</li>
+                    <li>Home</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
-                    <li>Customer List</li>
+                    {/* <li>Customer List</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
-                    </li>
+                    </li> */}
                     <li className="active-li">Overdue</li>
                   </ul>
                 </div>
@@ -349,7 +349,7 @@ function Overdue() {
                                     <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28-dec-2020
-                                        &nbsp;|&nbsp; 1,50,000.00
+                                        &nbsp;|&nbsp; ₹ 1,00,000
                                       </p>
                                     </div>
                                     {/* <div className="col-lg-1 col-md-1 text-center pad-0 d-none d-lg-block">
@@ -509,7 +509,7 @@ function Overdue() {
                                     <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28-dec-2020
-                                        &nbsp;|&nbsp; 1,50,000.00
+                                        &nbsp;|&nbsp; ₹ 1,00,000
                                       </p>
                                     </div>
 
@@ -577,7 +577,7 @@ function Overdue() {
                                     <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28-dec-2020
-                                        &nbsp;|&nbsp; 1,50,000.00
+                                        &nbsp;|&nbsp; ₹ 1,00,000
                                       </p>
                                     </div>
 
@@ -645,7 +645,7 @@ function Overdue() {
                                     <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28-dec-2020
-                                        &nbsp;|&nbsp; 1,50,000.00
+                                        &nbsp;|&nbsp; ₹ 1,00,000
                                       </p>
                                     </div>
 
@@ -713,7 +713,7 @@ function Overdue() {
                                     <div className="col-lg-4 col-md-4">
                                       <p>
                                         129129229 &nbsp;|&nbsp; 28-dec-2020
-                                        &nbsp;|&nbsp; 1,50,000.00
+                                        &nbsp;|&nbsp; ₹ 1,00,000
                                       </p>
                                     </div>
 

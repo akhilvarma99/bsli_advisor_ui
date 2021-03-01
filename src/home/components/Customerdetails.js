@@ -37,6 +37,20 @@ import reinstatementIcon from "../../assets/img/icons/Reinstatement.svg";
 
 function Customerdetails() {
   const [activeState, setActivestate] = useState("wishes");
+  const [enableSearch, setenableSearch] = useState(true);
+
+  function searchcontrol() {
+    let searchvalue = document.getElementById("exampleInputEmail1").value;
+    if (
+      searchvalue.length == 7 ||
+      searchvalue.length == 8 ||
+      searchvalue.length == 9
+    ) {
+      setenableSearch(false);
+    } else {
+      setenableSearch(true);
+    }
+  }
 
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
@@ -101,7 +115,7 @@ function Customerdetails() {
       cardTitle: "To Be Terminated",
       icon: terminatedIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990",
+      body: "27-dec-2020",
       status: "",
       buttonText: "Send Remainder",
     },
@@ -111,8 +125,8 @@ function Customerdetails() {
       cardTitle: "Payouts Released",
       icon: payoutIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | Type | ₹ 1,00,000",
-      status: "Payouts Released",
+      body: "27-dec-2020 | Type | ₹ 1,00,000",
+      // status: "Payouts Released",
       buttonText: "Send Congratulations",
     },
     {
@@ -120,8 +134,8 @@ function Customerdetails() {
       cardTitle: "Payouts To Be Released",
       icon: payoutIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | Type ",
-      status: "Payouts Released",
+      body: "27-dec-2020 | Type ",
+      // status: "Payouts Released",
       buttonText: "Send Congratulations",
     },
     {
@@ -130,7 +144,7 @@ function Customerdetails() {
       cardTitle: "Policy Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | ₹ 1,00,000",
+      body: "27-dec-2020 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -140,7 +154,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | ₹ 1,00,000",
+      body: "27-dec-2020 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -150,7 +164,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | ₹ 1,00,000",
+      body: "27-dec-2020 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -160,7 +174,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | ₹ 1,00,000",
+      body: "27-dec-2020 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -170,7 +184,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | ₹ 1,00,000",
+      body: "27-dec-2020 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -180,7 +194,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27/Dec/1990 | ₹ 1,00,000",
+      body: "27-dec-2020 | ₹ 1,00,000",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -224,14 +238,14 @@ function Customerdetails() {
                 <div className="col-md-12">
                   <ul>
                     {/* <li>Dashboard</li> */}
-                    <li>Customer List</li>
+                    <li>Home</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
-                    <li>All Customer</li>
+                    {/* <li>All Customer</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
-                    </li>
+                    </li> */}
                     <li className="active-li">Customer Details</li>
                   </ul>
                 </div>
@@ -260,15 +274,6 @@ function Customerdetails() {
                     </div>
                     <div className="col-lg-10 col-md-10">
                       <div className="name-details">
-                        <div className="category-div">
-                          <p style={{ color: "black" }}>
-                            Category Name{"   "}
-                            <img
-                              src={yellowstarfilled}
-                              alt="yellowstarfilled"
-                            />
-                          </p>
-                        </div>
                         <label>John Fernando</label>
                         <p className="d-flex align-items-center">
                           <img src={phonecall} alt="phonecall" />
@@ -289,6 +294,17 @@ function Customerdetails() {
                             dakhilvarma@gmail.com
                           </a>
                         </p>
+                        <div className="category-div">
+                          <p style={{ color: "black" }}>Category Name</p>
+                        </div>
+                        <div className="category-div-star">
+                          <p style={{ color: "black" }}>
+                            <img
+                              src={yellowstarfilled}
+                              alt="yellowstarfilled"
+                            />
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -447,17 +463,14 @@ function Customerdetails() {
                                   <div className="accordion-body">
                                     <div className="row">
                                       <div className="col-md-12">
-                                        <div
-                                          className="quikc-links-card"
-                                          style={{ paddingLeft: "20px" }}
-                                        >
-                                          <div className="quick-links-inner h-scroll-s">
+                                        <div className="quikc-links-card padding-none margin-bottom-none box-shadow-none">
+                                          <div className="quick-links-inner h-scroll-s padding-bottom-none">
                                             <ul>
                                               <li
                                                 className={
                                                   filter === "Payments"
-                                                    ? "background-red"
-                                                    : ""
+                                                    ? "background-red quicklinks-padding"
+                                                    : "quicklinks-padding"
                                                 }
                                                 onClick={() =>
                                                   filterFunction("Payments")
@@ -468,8 +481,8 @@ function Customerdetails() {
                                               <li
                                                 className={
                                                   filter === "Wishes"
-                                                    ? "background-red"
-                                                    : ""
+                                                    ? "background-red quicklinks-padding"
+                                                    : "quicklinks-padding"
                                                 }
                                                 onClick={() =>
                                                   filterFunction("Wishes")
@@ -480,8 +493,8 @@ function Customerdetails() {
                                               <li
                                                 className={
                                                   filter === "Policy Status"
-                                                    ? "background-red"
-                                                    : ""
+                                                    ? "background-red quicklinks-padding"
+                                                    : "quicklinks-padding"
                                                 }
                                                 onClick={() =>
                                                   filterFunction(
@@ -1010,7 +1023,7 @@ function Customerdetails() {
                                                   </div> */}
                                                   <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
-                                                      <label>KYC Number</label>{" "}
+                                                      <label>CKYC Number</label>{" "}
                                                       <br />
                                                       1234 3445 3322
                                                     </p>
@@ -1101,19 +1114,19 @@ function Customerdetails() {
                                   <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                     <div className="row">
                                       <div className="col-lg-2">
-                                        <h3>Life Insured Name</h3>
+                                        <h3>Customer Name</h3>
                                       </div>
                                       <div className="col-lg-2">
                                         <h3>Plan Name</h3>
                                       </div>
                                       <div className="col-lg-2">
-                                        <h3>Premium</h3>
+                                        <h3>Amount</h3>
                                       </div>
                                       <div className="col-lg-2">
                                         <h3>Policy Status</h3>
                                       </div>
                                       <div className="col-lg-2">
-                                        <h3>Next Premium Due Date</h3>
+                                        <h3>Date</h3>
                                       </div>
                                     </div>
                                   </div>
@@ -1157,7 +1170,7 @@ function Customerdetails() {
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
                                           <button
                                             type="button"
-                                            className="btn btn-outline-s"
+                                            className="btn btn-outline-s width-93"
                                             data-toggle="collapse"
                                             data-target={`#collapseExample${index}`}
                                             aria-expanded="false"
@@ -1183,7 +1196,7 @@ function Customerdetails() {
                                             <div className="row">
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Number
+                                                  Policy ID
                                                   <br />
                                                   <span>123456798</span>
                                                 </p>
@@ -1196,7 +1209,7 @@ function Customerdetails() {
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Insurance Date
+                                                  Policy Inssuance Date
                                                   <br />
                                                   <span>28-dec-2020</span>
                                                 </p>
@@ -1310,23 +1323,23 @@ function Customerdetails() {
                                   <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                     <div className="row">
                                       <div className="col-lg-2">
-                                        <h3>Life Insured Name</h3>
+                                        <h3>Policy Owner Name</h3>
                                       </div>
                                       <div className="col-lg-2">
                                         <h3>Plan Name</h3>
                                       </div>
                                       <div className="col-lg-2">
-                                        <h3>Premium</h3>
+                                        <h3>Amount</h3>
                                       </div>
                                       <div className="col-lg-2">
                                         <h3>Policy Status</h3>
                                       </div>
                                       <div className="col-lg-2">
-                                        <h3>Next Premium Due Date</h3>
+                                        <h3>Date</h3>
                                       </div>
                                     </div>
                                   </div>
-                                  {[1, 2, 3].map((id, index) => (
+                                  {[1, 2, 3, 4, 5].map((id, index) => (
                                     <div
                                       className="policy-grid-row"
                                       key={index}
@@ -1366,7 +1379,7 @@ function Customerdetails() {
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
                                           <button
                                             type="button"
-                                            className="btn btn-outline-s"
+                                            className="btn btn-outline-s width-93"
                                             data-toggle="collapse"
                                             data-target={`#collapseExamplef${index}`}
                                             aria-expanded="false"
@@ -1392,7 +1405,7 @@ function Customerdetails() {
                                             <div className="row">
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Number
+                                                  Policy ID
                                                   <br />
                                                   <span>123456798</span>
                                                 </p>
@@ -1405,7 +1418,7 @@ function Customerdetails() {
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Insurance Date
+                                                  Policy Inssuance Date
                                                   <br />
                                                   <span>28-dec-2020</span>
                                                 </p>
@@ -1670,7 +1683,7 @@ function Customerdetails() {
                                     Send Details
                                   </button>
                                 </div> */}
-                                <div className="col-lg-6 text-left">
+                                <div className="col-lg-12 text-right">
                                   <button
                                     type="button"
                                     class="btn btn-outline-s width-153"
@@ -1719,7 +1732,7 @@ function Customerdetails() {
                                     Send Details
                                   </button>
                                 </div> */}
-                                <div className="col-lg-6 text-left">
+                                <div className="col-lg-12 text-right">
                                   <button
                                     type="button"
                                     class="btn btn-outline-s width-153"
@@ -1784,11 +1797,21 @@ function Customerdetails() {
                             id="exampleInputEmail1"
                             aria-describedby="policy"
                             placeholder="Policy Number"
+                            onChange={searchcontrol}
                           />
                         </div>
                       </div>
                       <div className="col-lg-3 col-md-4 col-12">
-                        <button className="btn btn-primary">Search</button>
+                        <button
+                          className={
+                            enableSearch
+                              ? "btn  btn-disabled-state"
+                              : "btn btn-primary "
+                          }
+                          disabled={enableSearch}
+                        >
+                          Search
+                        </button>
                       </div>
                     </div>
                     <div className="family-policy-details">
@@ -1827,8 +1850,16 @@ function Customerdetails() {
                               className="form-control "
                               id="exampleFormControlSelect1"
                             >
+                              <option>Father</option>
+                              <option>Mother</option>
                               <option>Brother</option>
                               <option>Sister</option>
+                              <option>SpouseBrother</option>
+                              <option>Son</option>
+                              <option>Daughter</option>
+                              <option>Grandson</option>
+                              <option>Granddaughter</option>
+                              <option>Relative</option>
                             </select>
                           </div>
                         </div>
@@ -2130,7 +2161,7 @@ function Customerdetails() {
                         >
                           Download Tax Certificate
                         </button>
-                        <button className="btn btn-primary">Share</button>{" "}
+                        <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -2181,9 +2212,9 @@ function Customerdetails() {
                       </div>
                     </div>
                     <span className="grey">
-                      Tax Certificates are available only for last 3 Financial
-                      Years. Please raise a query in CRM to get older Tax
-                      Certificates
+                      You can only download statements for last 3 Financial
+                      Years from portal. To download older statement, please
+                      raise a query in CRM.
                     </span>
                     <div className="row">
                       <div className="col-md-12 mt-2">
@@ -2425,7 +2456,7 @@ function Customerdetails() {
                         >
                           Download Policy Statement
                         </button>
-                        <button className="btn btn-primary">Share</button>{" "}
+                        <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -2686,7 +2717,7 @@ function Customerdetails() {
                         >
                           Download Sales Illustration
                         </button>
-                        <button className="btn btn-primary">Share</button>{" "}
+                        <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -2719,6 +2750,11 @@ function Customerdetails() {
                   <div className="modal-body moda-family-tag-body">
                     <h3>Policy Contract</h3>
                     <hr />
+                    <div className="grey">
+                      Policy contract are only available for Policies issued
+                      after Apr 2017. Please raise a query to get older
+                      documents.
+                    </div>
 
                     <div className="row">
                       <div className="col-md-12 mt-2">
@@ -2870,7 +2906,7 @@ function Customerdetails() {
                         >
                           Download Policy Contract
                         </button>
-                        <button className="btn btn-primary">Share</button>{" "}
+                        <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -3389,7 +3425,7 @@ function Customerdetails() {
                         >
                           Download Premium Due Certificate
                         </button>
-                        <button className="btn btn-primary">Share</button>{" "}
+                        <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
                     </div>
                   </div>
@@ -3411,42 +3447,43 @@ function Customerdetails() {
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Pre-approved Offer
+                  <h5 class="modal-title bold " id="exampleModalLabel">
+                    Pasa Offer
                   </h5>
                   <button
                     type="button"
-                    class="close"
+                    className="close modal-close-button"
                     data-dismiss="modal"
                     aria-label="Close"
                   >
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">×</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  Pre Approved Offers (PASA) are available for Akhil
-                  <br />
-                  • No Medicals <br />• No Income Proof
-                  <p>
-                    Term PASA available, You can offer any Term Product to ** up
-                    to a Sum Assured of **. Recommended Products for this
-                    Customer - ****
+                  <p className="font-18 color-black">
+                    Pre Approved Offers (PASA) are available for Akhil
+                    <br />
+                    • No Medicals <br />• No Income Proof
                   </p>
-                  <p className="dark-grey-text font-12">
+                  <p className="font-18 color-black">
+                    You can offer any Term Product to Akhil up to a Sum Assured
+                    of ₹ 2,22,222.Recommended Product: 'PRODUCT NAME'.
+                  </p>
+                  <p className="dark-grey-text font-15">
                     <b> Disclaimer:</b> Subject to Underwriting approvals based
                     on actual information provided in the application form.
                     <br />
                   </p>
                 </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
+                {/* <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div> */}
               </div>
             </div>
           </div>
@@ -3462,33 +3499,40 @@ function Customerdetails() {
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">
-                    Pre-approved Offer
+                    Pasa Offer
                   </h5>
                   <button
                     type="button"
-                    class="close"
+                    className="close modal-close-button"
                     data-dismiss="modal"
                     aria-label="Close"
                   >
-                    <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">×</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  Pre Approved Offers (PASA) are available for Akhil
-                  <br />
-                  • No Medicals <br />• No Income Proof
-                  <p>
-                    Non-Term PASA available, You can offer any Non-Term Product
-                    to Akhil up to a Sum Assured of ****. Recommended Products
-                    for this Customer - *****" If Term PASA available
+                  <p className="font-18 color-black">
+                    Pre Approved Offers (PASA) are available for Akhil
+                    <br />
+                    • No Medicals <br />• No Income Proof
                   </p>
-                  <p className="dark-grey-text font-12">
+
+                  <p className="font-18 color-black">
+                    You can offer any Non-Term Product to Akhil up to a Sum
+                    Assured of ₹ 2,22,222. Recommended Product: 'PRODUCT NAME'.
+                  </p>
+                  {/* <p>
+                      Term PASA available, You can offer any Term Product to **
+                      up to a Sum Assured of **. Recommended Products for this
+                      Customer - ****
+                    </p> */}
+                  <p className="dark-grey-text font-15">
                     <b> Disclaimer:</b> Subject to Underwriting approvals based
                     on actual information provided in the application form.
                     <br />
                   </p>
                 </div>
-                <div class="modal-footer">
+                {/* <div class="modal-footer">
                   <button
                     type="button"
                     class="btn btn-secondary"
@@ -3496,7 +3540,7 @@ function Customerdetails() {
                   >
                     Close
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

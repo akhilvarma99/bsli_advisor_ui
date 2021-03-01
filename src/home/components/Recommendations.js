@@ -57,14 +57,14 @@ function Recommendations() {
               <div className="row">
                 <div className="col-md-12">
                   <ul>
-                    <li>Dashboard</li>
+                    <li>Home</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />{" "}
                     </li>
-                    <li>Customer List</li>
+                    {/* <li>Customer List</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />{" "}
-                    </li>
+                    </li> */}
                     <li className="active-li">Recommendations</li>
                   </ul>
                 </div>
@@ -435,7 +435,7 @@ function Recommendations() {
                                     <p>₹ 2,22,222</p>
                                   </div>
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                    <p>₹ 0</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -488,7 +488,7 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                    <p>₹ 0</p>
                                   </div>
                                   <div className="col-lg-2 col-md-2">
                                     <p>₹ 2,22,222</p>
@@ -502,6 +502,8 @@ function Recommendations() {
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
+                                      data-toggle="modal"
+                                      data-target="#pasaKnowMore2"
                                     >
                                       Know More
                                     </button>
@@ -3067,41 +3069,37 @@ function Recommendations() {
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
+                    <h5 class="modal-title bold " id="exampleModalLabel">
                       Pasa Offer
                     </h5>
                     <button
                       type="button"
-                      class="close"
+                      className="close modal-close-button"
                       data-dismiss="modal"
                       aria-label="Close"
                     >
-                      <span aria-hidden="true">&times;</span>
+                      <span aria-hidden="true">×</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    Pre Approved Offers (PASA) are available for Akhil
-                    <br />
-                    • No Medicals <br />• No Income Proof
-                    <p>
-                      <p>&nbsp;</p>
-                      Non-Term PASA available, You can offer any Non-Term
-                      Product to Akhil up to a Sum Assured of ****. Recommended
-                      Products for this Customer - *****" If Term PASA available
+                    <p className="font-18 color-black">
+                      Pre Approved Offers (PASA) are available for Akhil
+                      <br />
+                      • No Medicals <br />• No Income Proof
                     </p>
-                    <p>
-                      Term PASA available, You can offer any Term Product to **
-                      up to a Sum Assured of **. Recommended Products for this
-                      Customer - ****
+                    <p className="font-18 color-black">
+                      Term PASA available, You can offer any Term Product to
+                      Akhil up to a Sum Assured of ₹ 2,22,222. Recommended
+                      Products for this Customer - 'PRODUCT NAME'
                     </p>
-                    <p className="dark-grey-text font-12">
+                    <p className="dark-grey-text font-15">
                       <b> Disclaimer:</b> Subject to Underwriting approvals
                       based on actual information provided in the application
                       form.
                       <br />
                     </p>
                   </div>
-                  <div class="modal-footer">
+                  {/* <div class="modal-footer">
                     <button
                       type="button"
                       class="btn btn-secondary"
@@ -3109,7 +3107,65 @@ function Recommendations() {
                     >
                       Close
                     </button>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="pasaKnowMore2"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Pasa Offer
+                    </h5>
+                    <button
+                      type="button"
+                      className="close modal-close-button"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
                   </div>
+                  <div class="modal-body">
+                    <p className="font-18 color-black">
+                      Pre Approved Offers (PASA) are available for Akhil
+                      <br />
+                      • No Medicals <br />• No Income Proof
+                    </p>
+
+                    <p className="font-18 color-black">
+                      Non-Term PASA available, You can offer any Non-Term
+                      Product to Akhil up to a Sum Assured of ₹ 2,22,222.
+                      Recommended Products for this Customer - 'PRODUCT NAME'.
+                    </p>
+                    {/* <p>
+                      Term PASA available, You can offer any Term Product to **
+                      up to a Sum Assured of **. Recommended Products for this
+                      Customer - ****
+                    </p> */}
+                    <p className="dark-grey-text font-15">
+                      <b> Disclaimer:</b> Subject to Underwriting approvals
+                      based on actual information provided in the application
+                      form.
+                      <br />
+                    </p>
+                  </div>
+                  {/* <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div> */}
                 </div>
               </div>
             </div>

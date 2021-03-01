@@ -80,11 +80,11 @@ function Policydetails() {
             <div className="row">
               <div className="col-md-12">
                 <ul>
-                  <li>Dashboard</li>
-                  <li>
+                  <li>Home</li>
+                  {/* <li>
                     <img src={breadcrumbsarrow} alt="breadcrumbsarrow" />
                   </li>
-                  <li>Customer List</li>
+                  <li>Customer List</li> */}
                   <li>
                     <img src={breadcrumbsarrow} alt="breadcrumbsarrow" />
                   </li>
@@ -1170,7 +1170,7 @@ function Policydetails() {
                                   <span>from Date</span>
                                   <div className="date-box">
                                     <input
-                                      type="email"
+                                      type="date"
                                       className="form-control data-search-box"
                                       id="search"
                                       aria-describedby="data-search"
@@ -1182,7 +1182,7 @@ function Policydetails() {
                                   <span>To Date</span>
                                   <div className="date-box">
                                     <input
-                                      type="email"
+                                      type="date"
                                       className="form-control data-search-box"
                                       id="search"
                                       aria-describedby="data-search"
@@ -1343,7 +1343,7 @@ function Policydetails() {
                           >
                             <div className="accordion-body">
                               <div className="row">
-                                <div className="col-lg-1">
+                                {/* <div className="col-lg-1">
                                   <span>from Date</span>
                                   <div className="date-box">
                                     <input
@@ -1366,9 +1366,17 @@ function Policydetails() {
                                       placeholder="dd/mm/yyyy"
                                     />
                                   </div>
+                                </div> */}
+                                <div className="col-lg-2 ">
+                                  <span>From Date </span>
+                                  <input className="height-10" type="date" />
+                                </div>
+                                <div className="col-lg-2 padding-none height-10">
+                                  <span> To Date</span>
+                                  <input className="height-10" type="date" />
                                 </div>
 
-                                <div className="col-lg-10 text-right">
+                                <div className="col-lg-8  text-right">
                                   <button className="btn btn-primary-s m-bottom-10">
                                     download transaction history
                                   </button>
@@ -1379,10 +1387,10 @@ function Policydetails() {
                                 <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                   <div className="row">
                                     <div className="col-lg-2">
-                                      <h3>Deposit Date</h3>
+                                      <h3>Transaction Date</h3>
                                     </div>
                                     <div className="col-lg-3">
-                                      <h3>Total Amount Due</h3>
+                                      <h3>Payment Type</h3>
                                     </div>
                                     <div className="col-lg-2">
                                       <h3>Total Amount Paid</h3>
@@ -1395,7 +1403,7 @@ function Policydetails() {
                                     </div>
                                   </div>
                                 </div>
-                                {[1, 2, 3].map((id, index) => (
+                                {[1, 2, 3, 4].map((id, index) => (
                                   <div className="policy-grid-row" key={index}>
                                     <div className="row">
                                       <div
@@ -1411,7 +1419,7 @@ function Policydetails() {
                                         <p className="color-b">DD/MM/YYYY</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                        <p className="color-b">1,00,000</p>
+                                        <p className="color-b">Credit Card</p>
                                       </div>
                                       <div className="col-lg-2 d-none d-lg-block d-sm-none">
                                         <p className="color-b">2,22,222</p>
@@ -2393,7 +2401,12 @@ function Policydetails() {
                     >
                       <div className="policy-statement-box">
                         <div className="row">
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          <div
+                            className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                            data-toggle="modal"
+                            data-target="#Tax-Certificate"
+                            style={{ cursor: "pointer" }}
+                          >
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2407,7 +2420,12 @@ function Policydetails() {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          <div
+                            className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                            style={{ cursor: "pointer" }}
+                            data-target="#policyAccountStatement"
+                            data-toggle="modal"
+                          >
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2424,7 +2442,12 @@ function Policydetails() {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          <div
+                            className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                            data-toggle="modal"
+                            data-target="#sales-illustration"
+                            style={{ cursor: "pointer" }}
+                          >
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2438,7 +2461,7 @@ function Policydetails() {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          {/* <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2454,8 +2477,13 @@ function Policydetails() {
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          </div> */}
+                          <div
+                            className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                            style={{ cursor: "pointer" }}
+                            data-toggle="modal"
+                            data-target="#policy-contract"
+                          >
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2472,7 +2500,7 @@ function Policydetails() {
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          {/* <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2485,8 +2513,13 @@ function Policydetails() {
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          </div> */}
+                          <div
+                            className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x"
+                            data-toggle="modal"
+                            data-target="#Premium-Due-Certificate"
+                            style={{ cursor: "pointer" }}
+                          >
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2498,12 +2531,12 @@ function Policydetails() {
                               </div>
                               <div className="row r2">
                                 <div className="col-lg-12 text-center">
-                                  <h3>Premium Due Certificate</h3>
+                                  <h3>Premium Due certificate</h3>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
+                          {/* <div className="col-lg-2 col-md-4 col-sm-6 col-6 pad-m-x">
                             <div className="state-box shadow-normal">
                               <div className="row r1">
                                 <div className="col-lg-12 text-center">
@@ -2519,7 +2552,7 @@ function Policydetails() {
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -2724,6 +2757,1183 @@ function Policydetails() {
                     >
                       OK
                     </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="modal fade"
+          id="Tax-Certificate"
+          data-backdrop="static"
+          data-keyboard="false"
+          tabIndex={-1}
+          aria-labelledby="forgot-password"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-width-family-tag">
+            <div className="modal-content">
+              <div className="modal-header brdr-none">
+                {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                <button
+                  type="button"
+                  className="close modal-close-button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div className="modal-body moda-family-tag-body">
+                <h3>Tax Certificate</h3>
+                <hr />
+                <div className="row">
+                  <div className="col-lg-4 col-md-5 col-12">
+                    <div className="form-group">
+                      <label htmlFor="exampleFormControlSelect1">
+                        Select Financial Year
+                      </label>
+                      <select
+                        className="form-control "
+                        id="exampleFormControlSelect1"
+                      >
+                        <option>2019-2020</option>
+                        <option>2020-2021</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <span className="grey">
+                  Tax Certificates are available only for last two Financial
+                  Years. Please raise a query in CRM to get older Tax
+                  Certificates
+                </span>
+                <div className="row">
+                  <div className="col-md-12 mt-2">
+                    <div className="data-card">
+                      <div className="data_card_body">
+                        <div className="row">
+                          <div className="col-md-12" />
+                          <div className="col-md-12 pad-0 ">
+                            <div
+                              className="tab-content m-pad-normal"
+                              id="myTabContent"
+                            >
+                              {/* Today Content Starts Here */}
+                              <div
+                                className="tab-pane fade show active"
+                                id="today"
+                                role="tabpanel"
+                                aria-labelledby="today"
+                              >
+                                <div className="g-container scroll-vertical">
+                                  {/* Block */}
+                                  <div className="g-header d-nones d-lg-block d-md-none d-sm-none d-xs-none ">
+                                    <div className="row">
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <label className="ml-4">
+                                          Policy No.
+                                        </label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Policy Owner Name</label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Plan Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="row modal-cta">
+                  <div className="col-lg-12 text-right">
+                    <button
+                      className="btn btn-primary"
+                      style={{ width: "200px" }}
+                    >
+                      Download Tax Certificate
+                    </button>
+                    <button className="btn btn-primary">Share</button>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="policyAccountStatement"
+          data-backdrop="static"
+          data-keyboard="false"
+          tabIndex={-1}
+          aria-labelledby="forgot-password"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-width-family-tag">
+            <div className="modal-content">
+              <div className="modal-header brdr-none">
+                {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                <button
+                  type="button"
+                  className="close modal-close-button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div className="modal-body moda-family-tag-body">
+                <h3>Policy Account Statement</h3>
+                <hr />
+                <div className="row">
+                  <div className="col-lg-4 col-md-5 col-12">
+                    <div className="form-group">
+                      <label htmlFor="exampleFormControlSelect1">
+                        Select Financial Year
+                      </label>
+                      <select
+                        className="form-control "
+                        id="exampleFormControlSelect1"
+                      >
+                        <option>2018-2019</option>
+                        <option>2019-2020</option>
+                        <option>2020-2021</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <span className="grey">
+                  Tax Certificates are available only for last 3 Financial
+                  Years. Please raise a query in CRM to get older Tax
+                  Certificates
+                </span>
+                <div className="row">
+                  <div className="col-md-12 mt-2">
+                    <div className="data-card">
+                      <div className="data_card_body">
+                        <div className="row">
+                          <div className="col-md-12" />
+                          <div className="col-md-12 pad-0 ">
+                            <div
+                              className="tab-content m-pad-normal"
+                              id="myTabContent"
+                            >
+                              {/* Today Content Starts Here */}
+                              <div
+                                className="tab-pane fade show active"
+                                id="today"
+                                role="tabpanel"
+                                aria-labelledby="today"
+                              >
+                                <div className="g-container scroll-vertical">
+                                  {/* Block */}
+                                  <div className="g-header d-nones d-lg-block d-md-none d-sm-none d-xs-none ">
+                                    <div className="row">
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <label className="ml-4">
+                                          Policy No.
+                                        </label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Policy Owner Name</label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Plan Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="row modal-cta">
+                  <div className="col-lg-12 text-right">
+                    <button
+                      className="btn btn-primary"
+                      style={{ width: "200px" }}
+                    >
+                      Download Policy Statement
+                    </button>
+                    <button className="btn btn-primary">Share</button>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="modal fade"
+          id="Premium-Due-Certificate"
+          data-backdrop="static"
+          data-keyboard="false"
+          tabIndex={-1}
+          aria-labelledby="forgot-password"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-width-family-tag">
+            <div className="modal-content">
+              <div className="modal-header brdr-none">
+                {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                <button
+                  type="button"
+                  className="close modal-close-button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div className="modal-body moda-family-tag-body">
+                <h3>Premium Due Certificate</h3>
+                <hr />
+
+                <div className="row">
+                  <div className="col-md-12 mt-2">
+                    <div className="data-card">
+                      <div className="data_card_body">
+                        <div className="row">
+                          <div className="col-md-12" />
+                          <div className="col-md-12 pad-0 ">
+                            <div
+                              className="tab-content m-pad-normal"
+                              id="myTabContent"
+                            >
+                              {/* Today Content Starts Here */}
+                              <div
+                                className="tab-pane fade show active"
+                                id="today"
+                                role="tabpanel"
+                                aria-labelledby="today"
+                              >
+                                <div className="g-container">
+                                  {/* Block */}
+                                  <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                    <div className="row">
+                                      <div className="col-md-4 text-left ">
+                                        <label className="ml-4">
+                                          Policy No.
+                                        </label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Policy Owner Name</label>
+                                      </div>
+                                      <div className="col-md-4">
+                                        <label>Plan Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="row modal-cta">
+                  <div className="col-lg-12 text-right">
+                    <button
+                      className="btn btn-primary"
+                      style={{ width: "248px" }}
+                    >
+                      Download Premium Due Certificate
+                    </button>
+                    <button className="btn btn-primary">Share</button>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="sales-illustration"
+          data-backdrop="static"
+          data-keyboard="false"
+          tabIndex={-1}
+          aria-labelledby="forgot-password"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-width-family-tag">
+            <div className="modal-content">
+              <div className="modal-header brdr-none">
+                {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                <button
+                  type="button"
+                  className="close modal-close-button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div className="modal-body moda-family-tag-body">
+                <h3>Sales Illustration</h3>
+                <hr />
+
+                {/* <div className="row">
+                      <div className="col-lg-4 col-md-5 col-12">
+                        <div className="form-group">
+                          <label htmlFor="exampleFormControlSelect1">
+                            Select Policy
+                          </label>
+                          <select
+                            className="form-control"
+                            id="exampleFormControlSelect1"
+                          >
+                            <option>Policy 01</option>
+                            <option>Policy 02</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div> */}
+                <div className="row">
+                  <div className="col-md-12 mt-2">
+                    <div className="data-card">
+                      <div className="data_card_body">
+                        <div className="row">
+                          <div className="col-md-12" />
+                          <div className="col-md-12 pad-0 ">
+                            <div
+                              className="tab-content m-pad-normal"
+                              id="myTabContent"
+                            >
+                              {/* Today Content Starts Here */}
+                              <div
+                                className="tab-pane fade show active"
+                                id="today"
+                                role="tabpanel"
+                                aria-labelledby="today"
+                              >
+                                <div className="g-container">
+                                  {/* Block */}
+                                  <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                    <div className="row">
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <label className="ml-4">
+                                          Policy No.
+                                        </label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Policy Owner Name</label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Plan Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="row modal-cta">
+                  <div className="col-lg-12 text-right">
+                    <button
+                      className="btn btn-primary"
+                      style={{ width: "300px" }}
+                    >
+                      Download Sales Illustration
+                    </button>
+                    <button className="btn btn-primary">Share</button>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="modal fade"
+          id="policy-contract"
+          data-backdrop="static"
+          data-keyboard="false"
+          tabIndex={-1}
+          aria-labelledby="forgot-password"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-width-family-tag">
+            <div className="modal-content">
+              <div className="modal-header brdr-none">
+                {/* <h5 class="modal-title  bold" id="staticBackdropLabel">Forgot Password</h5> */}
+                <button
+                  type="button"
+                  className="close modal-close-button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div className="modal-body moda-family-tag-body">
+                <h3>Policy Contract</h3>
+                <hr />
+
+                <div className="row">
+                  <div className="col-md-12 mt-2">
+                    <div className="data-card">
+                      <div className="data_card_body">
+                        <div className="row">
+                          <div className="col-md-12" />
+                          <div className="col-md-12 pad-0 ">
+                            <div
+                              className="tab-content m-pad-normal"
+                              id="myTabContent"
+                            >
+                              {/* Today Content Starts Here */}
+                              <div
+                                className="tab-pane fade show active"
+                                id="today"
+                                role="tabpanel"
+                                aria-labelledby="today"
+                              >
+                                <div className="g-container">
+                                  {/* Block */}
+                                  <div className="g-header d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                    <div className="row">
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
+                                        <label className="ml-4">
+                                          Policy No.
+                                        </label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Policy Owner Name</label>
+                                      </div>
+                                      <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
+                                        <label>Plan Name</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                  {/* Block */}
+
+                                  <div className="g-row">
+                                    <div className="row">
+                                      <div className="col-lg-4 col-md-4 text-left ">
+                                        <div className="pl-3">
+                                          <input
+                                            className="form-check-input "
+                                            type="radio"
+                                            name="retentionRadio"
+                                            value="Mature"
+                                            id="customCheckBox5"
+                                          />
+
+                                          <div
+                                            className="form-check-label ml-1 "
+                                            htmlFor="customCheckBox5"
+                                          >
+                                            12345678
+                                          </div>
+                                        </div>
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                      <div className="col-lg-4 col-md-4">
+                                        Sangeetha
+                                      </div>
+                                      <div className="col-lg-4 col-md-4">
+                                        Plan Name goes here
+                                      </div>
+                                      {/* Hidden sm xs */}
+                                    </div>
+                                  </div>
+                                  {/* Block */}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="row modal-cta">
+                  <div className="col-lg-12 text-right">
+                    <button
+                      className="btn btn-primary"
+                      style={{ width: "300px" }}
+                    >
+                      Download Policy Contract
+                    </button>
+                    <button className="btn btn-primary">Share</button>{" "}
                   </div>
                 </div>
               </div>

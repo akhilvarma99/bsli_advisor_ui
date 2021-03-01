@@ -19,14 +19,14 @@ function Renewalpaymentdue() {
             <div className="row">
               <div className="col-md-12">
                 <ul>
-                  <li>Dashboard</li>
+                  <li>Home</li>
                   <li>
                     <img src={breadcrumbs} alt="breadcrumbs" />
                   </li>
-                  <li className>Customer List</li>{" "}
+                  {/* <li className>Customer List</li>{" "}
                   <li>
                     <img src={breadcrumbs} alt="breadcrumbs" />
-                  </li>
+                  </li> */}
                   <li className="active-li">Renewal Payment Due</li>
                 </ul>
               </div>
@@ -278,7 +278,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -335,7 +335,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -392,7 +392,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -449,7 +449,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -506,7 +506,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -563,7 +563,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -620,7 +620,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -675,7 +675,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -730,7 +730,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -785,7 +785,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -889,7 +889,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -946,7 +946,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1003,7 +1003,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1060,7 +1060,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1117,7 +1117,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1174,7 +1174,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1231,7 +1231,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1286,7 +1286,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1341,7 +1341,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1396,7 +1396,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1500,7 +1500,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1557,7 +1557,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1614,7 +1614,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1671,7 +1671,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1728,7 +1728,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1785,7 +1785,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1842,7 +1842,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1897,7 +1897,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -1952,7 +1952,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 
@@ -2007,7 +2007,7 @@ function Renewalpaymentdue() {
                                 <div className="col-lg-4 col-md-4">
                                   <p>
                                     129129229 &nbsp;|&nbsp; 28-dec-2020
-                                    &nbsp;|&nbsp; 1,50,000.00
+                                    &nbsp;|&nbsp; ₹ 1,00,000
                                   </p>
                                 </div>
 

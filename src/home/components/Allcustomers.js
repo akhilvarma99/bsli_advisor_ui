@@ -31,13 +31,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Allcustomers() {
-  const [policystatus, setPolicystatus] = useState("active");
+  const [policystatus, setPolicystatus] = useState("default");
   const [tabs, settabs] = useState("all");
   const classes = useStyles();
 
   const today = new Date();
 
   const datelist = {
+    default: [
+      "Premium due date",
+      "Issuance date",
+      "Paid Up",
+      "Maturity date",
+      "Surrender date",
+      "Terminated date",
+    ],
     active: ["Premium due date", "Issuance date", "Paid Up", "Maturity date"],
     lapsed: ["Issuance date", "Paid Up date", "Lapse date", "maturity date"],
     matured: ["Issuance date", "Paid up date", "Maturity date"],
@@ -46,7 +54,11 @@ function Allcustomers() {
     paidup: ["Issuance date", "Maturity date"],
   };
   const dropdownlist = (policystatus) => {
-    if (policystatus === "active") {
+    if (policystatus === "default") {
+      return datelist.default.map((value) => (
+        <option value={value}>{value}</option>
+      ));
+    } else if (policystatus === "active") {
       return datelist.active.map((value) => (
         <option value={value}>{value}</option>
       ));
@@ -78,6 +90,9 @@ function Allcustomers() {
 
     for (let i = 0; i < ele.length; i++) {
       if (ele[i].checked) {
+        if (ele[i].value === "default") {
+          console.log("default");
+        }
         if (ele[i].value === "active") {
           console.log("active");
           setPolicystatus("active");
@@ -116,14 +131,15 @@ function Allcustomers() {
               <div className="row">
                 <div className="col-md-12">
                   <ul>
-                    <li>Dashboard</li>
+                    <li>Home</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
                     </li>
-                    <li>Customer List</li>
+
+                    {/* <li>Customer List</li>
                     <li>
                       <img src={breadcrumbs} alt="breadcrumbs" />
-                    </li>
+                    </li> */}
                     <li className="active-li">All Customers</li>
                   </ul>
                 </div>
@@ -706,7 +722,7 @@ function Allcustomers() {
                                   className="form-control data-search-box"
                                   id="search"
                                   aria-describedby="data-search"
-                                  placeholder="Search by Customer Name, Policy No, mobile no."
+                                  placeholder="Search by customer name, policy no, mobile no."
                                 />
                                 <button
                                   type="button"
