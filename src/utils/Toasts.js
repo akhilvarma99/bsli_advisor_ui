@@ -14,7 +14,7 @@ export default function Toasts(props) {
       <strong class="messageText">{props.message}</strong>
       <button
         type="button"
-        className="ml-2 mb-1 close"
+        className="ml-2 mb-1 custom_close close"
         data-dismiss="toast"
         aria-label="Close"
       >

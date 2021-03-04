@@ -114,7 +114,7 @@ function Recommendations() {
                       <div className="row">
                         {/* <div className="col-lg-12"></div> */}
                         <div className="col-lg-12 filter_sub_check_box_row">
-                          <h3>Type</h3>
+                          <h3>Policy Status</h3>
 
                           <div className="form-check">
                             <input
@@ -128,7 +128,7 @@ function Recommendations() {
                               className="form-check-label"
                               htmlFor="flexRadioDefault1"
                             >
-                              Matured
+                              Surrendered
                             </label>
                           </div>
                           <div className="form-check">
@@ -143,22 +143,7 @@ function Recommendations() {
                               className="form-check-label"
                               htmlFor="flexRadioDefault1"
                             >
-                              Paid-Up
-                            </label>
-                          </div>
-                          <div className="form-check">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="retentionRadio"
-                              value="STD"
-                              id="flexRadioDefault1"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="flexRadioDefault1"
-                            >
-                              Surrendered
+                              Matured
                             </label>
                           </div>
                           <div className="form-check">
@@ -174,6 +159,21 @@ function Recommendations() {
                               htmlFor="flexRadioDefault1"
                             >
                               Terminated
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="retentionRadio"
+                              value="STD"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Paid Up
                             </label>
                           </div>
                           <div className="form-check">
@@ -370,13 +370,13 @@ function Recommendations() {
                                 <div className="row">
                                   <div className="col-md-3">
                                     <label>
-                                      name
+                                      Customer Name
                                       <img src={sort} alt="sort" />
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>
-                                      Contact
+                                      Mobile Number
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
@@ -558,6 +558,8 @@ function Recommendations() {
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
+                                      data-toggle="modal"
+                                      data-target="#pasaKnowMore3"
                                     >
                                       Know More
                                     </button>
@@ -701,13 +703,13 @@ function Recommendations() {
                                 <div className="row">
                                   <div className="col-md-3">
                                     <label>
-                                      name
+                                      Customer Name
                                       <img src={sort} alt="sort" />
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>
-                                      Contact
+                                      Mobile Number
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
@@ -1070,13 +1072,13 @@ function Recommendations() {
                                 <div className="row">
                                   <div className="col-md-3">
                                     <label>
-                                      name
+                                      Customer Name
                                       <img src={sort} alt="sort" />
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none">
                                     <label>
-                                      Contact
+                                      Mobile Number
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
@@ -1445,13 +1447,13 @@ function Recommendations() {
                                 <div className="row">
                                   <div className="col-md-3">
                                     <label>
-                                      name
+                                      Customer Name
                                       <img src={sort} alt="sort" />
                                     </label>
                                   </div>
                                   <div className="col-md-2 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <label>
-                                      Contact
+                                      Mobile Number
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
@@ -1730,13 +1732,13 @@ function Recommendations() {
                                 <div className="row">
                                   <div className="col-md-3">
                                     <label>
-                                      name
+                                      Customer Name
                                       <img src={sort} alt="sort" />
                                     </label>
                                   </div>
                                   <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <label>
-                                      Contact
+                                      Mobile Number
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
@@ -2242,13 +2244,13 @@ function Recommendations() {
                                 <div className="row">
                                   <div className="col-md-3">
                                     <label>
-                                      name
+                                      Customer Name
                                       <img src={sort} alt="sort" />
                                     </label>
                                   </div>
                                   <div className="col-md-1 d-none d-lg-block d-md-none d-sm-none d-xs-none pad-0">
                                     <label>
-                                      Contact
+                                      Mobile Number
                                       {/* <img src={sort} alt="sort" /> */}
                                     </label>
                                   </div>
@@ -3088,9 +3090,9 @@ function Recommendations() {
                       • No Medicals <br />• No Income Proof
                     </p>
                     <p className="font-18 color-black">
-                      Term PASA available, You can offer any Term Product to
-                      Akhil up to a Sum Assured of ₹ 2,22,222. Recommended
-                      Products for this Customer - 'PRODUCT NAME'
+                      You can offer any Term Product to Akhil up to a Sum
+                      Assured of ₹ 2,22,222. Recommended Products for this
+                      Customer - 'Product Name'
                     </p>
                     <p className="dark-grey-text font-15">
                       <b> Disclaimer:</b> Subject to Underwriting approvals
@@ -3111,6 +3113,7 @@ function Recommendations() {
                 </div>
               </div>
             </div>
+
             <div
               class="modal fade"
               id="pasaKnowMore2"
@@ -3141,9 +3144,9 @@ function Recommendations() {
                     </p>
 
                     <p className="font-18 color-black">
-                      Non-Term PASA available, You can offer any Non-Term
-                      Product to Akhil up to a Sum Assured of ₹ 2,22,222.
-                      Recommended Products for this Customer - 'PRODUCT NAME'.
+                      You can offer any Non-Term Product to Akhil up to a Sum
+                      Assured of ₹ 2,22,222. Recommended Products for this
+                      Customer - 'Product Name'.
                     </p>
                     {/* <p>
                       Term PASA available, You can offer any Term Product to **
@@ -3158,14 +3161,78 @@ function Recommendations() {
                     </p>
                   </div>
                   {/* <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div> */}
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="modal fade"
+              id="pasaKnowMore3"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Pasa Offer
+                    </h5>
                     <button
                       type="button"
-                      class="btn btn-secondary"
+                      className="close modal-close-button"
                       data-dismiss="modal"
+                      aria-label="Close"
                     >
-                      Close
+                      <span aria-hidden="true">×</span>
                     </button>
-                  </div> */}
+                  </div>
+                  <div class="modal-body">
+                    <p className="font-18 color-black">
+                      Pre Approved Offers (PASA) are available for Akhil
+                      <br />
+                      • No Medicals <br />• No Income Proof
+                    </p>
+
+                    <p className="font-18 color-black">
+                      You can offer any Term Product to Akhil up to a Sum
+                      Assured of ₹ 2,22,222. Recommended Products for this
+                      Customer - 'Product Name'
+                    </p>
+                    <p className="font-18 color-black">
+                      You can offer any Non-Term Product to Akhil up to a Sum
+                      Assured of ₹ 2,22,222. Recommended Products for this
+                      Customer - 'Product Name'.
+                    </p>
+                    {/* <p>
+                      Term PASA available, You can offer any Term Product to **
+                      up to a Sum Assured of **. Recommended Products for this
+                      Customer - ****
+                    </p> */}
+                    <p className="dark-grey-text font-15">
+                      <b> Disclaimer:</b> Subject to Underwriting approvals
+                      based on actual information provided in the application
+                      form.
+                      <br />
+                    </p>
+                  </div>
+                  {/* <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div> */}
                 </div>
               </div>
             </div>
@@ -3201,37 +3268,7 @@ function Recommendations() {
                       <div className="row">
                         <div className="col-lg-12"></div>
                         <div className="col-lg-12 filter_sub_check_box_row m_filter">
-                          <h3>Premium Due Date</h3>
-                          <div className="form-check">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="premiumduedateRadio"
-                              value="active"
-                              id="flexRadioDefault1"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="flexRadioDefault1"
-                            >
-                              Matured
-                            </label>
-                          </div>
-                          <div className="form-check">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name="premiumduedateRadio"
-                              value="active"
-                              id="flexRadioDefault1"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="flexRadioDefault1"
-                            >
-                              Paid-up
-                            </label>
-                          </div>
+                          <h3>Policy Status</h3>
                           <div className="form-check">
                             <input
                               className="form-check-input"
@@ -3259,7 +3296,37 @@ function Recommendations() {
                               className="form-check-label"
                               htmlFor="flexRadioDefault1"
                             >
+                              Matured
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
                               Terminated
+                            </label>
+                          </div>
+                          <div className="form-check">
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name="premiumduedateRadio"
+                              value="active"
+                              id="flexRadioDefault1"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="flexRadioDefault1"
+                            >
+                              Paid-up
                             </label>
                           </div>
                           <div className="form-check">

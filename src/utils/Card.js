@@ -33,7 +33,7 @@ export default function Card(props) {
           <p className="cardStatus mt-0">{props.cardInfo.status}</p>
           <div className="row">
             <div className="col-lg-12 text-right">
-              {props.cardInfo.buttonText == "Send Payment Link" ? (
+              {/* {props.cardInfo.buttonText == "Send Payment Link" ? (
                 <Dropdown
                   title={props.cardInfo.buttonText}
                   items={[
@@ -51,6 +51,22 @@ export default function Card(props) {
                     },
                   ]}
                 />
+              ) : (
+                <button className="btn btn-outline-s">
+                  {props.cardInfo.buttonText}
+                </button>
+              )} */}
+              {props.cardInfo.buttonText == "Send Payment Link" ? (
+                <button
+                  className="btn btn-outline-s"
+                  onClick={() =>
+                    props.openToast(
+                      "Payment link has been sent to mobile number and email id "
+                    )
+                  }
+                >
+                  {props.cardInfo.buttonText}
+                </button>
               ) : (
                 <button className="btn btn-outline-s">
                   {props.cardInfo.buttonText}

@@ -28,9 +28,8 @@
   position: fixed;
   top: 36px;
   right: 50px;
+  width: 600px;
   z-index: 99;
-  width: 291px;
-  height: 50px;
   padding: 9px 20px;
   display: none;
   .messageText {
@@ -385,8 +384,10 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   box-shadow: 0 0 0px 0 #cdcece !important;
 }
 
-.margin-bottom-none {
-  margin-bottom: 0px !important ;
+@media only screen and (min-width: 600px) {
+  .margin-bottom-none {
+    margin-bottom: 0px !important ;
+  }
 }
 
 .margin-right-zero {
@@ -467,4 +468,23 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .width-93 {
   width: 93px !important;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.custom_close {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+.w-92 {
+  width: 92px !important;
 }

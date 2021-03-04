@@ -21,10 +21,10 @@ function Overdue() {
     console.log(accordionClass);
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
-      document.getElementById(buttonId).innerHTML = "Show More";
+      document.getElementById(buttonId).innerHTML = "View More";
       document.getElementById(buttonId).classList.remove("checked-state");
     } else {
-      document.getElementById(buttonId).innerHTML = "Show Less";
+      document.getElementById(buttonId).innerHTML = "View Less";
       document.getElementById(buttonId).classList.add("checked-state");
     }
   }
@@ -131,32 +131,29 @@ function Overdue() {
                         <br />
 
                         <h3>Payment Mode</h3>
-                        <div className="form-check">
+
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
-                            className="form-check-input"
-                            type="radio"
-                            name="paymentRadio"
-                            value="active"
-                            id="flexRadioDefault1"
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox1"
                           />
                           <label
-                            className="form-check-label"
-                            htmlFor="flexRadioDefault1"
+                            class="custom-control-label"
+                            for="customCheckBox1"
                           >
                             Manual Payment
                           </label>
                         </div>
-                        <div className="form-check">
+                        <div class="custom-control custom-checkbox check-box-row">
                           <input
-                            className="form-check-input"
-                            type="radio"
-                            name="paymentRadio"
-                            value="lapsed"
-                            id="flexRadioDefault1"
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="customCheckBox2"
                           />
                           <label
-                            className="form-check-label"
-                            htmlFor="flexRadioDefault1"
+                            class="custom-control-label"
+                            for="customCheckBox2"
                           >
                             Auto debit
                           </label>
@@ -384,7 +381,7 @@ function Overdue() {
                                               )
                                             }
                                           >
-                                            Show More
+                                            View More
                                           </button>
                                         </div>
                                       </div>
@@ -534,7 +531,7 @@ function Overdue() {
                                             id="buttonel"
                                             aria-controls="collapseExample"
                                           >
-                                            Show More
+                                            View More
                                           </button>
                                         </div>
                                       </div>
@@ -602,7 +599,7 @@ function Overdue() {
                                             id="buttonel"
                                             aria-controls="collapseExample"
                                           >
-                                            Show More
+                                            View More
                                           </button>
                                         </div>
                                       </div>
@@ -670,7 +667,7 @@ function Overdue() {
                                             id="buttonel"
                                             aria-controls="collapseExample"
                                           >
-                                            Show More
+                                            View More
                                           </button>
                                         </div>
                                       </div>
@@ -738,7 +735,7 @@ function Overdue() {
                                             id="buttonel"
                                             aria-controls="collapseExample"
                                           >
-                                            Show More
+                                            View More
                                           </button>
                                         </div>
                                       </div>

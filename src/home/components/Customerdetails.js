@@ -57,10 +57,10 @@ function Customerdetails() {
     console.log(accordionClass);
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
-      document.getElementById(buttonId).innerHTML = "Show More";
+      document.getElementById(buttonId).innerHTML = "View More";
       document.getElementById(buttonId).classList.remove("checked-state");
     } else {
-      document.getElementById(buttonId).innerHTML = "Show Less";
+      document.getElementById(buttonId).innerHTML = "View Less";
       document.getElementById(buttonId).classList.add("checked-state");
     }
   }
@@ -122,6 +122,7 @@ function Customerdetails() {
 
     {
       id: "Policy Status",
+      headerTitle: "Success",
       cardTitle: "Payouts Released",
       icon: payoutIcon,
       bodyTitle: "Policy ID",
@@ -154,7 +155,7 @@ function Customerdetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27-dec-2020 | ₹ 1,00,000",
+      body: "27-dec-2020",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -962,20 +963,20 @@ function Customerdetails() {
                                                 <div className="row">
                                                   <div className="col-lg-6 col-md-3 value">
                                                     <p>
-                                                      <label>
-                                                        Policy Owner DOB
-                                                      </label>{" "}
+                                                      <label>CKYC No</label>{" "}
                                                       <br />
-                                                      20-dec-2020
+                                                      1234 3445 3322
                                                     </p>
                                                   </div>
                                                   <div className="col-lg-6 col-md-3 value">
                                                     <p>
                                                       <label>PAN Number</label>{" "}
                                                       <br />
-                                                      AKNBH1546E &nbsp;
-                                                      <button className="btn btn-primary-s">
-                                                        UPDATE
+                                                      <span>
+                                                        AKNBH1546E &nbsp;
+                                                      </span>
+                                                      <button className="btn btn-primary-s mt-0">
+                                                        Edit
                                                       </button>
                                                     </p>
                                                   </div>
@@ -1021,13 +1022,13 @@ function Customerdetails() {
                                                       </button>
                                                     </p>
                                                   </div> */}
-                                                  <div className="col-lg-6 col-md-12 value mrgn-0">
+                                                  {/* <div className="col-lg-6 col-md-12 value mrgn-0">
                                                     <p>
-                                                      <label>CKYC Number</label>{" "}
+                                                      <label>CKYC No</label>{" "}
                                                       <br />
                                                       1234 3445 3322
                                                     </p>
-                                                  </div>
+                                                  </div> */}
                                                 </div>
                                               </div>
                                             </div>
@@ -1152,7 +1153,7 @@ function Customerdetails() {
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2">
-                                          <p className="color-b">
+                                          <p className="color-b text-overflow-ellipsis">
                                             Sample text for plan name
                                           </p>
                                         </div>
@@ -1183,7 +1184,7 @@ function Customerdetails() {
                                               )
                                             }
                                           >
-                                            Show More
+                                            View More
                                           </button>
                                         </div>
                                       </div>
@@ -1204,12 +1205,12 @@ function Customerdetails() {
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
                                                   Product Type <br />
-                                                  <span>*****</span>
+                                                  <span>Term</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Inssuance Date
+                                                  Policy Issuance Date
                                                   <br />
                                                   <span>28-dec-2020</span>
                                                 </p>
@@ -1218,7 +1219,7 @@ function Customerdetails() {
                                                 <p>
                                                   Premium Payment Term
                                                   <br />
-                                                  <span>*****</span>
+                                                  <span>5</span>
                                                 </p>
                                               </div>
                                             </div>
@@ -1234,7 +1235,7 @@ function Customerdetails() {
                                                 <p>
                                                   Auto Pay Status
                                                   <br />
-                                                  <span>****</span>
+                                                  <span>No</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
@@ -1361,7 +1362,7 @@ function Customerdetails() {
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2">
-                                          <p className="color-b">
+                                          <p className="color-b text-overflow-ellipsis">
                                             Sample text for plan name
                                           </p>
                                         </div>
@@ -1392,7 +1393,7 @@ function Customerdetails() {
                                               )
                                             }
                                           >
-                                            Show More
+                                            View More
                                           </button>
                                         </div>
                                       </div>
@@ -1412,13 +1413,29 @@ function Customerdetails() {
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Product Type <br />
-                                                  <span>*****</span>
+                                                  Customer Name
+                                                  <br />
+                                                  <span>John</span>
                                                 </p>
                                               </div>
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Policy Inssuance Date
+                                                  Relation
+                                                  <br />
+                                                  <span>Father</span>
+                                                </p>
+                                              </div>
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Product Type <br />
+                                                  <span>Term</span>
+                                                </p>
+                                              </div>
+                                            </div>
+                                            <div className="row">
+                                              <div className="col-lg-3 col-md-3 col-sm-12">
+                                                <p>
+                                                  Policy Issuance Date
                                                   <br />
                                                   <span>28-dec-2020</span>
                                                 </p>
@@ -1427,11 +1444,9 @@ function Customerdetails() {
                                                 <p>
                                                   Premium Payment Term
                                                   <br />
-                                                  <span>*****</span>
+                                                  <span>5</span>
                                                 </p>
                                               </div>
-                                            </div>
-                                            <div className="row">
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
                                                   Policy Term
@@ -1443,30 +1458,16 @@ function Customerdetails() {
                                                 <p>
                                                   Auto Pay Status
                                                   <br />
-                                                  <span>****</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Total Sum Assured
-                                                  <br />
-                                                  <span>₹ 28,22,222</span>
-                                                </p>
-                                              </div>
-                                              <div className="col-lg-3 col-md-3 col-sm-12">
-                                                <p>
-                                                  Customer Name
-                                                  <br />
-                                                  <span>John</span>
+                                                  <span>No</span>
                                                 </p>
                                               </div>
                                             </div>
                                             <div className="row">
                                               <div className="col-lg-3 col-md-3 col-sm-12">
                                                 <p>
-                                                  Relation
+                                                  Total Sum Assured
                                                   <br />
-                                                  <span>Father</span>
+                                                  <span>₹ 28,22,222</span>
                                                 </p>
                                               </div>
                                             </div>
@@ -1490,7 +1491,12 @@ function Customerdetails() {
                                                       Go to Policy Details
                                                     </li>
                                                   </NavLink>
-                                                  <li>Remove Family Tag</li>
+                                                  <li
+                                                    data-toggle="modal"
+                                                    data-target="#removefamilytag"
+                                                  >
+                                                    Remove Family Tag
+                                                  </li>
                                                 </ul>
                                               </div>
                                             </div>
@@ -1674,7 +1680,9 @@ function Customerdetails() {
                                   style={{ paddingLeft: "0px" }}
                                 >
                                   <p className="m-top-12">&#8377; 2,22,222</p>
-                                  <span className="grey">Product Name</span>
+                                  <span className="grey">
+                                    Recommended Products: 'Product Name'
+                                  </span>
                                 </div>
                               </div>
                               <div className="row">
@@ -1690,7 +1698,7 @@ function Customerdetails() {
                                     data-toggle="modal"
                                     data-target="#pasaKnowMore"
                                   >
-                                    Know more
+                                    Know More
                                   </button>
                                 </div>
                               </div>
@@ -1723,7 +1731,9 @@ function Customerdetails() {
                                   style={{ paddingLeft: "0px" }}
                                 >
                                   <p className="m-top-12">&#8377; 2,22,222</p>
-                                  <span className="grey">Product Name</span>
+                                  <span className="grey">
+                                    Recommended Products: 'Product Name'
+                                  </span>
                                 </div>
                               </div>
                               <div className="row">
@@ -1739,7 +1749,7 @@ function Customerdetails() {
                                     data-toggle="modal"
                                     data-target="#pasaKnowMore2"
                                   >
-                                    Know more
+                                    Know More
                                   </button>
                                 </div>
                               </div>
@@ -1818,7 +1828,7 @@ function Customerdetails() {
                       <div className="row">
                         <div className="col-lg-3">
                           <p>
-                            Policy No. <br />
+                            Policy ID <br />
                             <label>123456789</label>
                           </p>
                         </div>
@@ -1852,9 +1862,9 @@ function Customerdetails() {
                             >
                               <option>Father</option>
                               <option>Mother</option>
+                              <option selected>Spouse</option>
                               <option>Brother</option>
                               <option>Sister</option>
-                              <option>SpouseBrother</option>
                               <option>Son</option>
                               <option>Daughter</option>
                               <option>Grandson</option>
@@ -1868,7 +1878,17 @@ function Customerdetails() {
                     <div className="row modal-cta">
                       <div className="col-lg-12 text-right">
                         <button className="btn btn-outline-s">Cancel</button>{" "}
-                        <button className="btn btn-primary">Add</button>
+                        <button
+                          className="btn btn-primary"
+                          data-dismiss="modal"
+                          onClick={() =>
+                            openToast(
+                              "Policy successfully added to the list of policies for Vijay Singha"
+                            )
+                          }
+                        >
+                          Add
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1945,7 +1965,7 @@ function Customerdetails() {
                                         <div className="row">
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                             <label className="ml-4">
-                                              Policy No.
+                                              Policy ID
                                             </label>
                                           </div>
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -2112,35 +2132,14 @@ function Customerdetails() {
                                           {/* Hidden sm xs */}
                                         </div>
                                       </div>
-                                      <div className="g-row">
-                                        <div className="row">
-                                          <div className="col-lg-4 col-md-4 text-left ">
-                                            <div className="pl-3">
-                                              <input
-                                                className="form-check-input "
-                                                type="radio"
-                                                name="retentionRadio"
-                                                value="Mature"
-                                                id="customCheckBox5"
-                                              />
 
-                                              <div
-                                                className="form-check-label ml-1 "
-                                                htmlFor="customCheckBox5"
-                                              >
-                                                12345678
-                                              </div>
-                                            </div>
-                                          </div>
-                                          {/* Hidden sm xs */}
-                                          <div className="col-lg-4 col-md-4">
-                                            Sangeetha
-                                          </div>
-                                          <div className="col-lg-4 col-md-4">
-                                            Plan Name goes here
-                                          </div>
-                                          {/* Hidden sm xs */}
-                                        </div>
+                                      <div className="g-footer text-center">
+                                        <button
+                                          type="button"
+                                          className="btn btn-primary w-92"
+                                        >
+                                          See More
+                                        </button>
                                       </div>
                                       {/* Block */}
                                     </div>
@@ -2155,13 +2154,22 @@ function Customerdetails() {
                     <div className="row modal-cta">
                       <div className="col-lg-12 text-right">
                         <button
-                          onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "200px" }}
+                          data-dismiss="modal"
                         >
-                          Download Tax Certificate
+                          Download
                         </button>
-                        <button className="btn btn-outline-s">Share</button>{" "}
+                        <button
+                          onClick={() => {
+                            openToast(
+                              "Tax Certificate has been successfully sent to xxx mobile number and xxx email ID"
+                            );
+                          }}
+                          className="btn btn-outline-s"
+                          data-dismiss="modal"
+                        >
+                          Share
+                        </button>{" "}
                       </div>
                     </div>
                   </div>
@@ -2240,7 +2248,7 @@ function Customerdetails() {
                                         <div className="row">
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                             <label className="ml-4">
-                                              Policy No.
+                                              Policy ID
                                             </label>
                                           </div>
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -2452,9 +2460,8 @@ function Customerdetails() {
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "200px" }}
                         >
-                          Download Policy Statement
+                          Download
                         </button>
                         <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
@@ -2530,7 +2537,7 @@ function Customerdetails() {
                                         <div className="row">
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                             <label className="ml-4">
-                                              Policy No.
+                                              Policy ID
                                             </label>
                                           </div>
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -2713,9 +2720,8 @@ function Customerdetails() {
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "300px" }}
                         >
-                          Download Sales Illustration
+                          Download
                         </button>
                         <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
@@ -2780,7 +2786,7 @@ function Customerdetails() {
                                         <div className="row">
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                             <label className="ml-4">
-                                              Policy No.
+                                              Policy ID
                                             </label>
                                           </div>
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -2902,9 +2908,8 @@ function Customerdetails() {
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "300px" }}
                         >
-                          Download Policy Contract
+                          Download
                         </button>
                         <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
@@ -2964,7 +2969,7 @@ function Customerdetails() {
                                         <div className="row">
                                           <div className="col-md-4 text-left ">
                                             <label className="ml-4">
-                                              Policy No.
+                                              Policy ID
                                             </label>
                                           </div>
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -3087,9 +3092,8 @@ function Customerdetails() {
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "250px" }}
                         >
-                          Download TDS Certificate
+                          Download
                         </button>
                       </div>
                     </div>
@@ -3148,7 +3152,7 @@ function Customerdetails() {
                                         <div className="row">
                                           <div className="col-md-4 text-left ">
                                             <label className="ml-4">
-                                              Policy No.
+                                              Policy ID
                                             </label>
                                           </div>
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -3271,9 +3275,8 @@ function Customerdetails() {
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "248px" }}
                         >
-                          Download Payment Acknowledgement
+                          Download
                         </button>
                       </div>
                     </div>
@@ -3332,7 +3335,7 @@ function Customerdetails() {
                                         <div className="row">
                                           <div className="col-md-4 text-left ">
                                             <label className="ml-4">
-                                              Policy No.
+                                              Policy ID
                                             </label>
                                           </div>
                                           <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -3421,9 +3424,8 @@ function Customerdetails() {
                         <button
                           onClick={downloadPDF}
                           className="btn btn-primary"
-                          style={{ width: "248px" }}
                         >
-                          Download Premium Due Certificate
+                          Download
                         </button>
                         <button className="btn btn-outline-s">Share</button>{" "}
                       </div>
@@ -3467,7 +3469,8 @@ function Customerdetails() {
                   </p>
                   <p className="font-18 color-black">
                     You can offer any Term Product to Akhil up to a Sum Assured
-                    of ₹ 2,22,222.Recommended Product: 'PRODUCT NAME'.
+                    of ₹ 2,22,222. Recommended Products for this Customer -
+                    'Product Name'
                   </p>
                   <p className="dark-grey-text font-15">
                     <b> Disclaimer:</b> Subject to Underwriting approvals based
@@ -3519,7 +3522,8 @@ function Customerdetails() {
 
                   <p className="font-18 color-black">
                     You can offer any Non-Term Product to Akhil up to a Sum
-                    Assured of ₹ 2,22,222. Recommended Product: 'PRODUCT NAME'.
+                    Assured of ₹ 2,22,222. Recommended Products for this
+                    Customer - 'Product Name'.
                   </p>
                   {/* <p>
                       Term PASA available, You can offer any Term Product to **
@@ -3541,6 +3545,48 @@ function Customerdetails() {
                     Close
                   </button>
                 </div> */}
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="modal fade"
+            id="removefamilytag"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title bold " id="exampleModalLabel">
+                    Remove Family Tag
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  You are removing your "Father" from Family tag
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Continue to Remove
+                  </button>
+                </div>
               </div>
             </div>
           </div>

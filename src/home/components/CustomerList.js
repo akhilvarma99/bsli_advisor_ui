@@ -67,11 +67,11 @@ function CoustmerListingPage() {
             <div className="row h-scroll-s">
               <div className="col-md-12 h-scroll-s">
                 <div className="card-div m-left-0">
-                  <p>Total Customers</p>
+                  <p>Total Active Customers</p>
                   <h2>100</h2>
                 </div>
                 <div className="card-div">
-                  <p>Total Policies</p>
+                  <p>Total Active Policies</p>
                   <h2>50</h2>
                 </div>
                 <div className="card-div">
@@ -206,7 +206,7 @@ function CoustmerListingPage() {
                                 aria-controls="profile"
                                 aria-selected="false"
                               >
-                                Next Week
+                                This Week
                               </a>
                             </li>
                             <li className="nav-item w-50-p" role="presentation">
@@ -481,12 +481,13 @@ function CoustmerListingPage() {
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
-                                    {/* <button
+                                    <button
                                       type="button"
-                                      className="btn btn-outline-s"
+                                      className="btn btn-outline-s w-144"
                                     >
-                                    </button> */}
-                                    <Dropdown
+                                      Resend Payment Link
+                                    </button>
+                                    {/* <Dropdown
                                       title={"Send Payment Link"}
                                       items={[
                                         {
@@ -502,7 +503,7 @@ function CoustmerListingPage() {
                                           message: "Success: Payment Link sent",
                                         },
                                       ]}
-                                    />
+                                    /> */}
                                   </div>
                                 </div>
                               </div>
@@ -554,29 +555,18 @@ function CoustmerListingPage() {
                                     </p>
                                   </div>
                                   <div className="col-lg-2 col-md-3 text-right">
+                                    <button
+                                      type="button"
+                                      className="btn btn-outline-s w-144"
+                                    >
+                                      Resend Payment Link
+                                    </button>
                                     {/*  <button
                                       type="button"
                                       className="btn btn-outline-s"
                                     >
                                       Send Payment Link
                                     </button> */}
-                                    <Dropdown
-                                      title={"Send Payment Link"}
-                                      items={[
-                                        {
-                                          logo: "",
-                                          title: "Copy link",
-                                          anvesh: openToast,
-                                          message: "Success: Link copied",
-                                        },
-                                        {
-                                          logo: "",
-                                          title: "Send Email",
-                                          anvesh: openToast,
-                                          message: "Success: Payment Link sent",
-                                        },
-                                      ]}
-                                    />
                                   </div>
                                 </div>
                               </div>
@@ -595,7 +585,7 @@ function CoustmerListingPage() {
                             </div>
                           </div>
                           {/* Today Content Ends Here */}
-                          {/* Next Week Content Starts Here -------------------------------------------------------------------------------- */}
+                          {/* This Week Content Starts Here -------------------------------------------------------------------------------- */}
                           <div
                             className="tab-pane fade"
                             id="next-week"
@@ -928,7 +918,7 @@ function CoustmerListingPage() {
                               </div>
                             </div>
                           </div>
-                          {/* Next Week Content Ends Here */}
+                          {/* This Week Content Ends Here */}
                           {/* Later Content Starts Here ----------------------------------------------------------------------------------------------*/}
                           <div
                             className="tab-pane fade"
@@ -1312,7 +1302,7 @@ function CoustmerListingPage() {
                                 aria-controls="profile"
                                 aria-selected="false"
                               >
-                                Next Week
+                                This Week
                               </a>
                             </li>
                             <li className="nav-item w-50-p" role="presentation">
@@ -1469,6 +1459,11 @@ function CoustmerListingPage() {
                                     <button
                                       type="button"
                                       className="btn btn-outline-s"
+                                      onClick={() =>
+                                        openToast(
+                                          "Wishes has been sent on registered XXX mobile number and XXX Email ID  "
+                                        )
+                                      }
                                     >
                                       Send Wishes
                                     </button>
@@ -1663,7 +1658,7 @@ function CoustmerListingPage() {
                             </div>
                           </div>
                           {/* Today Content Ends Here */}
-                          {/* Next Week Content Starts Here -------------------------------------------------------------------------------- */}
+                          {/* This Week Content Starts Here -------------------------------------------------------------------------------- */}
                           <div
                             className="tab-pane fade"
                             id="next-week1"
@@ -1994,7 +1989,7 @@ function CoustmerListingPage() {
                               </div>
                             </div>
                           </div>
-                          {/* Next Week Content Ends Here */}
+                          {/* This Week Content Ends Here */}
                           {/* Later Content Starts Here ----------------------------------------------------------------------------------------------*/}
                           <div
                             className="tab-pane fade"

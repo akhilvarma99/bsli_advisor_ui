@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../header";
 import breadcrumbs from "../../assets/img/icons/breadcrumbs-arrow.png";
 import backarrow from "../../assets/img/icons/back-arrow.svg";
@@ -9,7 +9,23 @@ import starempty from "../../assets/img/icons/star-empty.svg";
 import loadmore from "../../assets/img/icons/load-more-white.svg";
 import load from "../../assets/img/icons/load-more.svg";
 import closeIcon from "../../assets/img/icons/f_close.svg";
+import Card from "../../utils/Card";
+import Toasts from "../../utils/Toasts";
+
 function Renewalpaymentdue() {
+  const [message, setMessage] = useState();
+  const openToast = (message) => {
+    if (message !== null) {
+      document.getElementById("toastBlock").classList.add("showToast");
+      setTimeout(function () {
+        document.getElementById("toastBlock").classList.remove("showToast");
+      }, 3000);
+    } else {
+      document.getElementById("toastBlock").classList.remove("showToast");
+    }
+    setMessage(message);
+  };
+
   return (
     <div>
       <Header />
@@ -42,6 +58,7 @@ function Renewalpaymentdue() {
                 Renewal Payment Due (10)
               </h1>
             </div>
+            <Toasts message={message} />
             <div className="asOn verticalAlign mr-3">
               <h1>As on: 26-Jan-2021</h1>
             </div>
@@ -75,7 +92,7 @@ function Renewalpaymentdue() {
                             className="custom-control-label"
                             htmlFor="customCheckBox1"
                           >
-                            Manual payment(Direct bill)
+                            Manual payment
                           </label>
                         </div>
                         <div className="custom-control custom-checkbox check-box-row">
@@ -179,7 +196,7 @@ function Renewalpaymentdue() {
                               aria-controls="profile"
                               aria-selected="false"
                             >
-                              Next Week
+                              This Week
                             </a>
                           </li>
                           <li className="nav-item w-50-p" role="presentation">
@@ -293,6 +310,11 @@ function Renewalpaymentdue() {
                                       <button
                                         type="button"
                                         className="btn btn-outline-s w-144"
+                                        onClick={() =>
+                                          openToast(
+                                            "Payment link has been sent to XXX mobile number and  XXX email id "
+                                          )
+                                        }
                                       >
                                         Send Payment Link
                                       </button>
@@ -2112,7 +2134,7 @@ function Renewalpaymentdue() {
                             className="form-check-label"
                             htmlFor="flexRadioDefault1"
                           >
-                            Manual payment(Direct bill)
+                            Manual payment
                           </label>
                         </div>
                         <div className="form-check">

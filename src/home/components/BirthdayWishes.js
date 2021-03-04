@@ -81,7 +81,7 @@ function BirthdayWishes() {
                               aria-controls="profile"
                               aria-selected="false"
                             >
-                              Next Week
+                              This Week
                             </a>
                           </li>
                           <li className="nav-item w-50-p" role="presentation">
@@ -130,6 +130,8 @@ function BirthdayWishes() {
                                   <label>
                                     Details
                                     <img src={sort} alt="sort" />
+                                    <br />
+                                    <span>Sorted by DOB</span>
                                   </label>
                                 </div>
                               </div>
@@ -731,6 +733,8 @@ function BirthdayWishes() {
                                   <label>
                                     Details
                                     <img src={sort} alt="sort" />
+                                    <br />
+                                    <span>Sorted by DOB</span>
                                   </label>
                                 </div>
                               </div>
@@ -1110,6 +1114,8 @@ function BirthdayWishes() {
                                   <label>
                                     Details
                                     <img src={sort} alt="sort" />
+                                    <br />
+                                    <span>Sorted by DOB</span>
                                   </label>
                                 </div>
                               </div>
