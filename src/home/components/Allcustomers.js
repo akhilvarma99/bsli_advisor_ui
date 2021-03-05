@@ -32,9 +32,16 @@ const useStyles = makeStyles((theme) => ({
 
 function Allcustomers() {
   const [policystatus, setPolicystatus] = useState("default");
+  const [searchState, setsearchState] = useState("false");
   const [tabs, settabs] = useState("all");
   const classes = useStyles();
-
+  const searchHandler = () => {
+    if (document.querySelector(".searchInput").value) {
+      setsearchState("true");
+    } else {
+      setsearchState("false");
+    }
+  };
   const today = new Date();
 
   const datelist = {
@@ -719,14 +726,19 @@ function Allcustomers() {
                                 <img src={search} alt="search" />
                                 <input
                                   type="email"
-                                  className="form-control data-search-box"
+                                  onChange={searchHandler}
+                                  className="form-control data-search-box searchInput"
                                   id="search"
                                   aria-describedby="data-search"
                                   placeholder="Search by customer name, policy no, mobile no."
                                 />
                                 <button
                                   type="button"
-                                  className="btn btn-primary-s"
+                                  className={
+                                    searchState == "true"
+                                      ? "btn btn-primary-s"
+                                      : "btn btn-disabled-state"
+                                  }
                                 >
                                   Search
                                 </button>

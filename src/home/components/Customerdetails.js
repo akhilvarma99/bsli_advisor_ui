@@ -1149,23 +1149,28 @@ function Customerdetails() {
                                             alt="threedots"
                                           />
                                         </div>
-                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2 col-md-2">
+                                        <label class="d-lg-none d-sm-block">Customer Name</label>
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2">
+                                        <label class="d-lg-none d-sm-block">Plan name</label>
                                           <p className="color-b text-overflow-ellipsis">
                                             Sample text for plan name
                                           </p>
                                         </div>
-                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2">
+                                        <label class="d-lg-none d-sm-block">Amount</label>
                                           <p className="color-b">
                                             &#8377;1,22,222
                                           </p>
                                         </div>
-                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2">
+                                        <label class="d-lg-none d-sm-block">Policy Status</label>
                                           <p className="color-b">Paid up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                        <label class="d-lg-none d-sm-block">Date</label>
                                           <p className="color-b">28-dec-2020</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
@@ -1358,23 +1363,28 @@ function Customerdetails() {
                                             alt="threedots"
                                           />
                                         </div>
-                                        <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2 col-md-2">
+                                        <label class="d-lg-none d-sm-block">Customer Name</label>
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2">
+                                        <label class="d-lg-none d-sm-block">Plan name</label>
                                           <p className="color-b text-overflow-ellipsis">
                                             Sample text for plan name
                                           </p>
                                         </div>
-                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2">
+                                        <label class="d-lg-none d-sm-block">Amount</label>
                                           <p className="color-b">
                                             &#8377;1,22,222
                                           </p>
                                         </div>
-                                        <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                        <div className="col-lg-2">
+                                        <label class="d-lg-none d-sm-block">Policy Status</label>
                                           <p className="color-b">Paid up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                        <label class="d-lg-none d-sm-block">Date</label>
                                           <p className="color-b">28-dec-2020</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">

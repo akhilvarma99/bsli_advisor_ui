@@ -261,12 +261,14 @@
 // Modal Close
 .btn-disabled-state {
   opacity: 0.5 important;
+  padding: 4px 10px;
+  font-size: 15px;
   color: #ffffff important;
   background-color: #cdcece !important;
 }
 .btn-disabled-state:hover,
 .btn-disabled-state:focus {
-  color: #ffffff !important;
+  // color: #ffffff !important;
   background-color: #cdcece !important;
 }
 .btn-disabled-state:disabled {

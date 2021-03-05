@@ -256,10 +256,76 @@ function Recommendations() {
                   </div>
                 </div>
               ) : (
-                ""
+                <div className="f_Div_c1 d-none d-lg-block ">
+                  <div className="filter-div-l shadow-normal ">
+                    <div className="filter_header">
+                      <div className="row">
+                        <div className="col-lg-12 filter_sub_heading">
+                          <h2>
+                            <img src={filter} alt="filter" />
+                            Filter
+                          </h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="filter_body" id="style-3">
+                      <div className="row">
+                        {/* <div className="col-lg-12"></div> */}
+                        <div className="col-lg-12 filter_sub_check_box_row">
+                          <h3>Offer Type</h3>
+                          <div class="custom-control custom-checkbox check-box-row">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheckBox1"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheckBox1"
+                            >
+                              Term
+                            </label>
+                          </div>
+                          <div class="custom-control custom-checkbox check-box-row">
+                            <input
+                              type="checkbox"
+                              class="custom-control-input"
+                              id="customCheckBox2"
+                            />
+                            <label
+                              class="custom-control-label"
+                              for="customCheckBox2"
+                            >
+                              Non-Term
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>{" "}
+                    <div className="filter-footer">
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <button
+                            type="button"
+                            className="btn btn-outline-s-secondary"
+                          >
+                            Reset
+                          </button>{" "}
+                          <button
+                            type="button"
+                            className="btn btn-primary-s mrgn-0"
+                            onClick={applyFunc}
+                          >
+                            Apply
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               )}
 
-              <div className={tabHandler ? "f_Div_c2" : ""}>
+              <div className="f_Div_c2">
                 <div className="data-card">
                   {/* d-none d-lg-block d-md-block d-sm-none  */}
                   <div className="data_card_body">
@@ -388,7 +454,7 @@ function Recommendations() {
                                       {/*<span>Sorted by due date</span>*/}
                                     </label>
                                   </div>
-                                  <div className="col-md-2">
+                                  <div className="col-md-3">
                                     <label>
                                       Sum Assured Non-Term
                                       <img src={sort} alt="sort" />

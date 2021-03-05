@@ -35,7 +35,10 @@ import paidupIcon from "../../assets/img/icons/Paidup.svg";
 import payoutIcon from "../../assets/img/icons/payout.svg";
 import Dropdown from "../../utils/Dropdown";
 import Toasts from "../../utils/Toasts";
+import Card from "../../utils/Card";
+
 function Policydetails() {
+  const [activeState, setActivestate] = useState("wishes");
   const [forgotmodal, setforgotmodal] = useState(false);
   const [switchFundmodal, setswitchFundmodal] = useState(false);
 
@@ -48,13 +51,135 @@ function Policydetails() {
     console.log(accordionClass);
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
-      document.getElementById(buttonId).innerHTML = "Show More";
-      document.getElementById(buttonId).classList.remove("background-red");
+      document.getElementById(buttonId).innerHTML = "View More";
+      document.getElementById(buttonId).classList.remove("checked-state");
     } else {
-      document.getElementById(buttonId).innerHTML = "Show Less";
-      document.getElementById(buttonId).classList.add("background-red");
+      document.getElementById(buttonId).innerHTML = "View Less";
+      document.getElementById(buttonId).classList.add("checked-state");
     }
   }
+
+  const cardInfo = [
+    {
+      id: "Wishes",
+      headerTitle: "Today",
+      cardTitle: "Birthday",
+      icon: gift,
+      bodyTitle: "John Fernando",
+      body: "Relation | 20-dec-2020",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Payments",
+      headerTitle: "Overdue",
+      cardTitle: "Premium Due",
+      icon: premiumDueIcon,
+      bodyTitle: "Policy ID",
+      body: "20-dec-2020 | ₹ &#8377; 2,22,222",
+      status: "Payment Failed",
+      buttonText: "Send Payment Link",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Terminated",
+      icon: terminatedIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020",
+      status: "",
+      buttonText: "Send Remainder",
+    },
+
+    {
+      id: "Policy Status",
+      headerTitle: "Success",
+      cardTitle: "Payouts Released",
+      icon: payoutIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020 | Type | ₹ &#8377; 2,22,222",
+      // status: "Payouts Released",
+      buttonText: "Send Congratulations",
+    },
+    {
+      id: "Policy Status",
+      cardTitle: "Payouts To Be Released",
+      icon: payoutIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020 | Type ",
+      // status: "Payouts Released",
+      buttonText: "Send Congratulations",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "Policy Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+    {
+      id: "Policy Status",
+      headerTitle: "Today",
+      cardTitle: "To Be Matured",
+      icon: paymentRenewalIcon,
+      bodyTitle: "Policy ID",
+      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      status: "",
+      buttonText: "Send Wishes",
+    },
+  ];
+  let filterFunc = (arrayName, filterName) =>
+    arrayName.filter(function (e) {
+      return e.id == filterName;
+    });
+
+  const [filter, setFilter] = useState("Payments");
+  let filterFunction = (filter) => {
+    setFilter(filter);
+  };
 
   const [message, setMessage] = useState();
 
@@ -129,21 +254,34 @@ function Policydetails() {
                   </div>
                   <div className="col-lg-10 col-md-10">
                     <div className="name-details">
-                      <div className="category-div">
-                        <p>
-                          Category Name{" "}
-                          <img src={yellowstarfilled} alt="yellowstarfilled" />
-                        </p>
-                      </div>
-                      <label>Sangeetha</label>
+                      <label>John Fernando</label>
                       <p className="d-flex align-items-center">
                         <img src={phonecall} alt="phonecall" />
-                        9876543213
+                        {window.screen.width < 600 ? (
+                          <a className="anchor-style" href="tel:9876543210">
+                            9876543210
+                          </a>
+                        ) : (
+                          <span>9876543210</span>
+                        )}
                       </p>
                       <p className="pad-btnm d-flex align-items-center">
                         <img src={mail} alt="mail" />
-                        sangeetha@adityabirlacapital.com
+                        <a
+                          className="anchor-style"
+                          href="mailto:dakhilvarma@gmail.com"
+                        >
+                          dakhilvarma@gmail.com
+                        </a>
                       </p>
+                      <div className="category-div">
+                        <p style={{ color: "black" }}>Category Name</p>
+                      </div>
+                      <div className="category-div-star">
+                        <p style={{ color: "black" }}>
+                          <img src={yellowstarfilled} alt="yellowstarfilled" />
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -162,15 +300,18 @@ function Policydetails() {
                       </div>
                       <div className="col-6 mb-3">
                         <div className="dark-grey-text font18 line-ht-14">
-                          Premium Amount (with Taxes)
+                          Premium Amount
                         </div>
-                        <div className="font20 line-ht-11">12,000.00</div>
+                        <div className="font20 line-ht-11">
+                          {" "}
+                          &#8377;12,000.00
+                        </div>
                       </div>
                       <div className="col-6 mb-3">
                         <div className="dark-grey-text font18 line-ht-14">
                           Premium Due Date
                         </div>
-                        <div className="font20 line-ht-11">20/Dec/2020</div>
+                        <div className="font20 line-ht-11">20-dec-2020</div>
                       </div>
                       <div className="col-6 mb-3">
                         <div className="dark-grey-text font18 line-ht-14">
@@ -230,7 +371,7 @@ function Policydetails() {
                         aria-controls="customer_and_nominee"
                         aria-selected="false"
                       >
-                        Customer And Nominee Details
+                        More Details
                       </a>
                     </li>
                     <li className="nav-item w-50-p" role="presentation">
@@ -291,8 +432,14 @@ function Policydetails() {
                                 >
                                   Action Required
                                 </h2>
-                                <i className="arrow-up" />
-                                <i className="arrow-down" />
+
+                                <div className="accordion-header text-right">
+                                  <span className="pr-2">
+                                    As on Date 18-dec-2020{" "}
+                                  </span>
+                                  <i className="arrow-up" />
+                                  <i className="arrow-down" />
+                                </div>
                               </div>
                               <div
                                 id="flush-collapseOne"
@@ -300,276 +447,86 @@ function Policydetails() {
                               >
                                 <div className="accordion-body">
                                   <div className="row">
-                                    <div className="col-lg-4 col-md-6">
-                                      <div className="smart-card shadow-normal">
-                                        <div className="yellow-flag">
-                                          <img
-                                            src={yellowflag}
-                                            alt="yellowflag"
-                                          />
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 d-flex justify-content-between">
-                                            <h3>Premium Due</h3>
-                                            <div className="today">overdue</div>
-                                          </div>
-                                        </div>
-                                        <div className="row pad-10 card-body">
-                                          <div className="col-2">
-                                            <img
-                                              src={premiumDueIcon}
-                                              alt="premiumDueIcon"
-                                            />
-                                          </div>
-                                          <div className="col-10">
-                                            <p>
-                                              Policy ID
-                                              <br />{" "}
-                                              <span>
-                                                20/Dec/2020 | 1,50,000
-                                              </span>
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 text-right">
-                                            <Dropdown
-                                              title="Send Payment Link"
-                                              items={[
-                                                {
-                                                  logo: "",
-                                                  title: "Copy link",
-                                                  anvesh: openToast,
-                                                  message:
-                                                    "Success: Link copied",
-                                                },
-                                                {
-                                                  logo: "",
-                                                  title: "Send Email",
-                                                  anvesh: openToast,
-                                                  message:
-                                                    "Success: Payment Link sent",
-                                                },
-                                              ]}
-                                            />
-                                          </div>
+                                    <div className="col-md-12">
+                                      <div className="quikc-links-card padding-none margin-bottom-none box-shadow-none">
+                                        <div className="quick-links-inner h-scroll-s padding-bottom-none">
+                                          <ul>
+                                            <li
+                                              className={
+                                                filter === "Payments"
+                                                  ? "background-red quicklinks-padding"
+                                                  : "quicklinks-padding"
+                                              }
+                                              onClick={() =>
+                                                filterFunction("Payments")
+                                              }
+                                            >
+                                              Payments
+                                            </li>
+                                            <li
+                                              className={
+                                                filter === "Wishes"
+                                                  ? "background-red quicklinks-padding"
+                                                  : "quicklinks-padding"
+                                              }
+                                              onClick={() =>
+                                                filterFunction("Wishes")
+                                              }
+                                            >
+                                              Wishes
+                                            </li>
+                                            <li
+                                              className={
+                                                filter === "Policy Status"
+                                                  ? "background-red quicklinks-padding"
+                                                  : "quicklinks-padding"
+                                              }
+                                              onClick={() =>
+                                                filterFunction("Policy Status")
+                                              }
+                                            >
+                                              Policy Status
+                                            </li>
+                                          </ul>
                                         </div>
                                       </div>
                                     </div>
-
-                                    <div className="col-lg-4 col-md-6">
-                                      <div className="smart-card shadow-normal">
-                                        <div className="yellow-flag">
-                                          <img
-                                            src={yellowflag}
-                                            alt="yellowflag"
+                                  </div>
+                                  <div className="row">
+                                    {filterFunc(cardInfo, filter).map(
+                                      (key, index) => (
+                                        <div className="col-lg-4 col-md-6">
+                                          <Card
+                                            key={index}
+                                            cardInfo={{
+                                              headerTitle: key.headerTitle,
+                                              cardTitle: key.cardTitle,
+                                              icon: key.icon,
+                                              bodyTitle: key.bodyTitle,
+                                              body: key.body,
+                                              status: key.status,
+                                              buttonText: key.buttonText,
+                                            }}
+                                            openToast={openToast}
                                           />
                                         </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 d-flex justify-content-between">
-                                            <h3>Payment Failures</h3>
-                                            <div className="today">Today</div>
-                                          </div>
-                                        </div>
-                                        <div className="row pad-10 card-body">
-                                          <div className="col-2">
-                                            <img
-                                              src={paymentRenewalIcon}
-                                              alt="paymentRenewalIcon"
-                                            />
-                                          </div>
-                                          <div className="col-10">
-                                            <p>
-                                              Policy ID
-                                              <br />{" "}
-                                              <span>
-                                                20/Dec/2020 | Cheque |1,50,000
-                                              </span>
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 text-right">
-                                            <Dropdown
-                                              title="Send Payment Link"
-                                              items={[
-                                                {
-                                                  logo: "",
-                                                  title: "Copy link",
-                                                  anvesh: openToast,
-                                                  message:
-                                                    "Success: Link copied",
-                                                },
-                                                {
-                                                  logo: "",
-                                                  title: "Send Email",
-                                                  anvesh: openToast,
-                                                  message:
-                                                    "Success: Payment Link sent",
-                                                },
-                                              ]}
-                                            />
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div className="col-lg-4 col-md-6">
-                                      <div className="smart-card shadow-normal">
-                                        <div className="yellow-flag">
-                                          <img
-                                            src={paymentRenewalIcon}
-                                            alt="paymentRenewalIcon"
-                                          />
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 d-flex justify-content-between">
-                                            <h3>To be Matured</h3>
-                                            <div className="today">
-                                              Tomorrow
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="row pad-10 card-body">
-                                          <div className="col-2">
-                                            <img
-                                              src={paymentRenewalIcon}
-                                              alt="paymentRenewalIcon"
-                                            />
-                                          </div>
-                                          <div className="col-10">
-                                            <p>
-                                              Policy ID
-                                              <br />{" "}
-                                              <span>20/Dec/2020|1,50,000</span>
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 text-right">
-                                            <button className="btn btn-outline-s">
-                                              Send Wishes
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-6">
-                                      <div className="smart-card shadow-normal">
-                                        <div className="yellow-flag">
-                                          <img
-                                            src={yellowflag}
-                                            alt="yellowflag"
-                                          />
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 d-flex justify-content-between">
-                                            <h3>To Be Terminated</h3>
-                                            <div className="today">Today</div>
-                                          </div>
-                                        </div>
-                                        <div className="row pad-10 card-body">
-                                          <div className="col-2">
-                                            <img
-                                              src={terminatedIcon}
-                                              alt="terminatedIcon"
-                                            />
-                                          </div>
-                                          <div className="col-10">
-                                            <p>
-                                              Policy ID
-                                              <br /> <span>20/Dec/2020</span>
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 text-right">
-                                            <button className="btn btn-outline-s">
-                                              Contact Customer
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-6">
-                                      <div className="smart-card shadow-normal">
-                                        <div className="yellow-flag">
-                                          <img
-                                            src={yellowflag}
-                                            alt="yellowflag"
-                                          />
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 d-flex justify-content-between">
-                                            <h3>Paid Up Policies</h3>
-                                            <div className="today">
-                                              Next Week
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="row pad-10 card-body">
-                                          <div className="col-2">
-                                            <img
-                                              src={paidupIcon}
-                                              alt="paidupIcon"
-                                            />
-                                          </div>
-                                          <div className="col-10">
-                                            <p>
-                                              Policy ID
-                                              <br /> <span>20/Dec/2020</span>
-                                            </p>
-                                          </div>
-                                        </div>
-                                        {/* <div className="row">
-                                            <div className="col-lg-12 text-right">
-                                              <button className="btn btn-outline-s">
-                                                Send Payment Link
-                                              </button>
-                                            </div>
-                                          </div> */}
-                                      </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-6">
-                                      <div className="smart-card shadow-normal">
-                                        <div className="yellow-flag">
-                                          <img
-                                            src={yellowflag}
-                                            alt="yellowflag"
-                                          />
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 d-flex justify-content-between">
-                                            <h3>Payouts Released</h3>
-                                            <div className="today">Today</div>
-                                          </div>
-                                        </div>
-                                        <div className="row pad-10 card-body">
-                                          <div className="col-2">
-                                            <img
-                                              src={payoutIcon}
-                                              alt="payoutIcon"
-                                            />
-                                          </div>
-                                          <div className="col-10">
-                                            <p>
-                                              Policy ID
-                                              <br /> <span>20/Dec/2020</span>
-                                            </p>
-                                          </div>
-                                        </div>
-                                        <div className="row">
-                                          <div className="col-lg-12 text-right">
-                                            <button className="btn btn-outline-s">
-                                              Send Wishes
-                                            </button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    {/* <div className="col-lg-4 col-md-6"> */}
-                                    {/* <div className="smart-card shadow-normal"></div> */}
+                                      )
+                                    )}
+                                  </div>
+                                  <div
+                                    className="g-footer text-center top-padding"
+                                    style={
+                                      filter === "Policy Status"
+                                        ? { display: "block" }
+                                        : { display: "none" }
+                                    }
+                                  >
+                                    <button
+                                      type="button"
+                                      className="btn btn-primary"
+                                    >
+                                      See More
+                                    </button>
                                   </div>
                                 </div>
                               </div>
@@ -603,18 +560,26 @@ function Policydetails() {
                                         <div className="row">
                                           <div className="col-md-3 mb-3">
                                             <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Policy Number
+                                              Product Type
                                             </label>
                                             <div className="font18 line-ht-11">
-                                              123456798
+                                              Term
                                             </div>
                                           </div>
                                           <div className="col-md-3 mb-3">
                                             <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Policy Status
+                                              Policy Issuance Date
                                             </label>
                                             <div className="font18 line-ht-11">
-                                              Paid Up
+                                              20-dec-2020
+                                            </div>
+                                          </div>
+                                          <div className="col-md-3 mb-3">
+                                            <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                              Premium Payment Term
+                                            </label>
+                                            <div className="font18 line-ht-11">
+                                              5
                                             </div>
                                           </div>
                                           <div className="col-md-3 mb-3">
@@ -627,61 +592,22 @@ function Policydetails() {
                                           </div>
                                           <div className="col-md-3 mb-3">
                                             <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Modal Premium
+                                              ECS registation status
                                             </label>
                                             <div className="font18 line-ht-11">
-                                              12000
+                                              Paid-up
                                             </div>
                                           </div>
                                           <div className="col-md-3 mb-3">
                                             <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Premium Payment Term
+                                              Total Sum Assured
                                             </label>
                                             <div className="font18 line-ht-11">
-                                              2
+                                              &#8377; 3,33,333
                                             </div>
                                           </div>
-                                          <div className="col-md-3 mb-3">
-                                            <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Premium Mode
-                                            </label>
-                                            <div className="font18 line-ht-11">
-                                              Monthly
-                                            </div>
-                                          </div>
-                                          <div className="col-md-3 mb-3">
-                                            <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              ECS Registration Status
-                                            </label>
-                                            <div className="font18 line-ht-11">
-                                              Inactive
-                                            </div>
-                                          </div>
-                                          <div className="col-md-3 mb-3">
-                                            <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Stale Cheque Conditional Status
-                                            </label>
-                                            <div className="font18 line-ht-11">
-                                              Stale Cheque
-                                            </div>
-                                          </div>
-                                          <div className="col-md-3 mb-3">
-                                            <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Next Premium Due Date
-                                            </label>
-                                            <div className="font18 line-ht-11">
-                                              DD/MM/YYYY
-                                            </div>
-                                          </div>
-                                          <div className="col-md-3 mb-3">
-                                            <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                              Base Sum Assured
-                                            </label>
-                                            <div className="font18 line-ht-11">
-                                              20000
-                                            </div>
-                                          </div>
-                                          <div className="col-md-3 mb-3">
+
+                                          {/* <div className="col-md-3 mb-3">
                                             <div className="font18 line-ht-11">
                                               <p>
                                                 <label className="dark-grey-text font16 line-ht-14 mb-0">
@@ -696,13 +622,13 @@ function Policydetails() {
                                                 &nbsp; Activated
                                               </p>
                                             </div>
-                                          </div>
+                                          </div> */}
                                           {/*                                           <div className="col-md-3 mb-3">
                                             <label className="dark-grey-text font16 line-ht-14 mb-0">
                                               Cease Date
                                             </label>
                                             <div className="font18 line-ht-11">
-                                              DD/MM/YYYY
+                                              28-dec-2020
                                             </div>
                                           </div> */}
                                         </div>
@@ -757,7 +683,7 @@ function Policydetails() {
                                           Policy Issue Date
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          20/Dec/2020
+                                          20-dec-2020
                                         </div>
                                       </div>
                                       <div className="col-md-3 mb-3">
@@ -781,7 +707,7 @@ function Policydetails() {
                                         Last Premium Due Date
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        28-dec-2020
                                       </div>
                                     </div> 
                             <div className="col-md-3 mb-3">
@@ -860,7 +786,7 @@ function Policydetails() {
                                   className="accordion-header"
                                   id="flush-headingOne"
                                 >
-                                  Premium Related Details
+                                  Premium Details
                                 </h2>
                                 <i className="arrow-up" />
                                 <i className="arrow-down" />
@@ -871,22 +797,14 @@ function Policydetails() {
                               >
                                 <div className="accordion-body">
                                   <div className="row">
-                                    <div className="col-lg-12 text-right">
+                                    {/* <div className="col-lg-12 text-right">
                                       <button className="btn btn-primary-s m-bottom-10">
                                         download transaction history
                                       </button>
-                                    </div>
+                                    </div> */}
                                   </div>
                                   <div className="personal-de-card shadow-normal">
                                     <div className="row">
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Next Premium Due Date
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          DD/MM/YYYY
-                                        </div>
-                                      </div>
                                       <div className="col-md-3 mb-3">
                                         <label className="dark-grey-text font16 line-ht-14 mb-0">
                                           Premium Mode
@@ -897,26 +815,10 @@ function Policydetails() {
                                       </div>
                                       <div className="col-md-3 mb-3">
                                         <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Policy Billing Method
+                                          Billing Method
                                         </label>
                                         <div className="font18 line-ht-11">
                                           Direct Bill
-                                        </div>
-                                      </div>
-                                      {/* <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Last Premium Due Date
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                      DD/MM/YYYY
-                                      </div>
-                                    </div> */}
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Last Premium Paid Date
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          DD/MM/YYYY
                                         </div>
                                       </div>
                                       <div className="col-md-3 mb-3">
@@ -924,63 +826,48 @@ function Policydetails() {
                                           Modal Premium
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          20,000
+                                          &#8377; 20,000
                                         </div>
                                       </div>
                                       <div className="col-md-3 mb-3">
                                         <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Service Tax
+                                          GST
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          1,000
+                                          &#8377; 1,000
                                         </div>
                                       </div>
                                       <div className="col-md-3 mb-3">
                                         <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Model Premium with Service Tax
+                                          Total Instalment Premium
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          21,000
+                                          &#8377; 21,000
+                                        </div>
+                                      </div>
+
+                                      <div className="col-md-3 mb-3">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Annualized Premium
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          &#8377; 12,000
                                         </div>
                                       </div>
                                       <div className="col-md-3 mb-3">
                                         <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          First Year Premium
+                                          Next Premium Due Date
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          12,000
+                                          28-dec-2020
                                         </div>
                                       </div>
                                       <div className="col-md-3 mb-3">
                                         <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Annual Premium
+                                          Total Amount Paid
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          20,000
-                                        </div>
-                                      </div>
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Gross Annual Premium
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          21,000
-                                        </div>
-                                      </div>
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          G.A.P with Service Tax and Cess
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          22,343
-                                        </div>
-                                      </div>
-                                      <div className="col-md-3 mb-3">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Total Premium Paid
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          22,343
+                                          &#8377; 20,000
                                         </div>
                                       </div>
                                     </div>
@@ -1002,10 +889,15 @@ function Policydetails() {
                                   className="accordion-header"
                                   id="flush-headingOne"
                                 >
-                                  Portfolio Details
+                                  Benifit Details
                                 </h2>
-                                <i className="arrow-up" />
-                                <i className="arrow-down" />
+                                <div className="accordion-header text-right">
+                                  <span className="pr-2">
+                                    As on Date 18-dec-2020{" "}
+                                  </span>
+                                  <i className="arrow-up" />
+                                  <i className="arrow-down" />
+                                </div>
                               </div>
                               <div
                                 id="Portfolio-Details"
@@ -1027,6 +919,14 @@ function Policydetails() {
                                     <div className="row">
                                       <div className="col-md-2 mb-2">
                                         <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                          Total Fund Value
+                                        </label>
+                                        <div className="font18 line-ht-11">
+                                          &#8377; 2,22,223
+                                        </div>
+                                      </div>
+                                      <div className="col-md-2 mb-2">
+                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
                                           Fund Name
                                         </label>
                                         <div className="font18 line-ht-11">
@@ -1038,7 +938,7 @@ function Policydetails() {
                                           Allocation %
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          xxxxxxxxxxxx
+                                          3
                                         </div>
                                       </div>
                                       <div className="col-md-2 mb-2">
@@ -1046,7 +946,7 @@ function Policydetails() {
                                           Unit Fund Value
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          xxxx
+                                          &#8377; 2,22,223
                                         </div>
                                       </div>
                                       <div className="col-md-2 mb-2">
@@ -1054,7 +954,7 @@ function Policydetails() {
                                           Unit price
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          xxxxxx
+                                          &#8377; 2,22,223
                                         </div>
                                       </div>
 
@@ -1063,61 +963,7 @@ function Policydetails() {
                                           No. of Units
                                         </label>
                                         <div className="font18 line-ht-11">
-                                          xxxx
-                                        </div>
-                                      </div>
-                                      <div className="col-md-2 mb-2">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Total Fund Value
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          xxxxx
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div className="accordion-item">
-                              <div
-                                className="accordion-header-wrapper collapsed"
-                                data-toggle="collapse"
-                                href="#Commision-Details"
-                                role="button"
-                                aria-expanded="false"
-                                aria-controls="premium-related-details"
-                              >
-                                <h2
-                                  className="accordion-header"
-                                  id="flush-headingOne"
-                                >
-                                  Commision Details
-                                </h2>
-                                <i className="arrow-up" />
-                                <i className="arrow-down" />
-                              </div>
-                              <div
-                                id="Commision-Details"
-                                className="accordion-collapse collapse accordion-content"
-                              >
-                                <div className="accordion-body">
-                                  {/* <div className="row">
-                                  <div className="col-lg-12 text-right">
-                                    <button className="btn btn-primary-s m-bottom-10">
-                                      Switch Fund
-                                    </button>
-                                  </div>
-                                </div> */}
-                                  <div className="personal-de-card shadow-normal">
-                                    <div className="row">
-                                      <div className="col-md-2 mb-2">
-                                        <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                          Policy
-                                        </label>
-                                        <div className="font18 line-ht-11">
-                                          xxxxx
+                                          2
                                         </div>
                                       </div>
                                     </div>
@@ -1174,7 +1020,7 @@ function Policydetails() {
                                       className="form-control data-search-box"
                                       id="search"
                                       aria-describedby="data-search"
-                                      placeholder="dd/mm/yyyy"
+                                      placeholder="28-dec-2020"
                                     />
                                   </div>
                                 </div>
@@ -1186,7 +1032,7 @@ function Policydetails() {
                                       className="form-control data-search-box"
                                       id="search"
                                       aria-describedby="data-search"
-                                      placeholder="dd/mm/yyyy"
+                                      placeholder="28-dec-2020"
                                     />
                                   </div>
                                 </div>
@@ -1231,13 +1077,17 @@ function Policydetails() {
                                         <img src={threedots} alt="threedots" />
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">DD/MM/YYYY</p>
+                                        <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                        <p className="color-b">1,00,000</p>
+                                        <p className="color-b">
+                                          &#8377; 2,22,222
+                                        </p>
                                       </div>
                                       <div className="col-lg-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">2,22,222</p>
+                                        <p className="color-b">
+                                          &#8377; 2,22,222
+                                        </p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
                                         <p className="color-b">Failed</p>
@@ -1258,7 +1108,7 @@ function Policydetails() {
                                             )
                                           }
                                         >
-                                          Show More
+                                          View More
                                         </button>
                                       </div>
                                     </div>
@@ -1302,13 +1152,17 @@ function Policydetails() {
                                       <img src={threedots} alt="threedots" />
                                     </div>
                                     <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
-                                      <p className="color-b">DD/MM/YYYY</p>
+                                      <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
-                                      <p className="color-b">1,00,000</p>
+                                      <p className="color-b">
+                                        &#8377; 2,22,222
+                                      </p>
                                     </div>
                                     <div className="col-lg-2 d-none d-lg-block d-sm-none">
-                                      <p className="color-b">2,22,222</p>
+                                      <p className="color-b">
+                                        &#8377; 2,22,222
+                                      </p>
                                     </div>
                                     <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
                                       <p className="color-b">Success</p>
@@ -1341,8 +1195,8 @@ function Policydetails() {
                             id="premium-related-details"
                             className="accordion-collapse collapse show accordion-content"
                           >
-                            <div className="accordion-body">
-                              <div className="row">
+                            <div className="accordion-body pt-0">
+                              <div className="row mb-2">
                                 {/* <div className="col-lg-1">
                                   <span>from Date</span>
                                   <div className="date-box">
@@ -1351,7 +1205,7 @@ function Policydetails() {
                                       className="form-control data-search-box"
                                       id="search"
                                       aria-describedby="data-search"
-                                      placeholder="dd/mm/yyyy"
+                                      placeholder="28-dec-2020"
                                     />
                                   </div>
                                 </div>
@@ -1363,7 +1217,7 @@ function Policydetails() {
                                       className="form-control data-search-box"
                                       id="search"
                                       aria-describedby="data-search"
-                                      placeholder="dd/mm/yyyy"
+                                      placeholder="28-dec-2020"
                                     />
                                   </div>
                                 </div> */}
@@ -1376,11 +1230,11 @@ function Policydetails() {
                                   <input className="height-10" type="date" />
                                 </div>
 
-                                <div className="col-lg-8  text-right">
+                                {/* <div className="col-lg-8  text-right">
                                   <button className="btn btn-primary-s m-bottom-10">
                                     download transaction history
                                   </button>
-                                </div>
+                                </div> */}
                               </div>
 
                               <div className="policy-grid-customer">
@@ -1393,7 +1247,7 @@ function Policydetails() {
                                       <h3>Payment Type</h3>
                                     </div>
                                     <div className="col-lg-2">
-                                      <h3>Total Amount Paid</h3>
+                                      <h3> Amount </h3>
                                     </div>
                                     <div className="col-lg-2">
                                       <h3>Payment Status</h3>
@@ -1416,13 +1270,15 @@ function Policydetails() {
                                         <img src={threedots} alt="threedots" />
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">DD/MM/YYYY</p>
+                                        <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
                                         <p className="color-b">Credit Card</p>
                                       </div>
                                       <div className="col-lg-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">2,22,222</p>
+                                        <p className="color-b">
+                                          &#8377; 2,22,222
+                                        </p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
                                         <p className="color-b">Failed</p>
@@ -1443,7 +1299,7 @@ function Policydetails() {
                                             )
                                           }
                                         >
-                                          Show More
+                                          View More
                                         </button>
                                       </div>
                                     </div>
@@ -1486,13 +1342,17 @@ function Policydetails() {
                                       <img src={threedots} alt="threedots" />
                                     </div>
                                     <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
-                                      <p className="color-b">DD/MM/YYYY</p>
+                                      <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
-                                      <p className="color-b">1,00,000</p>
+                                      <p className="color-b">
+                                        &#8377; 2,22,222
+                                      </p>
                                     </div>
                                     <div className="col-lg-2 d-none d-lg-block d-sm-none">
-                                      <p className="color-b">2,22,222</p>
+                                      <p className="color-b">
+                                        &#8377; 2,22,222
+                                      </p>
                                     </div>
                                     <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
                                       <p className="color-b">Success</p>
@@ -1504,7 +1364,7 @@ function Policydetails() {
                                     type="button"
                                     className="btn btn-primary"
                                   >
-                                    See More
+                                    Show More
                                   </button>
                                 </div>
                               </div>
@@ -1541,20 +1401,20 @@ function Policydetails() {
                                       <h3>Date of Transaction</h3>
                                     </div>
                                     <div className="col-lg-3">
-                                      <h3>Amount Allowed</h3>
+                                      <h3>Amount Allocated To Fund</h3>
                                     </div>
                                     <div className="col-lg-2">
-                                      <h3>Total Deduction</h3>
+                                      <h3>Total Deductions</h3>
                                     </div>
                                     <div className="col-lg-2">
-                                      <h3>Fund Name</h3>
+                                      <h3>Fund Name/Option</h3>
                                     </div>
                                     <div className="col-lg-2">
                                       <h3>{""}</h3>
                                     </div>
                                   </div>
                                 </div>
-                                {[1, 2, 3].map((id, index) => (
+                                {[1, 2, 3, 4, 5].map((id, index) => (
                                   <div className="policy-grid-row" key={index}>
                                     <div className="row">
                                       <div
@@ -1567,13 +1427,17 @@ function Policydetails() {
                                         <img src={threedots} alt="threedots" />
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">DD/MM/YYYY</p>
+                                        <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                        <p className="color-b">4,00,000</p>
+                                        <p className="color-b">
+                                          &#8377;4,00,000
+                                        </p>
                                       </div>
                                       <div className="col-lg-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">2,22,222</p>
+                                        <p className="color-b">
+                                          &#8377; 2,22,222
+                                        </p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
                                         <p className="color-b">Fund Name</p>
@@ -1594,7 +1458,7 @@ function Policydetails() {
                                             )
                                           }
                                         >
-                                          Show More
+                                          View More
                                         </button>
                                       </div>
                                     </div>
@@ -1607,9 +1471,9 @@ function Policydetails() {
                                           <div className="row">
                                             <div className="col-lg-3 col-md-3 col-sm-12">
                                               <p>
-                                                Fund Value
+                                                Fund Values
                                                 <br />
-                                                <span>1,00,000</span>
+                                                <span>&#8377; 2,22,222</span>
                                               </p>
                                             </div>
                                             <div className="col-lg-3 col-md-3 col-sm-12">
@@ -1669,20 +1533,17 @@ function Policydetails() {
                               <div className="policy-grid-customer">
                                 <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                   <div className="row">
-                                    <div className="col-lg-2">
+                                    <div className="col-lg-3">
                                       <h3>Transaction Date</h3>
                                     </div>
                                     <div className="col-lg-3">
                                       <h3>Payout Type</h3>
                                     </div>
-                                    <div className="col-lg-2">
+                                    <div className="col-lg-3">
                                       <h3>Amount</h3>
                                     </div>
-                                    <div className="col-lg-2">
+                                    <div className="col-lg-3">
                                       <h3>Status</h3>
-                                    </div>
-                                    <div className="col-lg-2">
-                                      <h3>{""}</h3>
                                     </div>
                                   </div>
                                 </div>
@@ -1698,19 +1559,21 @@ function Policydetails() {
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
-                                      <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">DD/MM/YYYY</p>
+                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
                                         <p className="color-b">payout type</p>
                                       </div>
-                                      <div className="col-lg-2 d-none d-lg-block d-sm-none">
-                                        <p className="color-b">2,22,222</p>
+                                      <div className="col-lg-3 d-none d-lg-block d-sm-none">
+                                        <p className="color-b">
+                                          &#8377; 2,22,222
+                                        </p>
                                       </div>
-                                      <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                      <div className="col-lg-3 col-md-3 d-lg-block d-sm-block">
                                         <p className="color-b">Failed</p>
                                       </div>
-                                      <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-block d-sm-none">
+                                      {/* <div className="col-lg-3 col-md-3 d-none d-lg-block d-md-block d-sm-none">
                                         <button
                                           type="button"
                                           className="btn btn-outline-s"
@@ -1726,9 +1589,9 @@ function Policydetails() {
                                             )
                                           }
                                         >
-                                          Show More
+                                          View More
                                         </button>
-                                      </div>
+                                      </div> */}
                                     </div>
                                     <div
                                       className="row collapse"
@@ -1769,16 +1632,20 @@ function Policydetails() {
                                     >
                                       <img src={threedots} alt="threedots" />
                                     </div>
-                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
-                                      <p className="color-b">DD/MM/YYYY</p>
+                                    <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                      <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
-                                      <p className="color-b">1,00,000</p>
+                                      <p className="color-b">
+                                        &#8377; 2,22,222
+                                      </p>
                                     </div>
-                                    <div className="col-lg-2 d-none d-lg-block d-sm-none">
-                                      <p className="color-b">2,22,222</p>
+                                    <div className="col-lg-3 d-none d-lg-block d-sm-none">
+                                      <p className="color-b">
+                                        &#8377; 2,22,222
+                                      </p>
                                     </div>
-                                    <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                    <div className="col-lg-3 col-md-3 d-lg-block d-sm-block">
                                       <p className="color-b">Success</p>
                                     </div>
                                   </div>
@@ -1834,7 +1701,7 @@ function Policydetails() {
                           >
                             <div className="accordion-body">
                               <div className="personal-de-card shadow-normal">
-                                <div className="row">
+                                {/* <div className="row">
                                   <div className="col-md-3 mb-3">
                                     <label className="dark-grey-text font16 line-ht-14 mb-0">
                                       Proposer Name
@@ -1848,7 +1715,7 @@ function Policydetails() {
                                       Policy Owner DOB
                                     </label>
                                     <div className="font18 line-ht-11">
-                                      DD/MM/YYYY
+                                      28-dec-2020
                                     </div>
                                   </div>
                                   <div className="col-md-3 mb-3">
@@ -1856,7 +1723,7 @@ function Policydetails() {
                                       Proposer DOB
                                     </label>
                                     <div className="font18 line-ht-11">
-                                      DD/MM/YYYY
+                                      28-dec-2020
                                     </div>
                                   </div>
                                   <div className="col-md-3 mb-3">
@@ -1894,7 +1761,136 @@ function Policydetails() {
                                       Address Line2
                                     </div>
                                   </div>
-                                </div>
+                                </div> */}
+                                <section>
+                                  <div className="section-header font20 line-ht-14 mb-2">
+                                    Policy Owner
+                                  </div>
+                                  <div className="row">
+                                    {/* <div className="col-md-3 mb-3">
+                                      <div className="d-flex align-items-center">
+                                        <div className="circle40 bg-color6 font24 text-white d-flex justify-content-center align-items-center">
+                                          B
+                                        </div>
+                                        <div className="ml-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Name
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            Banumathy
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> */}
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Name
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        Angelina Julie
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Mobile Number
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        8939291194
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        DOB
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Email ID
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        postman@gmail.com
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Relation
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        Father
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                                <div className="grey-horizontal-separator mb-3 mt-2" />
+                                <section>
+                                  <div className="section-header font20 line-ht-14 mb-2">
+                                    Life Insured
+                                  </div>
+                                  <div className="row">
+                                    {/* <div className="col-md-3 mb-3">
+                                      <div className="d-flex align-items-center">
+                                        <div className="circle40 bg-color6 font24 text-white d-flex justify-content-center align-items-center">
+                                          B
+                                        </div>
+                                        <div className="ml-2">
+                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                            Name
+                                          </label>
+                                          <div className="font18 line-ht-11">
+                                            Banumathy
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> */}
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Name
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        Angelina Julie
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Mobile Number
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        8939291194
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        DOB
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Email ID
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        postman@gmail.com
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Relation
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        Father
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
                                 <div className="grey-horizontal-separator mb-3 mt-2" />
                                 <section>
                                   <div className="section-header font20 line-ht-14 mb-2">
@@ -1902,26 +1898,53 @@ function Policydetails() {
                                   </div>
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
-                                      <div className="d-flex align-items-center">
-                                        <div className="circle40 bg-color6 font24 text-white d-flex justify-content-center align-items-center">
-                                          B
-                                        </div>
-                                        <div className="ml-2">
-                                          <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                            Nominee Name
-                                          </label>
-                                          <div className="font18 line-ht-11">
-                                            Banumathy
-                                          </div>
-                                        </div>
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Name
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        Angelina Julie
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Nominee DOB
+                                        Mobile Number
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        8939291194
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        DOB
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Email ID
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        postman@gmail.com
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Relation
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        Father
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Allocation %
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        22
                                       </div>
                                     </div>
                                   </div>
@@ -1929,31 +1952,57 @@ function Policydetails() {
                                 <div className="grey-horizontal-separator mb-3 mt-2" />
                                 <section>
                                   <div className="section-header font20 line-ht-14 mb-2">
-                                    Relationship Details
+                                    Nominee Details
                                   </div>
                                   <div className="row">
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Client Number
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        XXXXXX
-                                      </div>
-                                    </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Name
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        Sangeetha
+                                        Angelina Julie
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Life Insured Name
+                                        Mobile Number
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        Sangeetha
+                                        8939291194
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        DOB
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Email ID
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        postman@gmail.com
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Relation
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        Father
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Allocation %
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        22
                                       </div>
                                     </div>
                                   </div>
@@ -1963,113 +2012,7 @@ function Policydetails() {
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="accordion accordion-flush"
-                        id="accordionFlushExample"
-                      >
-                        <div className="accordion-item">
-                          <div
-                            className="accordion-header-wrapper collapsed"
-                            data-toggle="collapse"
-                            href="#bank-details"
-                            role="button"
-                            aria-expanded="false"
-                            aria-controls="bank-details"
-                          >
-                            <h2
-                              className="accordion-header"
-                              id="flush-headingOne"
-                            >
-                              Bank Details
-                            </h2>
-                            <i className="arrow-up" />
-                            <i className="arrow-down" />
-                          </div>
-                          <div
-                            id="bank-details"
-                            className="accordion-collapse collapse accordion-content"
-                          >
-                            <div className="accordion-body">
-                              <div className="personal-de-card shadow-normal">
-                                <div className="row">
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Account Holder Name
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      Sangeetha
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Account Number
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      XXXXXX
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Bank Name
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      ICICI Bank Pvt. Ltd
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Branch Name
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      Anna Nagar West
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      IFSC Code
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      ICICXXXXX
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Account Type
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      Savings
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      ECS Registration Status
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      Activated
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      MICR Code
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      XXXXXX
-                                    </div>
-                                  </div>
-                                  <div className="col-md-3 mb-3">
-                                    <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Payment Mode
-                                    </label>
-                                    <div className="font18 line-ht-11">
-                                      **************
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+
                       <div
                         className="accordion accordion-flush"
                         id="accordionFlushExample"
@@ -2100,9 +2043,127 @@ function Policydetails() {
                               <div className="personal-de-card shadow-normal">
                                 <section>
                                   <div className="section-header font20 line-ht-14 mb-2">
+                                    Other Information
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Client ID
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        UI767777
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        E-insurance number
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        12345678
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Coverage Status
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        XXXX
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Base Sum Assured
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,22,222
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Maturity Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Surrender Amount
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,22,222
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Policy Issuance Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Purpose of Insurance
+                                      </label>
+                                      <div className="font18 line-ht-11"></div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Total instalment premium
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,22,222
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Partial Withdrawal Amount
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,22,222
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Last premium Paid Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Total Premium Paid
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,22,222
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Final premium due date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                                <div className="grey-horizontal-separator mb-3 mt-2" />
+                                <section>
+                                  <div className="section-header font20 line-ht-14 mb-2">
                                     Coverage Information
                                   </div>
                                   <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Plan
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        ABC
+                                      </div>
+                                    </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Coverage Status
@@ -2113,10 +2174,26 @@ function Policydetails() {
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Base Sum Assured
+                                        Modal Premium
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        2,10,000
+                                        &#8377; 2,10,000
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Face Amount
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,10,000
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Issue Date
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        28-dec-2020
                                       </div>
                                     </div>
                                   </div>
@@ -2124,69 +2201,131 @@ function Policydetails() {
                                 <div className="grey-horizontal-separator mb-3 mt-2" />
                                 <section>
                                   <div className="section-header font20 line-ht-14 mb-2">
-                                    Other Information
+                                    Rider Details
                                   </div>
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Application Number
+                                        Rider status
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        XXXXXX
+                                        xxx
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Policy Issue Date
+                                        Rider Name
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        Akhil
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        EIA ID
+                                        Rider sum assured
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        XXXXXX
+                                        &#8377; 2,10,000
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Branch Received Date
+                                        Rider Premium
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        &#8377; 2,10,000
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Policy Paid Up Date
+                                        Rider Benefit Term
+                                      </label>
+                                      <div className="font18 line-ht-11">3</div>
+                                    </div>
+                                  </div>
+                                </section>
+                                <div className="grey-horizontal-separator mb-3 mt-2" />
+                                <section>
+                                  <div className="section-header font20 line-ht-14 mb-2">
+                                    Annuity Details
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Purchase Price
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        &#8377; 2,10,000
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Maturity Date
+                                        Annuity Amount
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        Akhil
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Partial Withdrawal Amount
+                                        Annuity Frequency
                                       </label>
-                                      <div className="font18 line-ht-11">-</div>
+                                      <div className="font18 line-ht-11">3</div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Advisor Code
+                                        Next Payout Date
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        Code goes here
+                                        28-dec-2020
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Annuity Option
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        XXX
+                                      </div>
+                                    </div>
+                                  </div>
+                                </section>
+                                <div className="grey-horizontal-separator mb-3 mt-2" />
+                                <section>
+                                  <div className="section-header font20 line-ht-14 mb-2">
+                                    Loan Availed
+                                  </div>
+                                  <div className="row">
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Total loan amount
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,10,000
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Outstanding loan amount
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        &#8377; 2,10,000
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Current rate of interest
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        3%
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Installment
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        XXX
                                       </div>
                                     </div>
                                   </div>
@@ -2195,124 +2334,104 @@ function Policydetails() {
                             </div>
                           </div>
                         </div>
-
-                        <div className="accordion-item">
-                          <div
-                            className="accordion-header-wrapper collapsed"
-                            data-toggle="collapse"
-                            href="#other-detail"
-                            role="button"
-                            aria-expanded="false"
-                            aria-controls="other-details"
-                          >
-                            <h2
-                              className="accordion-header"
-                              id="flush-headingOne"
+                        <div
+                          className="accordion accordion-flush"
+                          id="accordionFlushExample"
+                        >
+                          <div className="accordion-item">
+                            <div
+                              className="accordion-header-wrapper collapsed"
+                              data-toggle="collapse"
+                              href="#bank-details"
+                              role="button"
+                              aria-expanded="false"
+                              aria-controls="bank-details"
                             >
-                              Policy Dispatch Details
-                            </h2>
-                            <i className="arrow-up" />
-                            <i className="arrow-down" />
-                          </div>
-                          <div
-                            id="other-detail"
-                            className="accordion-collapse collapse accordion-content"
-                          >
-                            <div className="accordion-body">
-                              <div className="personal-de-card shadow-normal">
-                                <section>
-                                  <div className="section-header font20 line-ht-14 mb-2">
-                                    Coverage Information
+                              <h2
+                                className="accordion-header"
+                                id="flush-headingOne"
+                              >
+                                Bank Details
+                              </h2>
+                              <i className="arrow-up" />
+                              <i className="arrow-down" />
+                            </div>
+                            <div
+                              id="bank-details"
+                              className="accordion-collapse collapse accordion-content"
+                            >
+                              <div className="accordion-body">
+                                <div className="row">
+                                  <div className="col-lg-12 text-right">
+                                    <button
+                                      data-toggle="modal"
+                                      data-target="update-bank-details"
+                                      className="btn btn-primary-s m-bottom-10"
+                                    >
+                                      Update Bank Details
+                                    </button>
                                   </div>
+                                </div>
+                                <div className="personal-de-card shadow-normal">
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Coverage Status
+                                        Account Holder Name
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        Inforce
+                                        Sangeetha
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Base Sum Assured
+                                        Account number
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        2,10,000
-                                      </div>
-                                    </div>
-                                  </div>
-                                </section>
-                                <div className="grey-horizontal-separator mb-3 mt-2" />
-                                <section>
-                                  <div className="section-header font20 line-ht-14 mb-2">
-                                    Other Information
-                                  </div>
-                                  <div className="row">
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Application Number
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        XXXXXX
+                                        233232XXXXX
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Policy Issue Date
+                                        Bank Name
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        ICICI Bank Pvt. Ltd
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        EIA ID
+                                        Branch Name
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        XXXXXX
+                                        Anna Nagar West
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Branch Received Date
+                                        IFSC Code
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        xxxx8788
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Policy Paid Up Date
+                                        Account Type
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
+                                        Savings
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Maturity Date
+                                        MICR CODE
                                       </label>
                                       <div className="font18 line-ht-11">
-                                        DD/MM/YYYY
-                                      </div>
-                                    </div>
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Partial Withdrawal Amount
-                                      </label>
-                                      <div className="font18 line-ht-11">-</div>
-                                    </div>
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Advisor Code
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        Code goes here
+                                        xxxx
                                       </div>
                                     </div>
                                   </div>
-                                </section>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -2336,26 +2455,42 @@ function Policydetails() {
                             </div>
                             <div className="row">
                               <div className="col-lg-12 d-flex justify-content-between">
-                                <h3>Upsell Opportunity</h3>
-                                <div className="today">Today</div>
+                                <h3>Pre-Approved Offers</h3>
+                                <div className="today">Term</div>
                               </div>
                             </div>
                             <div className="row pad-10 card-body">
-                              <div className="col-2">
+                              <div className="col-2" style={{ padding: "0px" }}>
                                 <img
-                                  className="m-bottom-6"
+                                  className="m-bottom-6 bottom-26"
                                   src={Upsell}
                                   alt="creative"
                                 />
                               </div>
-                              <div className="col-10">
-                                <p className="m-top-12">Plan Name Goes here</p>
+                              <div
+                                className="col-10"
+                                style={{ paddingLeft: "0px" }}
+                              >
+                                <p className="m-top-12">&#8377; 2,22,222</p>
+                                <span className="grey">
+                                  Recommended Products: 'Product Name'
+                                </span>
                               </div>
                             </div>
                             <div className="row">
+                              {/* <div className="col-lg-6 text-right">
+                                  <button className="btn btn-outline-s">
+                                    Send Details
+                                  </button>
+                                </div> */}
                               <div className="col-lg-12 text-right">
-                                <button className="btn btn-outline-s">
-                                  Send Details
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-s width-153"
+                                  data-toggle="modal"
+                                  data-target="#pasaKnowMore"
+                                >
+                                  Know More
                                 </button>
                               </div>
                             </div>
@@ -2368,22 +2503,42 @@ function Policydetails() {
                             </div>
                             <div className="row">
                               <div className="col-lg-12 d-flex justify-content-between">
-                                <h3>Set Up ECS</h3>
-                                <div className="today">Today</div>
+                                <h3>Pre-Approved Offers</h3>
+                                <div className="today">Non-Term</div>
                               </div>
                             </div>
                             <div className="row pad-10 card-body">
-                              <div className="col-2">
-                                <img src={Setup} alt="circle" />
+                              <div className="col-2" style={{ padding: "0px" }}>
+                                <img
+                                  className="m-bottom-6 bottom-26"
+                                  src={Upsell}
+                                  alt="creative"
+                                />
                               </div>
-                              <div className="col-10">
-                                <p className="m-top-12">Policy ID</p>
+                              <div
+                                className="col-10"
+                                style={{ paddingLeft: "0px" }}
+                              >
+                                <p className="m-top-12">&#8377; 2,22,222</p>
+                                <span className="grey">
+                                  Recommended Products: 'Product Name'
+                                </span>
                               </div>
                             </div>
                             <div className="row">
+                              {/* <div className="col-lg-6 text-right">
+                                  <button className="btn btn-outline-s">
+                                    Send Details
+                                  </button>
+                                </div> */}
                               <div className="col-lg-12 text-right">
-                                <button className="btn btn-outline-s">
-                                  Send Register Request
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-s width-153"
+                                  data-toggle="modal"
+                                  data-target="#pasaKnowMore2"
+                                >
+                                  Know More
                                 </button>
                               </div>
                             </div>
@@ -2834,7 +2989,7 @@ function Policydetails() {
                                     <div className="row">
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <label className="ml-4">
-                                          Policy No.
+                                          Policy ID
                                         </label>
                                       </div>
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -3001,35 +3156,14 @@ function Policydetails() {
                                       {/* Hidden sm xs */}
                                     </div>
                                   </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
 
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
+                                  <div className="g-footer text-center">
+                                    <button
+                                      type="button"
+                                      className="btn btn-primary w-92"
+                                    >
+                                      See More
+                                    </button>
                                   </div>
                                   {/* Block */}
                                 </div>
@@ -3043,19 +3177,27 @@ function Policydetails() {
                 </div>
                 <div className="row modal-cta">
                   <div className="col-lg-12 text-right">
-                    <button
-                      className="btn btn-primary"
-                      style={{ width: "200px" }}
-                    >
-                      Download Tax Certificate
+                    <button className="btn btn-primary" data-dismiss="modal">
+                      Download
                     </button>
-                    <button className="btn btn-primary">Share</button>{" "}
+                    <button
+                      onClick={() => {
+                        openToast(
+                          "Tax Certificate has been successfully sent to xxx mobile number and xxx email ID"
+                        );
+                      }}
+                      className="btn btn-outline-s"
+                      data-dismiss="modal"
+                    >
+                      Share
+                    </button>{" "}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div
           className="modal fade"
           id="policyAccountStatement"
@@ -3099,9 +3241,9 @@ function Policydetails() {
                   </div>
                 </div>
                 <span className="grey">
-                  Tax Certificates are available only for last 3 Financial
-                  Years. Please raise a query in CRM to get older Tax
-                  Certificates
+                  You can only download statements for last 3 Financial Years
+                  from portal. To download older statement, please raise a query
+                  in CRM.
                 </span>
                 <div className="row">
                   <div className="col-md-12 mt-2">
@@ -3127,7 +3269,7 @@ function Policydetails() {
                                     <div className="row">
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <label className="ml-4">
-                                          Policy No.
+                                          Policy ID
                                         </label>
                                       </div>
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -3171,36 +3313,6 @@ function Policydetails() {
                                   {/* Block */}
                                   {/* Block */}
 
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
                                   {/* Block */}
                                   {/* Block */}
 
@@ -3336,13 +3448,8 @@ function Policydetails() {
                 </div>
                 <div className="row modal-cta">
                   <div className="col-lg-12 text-right">
-                    <button
-                      className="btn btn-primary"
-                      style={{ width: "200px" }}
-                    >
-                      Download Policy Statement
-                    </button>
-                    <button className="btn btn-primary">Share</button>{" "}
+                    <button className="btn btn-primary">Download</button>
+                    <button className="btn btn-outline-s">Share</button>{" "}
                   </div>
                 </div>
               </div>
@@ -3486,19 +3593,15 @@ function Policydetails() {
                 </div>
                 <div className="row modal-cta">
                   <div className="col-lg-12 text-right">
-                    <button
-                      className="btn btn-primary"
-                      style={{ width: "248px" }}
-                    >
-                      Download Premium Due Certificate
-                    </button>
-                    <button className="btn btn-primary">Share</button>{" "}
+                    <button className="btn btn-primary">Download</button>
+                    <button className="btn btn-outline-s">Share</button>{" "}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div
           className="modal fade"
           id="sales-illustration"
@@ -3565,7 +3668,7 @@ function Policydetails() {
                                     <div className="row">
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <label className="ml-4">
-                                          Policy No.
+                                          Policy ID
                                         </label>
                                       </div>
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -3745,19 +3848,15 @@ function Policydetails() {
                 </div>
                 <div className="row modal-cta">
                   <div className="col-lg-12 text-right">
-                    <button
-                      className="btn btn-primary"
-                      style={{ width: "300px" }}
-                    >
-                      Download Sales Illustration
-                    </button>
-                    <button className="btn btn-primary">Share</button>{" "}
+                    <button className="btn btn-primary">Download</button>
+                    <button className="btn btn-outline-s">Share</button>{" "}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div
           className="modal fade"
           id="policy-contract"
@@ -3783,6 +3882,10 @@ function Policydetails() {
               <div className="modal-body moda-family-tag-body">
                 <h3>Policy Contract</h3>
                 <hr />
+                <div className="grey">
+                  Policy contract are only available for Policies issued after
+                  Apr 2017. Please raise a query to get older documents.
+                </div>
 
                 <div className="row">
                   <div className="col-md-12 mt-2">
@@ -3808,7 +3911,7 @@ function Policydetails() {
                                     <div className="row">
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none ">
                                         <label className="ml-4">
-                                          Policy No.
+                                          Policy ID
                                         </label>
                                       </div>
                                       <div className="col-md-4 d-none d-lg-block d-md-none d-sm-none d-xs-none">
@@ -3927,16 +4030,121 @@ function Policydetails() {
                 </div>
                 <div className="row modal-cta">
                   <div className="col-lg-12 text-right">
-                    <button
-                      className="btn btn-primary"
-                      style={{ width: "300px" }}
-                    >
-                      Download Policy Contract
-                    </button>
-                    <button className="btn btn-primary">Share</button>{" "}
+                    <button className="btn btn-primary">Download</button>
+                    <button className="btn btn-outline-s">Share</button>{" "}
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="pasaKnowMore"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title bold " id="exampleModalLabel">
+                  Pasa Offer
+                </h5>
+                <button
+                  type="button"
+                  className="close modal-close-button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p className="font-18 color-black">
+                  Pre Approved Offers (PASA) are available for Akhil
+                  <br />
+                  • No Medicals <br />• No Income Proof
+                </p>
+                <p className="font-18 color-black">
+                  You can offer any Term Product to Akhil up to a Sum Assured of
+                  ₹ 2,22,222. Recommended Products for this Customer - 'Product
+                  Name'
+                </p>
+                <p className="dark-grey-text font-15">
+                  <b> Disclaimer:</b> Subject to Underwriting approvals based on
+                  actual information provided in the application form.
+                  <br />
+                </p>
+              </div>
+              {/* <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div> */}
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="modal fade"
+          id="pasaKnowMore2"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Pasa Offer
+                </h5>
+                <button
+                  type="button"
+                  className="close modal-close-button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p className="font-18 color-black">
+                  Pre Approved Offers (PASA) are available for Akhil
+                  <br />
+                  • No Medicals <br />• No Income Proof
+                </p>
+
+                <p className="font-18 color-black">
+                  You can offer any Non-Term Product to Akhil up to a Sum
+                  Assured of ₹ 2,22,222. Recommended Products for this Customer
+                  - 'Product Name'.
+                </p>
+                {/* <p>
+                      Term PASA available, You can offer any Term Product to **
+                      up to a Sum Assured of **. Recommended Products for this
+                      Customer - ****
+                    </p> */}
+                <p className="dark-grey-text font-15">
+                  <b> Disclaimer:</b> Subject to Underwriting approvals based on
+                  actual information provided in the application form.
+                  <br />
+                </p>
+              </div>
+              {/* <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div> */}
             </div>
           </div>
         </div>
