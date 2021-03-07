@@ -61,7 +61,7 @@ export default function Card(props) {
                   className="btn btn-outline-s"
                   onClick={() =>
                     props.openToast(
-                      "Payment link has been sent to mobile number and email id "
+                      "Payment link has been sent to xxx mobile number and xxx email id "
                     )
                   }
                 >

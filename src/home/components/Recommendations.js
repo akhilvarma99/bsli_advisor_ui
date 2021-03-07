@@ -498,10 +498,12 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                    <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 0</p>
+                                    <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Non-Term</label>
+                                    <div>₹ 0</div>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -554,10 +556,12 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 0</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Term</label>
+                                    <div>₹ 0</div>
                                   </div>
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Non-Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -610,10 +614,12 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Non-Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -666,10 +672,12 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Non-Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -719,10 +727,12 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-2 col-md-2">
-                                    <p>₹ 2,22,222</p>
+                                  <label className="d-lg-none" style={{marginLeft:'0',color:"#6c7174"}}>Sum Assured Non-Term</label>
+                                    <div>₹ 2,22,222</div>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
                                     <p>
@@ -1571,9 +1581,11 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
-                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
+                                  <div className="d-lg-none" style={{color: '#6c7174'}}>Policy ID | Date</div>
+                                    <p  className="float-left">129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 pad-md-0">
+                                    <div className="d-lg-none" style={{color: '#6c7174'}}>Policy Status</div>
                                     <p className="float-left">Paid up</p>
                                   </div>
 
@@ -1618,9 +1630,11 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
-                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
+                                  <div className="d-lg-none" style={{color: '#6c7174'}}>Policy ID | Date</div>
+                                    <p className="float-left">129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 pad-md-0">
+                                  <div className="d-lg-none" style={{color: '#6c7174'}}>Policy Status</div>
                                     <p className="float-left">Paid up</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
@@ -1664,9 +1678,11 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
-                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
+                                  <div className="d-lg-none" style={{color: '#6c7174'}}>Policy ID | Date</div>
+                                    <p className="float-left">129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 pad-md-0">
+                                  <div className="d-lg-none" style={{color: '#6c7174'}}>Policy Status</div>
                                     <p className="float-left">Paid up</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
@@ -1710,9 +1726,11 @@ function Recommendations() {
                                   </div>
                                   {/* Hidden sm xs */}
                                   <div className="col-lg-3 col-md-4">
-                                    <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
+                                  <div className="d-lg-none" style={{color: '#6c7174'}}>Policy ID | Date</div>
+                                    <p className="float-left">129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                   </div>
-                                  <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
+                                  <div className="col-lg-3 col-md-3 pad-md-0">
+                                  <div className="d-lg-none" style={{color: '#6c7174'}}>Policy Status</div>
                                     <p className="float-left">Paid up</p>
                                   </div>
                                   <div className="col-lg-1 col-md-1 text-center">
@@ -1755,9 +1773,11 @@ function Recommendations() {
                                 </div>
                                 {/* Hidden sm xs */}
                                 <div className="col-lg-3 col-md-4">
-                                  <p>129129229 &nbsp;|&nbsp; 28-dec-2020</p>
+                                <div className="d-lg-none" style={{color: '#6c7174'}}>Policy ID | Date</div>
+                                  <p className="float-left">129129229 &nbsp;|&nbsp; 28-dec-2020</p>
                                 </div>
-                                <div className="col-lg-3 col-md-3 text-center pad-0 d-none d-lg-block">
+                                <div className="col-lg-3 col-md-3 pad-md-0">
+                                <div className="d-lg-none" style={{color: '#6c7174'}}>Policy Status</div>
                                   <p className="float-left">Paid up</p>
                                 </div>
                                 <div className="col-lg-1 col-md-1 text-center">

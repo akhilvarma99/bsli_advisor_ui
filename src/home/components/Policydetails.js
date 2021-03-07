@@ -76,7 +76,7 @@ function Policydetails() {
       cardTitle: "Premium Due",
       icon: premiumDueIcon,
       bodyTitle: "Policy ID",
-      body: "20-dec-2020 | ₹ &#8377; 2,22,222",
+      body: "20-dec-2020 | ₹ 2,22,222",
       status: "Payment Failed",
       buttonText: "Send Payment Link",
     },
@@ -97,7 +97,7 @@ function Policydetails() {
       cardTitle: "Payouts Released",
       icon: payoutIcon,
       bodyTitle: "Policy ID",
-      body: "27-dec-2020 | Type | ₹ &#8377; 2,22,222",
+      body: "27-dec-2020 | Type | ₹ 2,22,222",
       // status: "Payouts Released",
       buttonText: "Send Congratulations",
     },
@@ -116,7 +116,7 @@ function Policydetails() {
       cardTitle: "Policy Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      body: "27-dec-2020 | ₹ 2,22,222",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -136,7 +136,7 @@ function Policydetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      body: "27-dec-2020 | ₹ 2,22,222",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -146,7 +146,7 @@ function Policydetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      body: "27-dec-2020 | ₹ 2,22,222",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -156,7 +156,7 @@ function Policydetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      body: "27-dec-2020 | ₹ 2,22,222",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -166,7 +166,7 @@ function Policydetails() {
       cardTitle: "To Be Matured",
       icon: paymentRenewalIcon,
       bodyTitle: "Policy ID",
-      body: "27-dec-2020 | ₹ &#8377; 2,22,222",
+      body: "27-dec-2020 | ₹ 2,22,222",
       status: "",
       buttonText: "Send Wishes",
     },
@@ -1155,9 +1155,7 @@ function Policydetails() {
                                       <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
-                                      <p className="color-b">
-                                        &#8377; 2,22,222
-                                      </p>
+                                      <p className="color-b">Credit Card</p>
                                     </div>
                                     <div className="col-lg-2 d-none d-lg-block d-sm-none">
                                       <p className="color-b">
@@ -1196,7 +1194,7 @@ function Policydetails() {
                             className="accordion-collapse collapse show accordion-content"
                           >
                             <div className="accordion-body pt-0">
-                              <div className="row mb-2">
+                              <div className="row mb-19">
                                 {/* <div className="col-lg-1">
                                   <span>from Date</span>
                                   <div className="date-box">
@@ -1221,12 +1219,15 @@ function Policydetails() {
                                     />
                                   </div>
                                 </div> */}
-                                <div className="col-lg-2 ">
+                                <div className=" col col-lg-2 pr-0 ">
                                   <span>From Date </span>
                                   <input className="height-10" type="date" />
                                 </div>
-                                <div className="col-lg-2 padding-none height-10">
+                                <div className="col col-lg-2  height-10">
                                   <span> To Date</span>
+                                  <span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  </span>
                                   <input className="height-10" type="date" />
                                 </div>
 
@@ -1240,7 +1241,7 @@ function Policydetails() {
                               <div className="policy-grid-customer">
                                 <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                   <div className="row">
-                                    <div className="col-lg-2">
+                                    <div className="col-lg-3">
                                       <h3>Transaction Date</h3>
                                     </div>
                                     <div className="col-lg-3">
@@ -1269,7 +1270,7 @@ function Policydetails() {
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
-                                      <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
@@ -1286,7 +1287,7 @@ function Policydetails() {
                                       <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
                                         <button
                                           type="button"
-                                          className="btn btn-outline-s"
+                                          className="btn btn-outline-s w-92"
                                           data-toggle="collapse"
                                           data-target={`#collapseExample${index}`}
                                           aria-expanded="false"
@@ -1341,13 +1342,11 @@ function Policydetails() {
                                     >
                                       <img src={threedots} alt="threedots" />
                                     </div>
-                                    <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                    <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
                                       <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
-                                      <p className="color-b">
-                                        &#8377; 2,22,222
-                                      </p>
+                                      <p className="color-b">Credit Card</p>
                                     </div>
                                     <div className="col-lg-2 d-none d-lg-block d-sm-none">
                                       <p className="color-b">
@@ -1397,7 +1396,7 @@ function Policydetails() {
                               <div className="policy-grid-customer">
                                 <div className="policy-grid-header d-none d-lg-block d-sm-none">
                                   <div className="row">
-                                    <div className="col-lg-2">
+                                    <div className="col-lg-3">
                                       <h3>Date of Transaction</h3>
                                     </div>
                                     <div className="col-lg-3">
@@ -1406,7 +1405,7 @@ function Policydetails() {
                                     <div className="col-lg-2">
                                       <h3>Total Deductions</h3>
                                     </div>
-                                    <div className="col-lg-2">
+                                    <div className="col-lg-3">
                                       <h3>Fund Name/Option</h3>
                                     </div>
                                     <div className="col-lg-2">
@@ -1426,7 +1425,7 @@ function Policydetails() {
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
-                                      <div className="col-lg-2 col-md-2 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg3 col-md-3 d-none d-lg-block d-sm-none">
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
@@ -1445,7 +1444,7 @@ function Policydetails() {
                                       <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-block d-sm-none">
                                         <button
                                           type="button"
-                                          className="btn btn-outline-s"
+                                          className="btn btn-outline-s w-92"
                                           data-toggle="collapse"
                                           data-target={`#collapsed${index}`}
                                           aria-expanded="false"
@@ -1453,7 +1452,7 @@ function Policydetails() {
                                           aria-controls="collapseExample"
                                           onClick={() =>
                                             buttonText(
-                                              `collapseExample${index}`,
+                                              `collapsed${index}`,
                                               `buttons${index}`
                                             )
                                           }
@@ -2983,7 +2982,7 @@ function Policydetails() {
                                 role="tabpanel"
                                 aria-labelledby="today"
                               >
-                                <div className="g-container scroll-vertical">
+                                <div className="g-container">
                                   {/* Block */}
                                   <div className="g-header d-nones d-lg-block d-md-none d-sm-none d-xs-none ">
                                     <div className="row">
@@ -3033,138 +3032,6 @@ function Policydetails() {
                                   {/* Block */}
                                   {/* Block */}
 
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  {/* Block */}
-                                  {/* Block */}
-
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-
-                                  <div className="g-footer text-center">
-                                    <button
-                                      type="button"
-                                      className="btn btn-primary w-92"
-                                    >
-                                      See More
-                                    </button>
-                                  </div>
                                   {/* Block */}
                                 </div>
                               </div>
@@ -3263,7 +3130,7 @@ function Policydetails() {
                                 role="tabpanel"
                                 aria-labelledby="today"
                               >
-                                <div className="g-container scroll-vertical">
+                                <div className="g-container ">
                                   {/* Block */}
                                   <div className="g-header d-nones d-lg-block d-md-none d-sm-none d-xs-none ">
                                     <div className="row">
@@ -3316,126 +3183,6 @@ function Policydetails() {
                                   {/* Block */}
                                   {/* Block */}
 
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
                                   {/* Block */}
                                 </div>
                               </div>
@@ -3551,36 +3298,6 @@ function Policydetails() {
                                   {/* Block */}
                                   {/* Block */}
 
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
                                   {/* Block */}
                                 </div>
                               </div>
@@ -3712,130 +3429,6 @@ function Policydetails() {
                                   {/* Block */}
                                   {/* Block */}
 
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-
-                                  {/* Block */}
-                                  {/* Block */}
-
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
                                   {/* Block */}
                                 </div>
                               </div>
@@ -3955,69 +3548,6 @@ function Policydetails() {
                                   {/* Block */}
                                   {/* Block */}
 
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
-                                  {/* Block */}
-                                  {/* Block */}
-
-                                  <div className="g-row">
-                                    <div className="row">
-                                      <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
-                                          <div
-                                            className="form-check-label ml-1 "
-                                            htmlFor="customCheckBox5"
-                                          >
-                                            12345678
-                                          </div>
-                                        </div>
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                      <div className="col-lg-4 col-md-4">
-                                        Sangeetha
-                                      </div>
-                                      <div className="col-lg-4 col-md-4">
-                                        Plan Name goes here
-                                      </div>
-                                      {/* Hidden sm xs */}
-                                    </div>
-                                  </div>
                                   {/* Block */}
                                 </div>
                               </div>
