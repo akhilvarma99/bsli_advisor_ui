@@ -18,13 +18,22 @@ import Querymanagementsystem from "./Querymanagementsystem";
 import Query_list from "./Query_list";
 import Raise_query from "./Raise_query";
 import Dashboard from "../containers/dashboard";
-
+import Password from "./password";
 import Trouble from "./trouble";
+import Users from "./users";
+import Terms from "./terms";
+import Policy from "./policy";
+
 function Approuter() {
   return (
     <div className="portal-wrapper">
       <Route exact path="/" component={login} />
       <Route path="/troubleLogin" component={Trouble} />
+      <Route path="/password" component={Password} />
+      <Route path="/users" component={Users} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/Policy" component={Policy} />
+
       <Route exact path="/CustomerList" component={CustomerList} />
       <Route exact path="/Allcustomers" component={Allcustomers} />
       <Route exact path="/Recommendations" component={Recommendations} />

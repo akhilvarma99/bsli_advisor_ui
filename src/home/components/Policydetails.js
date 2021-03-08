@@ -88,7 +88,7 @@ function Policydetails() {
       bodyTitle: "Policy ID",
       body: "27-dec-2020",
       status: "",
-      buttonText: "Send Remainder",
+      buttonText: "Send Reminder",
     },
 
     {
@@ -449,7 +449,7 @@ function Policydetails() {
                                   <div className="row">
                                     <div className="col-md-12">
                                       <div className="quikc-links-card padding-none margin-bottom-none box-shadow-none">
-                                        <div className="quick-links-inner h-scroll-s padding-bottom-none">
+                                        <div className="quick-links-inner h-scroll-s">
                                           <ul>
                                             <li
                                               className={
@@ -889,7 +889,7 @@ function Policydetails() {
                                   className="accordion-header"
                                   id="flush-headingOne"
                                 >
-                                  Benifit Details
+                                  Benefit Details
                                 </h2>
                                 <div className="accordion-header text-right">
                                   <span className="pr-2">
@@ -1219,11 +1219,11 @@ function Policydetails() {
                                     />
                                   </div>
                                 </div> */}
-                                <div className=" col col-lg-2 pr-0 ">
+                                <div className=" col col-lg-2 pr-0 py-1">
                                   <span>From Date </span>
                                   <input className="height-10" type="date" />
                                 </div>
-                                <div className="col col-lg-2  height-10">
+                                <div className="col col-lg-2  height-10 py-1">
                                   <span> To Date</span>
                                   <span>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1315,9 +1315,9 @@ function Policydetails() {
                                     >
                                       <div className="col-lg-12 m-pad-div">
                                         <div className="expanded-div">
-                                          <div className="row">
+                                          <div className="row px-2">
                                             <p className="grey-text">Reason</p>
-                                            <p>
+                                            <p className="text-justify">
                                               Lorem ipsum dolor sit amet,
                                               consectetur adipiscing elit, sed
                                               do eiusmod tempor incididunt ut
@@ -1338,15 +1338,16 @@ function Policydetails() {
                                 ))}
                                 <div className="policy-grid-row">
                                   <div className="row">
-                                    <div
+                                    {/* <div
                                       className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                       data-toggle="collapse"
                                       data-target="#collapseExample"
                                       aria-expanded="false"
                                       aria-controls="collapseExample"
+                                      id="button"
                                     >
                                       <img src={threedots} alt="threedots" />
-                                    </div>
+                                    </div> */}
                                     <div className="col-lg-3 col-md-3">
                                     <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label>
                                       <p className="color-b">28-dec-2020</p>
@@ -1428,9 +1429,10 @@ function Policydetails() {
                                       <div
                                         className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                         data-toggle="collapse"
-                                        data-target="#collapseExample"
+                                        data-target={`#collapsed${index}`}
                                         aria-expanded="false"
-                                        aria-controls="collapseExample"
+                                        aria-controls="collapsed"
+                                        id={`buttons${index}`}
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
@@ -1559,18 +1561,19 @@ function Policydetails() {
                                     </div>
                                   </div>
                                 </div>
-                                {[1, 2, 3].map((id, index) => (
+                                {[1, 2, 3, 4].map((id, index) => (
                                   <div className="policy-grid-row" key={index}>
                                     <div className="row">
-                                      <div
+                                      {/* <div
                                         className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                         data-toggle="collapse"
-                                        data-target="#collapseExample"
+                                        data-target={`#collapse${index}`}
                                         aria-expanded="false"
-                                        aria-controls="collapseExample"
+                                        aria-controls="collapse"
+                                        id={`button${index}`}
                                       >
                                         <img src={threedots} alt="threedots" />
-                                      </div>
+                                      </div> */}
                                       <div className="col-lg-3 col-md-3">
                                       <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label> 
                                         <p className="color-b">28-dec-2020</p>
@@ -1639,7 +1642,7 @@ function Policydetails() {
 
                                 <div className="policy-grid-row">
                                   <div className="row">
-                                    <div
+                                    {/* <div
                                       className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                       data-toggle="collapse"
                                       data-target="#collapseExample"
@@ -1647,16 +1650,14 @@ function Policydetails() {
                                       aria-controls="collapseExample"
                                     >
                                       <img src={threedots} alt="threedots" />
-                                    </div>
+                                    </div> */}
                                     <div className="col-lg-3 col-md-3">
                                     <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label> 
                                       <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
                                     <label className="d-lg-none" style={{color:"#6c7174"}}>Payout Type</label> 
-                                      <p className="color-b">
-                                        &#8377; 2,22,222
-                                      </p>
+                                    <p className="color-b">payout type</p>
                                     </div>
                                     <div className="col-lg-3">
                                     <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label> 
@@ -1836,14 +1837,6 @@ function Policydetails() {
                                     </div>
                                   </div>
                                   <div className="row">
-                                    <div className="col-md-3 mb-3">
-                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Relation
-                                      </label>
-                                      <div className="font18 line-ht-11">
-                                        Father
-                                      </div>
-                                    </div>
                                   </div>
                                 </section>
                                 <div className="grey-horizontal-separator mb-3 mt-2" />
@@ -1901,7 +1894,7 @@ function Policydetails() {
                                     </div>
                                   </div>
                                   <div className="row">
-                                    <div className="col-md-3 mb-3">
+                                  <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Relation
                                       </label>
@@ -1953,7 +1946,7 @@ function Policydetails() {
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Relation
+                                      Relation
                                       </label>
                                       <div className="font18 line-ht-11">
                                         Father
@@ -2011,7 +2004,7 @@ function Policydetails() {
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                        Relation
+                                      Relation
                                       </label>
                                       <div className="font18 line-ht-11">
                                         Father
@@ -2254,6 +2247,14 @@ function Policydetails() {
                                       </label>
                                       <div className="font18 line-ht-11">
                                         &#8377; 2,10,000
+                                      </div>
+                                    </div>
+                                    <div className="col-md-3 mb-3">
+                                      <label className="dark-grey-text font16 line-ht-14 mb-0">
+                                        Rider Premium Term
+                                      </label>
+                                      <div className="font18 line-ht-11">
+                                        XXXXX
                                       </div>
                                     </div>
                                     <div className="col-md-3 mb-3">
@@ -3023,17 +3024,9 @@ function Policydetails() {
                                   <div className="g-row">
                                     <div className="row">
                                       <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
+                                        <div>
                                           <div
-                                            className="form-check-label ml-1 "
+                                            className="form-check-label"
                                             htmlFor="customCheckBox5"
                                           >
                                             12345678
@@ -3171,17 +3164,9 @@ function Policydetails() {
                                   <div className="g-row">
                                     <div className="row">
                                       <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
+                                        <div>
                                           <div
-                                            className="form-check-label ml-1 "
+                                            className="form-check-label"
                                             htmlFor="customCheckBox5"
                                           >
                                             12345678
@@ -3289,17 +3274,9 @@ function Policydetails() {
                                   <div className="g-row">
                                     <div className="row">
                                       <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
+                                        <div>
                                           <div
-                                            className="form-check-label ml-1 "
+                                            className="form-check-label"
                                             htmlFor="customCheckBox5"
                                           >
                                             12345678
@@ -3420,17 +3397,10 @@ function Policydetails() {
                                   <div className="g-row">
                                     <div className="row">
                                       <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
+                                        <div>
 
                                           <div
-                                            className="form-check-label ml-1 "
+                                            className="form-check-label"
                                             htmlFor="customCheckBox5"
                                           >
                                             12345678
@@ -3539,17 +3509,9 @@ function Policydetails() {
                                   <div className="g-row">
                                     <div className="row">
                                       <div className="col-lg-4 col-md-4 text-left ">
-                                        <div className="pl-3">
-                                          <input
-                                            className="form-check-input "
-                                            type="radio"
-                                            name="retentionRadio"
-                                            value="Mature"
-                                            id="customCheckBox5"
-                                          />
-
+                                        <div>
                                           <div
-                                            className="form-check-label ml-1 "
+                                            className="form-check-label"
                                             htmlFor="customCheckBox5"
                                           >
                                             12345678

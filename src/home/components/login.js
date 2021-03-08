@@ -1,4 +1,4 @@
-import { OverlayTrigger, Popover } from "react-bootstrap";
+import { Nav, OverlayTrigger, Popover } from "react-bootstrap";
 import BlankHeader from "../../blankheader";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -31,7 +31,7 @@ function Login(props) {
       ""
     );
     setTextBox(changedValue);
-    if (textBox === "") {
+    if (textElement.value === "") {
       textElement.style.border = "1px solid";
       buttonElement.disabled = true;
     } else {
@@ -61,8 +61,8 @@ function Login(props) {
                   >
                     <label htmlFor="exampleInputEmail1">User ID</label>
                     <OverlayTrigger
-                      trigger="click"
-                      placement="right"
+                      trigger="hover"
+                      placement="left"
                       overlay={popover}
                     >
                       <img src={infoIcon} alt="infoIcon" />
@@ -105,13 +105,15 @@ function Login(props) {
                   </div>
                   <div className="col-md-4   ">
                     {" "}
-                    <button
-                      type="button"
-                      disabled
-                      className="btn btn-primary float-right checkNext"
-                    >
-                      Next
-                    </button>
+                    <NavLink to="/password">
+                      <button
+                        type="button"
+                        disabled
+                        className="btn btn-primary float-right checkNext"
+                      >
+                        Next
+                      </button>
+                    </NavLink>
                   </div>
                   <div className="col-md-8 show-xs">
                     <br />
@@ -129,7 +131,13 @@ function Login(props) {
 
             <div style={{ width: "100%" }} className="privacy_term_div">
               <p style={{ textAlign: "center" }}>
-                <span>Privacy</span> &nbsp; <span>Terms</span>
+                <NavLink to="/terms" target="_blank" className="custom-navlink">
+                  <span>Privacy</span> &nbsp;{" "}
+                </NavLink>
+                <NavLink to="/terms" target="_blank" className="custom-navlink">
+                  {" "}
+                  <span>Terms</span>
+                </NavLink>
               </p>
             </div>
           </div>

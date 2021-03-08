@@ -398,27 +398,27 @@ function Overdue() {
                                             <div className="expanded-div">
                                               <div className="row">
                                                 <div className="col-lg-3 col-md-3 col-sm-12">
-                                                  <p className="black-fade">
+                                                  <p className="black-fade" style={{float:"left"}}>
                                                     Billing Method
                                                     <br />
-                                                    <span className="black">
+                                                    <span className="black" style={{float:"left"}}>
                                                       Cheque
                                                     </span>
                                                   </p>
                                                 </div>
                                                 <div className="col-lg-3 col-md-3 col-sm-12">
-                                                  <p className="black-fade">
+                                                  <p className="black-fade" style={{float:"left"}}>
                                                     Payment Status <br />
-                                                    <span className="black">
+                                                    <span className="black" style={{float:"left"}}>
                                                       Failed
                                                     </span>
                                                   </p>
                                                 </div>
                                                 <div className="col-lg-3 col-md-3 col-sm-12">
-                                                  <p className="black-fade">
+                                                  <p className="black-fade" style={{float:"left"}}>
                                                     Policy Lapse Date
                                                     <br />
-                                                    <span className="black">
+                                                    <span className="black" style={{float:"left"}}>
                                                       28-dec-2020
                                                     </span>
                                                   </p>
@@ -426,10 +426,10 @@ function Overdue() {
                                               </div>
                                               <div className="row">
                                                 <div className="col-lg-12 col-md-12 col-sm-12">
-                                                  <p className="black-fade">
+                                                  <p className="black-fade" style={{float:"left"}}>
                                                     Reason
                                                     <br />
-                                                    <span className="black">
+                                                    <span className="black" style={{float:"left"}}>
                                                       Lorem ipsum dolor sit
                                                       amet, consectetur
                                                       adipiscing elit, sed do

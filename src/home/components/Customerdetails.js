@@ -117,7 +117,7 @@ function Customerdetails() {
       bodyTitle: "Policy ID",
       body: "27-dec-2020",
       status: "",
-      buttonText: "Send Remainder",
+      buttonText: "Send Reminder",
     },
 
     {
@@ -465,7 +465,7 @@ function Customerdetails() {
                                     <div className="row">
                                       <div className="col-md-12">
                                         <div className="quikc-links-card padding-none margin-bottom-none box-shadow-none">
-                                          <div className="quick-links-inner h-scroll-s padding-bottom-none">
+                                          <div className="quick-links-inner h-scroll-s">
                                             <ul>
                                               <li
                                                 className={
@@ -1140,9 +1140,10 @@ function Customerdetails() {
                                         <div
                                           className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                           data-toggle="collapse"
-                                          data-target="#collapseExample"
+                                          data-target={`#collapseExample${index}`}
                                           aria-expanded="false"
                                           aria-controls="collapseExample"
+                                          id={`buttons${index}`}
                                         >
                                           <img
                                             src={threedots}
@@ -1354,9 +1355,10 @@ function Customerdetails() {
                                         <div
                                           className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                           data-toggle="collapse"
-                                          data-target="#collapseExample"
+                                          data-target={`#collapseExamplef${index}`}
                                           aria-expanded="false"
                                           aria-controls="collapseExample"
+                                          id={`buttonf${index}`}
                                         >
                                           <img
                                             src={threedots}
@@ -3583,7 +3585,7 @@ function Customerdetails() {
                   </button>
                 </div>
                 <div class="modal-body">
-                  You are removing your "Father" from Family tag
+                You are removing policy "policy id" from Family tag.
                 </div>
                 <div class="modal-footer">
                   <button

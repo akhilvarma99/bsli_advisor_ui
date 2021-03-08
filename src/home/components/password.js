@@ -1,11 +1,11 @@
 import React, { useState,useEffect } from 'react';
 import arrow from '../../assets/img/icons/arrow.svg';
-import leftArrow from '../../assets/img/icons/left-arrow.svg';
+import leftArrow from '../../assets/img/icons/arrow-left.svg';
 import { NavLink,useLocation,useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { createHash } from 'crypto';
 import AESEncryption from './aes';
-import useLoader from '../../hooks/useLoader.js'
+import useLoader from '../../hooks/useLoader.js';
 
 
 function Password() {
