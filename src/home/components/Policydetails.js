@@ -1264,24 +1264,29 @@ function Policydetails() {
                                       <div
                                         className="m-menu-dots d-lg-none d-md-none d-sm-block"
                                         data-toggle="collapse"
-                                        data-target="#collapseExample"
+                                        data-target={`#collapseExample${index}`}
                                         aria-expanded="false"
                                         aria-controls="collapseExample"
+                                        id={`button${index}`}
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg-3 col-md-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label>
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Type</label>
                                         <p className="color-b">Credit Card</p>
                                       </div>
-                                      <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg-2">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label>
                                         <p className="color-b">
                                           &#8377; 2,22,222
                                         </p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Status</label>
                                         <p className="color-b">Failed</p>
                                       </div>
                                       <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
@@ -1342,18 +1347,22 @@ function Policydetails() {
                                     >
                                       <img src={threedots} alt="threedots" />
                                     </div>
-                                    <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                    <div className="col-lg-3 col-md-3">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label>
                                       <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Type</label>
                                       <p className="color-b">Credit Card</p>
                                     </div>
-                                    <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                    <div className="col-lg-2">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label>
                                       <p className="color-b">
                                         &#8377; 2,22,222
                                       </p>
                                     </div>
                                     <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Status</label>           
                                       <p className="color-b">Success</p>
                                     </div>
                                   </div>
@@ -1425,20 +1434,24 @@ function Policydetails() {
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
-                                      <div className="col-lg3 col-md-3 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg3 col-md-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Date of Transaction</label> 
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Amount Allocated To Fund</label> 
                                         <p className="color-b">
                                           &#8377;4,00,000
                                         </p>
                                       </div>
-                                      <div className="col-lg-2 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg-2">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Total Deductions</label> 
                                         <p className="color-b">
                                           &#8377; 2,22,222
                                         </p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Fund Name/Option</label> 
                                         <p className="color-b">Fund Name</p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-block d-sm-none">
@@ -1558,18 +1571,22 @@ function Policydetails() {
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
-                                      <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg-3 col-md-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label> 
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Payout Type</label> 
                                         <p className="color-b">payout type</p>
                                       </div>
-                                      <div className="col-lg-3 d-none d-lg-block d-sm-none">
+                                      <div className="col-lg-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label> 
                                         <p className="color-b">
                                           &#8377; 2,22,222
                                         </p>
                                       </div>
-                                      <div className="col-lg-3 col-md-3 d-lg-block d-sm-block">
+                                      <div className="col-lg-3 col-md-3">
+                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Status</label> 
                                         <p className="color-b">Failed</p>
                                       </div>
                                       {/* <div className="col-lg-3 col-md-3 d-none d-lg-block d-md-block d-sm-none">
@@ -1631,20 +1648,24 @@ function Policydetails() {
                                     >
                                       <img src={threedots} alt="threedots" />
                                     </div>
-                                    <div className="col-lg-3 col-md-3 d-none d-lg-block d-sm-none">
+                                    <div className="col-lg-3 col-md-3">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label> 
                                       <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Payout Type</label> 
                                       <p className="color-b">
                                         &#8377; 2,22,222
                                       </p>
                                     </div>
-                                    <div className="col-lg-3 d-none d-lg-block d-sm-none">
+                                    <div className="col-lg-3">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label> 
                                       <p className="color-b">
                                         &#8377; 2,22,222
                                       </p>
                                     </div>
                                     <div className="col-lg-3 col-md-3 d-lg-block d-sm-block">
+                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Status</label> 
                                       <p className="color-b">Success</p>
                                     </div>
                                   </div>
