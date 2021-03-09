@@ -123,7 +123,10 @@ function Trouble() {
                           </p>
 
                           <p className="font-size-18">
-                            Step 1: Go to https://selfhelp.abfsg.com/
+                            Step 1: Go to{" "}
+                            <a href="https://selfhelp.abfsg.com">
+                              https://selfhelp.abfsg.com/{" "}
+                            </a>
                           </p>
                           <p className="font-size-18">
                             Step 2: Use “AD account unlock and password reset”
@@ -203,7 +206,10 @@ function Trouble() {
                             </span>
                           </p>
                           <p className="font-size-18">
-                            Step 1: Go to https://selfhelp.abfsg.com/
+                            Step 1: Go to{" "}
+                            <a href="https://selfhelp.abfsg.com">
+                              https://selfhelp.abfsg.com/{" "}
+                            </a>
                           </p>
                           <p className="font-size-18">
                             Step 2: Use “AD account unlock and password reset”

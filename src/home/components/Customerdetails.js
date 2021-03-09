@@ -54,12 +54,15 @@ function Customerdetails() {
 
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
+    console.log("yes");
     console.log(accordionClass);
+    console.log(buttonId);
     if (accordionClass[2] == "show") {
-      console.log("conditin" + accordionClass);
+      console.log("m");
       document.getElementById(buttonId).innerHTML = "View More";
       document.getElementById(buttonId).classList.remove("checked-state");
     } else {
+      console.log("l");
       document.getElementById(buttonId).innerHTML = "View Less";
       document.getElementById(buttonId).classList.add("checked-state");
     }
@@ -1151,27 +1154,37 @@ function Customerdetails() {
                                           />
                                         </div>
                                         <div className="col-lg-2 col-md-2">
-                                        <label class="d-lg-none d-sm-block">Customer Name</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Customer Name
+                                          </label>
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2">
-                                        <label class="d-lg-none d-sm-block">Plan name</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Plan name
+                                          </label>
                                           <p className="color-b text-overflow-ellipsis">
                                             Sample text for plan name
                                           </p>
                                         </div>
                                         <div className="col-lg-2">
-                                        <label class="d-lg-none d-sm-block">Amount</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Amount
+                                          </label>
                                           <p className="color-b">
                                             &#8377;1,22,222
                                           </p>
                                         </div>
                                         <div className="col-lg-2">
-                                        <label class="d-lg-none d-sm-block">Policy Status</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Policy Status
+                                          </label>
                                           <p className="color-b">Paid up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                        <label class="d-lg-none d-sm-block">Date</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Date
+                                          </label>
                                           <p className="color-b">28-dec-2020</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
@@ -1358,7 +1371,6 @@ function Customerdetails() {
                                           data-target={`#collapseExamplef${index}`}
                                           aria-expanded="false"
                                           aria-controls="collapseExample"
-                                          id={`buttonf${index}`}
                                         >
                                           <img
                                             src={threedots}
@@ -1366,27 +1378,37 @@ function Customerdetails() {
                                           />
                                         </div>
                                         <div className="col-lg-2 col-md-2">
-                                        <label class="d-lg-none d-sm-block">Customer Name</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Customer Name
+                                          </label>
                                           <p className="color-b">Vijay Singa</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2">
-                                        <label class="d-lg-none d-sm-block">Plan name</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Plan name
+                                          </label>
                                           <p className="color-b text-overflow-ellipsis">
                                             Sample text for plan name
                                           </p>
                                         </div>
                                         <div className="col-lg-2">
-                                        <label class="d-lg-none d-sm-block">Amount</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Amount
+                                          </label>
                                           <p className="color-b">
                                             &#8377;1,22,222
                                           </p>
                                         </div>
                                         <div className="col-lg-2">
-                                        <label class="d-lg-none d-sm-block">Policy Status</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Policy Status
+                                          </label>
                                           <p className="color-b">Paid up</p>
                                         </div>
                                         <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                        <label class="d-lg-none d-sm-block">Date</label>
+                                          <label class="d-lg-none d-sm-block">
+                                            Date
+                                          </label>
                                           <p className="color-b">28-dec-2020</p>
                                         </div>
                                         <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
@@ -3585,7 +3607,7 @@ function Customerdetails() {
                   </button>
                 </div>
                 <div class="modal-body">
-                You are removing policy "policy id" from Family tag.
+                  You are removing policy 112345 from Family tag.
                 </div>
                 <div class="modal-footer">
                   <button

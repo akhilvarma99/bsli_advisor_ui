@@ -74,6 +74,7 @@ function Login(props) {
                     onChange={handleInput}
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
+                    autoComplete="off"
                     placeholder="Eg :123456"
                     value={textBox}
                   />
@@ -131,7 +132,7 @@ function Login(props) {
 
             <div style={{ width: "100%" }} className="privacy_term_div">
               <p style={{ textAlign: "center" }}>
-                <NavLink to="/terms" target="_blank" className="custom-navlink">
+                <NavLink to="/privacy" target="_blank" className="custom-navlink">
                   <span>Privacy</span> &nbsp;{" "}
                 </NavLink>
                 <NavLink to="/terms" target="_blank" className="custom-navlink">

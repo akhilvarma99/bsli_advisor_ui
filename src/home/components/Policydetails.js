@@ -48,12 +48,16 @@ function Policydetails() {
 
   function buttonText(accordionId, buttonId) {
     const accordionClass = document.getElementById(accordionId).classList;
+    console.log("yes");
     console.log(accordionClass);
+    console.log(buttonId);
     if (accordionClass[2] == "show") {
       console.log("conditin" + accordionClass);
+      console.log("view more");
       document.getElementById(buttonId).innerHTML = "View More";
       document.getElementById(buttonId).classList.remove("checked-state");
     } else {
+      console.log("view less");
       document.getElementById(buttonId).innerHTML = "View Less";
       document.getElementById(buttonId).classList.add("checked-state");
     }
@@ -431,12 +435,12 @@ function Policydetails() {
                                   id="flush-headingOne"
                                 >
                                   Action Required
+                                  <div className="pr-2">
+                                    As on Date 18-dec-2020{" "}
+                                  </div>
                                 </h2>
 
                                 <div className="accordion-header text-right">
-                                  <span className="pr-2">
-                                    As on Date 18-dec-2020{" "}
-                                  </span>
                                   <i className="arrow-up" />
                                   <i className="arrow-down" />
                                 </div>
@@ -890,11 +894,11 @@ function Policydetails() {
                                   id="flush-headingOne"
                                 >
                                   Benefit Details
+                                  <div className="pr-2">
+                                    As on Date 18-dec-2020{" "}
+                                  </div>
                                 </h2>
                                 <div className="accordion-header text-right">
-                                  <span className="pr-2">
-                                    As on Date 18-dec-2020{" "}
-                                  </span>
                                   <i className="arrow-up" />
                                   <i className="arrow-down" />
                                 </div>
@@ -1099,7 +1103,7 @@ function Policydetails() {
                                           data-toggle="collapse"
                                           data-target={`#collapseExample${index}`}
                                           aria-expanded="false"
-                                          id={`buttonel${index}`}
+                                          id={`buttonel${index} btn`}
                                           aria-controls="collapseExample"
                                           onClick={() =>
                                             buttonText(
@@ -1118,8 +1122,10 @@ function Policydetails() {
                                     >
                                       <div className="col-lg-12 m-pad-div">
                                         <div className="expanded-div">
-                                          <div className="row">
-                                            <p className="grey-text">Reason</p>
+                                          <div className="row px-4">
+                                            <p className=" bold bold-text">
+                                              Reason
+                                            </p>
                                             <p>
                                               Lorem ipsum dolor sit amet,
                                               consectetur adipiscing elit, sed
@@ -1267,26 +1273,45 @@ function Policydetails() {
                                         data-target={`#collapseExample${index}`}
                                         aria-expanded="false"
                                         aria-controls="collapseExample"
-                                        id={`button${index}`}
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label>
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Transaction Date
+                                        </label>
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Type</label>
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Payment Type
+                                        </label>
                                         <p className="color-b">Credit Card</p>
                                       </div>
                                       <div className="col-lg-2">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label>
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Amount
+                                        </label>
                                         <p className="color-b">
                                           &#8377; 2,22,222
                                         </p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Status</label>
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Payment Status
+                                        </label>
                                         <p className="color-b">Failed</p>
                                       </div>
                                       <div className="col-lg-2 col-md-4 d-none d-lg-block d-md-block d-sm-none">
@@ -1315,8 +1340,8 @@ function Policydetails() {
                                     >
                                       <div className="col-lg-12 m-pad-div">
                                         <div className="expanded-div">
-                                          <div className="row px-2">
-                                            <p className="grey-text">Reason</p>
+                                          <div className="row px-4">
+                                            <p className="bold-text">Reason</p>
                                             <p className="text-justify">
                                               Lorem ipsum dolor sit amet,
                                               consectetur adipiscing elit, sed
@@ -1349,21 +1374,41 @@ function Policydetails() {
                                       <img src={threedots} alt="threedots" />
                                     </div> */}
                                     <div className="col-lg-3 col-md-3">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label>
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Transaction Date
+                                      </label>
                                       <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Type</label>
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Payment Type
+                                      </label>
                                       <p className="color-b">Credit Card</p>
                                     </div>
                                     <div className="col-lg-2">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label>
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Amount
+                                      </label>
                                       <p className="color-b">
                                         &#8377; 2,22,222
                                       </p>
                                     </div>
                                     <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Payment Status</label>           
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Payment Status
+                                      </label>
                                       <p className="color-b">Success</p>
                                     </div>
                                   </div>
@@ -1432,28 +1477,47 @@ function Policydetails() {
                                         data-target={`#collapsed${index}`}
                                         aria-expanded="false"
                                         aria-controls="collapsed"
-                                        id={`buttons${index}`}
                                       >
                                         <img src={threedots} alt="threedots" />
                                       </div>
                                       <div className="col-lg3 col-md-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Date of Transaction</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Date of Transaction
+                                        </label>
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Amount Allocated To Fund</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Amount Allocated To Fund
+                                        </label>
                                         <p className="color-b">
                                           &#8377;4,00,000
                                         </p>
                                       </div>
                                       <div className="col-lg-2">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Total Deductions</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Total Deductions
+                                        </label>
                                         <p className="color-b">
                                           &#8377; 2,22,222
                                         </p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-lg-block d-sm-block">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Fund Name/Option</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Fund Name/Option
+                                        </label>
                                         <p className="color-b">Fund Name</p>
                                       </div>
                                       <div className="col-lg-2 col-md-2 d-none d-lg-block d-md-block d-sm-none">
@@ -1575,21 +1639,41 @@ function Policydetails() {
                                         <img src={threedots} alt="threedots" />
                                       </div> */}
                                       <div className="col-lg-3 col-md-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Transaction Date
+                                        </label>
                                         <p className="color-b">28-dec-2020</p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Payout Type</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Payout Type
+                                        </label>
                                         <p className="color-b">payout type</p>
                                       </div>
                                       <div className="col-lg-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Amount
+                                        </label>
                                         <p className="color-b">
                                           &#8377; 2,22,222
                                         </p>
                                       </div>
                                       <div className="col-lg-3 col-md-3">
-                                      <label className="d-lg-none" style={{color:"#6c7174"}}>Status</label> 
+                                        <label
+                                          className="d-lg-none"
+                                          style={{ color: "#6c7174" }}
+                                        >
+                                          Status
+                                        </label>
                                         <p className="color-b">Failed</p>
                                       </div>
                                       {/* <div className="col-lg-3 col-md-3 d-none d-lg-block d-md-block d-sm-none">
@@ -1618,8 +1702,8 @@ function Policydetails() {
                                     >
                                       <div className="col-lg-12 m-pad-div">
                                         <div className="expanded-div">
-                                          <div className="row">
-                                            <p className="grey-text">Reason</p>
+                                          <div className="row px-4">
+                                            <p className="bold-text">Reason</p>
                                             <p>
                                               Lorem ipsum dolor sit amet,
                                               consectetur adipiscing elit, sed
@@ -1652,21 +1736,41 @@ function Policydetails() {
                                       <img src={threedots} alt="threedots" />
                                     </div> */}
                                     <div className="col-lg-3 col-md-3">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Transaction Date</label> 
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Transaction Date
+                                      </label>
                                       <p className="color-b">28-dec-2020</p>
                                     </div>
                                     <div className="col-lg-3 col-md-3">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Payout Type</label> 
-                                    <p className="color-b">payout type</p>
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Payout Type
+                                      </label>
+                                      <p className="color-b">payout type</p>
                                     </div>
                                     <div className="col-lg-3">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Amount</label> 
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Amount
+                                      </label>
                                       <p className="color-b">
                                         &#8377; 2,22,222
                                       </p>
                                     </div>
                                     <div className="col-lg-3 col-md-3 d-lg-block d-sm-block">
-                                    <label className="d-lg-none" style={{color:"#6c7174"}}>Status</label> 
+                                      <label
+                                        className="d-lg-none"
+                                        style={{ color: "#6c7174" }}
+                                      >
+                                        Status
+                                      </label>
                                       <p className="color-b">Success</p>
                                     </div>
                                   </div>
@@ -1836,8 +1940,7 @@ function Policydetails() {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="row">
-                                  </div>
+                                  <div className="row"></div>
                                 </section>
                                 <div className="grey-horizontal-separator mb-3 mt-2" />
                                 <section>
@@ -1894,7 +1997,7 @@ function Policydetails() {
                                     </div>
                                   </div>
                                   <div className="row">
-                                  <div className="col-md-3 mb-3">
+                                    <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
                                         Relation
                                       </label>
@@ -1946,7 +2049,7 @@ function Policydetails() {
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Relation
+                                        Relation
                                       </label>
                                       <div className="font18 line-ht-11">
                                         Father
@@ -2004,7 +2107,7 @@ function Policydetails() {
                                   <div className="row">
                                     <div className="col-md-3 mb-3">
                                       <label className="dark-grey-text font16 line-ht-14 mb-0">
-                                      Relation
+                                        Relation
                                       </label>
                                       <div className="font18 line-ht-11">
                                         Father
@@ -3398,7 +3501,6 @@ function Policydetails() {
                                     <div className="row">
                                       <div className="col-lg-4 col-md-4 text-left ">
                                         <div>
-
                                           <div
                                             className="form-check-label"
                                             htmlFor="customCheckBox5"

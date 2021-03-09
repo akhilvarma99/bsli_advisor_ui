@@ -22,18 +22,20 @@ import Password from "./password";
 import Trouble from "./trouble";
 import Users from "./users";
 import Terms from "./terms";
-import Policy from "./policy";
+import Privacy from "./privacy";
+import Navigation from "./navigation";
+import Login from "../components/login.js";
 
 function Approuter() {
   return (
     <div className="portal-wrapper">
-      <Route exact path="/" component={login} />
+      <Route exact path="/" component={Navigation} />
+      <Route exact path="/login" component={Login} />
       <Route path="/troubleLogin" component={Trouble} />
       <Route path="/password" component={Password} />
       <Route path="/users" component={Users} />
       <Route path="/terms" component={Terms} />
-      <Route path="/Policy" component={Policy} />
-
+      <Route path="/Privacy" component={Privacy} />
       <Route exact path="/CustomerList" component={CustomerList} />
       <Route exact path="/Allcustomers" component={Allcustomers} />
       <Route exact path="/Recommendations" component={Recommendations} />
@@ -41,7 +43,7 @@ function Approuter() {
       <Route exact path="/Payouts" component={Payouts} />
       <Route exact path="/Overdue" component={Overdue} />
       <Route exact path="/BirthdayWishes" component={BirthdayWishes} />
-
+      {/* <Route exact path="/Navigation" component={Navigation} /> */}
       <Route
         exact
         path="/Allcustomersresultnotfound"

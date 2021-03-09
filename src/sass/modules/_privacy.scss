@@ -1,0 +1,36 @@
+.outerpadding {
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+.content-block--center {
+    width: 66.6667%;
+    margin: 0 auto;
+}
+
+.no-letter-spacing {
+    letter-spacing: normal;
+}
+
+.title-wrap__title {
+    font-size: 2.8rem;
+    line-height: 4.4rem;
+    color: #000;
+}
+
+@media screen and (max-width: 767px){
+.title-wrap__title {
+    font-size: 2.0rem;
+    line-height: 2.2rem;
+}
+}
+
+@media screen and (max-width: 1020px){
+.outerpadding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.content-block--center {
+    width: 100%;
+}
+}

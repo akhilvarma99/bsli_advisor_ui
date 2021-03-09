@@ -4,6 +4,7 @@ import newUser from "../../assets/img/icons/newUser.svg";
 import existingUser from "../../assets/img/icons/existingUser.svg";
 import { NavLink } from "react-router-dom";
 import leftArrow from "../../assets/img/icons/arrow-left.svg";
+import backarrow from "../../assets/img/icons/back-arrow.svg";
 
 function Users() {
   return (
@@ -15,7 +16,7 @@ function Users() {
               <div className="login-card shadow-sm">
                 <span className="back-a">
                   <NavLink to="/password">
-                    <img className="backArrow" alt="backIcon" src={leftArrow} />
+                    <img className="backArrow" alt="backIcon" src={backarrow} style={{width:"12px"}} />
                     Back
                   </NavLink>
                 </span>

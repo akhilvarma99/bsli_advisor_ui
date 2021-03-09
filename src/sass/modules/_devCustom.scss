@@ -162,6 +162,7 @@
   top: 0;
   left: 0;
   background: #f8f8f8ad;
+  z-index: 10;
   .fp-loader {
     left: 45%;
     top: 50%;
@@ -495,4 +496,9 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 .custom-navlink {
   color: black !important;
   text-decoration: none !important;
+}
+
+.nav-div {
+  height: 54px;
+  font-size: 24px;
 }
