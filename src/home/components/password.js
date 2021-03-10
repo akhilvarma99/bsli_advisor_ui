@@ -349,7 +349,6 @@ function Password() {
                   {/* <button type="button" onClick={handleLogin} className="btn btn-primary float-right login">Login</button> */}
                   <NavLink
                     to="/customerList"
-                    target="_blank"
                     className="btn btn-primary float-right login"
                     style={{ color: "white" }}
                   >
@@ -358,11 +357,7 @@ function Password() {
                 </div>
                 <div className="col-md-8 show-xs">
                   <br />{" "}
-                  <NavLink
-                    to="/troubleLogin"
-                    target="_blank"
-                    className="float-left m-top-10"
-                  >
+                  <NavLink to="/troubleLogin" className="float-left m-top-10">
                     Having problem signing in?
                   </NavLink>
                 </div>
